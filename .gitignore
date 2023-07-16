@@ -1,0 +1,7 @@
+Client/Project/Library
+Client/Project/Logs
+Client/Project/Temp
+Client/Project/Assembly-CSharp.csproj
+Client/Project/abilitysystem.csproj
+*.csproj
+*.sln
