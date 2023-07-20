@@ -1,0 +1,371 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31390c44c9f3a3d40b424bf6821999a2, type: 3}
+  m_Name: BaiXiaoFei_Skill1
+  m_EditorClassIdentifier: 
+  serializedNodes: []
+  nodes:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  - id: 9
+  - id: 10
+  edges:
+  - GUID: db5cbfa1-262a-4cc5-8246-38b1e626c61d
+    owner: {fileID: 11400000}
+    inputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    outputNodeGUID: e22cfa32-d45c-44f7-9b38-d6d6dca43e4c
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 411fe33d-befd-4788-9d30-c4d30c964322
+    owner: {fileID: 11400000}
+    inputNodeGUID: 8f312312-90f2-4e72-89c4-002a530313e6
+    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 940848dc-2e66-4825-89a4-272e5c6661c8
+    owner: {fileID: 11400000}
+    inputNodeGUID: 8f312312-90f2-4e72-89c4-002a530313e6
+    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    inputFieldName: targets
+    outputFieldName: selectTargets
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 0526c94c-aabd-4d5a-9732-a1a767a2e135
+    owner: {fileID: 11400000}
+    inputNodeGUID: 083ae8cc-a0cd-487f-9afd-e27d7d98f373
+    outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: f3505a38-5d53-46db-8798-e61ab677b6a4
+  - GUID: 1d6e4167-d61e-4ad8-954d-18f882e24a47
+    owner: {fileID: 11400000}
+    inputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: 14b9d605-5439-4add-aa0b-60034f5b8148
+  - GUID: e4c717fd-096f-4230-9a12-31940ed4ca8a
+    owner: {fileID: 11400000}
+    inputNodeGUID: 183c8f8c-d398-4942-b593-b6360f130693
+    outputNodeGUID: 08241095-78e9-416e-88d7-45b1c93e33e1
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 366a9a9b-0ae0-4c4d-9404-b7e45a0a0de0
+    owner: {fileID: 11400000}
+    inputNodeGUID: 08241095-78e9-416e-88d7-45b1c93e33e1
+    outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: 2d34d4ce-bfe1-43dd-afb3-d426a9aedc0d
+  - GUID: 82be9234-0c0b-418f-b234-3ab4732904b9
+    owner: {fileID: 11400000}
+    inputNodeGUID: ce0b6b08-f84a-4db5-b0f7-be104b84fd57
+    outputNodeGUID: 083ae8cc-a0cd-487f-9afd-e27d7d98f373
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 6e7ec325-3d5b-4347-bdd5-8827443a834f
+    owner: {fileID: 11400000}
+    inputNodeGUID: 0f77ec48-d56d-4800-95a3-f83494bbf430
+    outputNodeGUID: ce0b6b08-f84a-4db5-b0f7-be104b84fd57
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: f8551f4c-0378-43c4-81b8-7373bd7bd74e
+    owner: {fileID: 11400000}
+    inputNodeGUID: 1a0ab7d0-89be-44ba-9fd7-e609165ccb82
+    outputNodeGUID: 19f6b072-4d79-44e9-b794-5952857b6117
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 0763a436-758d-4b1b-a8c3-bdebe3d8fe5c
+    owner: {fileID: 11400000}
+    inputNodeGUID: 1a0ab7d0-89be-44ba-9fd7-e609165ccb82
+    outputNodeGUID: 19f6b072-4d79-44e9-b794-5952857b6117
+    inputFieldName: targets
+    outputFieldName: selectTargets
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 092aa5dd-d6a8-4fd6-93c2-e3f2defcf8b7
+    owner: {fileID: 11400000}
+    inputNodeGUID: 19f6b072-4d79-44e9-b794-5952857b6117
+    outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: 2c890daf-885d-4d8f-8bd4-a5c02242ce6f
+  - GUID: 1328e3e7-41a6-4e38-ba39-35a14aa44a92
+    owner: {fileID: 11400000}
+    inputNodeGUID: 0f77ec48-d56d-4800-95a3-f83494bbf430
+    outputNodeGUID: ce0b6b08-f84a-4db5-b0f7-be104b84fd57
+    inputFieldName: targets
+    outputFieldName: selectTargets
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 73176ae3-3131-43d9-bf6c-4d0098b9cd67
+    owner: {fileID: 11400000}
+    inputNodeGUID: 183c8f8c-d398-4942-b593-b6360f130693
+    outputNodeGUID: 08241095-78e9-416e-88d7-45b1c93e33e1
+    inputFieldName: targets
+    outputFieldName: selectTargets
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  groups: []
+  stackNodes: []
+  pinnedElements: []
+  exposedParameters: []
+  serializedParameterList: []
+  stickyNotes: []
+  nodeInspectorReference: {fileID: 0}
+  position: {x: 43.5, y: -84.5, z: 0}
+  scale: {x: 0.7561437, y: 0.7561437, z: 1}
+  references:
+    version: 1
+    00000000:
+      type: {class: PlayActNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+        computeOrder: 1
+        position:
+          serializedVersion: 2
+          x: 482.45
+          y: 388.5
+          width: 229
+          height: 270
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        resId: Act_BaiXiaoFei_Skill1
+        lifeTime: 2420
+        targets: 
+        attackSpeedScale: 0
+        actEvents:
+        - triggerTime: 367
+          displayName: "\u51FB\u7A7A"
+          id: 14b9d605-5439-4add-aa0b-60034f5b8148
+        - triggerTime: 700
+          displayName: "\u56DE\u65CB\u5F00\u59CB"
+          id: f3505a38-5d53-46db-8798-e61ab677b6a4
+        - triggerTime: 1267
+          displayName: "\u56DE\u65CB\u7ED3\u675F"
+          id: 2c890daf-885d-4d8f-8bd4-a5c02242ce6f
+        - triggerTime: 1600
+          displayName: "\u51FB\u9000"
+          id: 2d34d4ce-bfe1-43dd-afb3-d426a9aedc0d
+    00000001:
+      type: {class: SelectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+        computeOrder: 2
+        position:
+          serializedVersion: 2
+          x: 843.0001
+          y: 201.5444
+          width: 173
+          height: 147
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        selectTargets: 
+        rangeType: 0
+        angleRange: 60
+        distanceRange: 3
+    00000002:
+      type: {class: StartNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: e22cfa32-d45c-44f7-9b38-d6d6dca43e4c
+        computeOrder: 0
+        position:
+          serializedVersion: 2
+          x: 287.20007
+          y: 403.50003
+          width: 99.5
+          height: 75
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+    00000003:
+      type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 8f312312-90f2-4e72-89c4-002a530313e6
+        computeOrder: 3
+        position:
+          serializedVersion: 2
+          x: 1232.1451
+          y: 153.50002
+          width: 136
+          height: 195
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        angle: 80
+        v0: 5
+        speed: 1
+        animState: 1
+        targets: 
+    00000004:
+      type: {class: LoopExecutionNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 083ae8cc-a0cd-487f-9afd-e27d7d98f373
+        computeOrder: 4
+        position:
+          serializedVersion: 2
+          x: 827.5
+          y: 412.5
+          width: 136
+          height: 123
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        interval: 100
+        timeLength: 500
+    00000005:
+      type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 0f77ec48-d56d-4800-95a3-f83494bbf430
+        computeOrder: 6
+        position:
+          serializedVersion: 2
+          x: 1268
+          y: 364.5
+          width: 114
+          height: 171
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        angle: 90
+        v0: 1
+        speed: 1
+        animState: 1
+        targets: 
+    00000006:
+      type: {class: SelectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 08241095-78e9-416e-88d7-45b1c93e33e1
+        computeOrder: 7
+        position:
+          serializedVersion: 2
+          x: 711.50006
+          y: 812
+          width: 173
+          height: 147
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        selectTargets: 
+        rangeType: 0
+        angleRange: 60
+        distanceRange: 3
+    00000007:
+      type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 183c8f8c-d398-4942-b593-b6360f130693
+        computeOrder: 8
+        position:
+          serializedVersion: 2
+          x: 1016
+          y: 857
+          width: 114
+          height: 171
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        angle: 5
+        v0: 5
+        speed: 2
+        animState: 1
+        targets: 
+    00000008:
+      type: {class: SelectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: ce0b6b08-f84a-4db5-b0f7-be104b84fd57
+        computeOrder: 5
+        position:
+          serializedVersion: 2
+          x: 1032.1432
+          y: 406.58237
+          width: 173
+          height: 147
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        selectTargets: 
+        rangeType: 0
+        angleRange: 360
+        distanceRange: 5
+    00000009:
+      type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 1a0ab7d0-89be-44ba-9fd7-e609165ccb82
+        computeOrder: 10
+        position:
+          serializedVersion: 2
+          x: 1178
+          y: 658.5
+          width: 114
+          height: 171
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        angle: 90
+        v0: 1
+        speed: 1
+        animState: 1
+        targets: 
+    0000000A:
+      type: {class: SelectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 19f6b072-4d79-44e9-b794-5952857b6117
+        computeOrder: 9
+        position:
+          serializedVersion: 2
+          x: 807.0218
+          y: 597
+          width: 173
+          height: 147
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        selectTargets: 
+        rangeType: 0
+        angleRange: 360
+        distanceRange: 2

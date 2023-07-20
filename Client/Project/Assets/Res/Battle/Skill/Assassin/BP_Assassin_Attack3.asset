@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31390c44c9f3a3d40b424bf6821999a2, type: 3}
+  m_Name: BP_Assassin_Attack3
+  m_EditorClassIdentifier: 
+  serializedNodes: []
+  nodes:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  edges:
+  - GUID: db5cbfa1-262a-4cc5-8246-38b1e626c61d
+    owner: {fileID: 11400000}
+    inputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    outputNodeGUID: e22cfa32-d45c-44f7-9b38-d6d6dca43e4c
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: dc4196b9-d441-4b99-91d3-b8bca6f29b57
+    owner: {fileID: 11400000}
+    inputNodeGUID: dc8cca93-1438-41be-b1a4-9548c0ff9753
+    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: ec1ce31c-b36d-418b-9399-8ccc21e2de7c
+    owner: {fileID: 11400000}
+    inputNodeGUID: dc8cca93-1438-41be-b1a4-9548c0ff9753
+    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    inputFieldName: targets
+    outputFieldName: selectTargets
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: afdefa69-09b9-490b-94c7-55e3304e73b0
+    owner: {fileID: 11400000}
+    inputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: c15c63d0-5a94-468c-a9b1-177f3547fa5e
+  groups: []
+  stackNodes: []
+  pinnedElements: []
+  exposedParameters: []
+  serializedParameterList: []
+  stickyNotes: []
+  nodeInspectorReference: {fileID: 0}
+  position: {x: -651, y: -328, z: 0}
+  scale: {x: 1.3225, y: 1.3225, z: 1}
+  references:
+    version: 1
+    00000000:
+      type: {class: PlayActNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+        computeOrder: 1
+        position:
+          serializedVersion: 2
+          x: 616.34247
+          y: 344
+          width: 231.5
+          height: 246
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        resId: Act_Assassin_Attack3
+        lifeTime: 560
+        targets: 
+        attackSpeedScale: 0
+        actEvents:
+        - triggerTime: 333
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: c15c63d0-5a94-468c-a9b1-177f3547fa5e
+    00000001:
+      type: {class: SelectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+        computeOrder: 2
+        position:
+          serializedVersion: 2
+          x: 901.76666
+          y: 387.03687
+          width: 173
+          height: 147
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        selectTargets: 
+        rangeType: 0
+        angleRange: 60
+        distanceRange: 2
+    00000002:
+      type: {class: StartNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: e22cfa32-d45c-44f7-9b38-d6d6dca43e4c
+        computeOrder: 0
+        position:
+          serializedVersion: 2
+          x: 457.82614
+          y: 336.5
+          width: 99.5
+          height: 75
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+    00000003:
+      type: {class: KnockBackNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: dc8cca93-1438-41be-b1a4-9548c0ff9753
+        computeOrder: 3
+        position:
+          serializedVersion: 2
+          x: 1231.846
+          y: 405.2439
+          width: 136
+          height: 219
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        f: 5
+        a: 10
+        speed: 1
+        animState: 0
+        targets: 
+        target: 0

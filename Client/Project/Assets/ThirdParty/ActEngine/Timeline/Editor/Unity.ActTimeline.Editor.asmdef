@@ -1,0 +1,20 @@
+{
+    "name": "UnityEditor.UWP.Extensions",
+    "rootNamespace": "",
+    "references": [
+        "GUID:12e6d453d6c4ff040bcb486e8209e9c7",
+        "GUID:615357118099cc44dab43760f25ed1f6",
+        "GUID:39cc4c98dc8e6ef4f80fd17a274b5178"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

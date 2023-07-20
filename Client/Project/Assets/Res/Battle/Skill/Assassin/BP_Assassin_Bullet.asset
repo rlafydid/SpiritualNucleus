@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31390c44c9f3a3d40b424bf6821999a2, type: 3}
+  m_Name: BP_Assassin_Bullet
+  m_EditorClassIdentifier: 
+  serializedNodes: []
+  nodes:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  edges:
+  - GUID: 4abafd47-c991-459b-91a5-4cff2aa64d33
+    owner: {fileID: 11400000}
+    inputNodeGUID: 7789cc7b-78e8-4eba-bf9f-b08a3f230760
+    outputNodeGUID: b05f857a-8a88-4efa-8fda-786d46f61d17
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 1f52c600-039c-42dc-bb4f-8748b453d12b
+    owner: {fileID: 11400000}
+    inputNodeGUID: b40c9445-b633-4708-80e4-8ddd3918ef07
+    outputNodeGUID: 7789cc7b-78e8-4eba-bf9f-b08a3f230760
+    inputFieldName: executed
+    outputFieldName: hitTriggerNodes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 181c6953-0881-4815-945b-3438133e51b9
+    owner: {fileID: 11400000}
+    inputNodeGUID: ed04fb1c-76db-43c6-94e4-878f13f770dc
+    outputNodeGUID: b40c9445-b633-4708-80e4-8ddd3918ef07
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: b65fe265-62a7-403c-b202-0e108a9c9c8f
+    owner: {fileID: 11400000}
+    inputNodeGUID: f5d6518c-3e50-4be4-955b-697ba4930312
+    outputNodeGUID: b40c9445-b633-4708-80e4-8ddd3918ef07
+    inputFieldName: target
+    outputFieldName: targetId
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: b388cf44-16e8-4c19-bc4a-f7b9a30ba7e9
+    owner: {fileID: 11400000}
+    inputNodeGUID: f5d6518c-3e50-4be4-955b-697ba4930312
+    outputNodeGUID: b40c9445-b633-4708-80e4-8ddd3918ef07
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  groups: []
+  stackNodes: []
+  pinnedElements: []
+  exposedParameters: []
+  serializedParameterList: []
+  stickyNotes: []
+  nodeInspectorReference: {fileID: 0}
+  position: {x: -170.5, y: -163, z: 0}
+  scale: {x: 1.15, y: 1.15, z: 1}
+  references:
+    version: 1
+    00000000:
+      type: {class: StartNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: b05f857a-8a88-4efa-8fda-786d46f61d17
+        computeOrder: 0
+        position:
+          serializedVersion: 2
+          x: 203
+          y: 330
+          width: 99.5
+          height: 75
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+    00000001:
+      type: {class: VectorBulletNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 7789cc7b-78e8-4eba-bf9f-b08a3f230760
+        computeOrder: 1
+        position:
+          serializedVersion: 2
+          x: 472.36993
+          y: 273.3974
+          width: 141.5
+          height: 171
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        res: bullet1.prefab
+        offset: {x: 0, y: 0.5, z: 1}
+        speed: 30
+        angle: 0
+        distance: 50
+    00000002:
+      type: {class: BulletHitNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: b40c9445-b633-4708-80e4-8ddd3918ef07
+        computeOrder: 2
+        position:
+          serializedVersion: 2
+          x: 721
+          y: 329
+          width: 106
+          height: 99
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+    00000003:
+      type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: f5d6518c-3e50-4be4-955b-697ba4930312
+        computeOrder: 3
+        position:
+          serializedVersion: 2
+          x: 989.00006
+          y: 359.00006
+          width: 136
+          height: 219
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        angle: 30
+        v0: 10
+        speed: 1
+        animState: 1
+        targets: 
+        target: 0
+    00000004:
+      type: {class: LogNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: ed04fb1c-76db-43c6-94e4-878f13f770dc
+        computeOrder: 4
+        position:
+          serializedVersion: 2
+          x: 989
+          y: 223.49998
+          width: 125
+          height: 99
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        log: "\u5B50\u5F39\u547D\u4E2D"

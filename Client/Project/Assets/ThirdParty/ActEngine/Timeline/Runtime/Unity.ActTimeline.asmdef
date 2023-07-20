@@ -1,0 +1,16 @@
+{
+    "name": "GoogleAR.UnityNative",
+    "rootNamespace": "",
+    "references": [
+        "GUID:615357118099cc44dab43760f25ed1f6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af28d68821bd4714196a9ccef7a4c2c4, type: 3}
+  m_Name: AssetFilter
+  m_EditorClassIdentifier: 
+  filters:
+  - lable: 2DSpite
+    filter: t:Sprite
+    regex: 
+    searchInFolders:
+    - Assets/Res/UI/BigTexture
+    - Assets/Res/UI/Texture
+  - lable: "\u9884\u5236\u4F53"
+    filter: t:Prefab
+    regex: 
+    searchInFolders:
+    - Assets/Res/UI/Prefab
+    - Assets/Res/Effect
+    - Assets/Res/Model
+    - Assets/Res/Spine
+    - Assets/Res/UIEffect/Prefab
+    - Assets/Res/Story/Prefab
+  - lable: "\u573A\u666F"
+    filter: t:Scene
+    regex: 
+    searchInFolders:
+    - Assets/Res/SceneFinal
+  - lable: Font
+    filter: t:Font t:TMP_FontAsset
+    regex: 
+    searchInFolders:
+    - Assets/Res/UI/Font/ComFont
+    - Assets/Res/UI/Font/ZH_CN
+  - lable: "\u884C\u4E3A\u6811"
+    filter: t:Prefab
+    regex: 
+    searchInFolders:
+    - Assets/Res/Behavior
+  - lable: "\u84DD\u56FE"
+    filter: t:ScriptableObject
+    regex: 
+    searchInFolders:
+    - Assets/Res/Behavior

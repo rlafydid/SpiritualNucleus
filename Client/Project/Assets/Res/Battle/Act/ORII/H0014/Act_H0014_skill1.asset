@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
+  m_Name: Act_H0014_skill1
+  m_EditorClassIdentifier: 
+  LifeTime: 1.35
+  Clips:
+  - id: 0
+  - id: 1
+  Events:
+  - id: 2
+  Model: Art_Model_H0014
+  references:
+    version: 1
+    00000000:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 3
+        Index: 0
+        Row: 1
+        assetPrefab: {fileID: 1822322168260633051, guid: 9d8889f61d0da594f8579b4fa8087c89, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 0
+        followType: 0
+        bindPoint: RoleFoot
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 1
+    00000001:
+      type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 1.3333334
+        Index: 0
+        Row: 0
+        animName: Skill1
+        dontStopOnDisable: 0
+    00000002:
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.8
+        EventName: "\u89E6\u53D1\u4E8B\u4EF6"
+        _row: 2
+        GUID: bd200354-7e04-4af8-8177-c4ec07dba8e8
+        AttackRange: 0

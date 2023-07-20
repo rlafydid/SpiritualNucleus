@@ -1,0 +1,16 @@
+{
+    "name": "ActEngine",
+    "rootNamespace": "",
+    "references": [
+        "GUID:aff632302a0b84b498c3f33f7639b4d3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

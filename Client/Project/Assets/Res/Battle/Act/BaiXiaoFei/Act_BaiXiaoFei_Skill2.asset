@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
+  m_Name: Act_BaiXiaoFei_Skill2
+  m_EditorClassIdentifier: 
+  LifeTime: 3.3666668
+  Clips:
+  - id: 0
+  - id: 1
+  - id: 2
+  Events:
+  - id: 3
+  - id: 4
+  - id: 5
+  Model: baixiaofei02
+  references:
+    version: 1
+    00000000:
+      type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 3.3666668
+        Index: 0
+        Row: 0
+        animName: Skill02
+        dontStopOnDisable: 0
+    00000001:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 2.7333333
+        Index: 0
+        Row: 2
+        assetPrefab: {fileID: 135154, guid: 07c84ccd32034fa47978a95fc92572ae, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 1
+        followType: 0
+        bindPoint: Default
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    00000002:
+      type: {class: ActAudioClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 2.25
+        Duration: 0.84360546
+        Index: 0
+        Row: 4
+        configId: 
+        cueSheet: 
+        cueName: baixiaofei01_attack_qijiashu_nahan
+    00000003:
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 2.2666667
+        EventName: "\u84C4\u529B\u4E00\u51FB"
+        _row: 1
+        GUID: 2d34d4ce-bfe1-43dd-afb3-d426a9aedc0d
+        AttackRange: 0
+    00000004:
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.7
+        EventName: "\u6D41\u661F\u62F3\u5F00\u59CB"
+        _row: 1
+        GUID: ecb31714-0d68-4485-bc02-0cb024ad962a
+        AttackRange: 0
+    00000005:
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 1.8666667
+        EventName: "\u6D41\u661F\u62F3\u7ED3\u675F"
+        _row: 1
+        GUID: 7e0a27b3-3037-4fe3-bf4a-0dea59f90764
+        AttackRange: 0

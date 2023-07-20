@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
+  m_Name: Act_BaiXiaoFei_Skill1
+  m_EditorClassIdentifier: 
+  LifeTime: 2.4
+  Clips:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  Events:
+  - id: 8
+  - id: 9
+  - id: 10
+  - id: 11
+  Model: baixiaofei02
+  references:
+    version: 1
+    00000000:
+      type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 2.4
+        Index: 0
+        Row: 0
+        animName: Skill01
+        dontStopOnDisable: 0
+    00000001:
+      type: {class: ActDisplacementClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.2
+        Duration: 0.2
+        Index: 0
+        Row: 2
+        eulerAngles: {x: 0, y: 0, z: 0}
+        distance: 1
+    00000002:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.6166667
+        Duration: 1
+        Index: 0
+        Row: 3
+        assetPrefab: {fileID: 100000, guid: 573300e6a64cb714e94a64e33559b5c3, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 1
+        followType: 0
+        bindPoint: Default
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    00000003:
+      type: {class: ActAudioClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.2
+        Duration: 0.54684806
+        Index: 0
+        Row: 5
+        configId: 
+        cueSheet: 
+        cueName: baixiaofei01_attack_normal_huidao
+    00000004:
+      type: {class: ActAudioClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.6166667
+        Duration: 0.8920635
+        Index: 0
+        Row: 6
+        configId: 
+        cueSheet: 
+        cueName: baixiaofei01_attack_huixuansha_hit
+    00000005:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.2
+        Duration: 1
+        Index: 0
+        Row: 4
+        assetPrefab: {fileID: 102550, guid: e3b242f2faa356442a13da784b0cebca, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 1
+        followType: 0
+        bindPoint: Default
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    00000006:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 1.1166667
+        Duration: 1
+        Index: 0
+        Row: 5
+        assetPrefab: {fileID: 188106, guid: 71e8989668cad2f4b806f7ce0cf2e71f, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 1
+        followType: 0
+        bindPoint: Default
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    00000007:
+      type: {class: ActAudioClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 1.4666667
+        Duration: 0.54684806
+        Index: 0
+        Row: 7
+        configId: 
+        cueSheet: 
+        cueName: baixiaofei01_attack_normal_huidao
+    00000008:
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 1.6
+        EventName: "\u51FB\u9000"
+        _row: 1
+        GUID: 2d34d4ce-bfe1-43dd-afb3-d426a9aedc0d
+        AttackRange: 0
+    00000009:
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.36666667
+        EventName: "\u51FB\u7A7A"
+        _row: 1
+        GUID: 14b9d605-5439-4add-aa0b-60034f5b8148
+        AttackRange: 0
+    0000000A:
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.7
+        EventName: "\u56DE\u65CB\u5F00\u59CB"
+        _row: 1
+        GUID: f3505a38-5d53-46db-8798-e61ab677b6a4
+        AttackRange: 0
+    0000000B:
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 1.2666667
+        EventName: "\u56DE\u65CB\u7ED3\u675F"
+        _row: 1
+        GUID: 2c890daf-885d-4d8f-8bd4-a5c02242ce6f
+        AttackRange: 0

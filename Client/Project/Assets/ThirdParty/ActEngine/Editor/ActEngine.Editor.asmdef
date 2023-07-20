@@ -1,0 +1,21 @@
+{
+    "name": "ActEngine.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:615357118099cc44dab43760f25ed1f6",
+        "GUID:1b93ac6194638bc4abdece3339f0a758",
+        "GUID:882ea3432f51a284d85fc5d686eac949",
+        "GUID:aff632302a0b84b498c3f33f7639b4d3"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

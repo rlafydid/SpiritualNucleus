@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
+  m_Name: Act_Hero_Show
+  m_EditorClassIdentifier: 
+  LifeTime: 10
+  Clips:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  - id: 9
+  Events: []
+  references:
+    version: 1
+    00000000:
+      type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 1.3066667
+        Duration: 1
+        Index: 0
+        Row: 1
+        animName: Show
+        dontStopOnDisable: 0
+    00000001:
+      type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.14
+        Duration: 1
+        Index: 0
+        Row: 0
+        animName: Born
+        dontStopOnDisable: 0
+    00000002:
+      type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 2.3999999
+        Duration: 1
+        Index: 0
+        Row: 3
+        animName: Win
+        dontStopOnDisable: 0
+    00000003:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.14
+        Duration: 1.1666666
+        Index: 0
+        Row: 1
+        assetName: fx_H0006_bullet1_01
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 2
+        followType: 0
+        bindPoint: L_Hand
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 1
+        isTurnToTarget: 0
+    00000004:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.22
+        Duration: 1.06
+        Index: 0
+        Row: 2
+        assetName: fx_H0006_bullet1_01
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 2
+        followType: 0
+        bindPoint: R_Hand
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 1
+        isTurnToTarget: 0
+    00000005:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 4.0666666
+        Duration: 1
+        Index: 0
+        Row: 4
+        assetName: H0013_Skill1_hit01
+        generateMode: 1
+        direction: 0
+        space: 0
+        actionMode: 0
+        followType: 0
+        bindPoint: Default
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+    00000006:
+      type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 3.6
+        Duration: 1
+        Index: 0
+        Row: 5
+        animName: Attack2
+        dontStopOnDisable: 0
+    00000007:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 4.02
+        Duration: 0.4399999
+        Index: 0
+        Row: 7
+        assetName: fx_H0006_bullet1_01
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 0
+        followType: 0
+        bindPoint: R_Hand
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0.27}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 1
+        isTurnToTarget: 0
+    00000008:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 2.18
+        Duration: 1
+        Index: 0
+        Row: 8
+        assetName: 
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 0
+        followType: 0
+        bindPoint: Default
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+    00000009:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 1.88
+        Duration: 2.1399999
+        Index: 0
+        Row: 6
+        assetName: fx_H0103_ski_pjt
+        generateMode: 0
+        direction: 0
+        space: 1
+        actionMode: 2
+        followType: 1
+        bindPoint: Qiang_Bone030
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: -0.1, y: 0.72, z: 0.14}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 1
+        isTurnToTarget: 0

@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31390c44c9f3a3d40b424bf6821999a2, type: 3}
+  m_Name: BaiXiaoFei_Attack3
+  m_EditorClassIdentifier: 
+  serializedNodes: []
+  nodes:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  edges:
+  - GUID: db5cbfa1-262a-4cc5-8246-38b1e626c61d
+    owner: {fileID: 11400000}
+    inputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    outputNodeGUID: e22cfa32-d45c-44f7-9b38-d6d6dca43e4c
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: f5032dfd-e321-42cb-acd7-e0b1765d0e61
+    owner: {fileID: 11400000}
+    inputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: 2d34d4ce-bfe1-43dd-afb3-d426a9aedc0d
+  - GUID: faf2258d-cb60-4c8a-82d5-f07d72cf24fb
+    owner: {fileID: 11400000}
+    inputNodeGUID: 2d2c3a64-8d24-4270-b9ba-2e67b18fe0c5
+    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 6157039a-959a-4c67-8c07-b1df96377824
+    owner: {fileID: 11400000}
+    inputNodeGUID: 2d2c3a64-8d24-4270-b9ba-2e67b18fe0c5
+    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    inputFieldName: targets
+    outputFieldName: selectTargets
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  groups: []
+  stackNodes: []
+  pinnedElements: []
+  exposedParameters: []
+  serializedParameterList: []
+  stickyNotes: []
+  nodeInspectorReference: {fileID: 0}
+  position: {x: -717, y: -337.5, z: 0}
+  scale: {x: 1.3225, y: 1.3225, z: 1}
+  references:
+    version: 1
+    00000000:
+      type: {class: PlayActNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+        computeOrder: 1
+        position:
+          serializedVersion: 2
+          x: 616.244
+          y: 344
+          width: 233.5
+          height: 246
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        resId: Act_BaiXiaoFei_Attack3
+        lifeTime: 580
+        targets: 
+        attackSpeedScale: 0
+        actEvents:
+        - triggerTime: 167
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: 2d34d4ce-bfe1-43dd-afb3-d426a9aedc0d
+    00000001:
+      type: {class: SelectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+        computeOrder: 2
+        position:
+          serializedVersion: 2
+          x: 938
+          y: 393.5
+          width: 173
+          height: 147
+        expanded: 1
+        debug: 0
+        nodeLock: 0
+        selectTargets: 
+        rangeType: 0
+        angleRange: 60
+        distanceRange: 2
+    00000002:
+      type: {class: StartNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: e22cfa32-d45c-44f7-9b38-d6d6dca43e4c
+        computeOrder: 0
+        position:
+          serializedVersion: 2
+          x: 358.53122
+          y: 393.5
+          width: 99.5
+          height: 75
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+    00000003:
+      type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 2d2c3a64-8d24-4270-b9ba-2e67b18fe0c5
+        computeOrder: 3
+        position:
+          serializedVersion: 2
+          x: 1244.223
+          y: 432.66635
+          width: 114
+          height: 195
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        angle: 85
+        v0: 5
+        speed: 1
+        animState: 1
+        targets: 

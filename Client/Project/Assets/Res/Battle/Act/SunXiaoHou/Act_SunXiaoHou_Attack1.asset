@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
+  m_Name: Act_SunXiaoHou_Attack1
+  m_EditorClassIdentifier: 
+  LifeTime: 1
+  Clips:
+  - id: 0
+  - id: 1
+  - id: 2
+  Events:
+  - id: 3
+  Model: sunxiaohou01
+  references:
+    version: 1
+    00000000:
+      type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 0.90000004
+        Index: 0
+        Row: 0
+        animName: Attack
+        dontStopOnDisable: 0
+    00000001:
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 1
+        Index: 0
+        Row: 1
+        assetPrefab: {fileID: 168272, guid: 3d74bc68596db88499e79f2f419047cf, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 0
+        followType: 0
+        bindPoint: Default
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    00000002:
+      type: {class: ActAudioClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.33691615
+        Duration: 0.5630839
+        Index: 0
+        Row: 3
+        configId: 
+        cueSheet: 
+        cueName: sunxiaohou01_attack
+    00000003:
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.46666667
+        EventName: "\u89E6\u53D1\u4E8B\u4EF6"
+        _row: 2
+        GUID: c9016ce4-9bf8-4f9f-bd14-32e57e3b99de
+        AttackRange: 0
