@@ -8,7 +8,6 @@ using UnityEditor.SceneManagement;
 using UnityEditor.Experimental.SceneManagement;
 #endif
 using UnityEngine;
-using UnityEngine.Playables;
 using UnityEngine.ActTimeline;
 
 namespace UnityEditor.ActTimeline

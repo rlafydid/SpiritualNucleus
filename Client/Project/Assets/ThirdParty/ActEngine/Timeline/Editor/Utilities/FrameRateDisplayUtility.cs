@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Playables;
 using UnityEngine.ActTimeline;
 
 namespace UnityEditor.ActTimeline
