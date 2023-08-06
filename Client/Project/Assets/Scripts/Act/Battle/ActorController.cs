@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using AbilitySystem;
 using UnityEngine;
 
 namespace Act.Simulator
@@ -16,6 +17,9 @@ namespace Act.Simulator
 
         public MoveComponent moveComp { get; set; }
 
+        private AbilityController _abilityController;
+        private AbilitySystemCharacter _abilitySystemCharacter;
+        
         public ActInstance PlayAct(string path, List<GameObject> targets = null)
         {
             var act = actComponent.PlayAct(Entity, path, targets);
@@ -106,6 +110,14 @@ namespace Act.Simulator
         {
             targetPos = new Vector3(center.x + Random.Range(-range, range), center.y, center.z + Random.Range(-range, range));
             owner.Entity.transform.LookAt(targetPos);
+        }
+    }
+
+    public static class EntityExtension
+    {
+        public static T GetComponent<T>(this GameObject entity)
+        {
+            return entity.GetComponent<T>();
         }
     }
 }
