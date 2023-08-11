@@ -16,7 +16,7 @@ namespace Battle
 
     public class HeroSkillComponent : SkillComponent
     {
-        Dictionary<KeyCode, SkillUnit> skillMapping;
+        Dictionary<int, SkillUnit> skillMapping;
         NormalAttacksComponent normalAttacksComp;
 
         protected override void OnAwake()
@@ -30,15 +30,15 @@ namespace Battle
         {
             base.OnStart();
 
-            skillMapping = new Dictionary<KeyCode, SkillUnit>();
+            skillMapping = new Dictionary<int, SkillUnit>();
 
             var conf = ownerActor.CharacterConfig;
 
-            skillMapping.Add(KeyCode.K, new SkillUnit() { BPRes = conf.Skill1, OwnerID = this.ownerActor.ID });
-            skillMapping.Add(KeyCode.U, new SkillUnit() { BPRes = conf.Skill2, OwnerID = this.ownerActor.ID });
-            skillMapping.Add(KeyCode.I, new SkillUnit() { BPRes = conf.Skill3, OwnerID = this.ownerActor.ID });
+            skillMapping.Add(1, new SkillUnit() { BPRes = conf.Skill1, OwnerID = this.ownerActor.ID });
+            skillMapping.Add(2, new SkillUnit() { BPRes = conf.Skill2, OwnerID = this.ownerActor.ID });
+            skillMapping.Add(3, new SkillUnit() { BPRes = conf.Skill3, OwnerID = this.ownerActor.ID });
         }
-
+    
         public bool FindSkill()
         {
             foreach(var item in skillMapping)
@@ -56,6 +56,12 @@ namespace Battle
             }
             readySkill = null;
             return false;
+        }
+        
+        public void SetupSkill(int index)
+        {
+            var abilityController = this.ownerActor.Entity.GameObject.GetComponent<AbilityController>();
+            abilityController.UseAbility(index);
         }
     }
 }

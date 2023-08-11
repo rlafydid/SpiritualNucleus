@@ -5,3 +5,5 @@ Client/Project/Assembly-CSharp.csproj
 Client/Project/abilitysystem.csproj
 *.csproj
 *.sln
+Client/Project/obj
+Client/Project/.idea

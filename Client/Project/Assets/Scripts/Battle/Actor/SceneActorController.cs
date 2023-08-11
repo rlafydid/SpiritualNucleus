@@ -60,6 +60,8 @@ namespace Battle
                 moveComponent.MoveSpeed = value;
             }
         }
+        
+        protected AbilityController AbilityController;
 
         public void SetConfig(int id)
         {

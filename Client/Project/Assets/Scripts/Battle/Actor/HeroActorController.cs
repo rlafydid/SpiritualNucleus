@@ -16,6 +16,8 @@ namespace Battle
             AddComponent<HandleInputComponent>();
             AddComponent<OperateComponent>();
             InitState();
+            
+            
         }
 
         void InitState()
@@ -38,16 +40,16 @@ namespace Battle
             var handleInput = this.GetComponent<HandleInputComponent>();
 
             FSM.Transition toMove = new FSM.Transition(ERoleState.Move);
-            toMove.AddCondition(GetComponent<JoystickMoveComponent>().IsMoving);
+            // toMove.AddCondition(GetComponent<JoystickMoveComponent>().IsMoving);
 
             FSM.Transition toAttack = new FSM.Transition(ERoleState.Attack);
-            toAttack.AddCondition(this.GetComponent<HeroSkillComponent>().FindSkill);
+            // toAttack.AddCondition(this.GetComponent<HeroSkillComponent>().FindSkill);
 
             FSM.Transition toJump = new FSM.Transition(ERoleState.Jump);
-            toJump.AddCondition(handleInput.Jump);
+            // toJump.AddCondition(handleInput.Jump);
 
             FSM.Transition toFlashMove = new FSM.Transition(ERoleState.FlashMove);
-            toFlashMove.AddCondition(handleInput.FlashMove);
+            // toFlashMove.AddCondition(handleInput.FlashMove);
 
             FSM.Transition toEvade = new FSM.Transition(ERoleState.Evade);
             toEvade.AddCondition(new EvadeCondition());
@@ -64,6 +66,12 @@ namespace Battle
             moveState.AddTransition(toEvade);
 
         }
+
+        public void TriggerEvent(ERoleState state)
+        {
+            GetComponent<FSM.FiniteStateMachine>().TriggerEvent(state);
+        }
+        
 
         public override void Start()
         {

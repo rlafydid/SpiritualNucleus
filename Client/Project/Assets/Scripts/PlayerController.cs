@@ -121,6 +121,11 @@ public class PlayerController : MonoBehaviour, DefaultInputActions.IPlayerAction
 
     }
 
+    public void OnReleaseSkill(InputAction.CallbackContext context)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void OnLook(InputAction.CallbackContext context)
     {
     }

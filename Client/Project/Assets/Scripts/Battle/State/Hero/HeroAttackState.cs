@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using AbilitySystem;
 using UnityEngine;
 
 namespace Battle
@@ -30,6 +31,8 @@ namespace Battle
             triggerSkill = owner.GetComponent<HeroSkillComponent>().GetReadySkill();
             triggerSkill.Finish = Finish;
             Facade.Skill.TriggerSkill(triggerSkill);
+            
+            // owner.GetComponent<AbilityController>()
 
             isContinue = false;
         }

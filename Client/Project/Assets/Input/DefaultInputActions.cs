@@ -769,6 +769,295 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Hero"",
+            ""id"": ""7abed7da-1760-4f80-bb90-18b02a480bbe"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""49e86af2-5c8c-41bc-9585-e081474d05ea"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""578ae880-377e-485b-ac49-df25895a5e7a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""a3684283-bd37-4aec-bc36-dd63cbcbc439"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skill1"",
+                    ""type"": ""Button"",
+                    ""id"": ""d781ad33-283e-492a-b679-b09320cbe849"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skill2"",
+                    ""type"": ""Button"",
+                    ""id"": ""be846192-5e5f-4368-a1f7-e31125be3331"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skill3"",
+                    ""type"": ""Button"",
+                    ""id"": ""6afd99b4-13d7-457c-9936-fe10619d332e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skill4"",
+                    ""type"": ""Button"",
+                    ""id"": ""4ccfc53a-d3a4-47db-96c8-cd1959b308de"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dodge"",
+                    ""type"": ""Button"",
+                    ""id"": ""b10ca4b6-2ebc-4b2c-a25b-5108a0e0f8c7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""a124da89-6dbf-4bd7-b858-faac5fe82d40"",
+                    ""path"": ""<Keyboard>/u"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""18580014-3e9a-4825-a1e3-f563f8f9467b"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""679d54df-0584-41e7-a098-fb01dd8ac5b2"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5882966c-581b-4c16-a0f1-ff93dcb16abe"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""15e01a96-0a56-4503-9aa1-7a22407065a6"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""385d7e9c-839c-4d86-9251-a3568b226344"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f84f8b71-7260-4dc5-944c-5a74e93c3c45"",
+                    ""path"": ""<Keyboard>/leftMeta"",
+                    ""interactions"": ""MultiTap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dodge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""82248844-0c33-4707-ab17-b626784e9a60"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""ec4f2c06-5b11-4691-8654-3b1377cbbad5"",
+                    ""path"": ""Dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""69943a9d-eb6b-4bbc-9c7a-efb19804e964"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""34218d95-96a9-4d25-8cf7-6c6b92d534bf"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""0dde561e-ea2f-4063-8f3a-c67d46beceee"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""a949ef68-dbdd-46ef-91a3-aa5c925689e9"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""f8a059d8-95ac-456b-8f48-c5da64a043d3"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""666fdc29-04e3-43b8-908c-d8bc9d0b055d"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""3287771c-3ce2-471e-becd-a35c128f0bfe"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""8df3d625-19f5-4b8f-9c02-2399f0c62804"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d686c70c-b709-4035-ae37-90f354760f24"",
+                    ""path"": ""<XRController>/{Primary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5b79f3c2-02b4-4abf-bffb-b59b9802f244"",
+                    ""path"": ""<Joystick>/stick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -852,6 +1141,16 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // Hero
+        m_Hero = asset.FindActionMap("Hero", throwIfNotFound: true);
+        m_Hero_Move = m_Hero.FindAction("Move", throwIfNotFound: true);
+        m_Hero_Attack = m_Hero.FindAction("Attack", throwIfNotFound: true);
+        m_Hero_Jump = m_Hero.FindAction("Jump", throwIfNotFound: true);
+        m_Hero_Skill1 = m_Hero.FindAction("Skill1", throwIfNotFound: true);
+        m_Hero_Skill2 = m_Hero.FindAction("Skill2", throwIfNotFound: true);
+        m_Hero_Skill3 = m_Hero.FindAction("Skill3", throwIfNotFound: true);
+        m_Hero_Skill4 = m_Hero.FindAction("Skill4", throwIfNotFound: true);
+        m_Hero_Dodge = m_Hero.FindAction("Dodge", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1069,6 +1368,95 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // Hero
+    private readonly InputActionMap m_Hero;
+    private IHeroActions m_HeroActionsCallbackInterface;
+    private readonly InputAction m_Hero_Move;
+    private readonly InputAction m_Hero_Attack;
+    private readonly InputAction m_Hero_Jump;
+    private readonly InputAction m_Hero_Skill1;
+    private readonly InputAction m_Hero_Skill2;
+    private readonly InputAction m_Hero_Skill3;
+    private readonly InputAction m_Hero_Skill4;
+    private readonly InputAction m_Hero_Dodge;
+    public struct HeroActions
+    {
+        private @DefaultInputActions m_Wrapper;
+        public HeroActions(@DefaultInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Hero_Move;
+        public InputAction @Attack => m_Wrapper.m_Hero_Attack;
+        public InputAction @Jump => m_Wrapper.m_Hero_Jump;
+        public InputAction @Skill1 => m_Wrapper.m_Hero_Skill1;
+        public InputAction @Skill2 => m_Wrapper.m_Hero_Skill2;
+        public InputAction @Skill3 => m_Wrapper.m_Hero_Skill3;
+        public InputAction @Skill4 => m_Wrapper.m_Hero_Skill4;
+        public InputAction @Dodge => m_Wrapper.m_Hero_Dodge;
+        public InputActionMap Get() { return m_Wrapper.m_Hero; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(HeroActions set) { return set.Get(); }
+        public void SetCallbacks(IHeroActions instance)
+        {
+            if (m_Wrapper.m_HeroActionsCallbackInterface != null)
+            {
+                @Move.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnMove;
+                @Attack.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
+                @Attack.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
+                @Attack.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
+                @Jump.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnJump;
+                @Skill1.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill1;
+                @Skill1.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill1;
+                @Skill1.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill1;
+                @Skill2.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill2;
+                @Skill2.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill2;
+                @Skill2.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill2;
+                @Skill3.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill3;
+                @Skill3.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill3;
+                @Skill3.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill3;
+                @Skill4.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill4;
+                @Skill4.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill4;
+                @Skill4.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnSkill4;
+                @Dodge.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnDodge;
+                @Dodge.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnDodge;
+                @Dodge.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnDodge;
+            }
+            m_Wrapper.m_HeroActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+                @Skill1.started += instance.OnSkill1;
+                @Skill1.performed += instance.OnSkill1;
+                @Skill1.canceled += instance.OnSkill1;
+                @Skill2.started += instance.OnSkill2;
+                @Skill2.performed += instance.OnSkill2;
+                @Skill2.canceled += instance.OnSkill2;
+                @Skill3.started += instance.OnSkill3;
+                @Skill3.performed += instance.OnSkill3;
+                @Skill3.canceled += instance.OnSkill3;
+                @Skill4.started += instance.OnSkill4;
+                @Skill4.performed += instance.OnSkill4;
+                @Skill4.canceled += instance.OnSkill4;
+                @Dodge.started += instance.OnDodge;
+                @Dodge.performed += instance.OnDodge;
+                @Dodge.canceled += instance.OnDodge;
+            }
+        }
+    }
+    public HeroActions @Hero => new HeroActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1133,5 +1521,16 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    public interface IHeroActions
+    {
+        void OnMove(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnSkill1(InputAction.CallbackContext context);
+        void OnSkill2(InputAction.CallbackContext context);
+        void OnSkill3(InputAction.CallbackContext context);
+        void OnSkill4(InputAction.CallbackContext context);
+        void OnDodge(InputAction.CallbackContext context);
     }
 }
