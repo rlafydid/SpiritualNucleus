@@ -47,6 +47,11 @@ namespace Battle
         public void Load()
         {
             BaseGraph baseGraph = Facade.Asset.Instantiate<BaseGraph>($"{skill.BPRes}");
+            
+        }
+
+        public void Run(BaseGraph baseGraph)
+        {
             StartNode startNode = null;
             foreach (var node in baseGraph.nodes)
             {

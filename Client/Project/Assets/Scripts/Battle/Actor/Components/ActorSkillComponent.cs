@@ -19,9 +19,14 @@ namespace Battle
         Dictionary<int, SkillUnit> skillMapping;
         NormalAttacksComponent normalAttacksComp;
 
+        private int _normalAttackIndex;
+
+        private AbilityController _abilityController;
+        
         protected override void OnAwake()
         {
             base.OnAwake();
+            _abilityController = this.ownerActor.Entity.GameObject.GetComponent<AbilityController>();
             normalAttacksComp = this.AddComponent<NormalAttacksComponent>();
             normalAttacksComp.Setup(ownerActor);
         }
@@ -38,30 +43,35 @@ namespace Battle
             skillMapping.Add(2, new SkillUnit() { BPRes = conf.Skill2, OwnerID = this.ownerActor.ID });
             skillMapping.Add(3, new SkillUnit() { BPRes = conf.Skill3, OwnerID = this.ownerActor.ID });
         }
-    
-        public bool FindSkill()
+        //
+        // public bool FindSkill()
+        // {
+        //     foreach(var item in skillMapping)
+        //     {
+        //         if(Input.GetKeyDown(item.Key))
+        //         {
+        //             readySkill = item.Value;
+        //             return true;
+        //         }
+        //     }
+        //     if(Input.GetKeyDown(KeyCode.J))
+        //     {
+        //         readySkill = normalAttacksComp.FindSkill();
+        //         return true;
+        //     }
+        //     readySkill = null;
+        //     return false;
+        // }
+        //
+        public void UseNormalAbility()
         {
-            foreach(var item in skillMapping)
-            {
-                if(Input.GetKeyDown(item.Key))
-                {
-                    readySkill = item.Value;
-                    return true;
-                }
-            }
-            if(Input.GetKeyDown(KeyCode.J))
-            {
-                readySkill = normalAttacksComp.FindSkill();
-                return true;
-            }
-            readySkill = null;
-            return false;
+            _normalAttackIndex = ++_normalAttackIndex % 3;
+            _abilityController.UseNormalAbility(_normalAttackIndex);
         }
         
-        public void SetupSkill(int index)
+        public void UseAbility(int index)
         {
-            var abilityController = this.ownerActor.Entity.GameObject.GetComponent<AbilityController>();
-            abilityController.UseAbility(index);
+            _abilityController.UseAbility(index);
         }
     }
 }

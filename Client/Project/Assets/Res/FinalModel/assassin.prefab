@@ -2599,6 +2599,9 @@ GameObject:
   - component: {fileID: 4454336320037257642}
   - component: {fileID: 4454336320028274286}
   - component: {fileID: 1004161016}
+  - component: {fileID: -2478475712245162819}
+  - component: {fileID: 1195833744836977239}
+  - component: {fileID: 2387122771759421683}
   m_Layer: 0
   m_Name: assassin
   m_TagString: Untagged
@@ -2729,6 +2732,52 @@ MonoBehaviour:
     name: Skill4
     defaultState: 0
   returnToDefaultState: 0
+--- !u!114 &-2478475712245162819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454336320037625290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfd75aac9fa5534eb516f0e321a8e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalAbilities: []
+  Abilities:
+  - {fileID: 11400000, guid: 28b45481170eb41e4985dada8a70d7b0, type: 2}
+  InitialisationAbilities: []
+  Cooldowns: []
+--- !u!114 &1195833744836977239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454336320037625290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c1425312ee2f5e4da3ab46a2724a3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attributeSystem: {fileID: 2387122771759421683}
+  Level: 0
+--- !u!114 &2387122771759421683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454336320037625290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73cbd57edc91b874a8bd957309e1f62c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttributeSystemEvents: []
+  Attributes: []
+  AttributeValues: []
 --- !u!1 &4454336320037625292
 GameObject:
   m_ObjectHideFlags: 0

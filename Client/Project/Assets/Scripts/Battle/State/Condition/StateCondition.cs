@@ -11,10 +11,10 @@ namespace Battle
 
     public class StateCondition :  FSM.Condition
     {
-        public EActorState state;
+        // public GameplayTag state;
         public override bool Pass()
         {
-            
+            return true;
         }
     }
 }

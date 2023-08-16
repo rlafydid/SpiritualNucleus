@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AbilitySystem;
 using AbilitySystem.Authoring;
 using Battle;
@@ -25,6 +26,10 @@ public class UniversalAbilityScriptableObject : AbstractAbilityScriptableObject
     {
         public BaseGraph AbilityBlueprint;
         public CastPointComponent CastPointComponent;
+
+        private TaskCompletionSource<bool> _taskCompletionSource;
+        private SkillProcess _skillProcess;
+        
         public UniversalAbilitySpec(AbstractAbilityScriptableObject ability, AbilitySystemCharacter owner) : base(ability, owner)
         {
 
@@ -56,10 +61,15 @@ public class UniversalAbilityScriptableObject : AbstractAbilityScriptableObject
             var effectSpec = this.Owner.MakeOutgoingSpec((this.Ability as UniversalAbilityScriptableObject).GameplayEffect);
             this.Owner.ApplyGameplayEffectSpecToSelf(effectSpec);
 
-            // SkillProcess process = new SkillProcess();
-            // process.Init(skill);
-            // process.Load();
-            // process.Finish = Finish;
+            _skillProcess = new SkillProcess();
+            var skillUnit = new SkillUnit() { OwnerID = Owner.OwnerId };
+            skillUnit.Finish = (skill) =>
+            {
+                _taskCompletionSource.SetResult(true);
+            };
+            _skillProcess.Init(skillUnit);
+            _skillProcess.Run((Ability as UniversalAbilityScriptableObject).AbilityBlueprint);
+            
 
             yield return null;
 

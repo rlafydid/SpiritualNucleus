@@ -61,10 +61,10 @@ namespace Battle
                 ChangeState(ERoleState.Idle);
             }
 
-            if(jumpCount < 2 && owner.GetComponent<HandleInputComponent>().Jump())
-            {
-                ContinueJump();
-            }
+            // if(jumpCount < 2 && owner.GetComponent<HandleInputComponent>().Jump())
+            // {
+            //     ContinueJump();
+            // }
         }
     }
 }

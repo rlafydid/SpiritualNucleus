@@ -7,12 +7,14 @@ using UnityEngine.UI;
 
 public class AbilityController : MonoBehaviour
 {
+    public AbstractAbilityScriptableObject[] NormalAbilities;
     public AbstractAbilityScriptableObject[] Abilities;
 
     public AbstractAbilityScriptableObject[] InitialisationAbilities;
     private AbilitySystemCharacter abilitySystemCharacter;
 
     private AbstractAbilitySpec[] abilitySpecs;
+    private AbstractAbilitySpec[] normalAbilitySpecs;
 
     public Image[] Cooldowns;
 
@@ -57,17 +59,32 @@ public class AbilityController : MonoBehaviour
     void GrantCastableAbilities()
     {
         this.abilitySpecs = new AbstractAbilitySpec[Abilities.Length];
+
         for (var i = 0; i < Abilities.Length; i++)
         {
             var spec = Abilities[i].CreateSpec(this.abilitySystemCharacter);
             this.abilitySystemCharacter.GrantAbility(spec);
             this.abilitySpecs[i] = spec;
         }
+
+        this.normalAbilitySpecs = new AbstractAbilitySpec[NormalAbilities.Length];
+        for (var i = 0; i < NormalAbilities.Length; i++)
+        {
+            var spec = NormalAbilities[i].CreateSpec(this.abilitySystemCharacter);
+            this.abilitySystemCharacter.GrantAbility(spec);
+            this.normalAbilitySpecs[i] = spec;
+        }
     }
 
     public void UseAbility(int i)
     {
         var spec = abilitySpecs[i];
+        StartCoroutine(spec.TryActivateAbility());
+    }
+
+    public void UseNormalAbility(int i)
+    {
+        var spec = normalAbilitySpecs[i];
         StartCoroutine(spec.TryActivateAbility());
     }
 }

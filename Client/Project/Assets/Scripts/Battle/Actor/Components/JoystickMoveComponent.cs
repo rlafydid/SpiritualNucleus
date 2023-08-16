@@ -23,12 +23,15 @@ namespace Battle
             //offset = Entity.LocalRotation * offset;
 
             //MoveToDir(Vector3.Lerp(Entity.Forward, offset.normalized, Time.deltaTime));
+        }
+        
+        public void SetMoveDelta(Vector3 val)
+        {
+            MoveToDir(val.normalized);
 
-            MoveToDir(offset.normalized);
-
-            value = Mathf.Max(Mathf.Abs(x), Mathf.Abs(y));
-            SetValue("v1", y);
-            SetValue("v2", x);
+            value = Mathf.Max(Mathf.Abs(val.x), Mathf.Abs(val.z));
+            SetValue("v1", val.x);
+            SetValue("v2", val.z);
         }
 
         public void MoveToDir(Vector3 dir)

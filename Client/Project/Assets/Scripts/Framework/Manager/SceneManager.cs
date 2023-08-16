@@ -111,7 +111,7 @@ namespace LKEngine
             switch (sceneType)
             {
                 case SceneType.Main:
-                    sceneName = "Main";
+                    sceneName = "ProjectMain";
                     break;
                 case SceneType.Battle:
                     sceneName = "World";
