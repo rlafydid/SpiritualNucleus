@@ -26,15 +26,15 @@ namespace Battle
         protected override void OnAwake()
         {
             base.OnAwake();
-            _abilityController = this.ownerActor.Entity.GameObject.GetComponent<AbilityController>();
-            normalAttacksComp = this.AddComponent<NormalAttacksComponent>();
-            normalAttacksComp.Setup(ownerActor);
+           
         }
 
         protected override void OnStart()
         {
             base.OnStart();
-
+            _abilityController = this.ownerActor.Entity.GameObject.GetComponent<AbilityController>();
+            normalAttacksComp = this.AddComponent<NormalAttacksComponent>();
+            normalAttacksComp.Setup(ownerActor);
             skillMapping = new Dictionary<int, SkillUnit>();
 
             var conf = ownerActor.CharacterConfig;

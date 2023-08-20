@@ -19,12 +19,12 @@ namespace Battle
         public void OnMove(InputAction.CallbackContext context)
         {
             var delta = context.ReadValue<Vector2>();
-            this.GetComponent<JoystickMoveComponent>().SetMoveDelta(new Vector3(delta.x, 0, delta.y));
+            this.ownerActor.GetComponent<JoystickMoveComponent>().SetMoveDelta(new Vector3(delta.x, 0, delta.y));
         }
 
         public void OnAttack(InputAction.CallbackContext context)
         {
-            this.GetComponent<HeroSkillComponent>().UseNormalAbility();
+            this.ownerActor.GetComponent<HeroSkillComponent>().UseNormalAbility();
             ChangeToState(ERoleState.Attack);
         }
 
@@ -35,25 +35,25 @@ namespace Battle
 
         public void OnSkill1(InputAction.CallbackContext context)
         {
-            this.GetComponent<HeroSkillComponent>().UseAbility(0);
+            this.ownerActor.GetComponent<HeroSkillComponent>().UseAbility(0);
             ChangeToState(ERoleState.Attack);
         }
 
         public void OnSkill2(InputAction.CallbackContext context)
         {
-            this.GetComponent<HeroSkillComponent>().UseAbility(1);
+            this.ownerActor.GetComponent<HeroSkillComponent>().UseAbility(1);
             ChangeToState(ERoleState.Attack);
         }
 
         public void OnSkill3(InputAction.CallbackContext context)
         {
-            this.GetComponent<HeroSkillComponent>().UseAbility(2);
+            this.ownerActor.GetComponent<HeroSkillComponent>().UseAbility(2);
             ChangeToState(ERoleState.Attack);
         }
 
         public void OnSkill4(InputAction.CallbackContext context)
         {
-            this.GetComponent<HeroSkillComponent>().UseAbility(3);
+            this.ownerActor.GetComponent<HeroSkillComponent>().UseAbility(3);
             ChangeToState(ERoleState.Attack);
         }
 
@@ -64,7 +64,7 @@ namespace Battle
 
         void ChangeToState(ERoleState state)
         {
-            var fsm = GetComponent<FSM.FiniteStateMachine>();
+            var fsm = this.ownerActor.GetComponent<FSM.FiniteStateMachine>();
             fsm.ChangeState(state);
         }
     }

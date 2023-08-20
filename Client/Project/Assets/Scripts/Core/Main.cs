@@ -8,7 +8,7 @@ using UnityEngine;
 public class Main : MonoBehaviour
 {
     List<BaseModule> modules;
-    static bool isInited = false;
+    bool isInited = false;
     private void Awake()
     {
         if (!isInited)
@@ -16,6 +16,7 @@ public class Main : MonoBehaviour
             Init();
             isInited = true;
         }
+        Debug.Log($"Awake");
     }
 
     private void Init()
@@ -27,6 +28,7 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log($"Start");
         // Tables table = new Tables(Loader); 
         // var item = table.TbItem.Get(10001);
         // Debug.Log(item.Desc);

@@ -78,10 +78,10 @@ namespace FSM
             if (curState != null)
             {
                 curState.Exexute();
-                if(curState.TryTransitionState(out int state))
-                {
-                    ChangeState(state);
-                }
+                // if(curState.TryTransitionState(out int state))
+                // {c
+                //     ChangeState(state);
+                // }
             }
 
         }

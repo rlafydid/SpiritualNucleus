@@ -14,11 +14,11 @@ namespace Battle
 
         protected override void OnUpdate()
         {
-            float x = Input.GetAxis("Horizontal");
-            float y = Input.GetAxis("Vertical");
-            Vector3 offset = new Vector3(x, 0, y);
-            if (offset == Vector3.zero)
-                return;
+            // float x = Input.GetAxis("Horizontal");
+            // float y = Input.GetAxis("Vertical");
+            // Vector3 offset = new Vector3(x, 0, y);
+            // if (offset == Vector3.zero)
+            //     return;
 
             //offset = Entity.LocalRotation * offset;
 
@@ -41,9 +41,9 @@ namespace Battle
 
             Vector3 lookAt = moveToPos;
             lookAt.y = ownerActor.Position.y;
-            //Entity.LookAt(lookAt);
-            //Vector3 groundPos = moveToPos.ToGroundPos();
-            //moveToPos.y = groundPos.y;
+            // Entity.LookAt(lookAt);
+            Vector3 groundPos = moveToPos.ToGroundPos();
+            moveToPos.y = groundPos.y;
             ownerActor.Position = moveToPos;
         }
 
