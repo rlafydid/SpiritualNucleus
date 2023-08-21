@@ -28,9 +28,9 @@ namespace Battle
                 lookAtPos.y = owner.Position.y;
                 //owner.Entity.LookAt(lookAtPos);
             }
-            triggerSkill = owner.GetComponent<HeroSkillComponent>().GetReadySkill();
-            triggerSkill.Finish = Finish;
-            Facade.Skill.TriggerSkill(triggerSkill);
+            // triggerSkill = owner.GetComponent<HeroSkillComponent>().GetReadySkill();
+            // triggerSkill.Finish = Finish;
+            // Facade.Skill.TriggerSkill(triggerSkill);
             
             // owner.GetComponent<AbilityController>()
 

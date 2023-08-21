@@ -28,7 +28,7 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log($"Start");
+        Debug.Log($" Start");
         // Tables table = new Tables(Loader); 
         // var item = table.TbItem.Get(10001);
         // Debug.Log(item.Desc);
@@ -76,6 +76,8 @@ public class Main : MonoBehaviour
 
     public void AddModule()
     {
+        Debug.Log($" AddModule");
+
         modules = new List<BaseModule>();
         modules.Add(new ResourceManager());
         modules.Add(new Battle.BattleModule());
