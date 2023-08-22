@@ -17,7 +17,7 @@ namespace AbilitySystem
         public List<AbstractAbilitySpec> GrantedAbilities = new List<AbstractAbilitySpec>();
         public float Level;
 
-        public int OwnerId { get; set; }
+        public long OwnerId { get; set; }
 
         public void GrantAbility(AbstractAbilitySpec spec)
         {

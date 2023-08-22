@@ -165,8 +165,11 @@ namespace Act
 
         void CreateMonster()
         {
+            var model = GetMonster().Model;
+            if (model == null)
+                return;
             var sceneData = GetSceneData();
-            var obj = GameObject.Instantiate(GetMonster().Model);
+            var obj = GameObject.Instantiate(model);
             var trans = obj.transform;
             trans.localScale = Vector3.one;
             trans.position = sceneData.MonsterPosition;

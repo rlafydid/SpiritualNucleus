@@ -19,6 +19,7 @@ MonoBehaviour:
   - rid: 2
   Events:
   - rid: 3
+  - rid: 6647520258994208798
   Model: assassin
   references:
     version: 2
@@ -67,8 +68,16 @@ MonoBehaviour:
     - rid: 3
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0.16666667
+        TriggerTime: 0.6333333
         EventName: "\u89E6\u53D1\u4E8B\u4EF6"
         _row: 1
         GUID: 5b08abd0-5f2a-4fa1-a1d4-91bdbacd9140
+        AttackRange: 0
+    - rid: 6647520258994208798
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.16666667
+        EventName: "\u89E6\u53D1\u4E8B\u4EF6"
+        _row: 1
+        GUID: ec1233e2-f4f4-4016-97a3-aa0023394e39
         AttackRange: 0

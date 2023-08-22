@@ -687,7 +687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4454336320037257226
 Transform:
   m_ObjectHideFlags: 0
@@ -773,7 +773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4454336320037257228
 Transform:
   m_ObjectHideFlags: 0
@@ -1588,7 +1588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4454336320037257272
 Transform:
   m_ObjectHideFlags: 0
@@ -2415,7 +2415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4454336320037257636
 Transform:
   m_ObjectHideFlags: 0
@@ -2770,16 +2770,16 @@ MonoBehaviour:
   - clip: {fileID: 7400000, guid: 4f120cda2582977448803ff835fdcbd2, type: 3}
     name: EvadeRight
     defaultState: 0
-  - clip: {fileID: 7400000, guid: 406a1c466a4b7f043a43063ef9d013a3, type: 3}
+  - clip: {fileID: 7400000, guid: 68c1ccbd80e2e4d4abb1731500154646, type: 3}
     name: Attack1
     defaultState: 0
-  - clip: {fileID: 7400000, guid: dee43154e84011b4292b06ed9a730eb4, type: 3}
+  - clip: {fileID: 7400000, guid: b88936b686bb10b4d9def72d2a5c8085, type: 3}
     name: Attack2
     defaultState: 0
-  - clip: {fileID: 7400000, guid: 1967cb0e1ffa9224ca5f2ef41f8a57ae, type: 3}
+  - clip: {fileID: 7400000, guid: af39959abdafc9647a5e2e70651c8ab7, type: 3}
     name: Attack3
     defaultState: 0
-  - clip: {fileID: 7400000, guid: 5d504380a3dee0c4e8fca5cb337683bf, type: 3}
+  - clip: {fileID: 7400000, guid: 722598ba1261f334a9efa3ec641c0a99, type: 3}
     name: Attack4
     defaultState: 0
   - clip: {fileID: 7400000, guid: d26a2de39bf87344c95ada91c6d7d62e, type: 3}
@@ -2823,8 +2823,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NormalAbilities:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 28b45481170eb41e4985dada8a70d7b0, type: 2}
+  - {fileID: 11400000, guid: 968bacea9d5bb4318beddfde577c0f8c, type: 2}
+  - {fileID: 11400000, guid: 6267ebe50e88d48589898086051e7b1c, type: 2}
+  - {fileID: 11400000, guid: afaa5f24ebf2a401da222d352b7cb1a1, type: 2}
   Abilities:
   - {fileID: 11400000, guid: 28b45481170eb41e4985dada8a70d7b0, type: 2}
   InitialisationAbilities: []

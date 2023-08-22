@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeTime: 1.1
   Clips:
-  - id: 0
+  - rid: 0
   Events:
-  - id: 1
+  - rid: 1
   Model: assassin
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
@@ -29,7 +30,7 @@ MonoBehaviour:
         Row: 0
         animName: Skill
         dontStopOnDisable: 0
-    00000001:
+    - rid: 1
       type: {class: ActBulletEvent, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0.36666667
@@ -37,8 +38,8 @@ MonoBehaviour:
         _row: 1
         GUID: 91417a8a-24c0-41c6-b115-42757ff90df1
         BulletData:
-          id: 2
-    00000002:
+          rid: 2
+    - rid: 2
       type: {class: ActVectorBulletData, ns: Act, asm: ActEngine}
       data:
         bulletID: fx_com_bullet01

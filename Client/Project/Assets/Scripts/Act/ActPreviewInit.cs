@@ -6,7 +6,7 @@ using UnityEngine;
 # if UNITY_EDITOR
 public class ActPreviewInit : MonoBehaviour
 {
-    static bool isInited = false;
+    bool isInited = false;
     List<BaseModule> modules;
 
     // Start is called before the first frame update

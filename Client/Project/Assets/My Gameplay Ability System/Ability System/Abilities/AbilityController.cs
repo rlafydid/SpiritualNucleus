@@ -84,6 +84,7 @@ public class AbilityController : MonoBehaviour
 
     public void UseNormalAbility(int i)
     {
+        Debug.Log($"普通攻击 {i}");
         var spec = normalAbilitySpecs[i];
         StartCoroutine(spec.TryActivateAbility());
     }

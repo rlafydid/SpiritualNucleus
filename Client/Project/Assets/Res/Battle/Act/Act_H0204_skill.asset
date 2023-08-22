@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeTime: 3.3
   Clips:
-  - id: 0
-  - id: 1
+  - rid: 0
+  - rid: 1
   Events:
-  - id: 2
+  - rid: 2
   Model: 
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
@@ -30,7 +31,7 @@ MonoBehaviour:
         Row: 0
         animName: Skill1
         dontStopOnDisable: 0
-    00000001:
+    - rid: 1
       type: {class: ActEffectClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
@@ -52,7 +53,7 @@ MonoBehaviour:
         isLoop: 0
         isTurnToTarget: 0
         dontDestroyWithAct: 0
-    00000002:
+    - rid: 2
       type: {class: ActBulletEvent, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 1.9
@@ -60,8 +61,8 @@ MonoBehaviour:
         _row: 2
         GUID: 09d99789-532a-4ea4-83a9-38b2b61f3894
         BulletData:
-          id: 3
-    00000003:
+          rid: 3
+    - rid: 3
       type: {class: ActVectorBulletData, ns: Act, asm: ActEngine}
       data:
         bulletID: fx_H0204_ski_long

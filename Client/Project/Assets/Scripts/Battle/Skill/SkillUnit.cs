@@ -15,6 +15,7 @@ namespace Battle
         public SkillConfig Config;
         public Action<SkillUnit> Finish;
         public string BPRes;
+        public BaseGraph Skill;
     }
 
     public class SkillProcess

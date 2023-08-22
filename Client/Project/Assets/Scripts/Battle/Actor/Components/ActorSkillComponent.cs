@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using AbilitySystem;
 using UnityEngine;
 
 namespace Battle
@@ -42,6 +43,8 @@ namespace Battle
             skillMapping.Add(1, new SkillUnit() { BPRes = conf.Skill1, OwnerID = this.ownerActor.ID });
             skillMapping.Add(2, new SkillUnit() { BPRes = conf.Skill2, OwnerID = this.ownerActor.ID });
             skillMapping.Add(3, new SkillUnit() { BPRes = conf.Skill3, OwnerID = this.ownerActor.ID });
+
+            this.ownerActor.Entity.GameObject.GetComponent<AbilitySystemCharacter>().OwnerId = this.ownerActor.ID;
         }
         //
         // public bool FindSkill()
@@ -65,7 +68,7 @@ namespace Battle
         //
         public void UseNormalAbility()
         {
-            _normalAttackIndex = ++_normalAttackIndex % 3;
+            _normalAttackIndex = ++_normalAttackIndex % 4;
             _abilityController.UseNormalAbility(_normalAttackIndex);
         }
         

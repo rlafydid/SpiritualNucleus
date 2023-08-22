@@ -51,25 +51,27 @@ public class UniversalAbilityScriptableObject : AbstractAbilityScriptableObject
         protected override IEnumerator ActivateAbility()
         {
             // Apply cost and cooldown
-            var cdSpec = this.Owner.MakeOutgoingSpec(this.Ability.Cooldown);
-            var costSpec = this.Owner.MakeOutgoingSpec(this.Ability.Cost);
-            this.Owner.ApplyGameplayEffectSpecToSelf(cdSpec);
-            this.Owner.ApplyGameplayEffectSpecToSelf(costSpec);
+            // var cdSpec = this.Owner.MakeOutgoingSpec(this.Ability.Cooldown);
+            // var costSpec = this.Owner.MakeOutgoingSpec(this.Ability.Cost);
+            // this.Owner.ApplyGameplayEffectSpecToSelf(cdSpec);
+            // this.Owner.ApplyGameplayEffectSpecToSelf(costSpec);
 
 
             // Apply primary effect
-            var effectSpec = this.Owner.MakeOutgoingSpec((this.Ability as UniversalAbilityScriptableObject).GameplayEffect);
-            this.Owner.ApplyGameplayEffectSpecToSelf(effectSpec);
+            // var effectSpec = this.Owner.MakeOutgoingSpec((this.Ability as UniversalAbilityScriptableObject).GameplayEffect);
+            // this.Owner.ApplyGameplayEffectSpecToSelf(effectSpec);
 
             _skillProcess = new SkillProcess();
             var skillUnit = new SkillUnit() { OwnerID = Owner.OwnerId };
-            skillUnit.Finish = (skill) =>
-            {
-                _taskCompletionSource.SetResult(true);
-            };
+            // skillUnit.Finish = (skill) =>
+            // {
+            //     _taskCompletionSource.SetResult(true);
+            // };
             _skillProcess.Init(skillUnit);
-            _skillProcess.Run((Ability as UniversalAbilityScriptableObject).AbilityBlueprint);
-            
+            skillUnit.Skill = (Ability as UniversalAbilityScriptableObject).AbilityBlueprint;
+            // _skillProcess.Run((Ability as UniversalAbilityScriptableObject).AbilityBlueprint);
+
+            Facade.Skill.TriggerSkill(skillUnit);
 
             yield return null;
 

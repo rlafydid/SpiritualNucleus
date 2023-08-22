@@ -133,6 +133,7 @@ public class PlayerController : MonoBehaviour, DefaultInputActions.IPlayerAction
     public void OnMove(InputAction.CallbackContext context)
     {
         this.mMovementVector = context.ReadValue<Vector2>();
+        Debug.Log($"Move {mMovementVector}");
         this.shouldMove = true;
         if (this.mMovementVector.magnitude < 0.2)
         {

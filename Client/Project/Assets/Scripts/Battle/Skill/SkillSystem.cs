@@ -56,8 +56,9 @@ namespace Battle
         {
             SkillProcess process = new SkillProcess();
             process.Init(skill);
-            process.Load();
+            // process.Load();
             process.Finish = Finish;
+            process.Run(skill.Skill);
             skillList.Add(process);
         }
 

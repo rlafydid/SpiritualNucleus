@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeTime: 0.5
   Clips:
-  - id: 0
+  - rid: 0
+  - rid: 6647520258994208795
   Events:
-  - id: 1
+  - rid: 1
   Model: assassin
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
@@ -29,7 +31,7 @@ MonoBehaviour:
         Row: 0
         animName: Attack4
         dontStopOnDisable: 0
-    00000001:
+    - rid: 1
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0.36666667
@@ -37,3 +39,12 @@ MonoBehaviour:
         _row: 1
         GUID: 52c553d0-cc9a-488e-91c6-eee010cea1bc
         AttackRange: 0
+    - rid: 6647520258994208795
+      type: {class: ActDisplacementClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 0.33333334
+        Index: 0
+        Row: 2
+        eulerAngles: {x: 0, y: 0, z: 0}
+        distance: 0

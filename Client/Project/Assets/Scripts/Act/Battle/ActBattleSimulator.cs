@@ -52,7 +52,7 @@ namespace Act.Simulator
 
             AddSimulator<ActEventSimulator>();
             AddSimulator<ActBulletSimulator>();
-            AddSimulator<ActMoveSimulator>();
+            // AddSimulator<ActMoveSimulator>();
 
             mainCharactor = new ActorController();
             mainCharactor.Entity = Facade.Preview.GetMainCharactor();
@@ -61,18 +61,21 @@ namespace Act.Simulator
 
             GameObject target = Facade.Preview.GetTarget();
 
-            for (int i = 0; i < 3; i++)
+            if (target != null)
             {
-                var obj = GameObject.Instantiate(target);
-                obj.transform.localScale = Vector3.one;
-                obj.transform.LookAt(mainCharactor.Position);
-                obj.transform.position = target.transform.position + Vector3.right * (i + 1) * 1.5f;
-                var actor = new ActorController();
-                actor.Entity = obj;
-                actor.StartMove();
-                targets.Add(actor);
+                for (int i = 0; i < 3; i++)
+                {
+                    var obj = GameObject.Instantiate(target);
+                    obj.transform.localScale = Vector3.one;
+                    obj.transform.LookAt(mainCharactor.Position);
+                    obj.transform.position = target.transform.position + Vector3.right * (i + 1) * 1.5f;
+                    var actor = new ActorController();
+                    actor.Entity = obj;
+                    actor.StartMove();
+                    targets.Add(actor);
+                }
+                GameObject.Destroy(target);
             }
-            GameObject.Destroy(target);
         }
 
         public void PlayAct(string path, float speed = 1)
@@ -120,10 +123,10 @@ namespace Act.Simulator
                 item.Update();
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                PlayAct(lastPlayedAct);
-            }
+            // if (Input.GetKeyDown(KeyCode.Space))
+            // {
+            //     PlayAct(lastPlayedAct);
+            // }
         }
 
         internal ActorController GetMainCharactor()

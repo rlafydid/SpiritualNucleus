@@ -23,17 +23,30 @@ namespace Battle
             //offset = Entity.LocalRotation * offset;
 
             //MoveToDir(Vector3.Lerp(Entity.Forward, offset.normalized, Time.deltaTime));
+
+            if (_direction != Vector3.zero)
+            {
+                SetMoveDelta(_direction);
+            }
         }
         
         public void SetMoveDelta(Vector3 val)
         {
+            Debug.Log($"MoveDelta {val}");
             MoveToDir(val.normalized);
 
             value = Mathf.Max(Mathf.Abs(val.x), Mathf.Abs(val.z));
-            SetValue("v1", val.x);
-            SetValue("v2", val.z);
+            SetValue("v1", val.z);
+            SetValue("v2", val.x);
         }
 
+        private Vector3 _direction;
+        public void SetMoveDir(Vector3 dir)
+        {
+            _direction = dir;
+            SetMoveDelta(_direction);
+        }
+        
         public void MoveToDir(Vector3 dir)
         {
             dir.x *= 0.7f;
@@ -44,6 +57,7 @@ namespace Battle
             // Entity.LookAt(lookAt);
             Vector3 groundPos = moveToPos.ToGroundPos();
             moveToPos.y = groundPos.y;
+            Debug.Log($"ownerActor.Position {ownerActor.Position} moveToPos {moveToPos}");
             ownerActor.Position = moveToPos;
         }
 
