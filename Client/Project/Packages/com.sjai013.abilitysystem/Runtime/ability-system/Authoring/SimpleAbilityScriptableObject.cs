@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace AbilitySystem.Authoring
@@ -48,7 +49,7 @@ namespace AbilitySystem.Authoring
             /// gameplay effect
             /// </summary>
             /// <returns></returns>
-            protected override IEnumerator ActivateAbility()
+            protected override async Task<bool> ActivateAbility()
             {
                 // Apply cost and cooldown
                 var cdSpec = this.Owner.MakeOutgoingSpec(this.Ability.Cooldown);
@@ -61,7 +62,9 @@ namespace AbilitySystem.Authoring
                 var effectSpec = this.Owner.MakeOutgoingSpec((this.Ability as SimpleAbilityScriptableObject).GameplayEffect);
                 this.Owner.ApplyGameplayEffectSpecToSelf(effectSpec);
 
-                yield return null;
+                await Task.Yield();
+                
+                return true;
             }
 
             /// <summary>
@@ -87,9 +90,10 @@ namespace AbilitySystem.Authoring
             /// </summary>
             /// <returns></returns>
 
-            protected override IEnumerator PreActivate()
+            protected override async Task<bool> PreActivate()
             {
-                yield return null;
+                await Task.Yield();
+                return true;
             }
         }
     }

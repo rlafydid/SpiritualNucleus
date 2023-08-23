@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using GameplayTag.Authoring;
 
 namespace AbilitySystem.Authoring
@@ -47,15 +48,15 @@ namespace AbilitySystem.Authoring
         /// is a couroutine, to allow abilities to span more than one frame.
         /// </summary>
         /// <returns></returns>
-        public virtual IEnumerator TryActivateAbility()
+        public async virtual Task<bool> TryActivateAbility()
         {
-            if (!CanActivateAbility()) yield break;
+            if (!CanActivateAbility()) return false;
 
             isActive = true;
-            yield return PreActivate();
-            yield return ActivateAbility();
+            await PreActivate();
+            await ActivateAbility();
             EndAbility();
-
+            return true;
         }
 
         /// <summary>
@@ -135,14 +136,14 @@ namespace AbilitySystem.Authoring
         /// <summary>
         /// Method to activate before activating this ability.  This method is run after activation checks.
         /// </summary>
-        protected abstract IEnumerator PreActivate();
+        protected abstract Task<bool> PreActivate();
 
         /// <summary>
         /// The logic that dictates what the ability does.  Targetting logic should be placed here.
         /// Gameplay Effects are applied in this method.
         /// </summary>
         /// <returns></returns>
-        protected abstract IEnumerator ActivateAbility();
+        protected abstract Task<bool> ActivateAbility();
 
         /// <summary>
         /// Method to run once the ability ends

@@ -48,8 +48,9 @@ public class UniversalAbilityScriptableObject : AbstractAbilityScriptableObject
                     && AscHasNoneTags(Owner, this.Ability.AbilityTags.SourceTags.IgnoreTags);
         }
 
-        protected override IEnumerator ActivateAbility()
+        protected override Task<bool> ActivateAbility()
         {
+            _taskCompletionSource = new TaskCompletionSource<bool>();
             // Apply cost and cooldown
             // var cdSpec = this.Owner.MakeOutgoingSpec(this.Ability.Cooldown);
             // var costSpec = this.Owner.MakeOutgoingSpec(this.Ability.Cost);
@@ -63,24 +64,24 @@ public class UniversalAbilityScriptableObject : AbstractAbilityScriptableObject
 
             _skillProcess = new SkillProcess();
             var skillUnit = new SkillUnit() { OwnerID = Owner.OwnerId };
-            // skillUnit.Finish = (skill) =>
-            // {
-            //     _taskCompletionSource.SetResult(true);
-            // };
+            skillUnit.Finish = (skill) =>
+            {
+                Debug.Log("技能释放完成");
+                _taskCompletionSource.SetResult(true);
+            };
             _skillProcess.Init(skillUnit);
             skillUnit.Skill = (Ability as UniversalAbilityScriptableObject).AbilityBlueprint;
             // _skillProcess.Run((Ability as UniversalAbilityScriptableObject).AbilityBlueprint);
 
             Facade.Skill.TriggerSkill(skillUnit);
 
-            yield return null;
-
+            return _taskCompletionSource.Task;
             // Spawn instance of projectile prefab
         }
 
-        protected override IEnumerator PreActivate()
+        protected async override Task<bool> PreActivate()
         {
-            yield return null;
+            return true;
         }
     }
 }

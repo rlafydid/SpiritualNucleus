@@ -66,15 +66,17 @@ namespace Battle
         //     return false;
         // }
         //
-        public void UseNormalAbility()
+        public async void UseNormalAbility()
         {
             _normalAttackIndex = ++_normalAttackIndex % 4;
-            _abilityController.UseNormalAbility(_normalAttackIndex);
+            await _abilityController.UseNormalAbility(_normalAttackIndex);
+            this.ownerActor.GetComponent<FSM.FiniteStateMachine>().TriggerEvent(ERoleState.Idle);
         }
         
-        public void UseAbility(int index)
+        public async void UseAbility(int index)
         {
-            _abilityController.UseAbility(index);
+            await _abilityController.UseAbility(index);
+            this.ownerActor.GetComponent<FSM.FiniteStateMachine>().TriggerEvent(ERoleState.Idle);
         }
     }
 }

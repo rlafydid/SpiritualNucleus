@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AbilitySystem;
 using AbilitySystem.Authoring;
 using UnityEngine;
@@ -42,8 +43,10 @@ public class MyProjectileAbilityScriptableObject : AbstractAbilityScriptableObje
                     && AscHasNoneTags(Owner, this.Ability.AbilityTags.SourceTags.IgnoreTags);
         }
 
-        protected override IEnumerator ActivateAbility()
+        protected override async Task<bool> ActivateAbility()
         {
+            await Task.Yield();
+            
             AbilitySystemCharacter target = null;
 
             var cdSpec = this.Owner.MakeOutgoingSpec(this.Ability.Cooldown);
@@ -56,7 +59,7 @@ public class MyProjectileAbilityScriptableObject : AbstractAbilityScriptableObje
                 if (!target)
                 {
                     EndAbility();
-                    yield break;
+                    return false;
                 }
 
                 var go = Instantiate(this.projectile.gameObject, this.CastPointComponent.GetPosition(), this.CastPointComponent.transform.rotation);
@@ -65,7 +68,7 @@ public class MyProjectileAbilityScriptableObject : AbstractAbilityScriptableObje
                 projectileInstance.Target = target;
                 this.Owner.ApplyGameplayEffectSpecToSelf(cdSpec);
                 this.Owner.ApplyGameplayEffectSpecToSelf(costSpec);
-                yield return projectileInstance.TravelToTarget();
+                // yield return projectileInstance.TravelToTarget();
                 var effectSpec = this.Owner.MakeOutgoingSpec((this.Ability as MyProjectileAbilityScriptableObject).GameplayEffect);
                 target.ApplyGameplayEffectSpecToSelf(effectSpec);
                 Destroy(go.gameObject);
@@ -74,11 +77,13 @@ public class MyProjectileAbilityScriptableObject : AbstractAbilityScriptableObje
             EndAbility();
 
             // Spawn instance of projectile prefab
+            return true;
         }
 
-        protected override IEnumerator PreActivate()
+        protected override async Task<bool> PreActivate()
         {
-            yield return null;
+            await Task.Yield();
+            return true;
         }
     }
 }

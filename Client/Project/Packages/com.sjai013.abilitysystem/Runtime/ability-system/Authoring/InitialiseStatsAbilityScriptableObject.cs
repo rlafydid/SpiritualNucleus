@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace AbilitySystem.Authoring
@@ -31,7 +32,7 @@ namespace AbilitySystem.Authoring
                         && AscHasNoneTags(Owner, this.Ability.AbilityTags.OwnerTags.IgnoreTags);
             }
 
-            protected override IEnumerator ActivateAbility()
+            protected override async Task<bool> ActivateAbility()
             {
                 // Apply cost and cooldown (if any)
                 if (this.Ability.Cooldown)
@@ -56,12 +57,14 @@ namespace AbilitySystem.Authoring
                     this.Owner.AttributeSystem.UpdateAttributeCurrentValues();
                 }
 
-                yield break;
+                await Task.Yield();
+                return true;
             }
 
-            protected override IEnumerator PreActivate()
+            protected override async Task<bool> PreActivate()
             {
-                yield return null;
+                await Task.Yield();
+                return true;
             }
         }
     }

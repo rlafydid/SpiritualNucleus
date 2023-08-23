@@ -12,12 +12,11 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField]
     private AbilitySystemCharacter asc;
-    void Start()
+    async void Start()
     {
         var spec = initialStats.CreateSpec(asc);
         asc.GrantAbility(spec);
-        StartCoroutine(spec.TryActivateAbility());
-
+        await spec.TryActivateAbility();
     }
 
     // Update is called once per frame

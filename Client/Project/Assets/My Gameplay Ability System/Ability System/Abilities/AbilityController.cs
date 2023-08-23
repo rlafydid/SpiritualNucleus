@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AbilitySystem;
 using AbilitySystem.Authoring;
 using UnityEngine;
@@ -46,13 +47,13 @@ public class AbilityController : MonoBehaviour
         }
     }
 
-    void ActivateInitialisationAbilities()
+    async void ActivateInitialisationAbilities()
     {
         for (var i = 0; i < InitialisationAbilities.Length; i++)
         {
             var spec = InitialisationAbilities[i].CreateSpec(this.abilitySystemCharacter);
             this.abilitySystemCharacter.GrantAbility(spec);
-            StartCoroutine(spec.TryActivateAbility());
+            await spec.TryActivateAbility();
         }
     }
 
@@ -76,16 +77,16 @@ public class AbilityController : MonoBehaviour
         }
     }
 
-    public void UseAbility(int i)
+    public Task<bool> UseAbility(int i)
     {
         var spec = abilitySpecs[i];
-        StartCoroutine(spec.TryActivateAbility());
+        return spec.TryActivateAbility();
     }
 
-    public void UseNormalAbility(int i)
+    public Task<bool> UseNormalAbility(int i)
     {
         Debug.Log($"普通攻击 {i}");
         var spec = normalAbilitySpecs[i];
-        StartCoroutine(spec.TryActivateAbility());
+        return spec.TryActivateAbility();
     }
 }
