@@ -12,6 +12,8 @@ public class UniversalAbilityScriptableObject : AbstractAbilityScriptableObject
 {
     public BaseGraph AbilityBlueprint;
     public GameplayEffectScriptableObject GameplayEffect;
+
+
     public override AbstractAbilitySpec CreateSpec(AbilitySystemCharacter owner)
     {
         var spec = new UniversalAbilitySpec(this, owner);
@@ -24,15 +26,23 @@ public class UniversalAbilityScriptableObject : AbstractAbilityScriptableObject
 
     public class UniversalAbilitySpec : AbstractAbilitySpec
     {
+        private static long abilityId;
+        
         public BaseGraph AbilityBlueprint;
         public CastPointComponent CastPointComponent;
 
         private TaskCompletionSource<bool> _taskCompletionSource;
         private SkillProcess _skillProcess;
-        
+        public long AbilityId { get; private set; }
+
         public UniversalAbilitySpec(AbstractAbilityScriptableObject ability, AbilitySystemCharacter owner) : base(ability, owner)
         {
+            AbilityId = ++abilityId;
+        }
 
+        public override bool CanActivateAbility()
+        {
+            return true;
         }
 
         public override void CancelAbility()

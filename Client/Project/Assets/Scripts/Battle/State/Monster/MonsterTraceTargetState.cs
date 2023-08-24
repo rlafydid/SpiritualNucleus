@@ -4,24 +4,24 @@ using UnityEngine;
 
 namespace Battle
 {
-    public class MonsterTraceTargetState : MonsterState
+    public class MonsterTraceTargetState : MonsterState<MonsterTraceTargetState.StateData>
     {
-        Entity entity;
-        public override void SetParameters(object parameters)
+        public new struct StateData : IStateData
         {
-            entity = (Entity)parameters;
+            public Entity entity;
         }
+    
         public override void Enter()
         {
             base.Enter();
-            GetActor.TraceTarget(entity);
+            GetActor.TraceTarget(Data.entity);
             GetActor.PlayAnim("Run");
         }
 
-        public override void Exexute()
+        public override void Update()
         {
-            base.Exexute();
-            if (Vector3.Distance(GetActor.Position, entity.Position) < 2)
+            base.Update();
+            if (Vector3.Distance(GetActor.Position, Data.entity.Position) < 2)
             {
                 //owner.TriggetNormalAttack();
                 ChangeState(ERoleState.Attack);

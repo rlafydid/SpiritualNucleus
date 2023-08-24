@@ -18,9 +18,9 @@ namespace Battle
             //GetActor.PlayAnim("Default");
         }
 
-        public override void Exexute()
+        public override void Update()
         {
-            base.Exexute();
+            base.Update();
             if (owner.IsDead())
                 return;
 
@@ -31,7 +31,9 @@ namespace Battle
             var target = Facade.Battle.SelectNearestTarget(owner, Facade.Battle.GetHeroActors(), 10);
             if(target != null)
             {
-                this.TriggerEvent(ERoleState.TraceTarget, target.Entity);
+                var data = new MonsterTraceTargetState.StateData();
+                data.entity = target.Entity;
+                this.TriggerEvent(ERoleState.TraceTarget, data);
             }
         }
 

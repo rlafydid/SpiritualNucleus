@@ -14,9 +14,9 @@ namespace Battle
             //GetActor.Entity.GetComponent<MoveComponent>().ToDefaultState();
         }
 
-        public override void Exexute()
+        public override void Update()
         {
-            base.Exexute();
+            base.Update();
         }
 
         public override void Exit()

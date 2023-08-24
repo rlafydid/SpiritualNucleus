@@ -8,9 +8,19 @@ namespace Battle
 {
     public interface IState
     {
+        void SetData(IStateData data);
         void Enter();
-        void Exexute();
+        void Update();
         void Exit();
+    }
+
+    public interface IStateData
+    {
+        
+    }
+
+    public struct StateEmptyData : IStateData
+    {
     }
 
     public class TransitionParams
@@ -19,6 +29,16 @@ namespace Battle
         public object param;
     }
 
+    public class BaseState<T> : BaseState where T : IStateData
+    {
+        protected T Data { get; private set; }
+
+        public override void SetData(IStateData data)
+        {
+            Data = (T)data;
+        }
+    }   
+    
     public class BaseState : IState
     {
         public SceneActorController owner;
@@ -31,10 +51,15 @@ namespace Battle
         public virtual void SetParameters(object parameters)
         {
         }
+
+        public virtual void SetData(IStateData data)
+        {
+        }
+        
         public virtual void Enter()
         {
         }
-        public virtual void Exexute() { }
+        public virtual void Update() { }
         public virtual void Exit() { }
 
         public void AddTransition(Transition transition)
@@ -56,13 +81,34 @@ namespace Battle
             state = 0;
             return false;
         }
+        
+        /// <summary>
+        /// 是否可以转换到指定状态
+        /// </summary>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        public bool CanTransitionToState(int state)
+        {
+            if (transitions.Count == 0)
+                return true;
+            
+            foreach (var trasition in transitions)
+            {
+                if (state == trasition.toState && trasition.CanTransition())
+                {
+                    return true;
+                }
+            }
 
-        protected void ChangeState(Enum state, TransitionParams param = null)
+            return false;
+        }
+
+        protected void ChangeState(Enum state, IStateData param = null)
         {
             fsm.ChangeState(state, param);
         }
 
-        protected void TriggerEvent(Enum state, object param = null)
+        protected void TriggerEvent(Enum state, IStateData param = null)
         {
             fsm.TriggerEvent(state, param);
         }

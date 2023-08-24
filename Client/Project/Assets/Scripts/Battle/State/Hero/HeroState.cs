@@ -4,7 +4,12 @@ using UnityEngine;
 
 namespace Battle
 {
-    public class HeroState : BaseState
+    public class HeroState : HeroState<StateEmptyData>
+    {
+   
+    }
+    
+    public class HeroState<T> : BaseState<T> where T : IStateData
     {
         public HeroActorController GetActor
         {

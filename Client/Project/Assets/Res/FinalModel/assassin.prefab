@@ -2779,34 +2779,22 @@ MonoBehaviour:
   - clip: {fileID: 7400000, guid: af39959abdafc9647a5e2e70651c8ab7, type: 3}
     name: Attack3
     defaultState: 0
-  - clip: {fileID: 7400000, guid: 722598ba1261f334a9efa3ec641c0a99, type: 3}
-    name: Attack4
-    defaultState: 0
-  - clip: {fileID: 7400000, guid: d26a2de39bf87344c95ada91c6d7d62e, type: 3}
-    name: Attack5
-    defaultState: 0
-  - clip: {fileID: 7400000, guid: 2452fd1ace8bc0f4bbf7159e20e3a51f, type: 3}
-    name: Attack6
-    defaultState: 0
-  - clip: {fileID: 7400000, guid: 230e02f7cba95b040abb3ac73083d511, type: 3}
-    name: Attack7
-    defaultState: 0
-  - clip: {fileID: 7400000, guid: ae5da67e25cd89f469bcced4b939a95e, type: 3}
+  - clip: {fileID: 7400000, guid: c2961a1a15be9fc409ba16170b792312, type: 3}
     name: Attack8
     defaultState: 0
-  - clip: {fileID: 7400000, guid: d26a2de39bf87344c95ada91c6d7d62e, type: 3}
+  - clip: {fileID: 7400000, guid: ac3e41f35b51bec48b844ca6e64e0fc8, type: 3}
     name: Skill
     defaultState: 0
-  - clip: {fileID: 7400000, guid: 289a6f652d9995d45816a37e64c31987, type: 3}
+  - clip: {fileID: 7400000, guid: 3ff7e3056e7897849a6795c3685e01a4, type: 3}
     name: Skill1
     defaultState: 0
-  - clip: {fileID: 7400000, guid: a2d6b4d9cf4dee7489f3a06d906da0d7, type: 3}
+  - clip: {fileID: 7400000, guid: e1dbb95ab56104044b03e9ed42642055, type: 3}
     name: Skill2
     defaultState: 0
-  - clip: {fileID: 7400000, guid: c69a40f8d888fe543bbff63e3d778ef8, type: 3}
+  - clip: {fileID: 7400000, guid: 471176ada4014654fbf4a53d94256db5, type: 3}
     name: Skill3
     defaultState: 0
-  - clip: {fileID: 7400000, guid: 0ab85fdb42cdf6c458f8fb3f1afbf125, type: 3}
+  - clip: {fileID: 7400000, guid: 4b66c7588502d6b4b8c3beeaaaf3bc78, type: 3}
     name: Skill4
     defaultState: 0
   returnToDefaultState: 0
@@ -2828,7 +2816,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6267ebe50e88d48589898086051e7b1c, type: 2}
   - {fileID: 11400000, guid: afaa5f24ebf2a401da222d352b7cb1a1, type: 2}
   Abilities:
-  - {fileID: 11400000, guid: 28b45481170eb41e4985dada8a70d7b0, type: 2}
+  - {fileID: 11400000, guid: 992b0e9e8bda54b29b6de370866641c0, type: 2}
+  - {fileID: 11400000, guid: c8a7d7eb12f08441bbf73e4669b5b69b, type: 2}
+  - {fileID: 11400000, guid: dec998d16076c45db85fd15f721e198e, type: 2}
+  - {fileID: 11400000, guid: 435da1a9a1135410196276276a514df5, type: 2}
+  - {fileID: 11400000, guid: 743020e20e92e43e2b12ba63becc65fb, type: 2}
   InitialisationAbilities: []
   Cooldowns: []
 --- !u!114 &1195833744836977239

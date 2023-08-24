@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
+  m_Name: Act_Assassin_Skill5
+  m_EditorClassIdentifier: 
+  LifeTime: 3.2833335
+  Clips:
+  - rid: 0
+  Events:
+  - rid: 6647520310010839064
+  - rid: 6647520310010839065
+  - rid: 6647520310010839066
+  - rid: 6647520310010839067
+  - rid: 6647520310010839070
+  Model: assassin
+  references:
+    version: 2
+    RefIds:
+    - rid: 0
+      type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 3.2833335
+        Index: 0
+        Row: 0
+        animName: Skill4
+        dontStopOnDisable: 0
+    - rid: 6647520310010839064
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.8
+        EventName: "\u89E6\u53D1\u4E8B\u4EF6"
+        _row: 1
+        GUID: cf39d854-92e6-4006-a841-1276c6c5f118
+        AttackRange: 0
+    - rid: 6647520310010839065
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 1.0333333
+        EventName: "\u89E6\u53D1\u4E8B\u4EF6"
+        _row: 1
+        GUID: bf67a602-afb5-4290-96d2-7c5e08a39aa1
+        AttackRange: 0
+    - rid: 6647520310010839066
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 1.3333334
+        EventName: "\u89E6\u53D1\u4E8B\u4EF6"
+        _row: 1
+        GUID: 629a554f-2974-40ba-828d-05a537145742
+        AttackRange: 0
+    - rid: 6647520310010839067
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 1.6
+        EventName: "\u653B\u51FB4"
+        _row: 1
+        GUID: 27b40ac2-ec60-4b33-aceb-f5f8f87310b7
+        AttackRange: 0
+    - rid: 6647520310010839070
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 2.1666667
+        EventName: "\u51FB\u9000"
+        _row: 1
+        GUID: b1111ba0-493f-47a1-ac7a-ce06eea4e7da
+        AttackRange: 0

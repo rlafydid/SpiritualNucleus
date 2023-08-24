@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using AbilitySystem;
+using AbilitySystem.Authoring;
+using FSM;
 using UnityEngine;
 
 namespace Battle
@@ -66,17 +68,37 @@ namespace Battle
         //     return false;
         // }
         //
-        public async void UseNormalAbility()
+        public void UseNormalAbility()
         {
-            _normalAttackIndex = ++_normalAttackIndex % 4;
-            await _abilityController.UseNormalAbility(_normalAttackIndex);
-            this.ownerActor.GetComponent<FSM.FiniteStateMachine>().TriggerEvent(ERoleState.Idle);
+            _normalAttackIndex = _normalAttackIndex % 4;
+            var ability = _abilityController.GetNormalAbility(_normalAttackIndex);
+            if (TryUseAbility(ability))
+            {
+                _normalAttackIndex++;
+            }
         }
         
         public async void UseAbility(int index)
         {
-            await _abilityController.UseAbility(index);
-            this.ownerActor.GetComponent<FSM.FiniteStateMachine>().TriggerEvent(ERoleState.Idle);
+            var ability = _abilityController.GetAbility(index);
+            TryUseAbility(ability);
+        }
+
+        bool TryUseAbility(AbstractAbilitySpec ability)
+        {
+            if (ability.CanActivateAbility())
+            {
+                var abilitySpec = ability as UniversalAbilityScriptableObject.UniversalAbilitySpec;
+                var attackStateData = new AttackStateData() { abilityId = abilitySpec.AbilityId };
+                return this.ownerActor.ChangeState(ERoleState.Attack,  attackStateData);
+            }
+
+            return false;
+        }
+
+        public AbstractAbilitySpec GetAbility(long id)
+        {
+            return _abilityController.GetAbilityById(id);
         }
     }
 }

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
-  m_Name: Act_Assassin_Skill
+  m_Name: Act_Assassin_Skill3
   m_EditorClassIdentifier: 
-  LifeTime: 1.3333334
+  LifeTime: 2.0833335
   Clips:
   - rid: 0
   Events:
-  - rid: 6647520310010839043
+  - rid: 6647520310010839048
   Model: assassin
   references:
     version: 2
@@ -25,16 +25,16 @@ MonoBehaviour:
       type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
-        Duration: 1.3333334
+        Duration: 2.0833335
         Index: 0
         Row: 0
-        animName: Skill
+        animName: Skill2
         dontStopOnDisable: 0
-    - rid: 6647520310010839043
+    - rid: 6647520310010839048
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0.6666667
+        TriggerTime: 1.1
         EventName: "\u89E6\u53D1\u4E8B\u4EF6"
         _row: 1
-        GUID: d5b47b94-9751-4a1e-b985-63dc14bdbb41
+        GUID: 76602c80-7a55-429f-a65d-ee6b21eae251
         AttackRange: 0

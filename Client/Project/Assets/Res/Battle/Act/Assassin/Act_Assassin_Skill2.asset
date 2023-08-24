@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
-  m_Name: Act_Assassin_Skill
+  m_Name: Act_Assassin_Skill2
   m_EditorClassIdentifier: 
-  LifeTime: 1.3333334
+  LifeTime: 1.9166667
   Clips:
   - rid: 0
   Events:
-  - rid: 6647520310010839043
+  - rid: 1
   Model: assassin
   references:
     version: 2
@@ -25,16 +25,28 @@ MonoBehaviour:
       type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
-        Duration: 1.3333334
+        Duration: 1.9166667
         Index: 0
         Row: 0
-        animName: Skill
+        animName: Skill1
         dontStopOnDisable: 0
-    - rid: 6647520310010839043
-      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+    - rid: 1
+      type: {class: ActBulletEvent, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0.6666667
+        TriggerTime: 0.9
         EventName: "\u89E6\u53D1\u4E8B\u4EF6"
         _row: 1
-        GUID: d5b47b94-9751-4a1e-b985-63dc14bdbb41
-        AttackRange: 0
+        GUID: 91417a8a-24c0-41c6-b115-42757ff90df1
+        BulletData:
+          rid: 2
+    - rid: 2
+      type: {class: ActVectorBulletData, ns: Act, asm: ActEngine}
+      data:
+        bulletID: fx_com_bullet01
+        launchOffset: {x: 0, y: 0, z: 0}
+        dispersionNum: 1
+        continuousShootingCount: 1
+        continuousTimeInterval: 1
+        BPdispersionSymmetry: 1
+        BPdispersionAngle: 0
+        speed: 1

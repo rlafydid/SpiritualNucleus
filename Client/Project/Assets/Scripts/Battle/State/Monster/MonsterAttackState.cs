@@ -31,7 +31,7 @@ namespace Battle
         }
 
 
-        public override void Exexute()
+        public override void Update()
         {
 
         }

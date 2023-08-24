@@ -12,7 +12,7 @@ namespace Battle
             GetActor.StartMove();
            
         }
-        public override void Exexute()
+        public override void Update()
         {
         }
     }

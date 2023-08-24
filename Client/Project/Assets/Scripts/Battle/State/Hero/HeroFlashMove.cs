@@ -14,7 +14,7 @@ namespace Battle
             moveComponent.Finish = Finish;
 
         }
-        public override void Exexute()
+        public override void Update()
         {
             owner.Position += owner.Entity.Forward * Time.deltaTime * speed;
             if (Input.GetKeyUp(KeyCode.E))

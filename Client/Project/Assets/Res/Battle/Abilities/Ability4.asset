@@ -29,5 +29,5 @@ MonoBehaviour:
       IgnoreTags: []
   Cost: {fileID: 0}
   Cooldown: {fileID: 0}
-  AbilityBlueprint: {fileID: 11400000, guid: 363afd5b8c0e6425fa4e254bc3b5c0b7, type: 2}
+  AbilityBlueprint: {fileID: 11400000, guid: 44c4b8f1a56764bf3aabf3c5de1e9042, type: 2}
   GameplayEffect: {fileID: 0}

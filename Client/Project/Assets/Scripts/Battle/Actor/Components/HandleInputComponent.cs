@@ -28,7 +28,6 @@ namespace Battle
                 return;
             Debug.Log($"OnAttack");
             this.ownerActor.GetComponent<HeroSkillComponent>().UseNormalAbility();
-            ChangeToState(ERoleState.Attack);
         }
 
         public void OnJump(InputAction.CallbackContext context)
@@ -43,7 +42,6 @@ namespace Battle
             if (!context.performed)
                 return;
             this.ownerActor.GetComponent<HeroSkillComponent>().UseAbility(0);
-            ChangeToState(ERoleState.Attack);
         }
 
         public void OnSkill2(InputAction.CallbackContext context)
@@ -51,7 +49,6 @@ namespace Battle
             if (!context.performed)
                 return;
             this.ownerActor.GetComponent<HeroSkillComponent>().UseAbility(1);
-            ChangeToState(ERoleState.Attack);
         }
 
         public void OnSkill3(InputAction.CallbackContext context)
@@ -59,7 +56,6 @@ namespace Battle
             if (!context.performed)
                 return;
             this.ownerActor.GetComponent<HeroSkillComponent>().UseAbility(2);
-            ChangeToState(ERoleState.Attack);
         }
 
         public void OnSkill4(InputAction.CallbackContext context)
@@ -67,7 +63,6 @@ namespace Battle
             if (!context.performed)
                 return;
             this.ownerActor.GetComponent<HeroSkillComponent>().UseAbility(3);
-            ChangeToState(ERoleState.Attack);
         }
 
         public void OnDodge(InputAction.CallbackContext context)

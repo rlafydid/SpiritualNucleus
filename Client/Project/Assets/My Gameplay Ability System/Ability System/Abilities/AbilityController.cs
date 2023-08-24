@@ -89,4 +89,34 @@ public class AbilityController : MonoBehaviour
         var spec = normalAbilitySpecs[i];
         return spec.TryActivateAbility();
     }
+
+    public AbstractAbilitySpec GetAbility(int index)
+    {
+        return abilitySpecs[index];
+    }
+
+    public AbstractAbilitySpec GetNormalAbility(int index)
+    {
+        return normalAbilitySpecs[index];
+    }
+
+    public AbstractAbilitySpec GetAbilityById(long id)
+    {
+        foreach (var ability in abilitySpecs)
+        {
+            if (((UniversalAbilityScriptableObject.UniversalAbilitySpec)ability).AbilityId == id)
+            {
+                return ability;
+            }
+        }
+        foreach (var ability in normalAbilitySpecs)
+        {
+            if (((UniversalAbilityScriptableObject.UniversalAbilitySpec)ability).AbilityId == id)
+            {
+                return ability;
+            }
+        }
+
+        return null;
+    }
 }

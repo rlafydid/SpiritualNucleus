@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31390c44c9f3a3d40b424bf6821999a2, type: 3}
+  m_Name: BP_Assassin_Skill1 4
+  m_EditorClassIdentifier: 
+  serializedNodes: []
+  nodes:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  edges:
+  - GUID: 2d62707a-3199-472c-a101-490a79788040
+    owner: {fileID: 11400000}
+    inputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
+    outputNodeGUID: de766f28-084e-4c68-868d-0ead714d15c4
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 4f338bc9-545b-4dbd-8e03-3fafbde10f62
+    owner: {fileID: 11400000}
+    inputNodeGUID: 7a3e6a5f-3671-43cc-826c-ad6de08cb071
+    outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: 91417a8a-24c0-41c6-b115-42757ff90df1
+  - GUID: 8efdac35-767c-48da-9ec7-5e73626cf443
+    owner: {fileID: 11400000}
+    inputNodeGUID: 6197ee59-7d21-4c69-ab0c-7a3ac9fb4953
+    outputNodeGUID: 7a3e6a5f-3671-43cc-826c-ad6de08cb071
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  groups: []
+  stackNodes: []
+  pinnedElements: []
+  exposedParameters: []
+  serializedParameterList: []
+  stickyNotes: []
+  nodeInspectorReference: {fileID: 0}
+  position: {x: -590.5, y: -389, z: 0}
+  scale: {x: 1.520875, y: 1.520875, z: 1}
+  references:
+    version: 1
+    00000000:
+      type: {class: StartNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: de766f28-084e-4c68-868d-0ead714d15c4
+        computeOrder: 0
+        position:
+          serializedVersion: 2
+          x: 168.28923
+          y: 381.5
+          width: 99.5
+          height: 75
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+    00000001:
+      type: {class: PlayActNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
+        computeOrder: 1
+        position:
+          serializedVersion: 2
+          x: 334.4928
+          y: 354.97253
+          width: 228
+          height: 246
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        resId: Act_Assassin_Skill
+        lifeTime: 1100
+        targets: 
+        attackSpeedScale: 0
+        actEvents:
+        - triggerTime: 367
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: 91417a8a-24c0-41c6-b115-42757ff90df1
+    00000002:
+      type: {class: LauncherNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 7a3e6a5f-3671-43cc-826c-ad6de08cb071
+        computeOrder: 2
+        position:
+          serializedVersion: 2
+          x: 671.8913
+          y: 332
+          width: 147
+          height: 99
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        res: BP_Assassin_Bullet.asset
+    00000003:
+      type: {class: LogNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 6197ee59-7d21-4c69-ab0c-7a3ac9fb4953
+        computeOrder: 3
+        position:
+          serializedVersion: 2
+          x: 886.94055
+          y: 373.37714
+          width: 124.5
+          height: 99
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        log: "\u6267\u884C\u5B8C\u6BD51"

@@ -37,23 +37,23 @@ namespace FSM
             states.Add(key, state);
         }
 
-        public void TriggerEvent(Enum stateType, object param = null)
+        public bool TriggerEvent(Enum stateType, IStateData data = null)
         {
-            ChangeState(stateType, param);
+            return ChangeState(stateType, data);
         }
 
-        public void ChangeState(Enum stateType, object transitionParams = null)
+        public bool ChangeState(Enum stateType, IStateData data = null)
         {
             int state = stateType.ToInt();
-            ChangeState(state, transitionParams);
+            return ChangeState(state, data);
         }
 
-        public void ChangeState(int state, object transitionParams = null)
+        public bool ChangeState(int state, IStateData data = null)
         {
             if (CurrentState == (int)ERoleState.Dead)
-                return;
+                return false;
 
-            if (states.TryGetValue(state, out BaseState target))
+            if (states.TryGetValue(state, out BaseState target) && target.CanTransitionToState(state))
             {
                 CurrentState = state;
 
@@ -66,10 +66,13 @@ namespace FSM
                     Debug.Log($"转换状态为 => {(ERoleState)state}");
 
                 curState = target;
-                if (transitionParams != null)
-                    curState.SetParameters(transitionParams);
+                curState.SetData(data);
                 curState.Enter();
+
+                return true;
             }
+
+            return false;
         }
 
         
@@ -77,16 +80,16 @@ namespace FSM
         {
             if (curState != null)
             {
-                curState.Exexute();
+                curState.Update();
                 // if(curState.TryTransitionState(out int state))
-                // {c
+                // {
                 //     ChangeState(state);
                 // }
             }
 
         }
 
-        public void TriggerEvent(EEvent fsmEvent, object param = null)
+        public void TriggerEvent(EEvent fsmEvent, IStateData data = null)
         {
             if(events.TryGetValue((int)fsmEvent, out var list))
             {
@@ -94,7 +97,7 @@ namespace FSM
                 {
                     if(transition.CanTransition() && (transition.fromState == -1 || transition.fromState == curState.state))
                     {
-                        ChangeState(transition.toState, param);
+                        ChangeState(transition.toState, data);
                     }
                 }
             }
@@ -118,14 +121,14 @@ namespace FSM
             actor.GetComponent<FiniteStateMachine>().AddState(stateType, state);
         }
 
-        public static void ChangeState(this SceneActorController actor, Enum stateType, TransitionParams param)
+        public static bool ChangeState(this SceneActorController actor, Enum stateType, IStateData param)
         {
-            actor.GetComponent<FiniteStateMachine>().ChangeState(stateType, param);
+            return actor.GetComponent<FiniteStateMachine>().ChangeState(stateType, param);
         }
 
-        public static void TriggerEvent(this SceneActorController actor, FSM.EEvent fsmEvent, object param = null)
+        public static void TriggerEvent(this SceneActorController actor, FSM.EEvent fsmEvent, IStateData data = null)
         {
-            actor.GetComponent<FiniteStateMachine>().TriggerEvent(fsmEvent, param);
+            actor.GetComponent<FiniteStateMachine>().TriggerEvent(fsmEvent, data);
         }
 
         public static int GetCurrentState(this SceneActorController actor)

@@ -5,7 +5,11 @@ using UnityEngine;
 
 namespace Battle
 {
-    public class HeroAttackState : HeroState
+    public struct AttackStateData : IStateData
+    {
+        public long abilityId;
+    }
+    public class HeroAttackState : HeroState<AttackStateData>
     {
         SkillUnit triggerSkill;
         SceneActorController target;
@@ -13,7 +17,7 @@ namespace Battle
 
         bool isContinue = false;
 
-        public override void Enter()
+        public override async void Enter()
         {
             owner.StopMove();
             if (target == null || target.IsDead() || Vector3.Distance(owner.Position, target.Position) > maxDistance)
@@ -28,17 +32,21 @@ namespace Battle
                 lookAtPos.y = owner.Position.y;
                 //owner.Entity.LookAt(lookAtPos);
             }
+
+            var ability = owner.GetComponent<HeroSkillComponent>().GetAbility(Data.abilityId);
+            await ability.TryActivateAbility();
+            this.ChangeState(ERoleState.Idle);
+
             // triggerSkill = owner.GetComponent<HeroSkillComponent>().GetReadySkill();
             // triggerSkill.Finish = Finish;
             // Facade.Skill.TriggerSkill(triggerSkill);
             
             // owner.GetComponent<AbilityController>()
 
-            isContinue = false;
         }
 
 
-        public override void Exexute()
+        public override void Update()
         {
             //if (Input.GetKeyDown(KeyCode.J))
             //{
@@ -57,4 +65,5 @@ namespace Battle
                 this.ChangeState(ERoleState.Idle);
         }
     }
+
 }

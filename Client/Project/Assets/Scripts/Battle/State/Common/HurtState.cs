@@ -14,9 +14,9 @@ namespace Battle
             base.Enter();
             owner.PlayAnim("Hurt");
         }
-        public override void Exexute()
+        public override void Update()
         {
-            base.Exexute();
+            base.Update();
             t += Time.deltaTime;
             if (t < length)
                 ChangeState(ERoleState.Idle);

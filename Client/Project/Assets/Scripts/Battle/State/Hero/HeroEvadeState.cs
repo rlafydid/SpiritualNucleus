@@ -60,7 +60,7 @@ namespace Battle
             toPos = fromPos + dir * 6;
         }
 
-        public override void Exexute()
+        public override void Update()
         {
             t += Time.deltaTime * speed;
             //float h = v0 * t - 0.5f * g * t * t;

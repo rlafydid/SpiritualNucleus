@@ -176,7 +176,7 @@ namespace Battle
         }
     }
 
-    public class DamageData
+    public class DamageData : IStateData
     {
         public long value;
     }

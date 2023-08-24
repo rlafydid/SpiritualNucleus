@@ -53,9 +53,9 @@ namespace Battle
         }
 
         float lastH = 0;
-        public override void Exexute()
+        public override void Update()
         {
-            base.Exexute();
+            base.Update();
             t += Time.deltaTime * speed;
             float h = v0 * t - 0.5f * g * t * t;
             float deltaH = h - lastH;
