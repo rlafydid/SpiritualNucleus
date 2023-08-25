@@ -13,6 +13,7 @@ namespace Battle
         {
             base.OnInit();
             AddComponent<NormalAttacksComponent>();
+            AddComponent<HeroSkillComponent>();
             InitState();
         }
 

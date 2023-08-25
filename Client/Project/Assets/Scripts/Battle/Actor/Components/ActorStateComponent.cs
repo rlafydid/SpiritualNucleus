@@ -53,7 +53,7 @@ namespace FSM
             if (CurrentState == (int)ERoleState.Dead)
                 return false;
 
-            if (states.TryGetValue(state, out BaseState target) && target.CanTransitionToState(state))
+            if (states.TryGetValue(state, out BaseState target) && (target.CanTransitionToState(state) || state == 0))
             {
                 CurrentState = state;
 

@@ -15,6 +15,7 @@ MonoBehaviour:
   LifeTime: 1.3333334
   Clips:
   - rid: 0
+  - rid: 6647520330707632223
   Events:
   - rid: 6647520310010839043
   Model: assassin
@@ -38,3 +39,12 @@ MonoBehaviour:
         _row: 1
         GUID: d5b47b94-9751-4a1e-b985-63dc14bdbb41
         AttackRange: 0
+    - rid: 6647520330707632223
+      type: {class: ActDisplacementClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.56666666
+        Duration: 0.1
+        Index: 0
+        Row: 2
+        eulerAngles: {x: 0, y: 0, z: 0}
+        distance: 5

@@ -61,6 +61,7 @@ namespace LKEngine
             _scene = new Component();
             _scene.AddComponent<SceneEntityContainer>();
             _camera = new LKCamera();
+            UnityEngine.SceneManagement.SceneManager.activeSceneChanged -= SceneChanged;
             UnityEngine.SceneManagement.SceneManager.activeSceneChanged += SceneChanged;
             instance = this;
         }
@@ -102,6 +103,8 @@ namespace LKEngine
 
             currentType = sceneType;
             //UIManager.Instance.OpenUI (UIPanel.Loading, true);
+            Debug.Log($"LoadScene {sceneName}");
+            _lastScene = null;
             UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
         }
 
@@ -120,11 +123,17 @@ namespace LKEngine
             return sceneName;
         }
 
+        private string _lastScene;
         void SceneChanged(Scene arg1, Scene arg2)
         {
             if (currentType == SceneType.None)
                 return;
 
+            if (_lastScene == arg2.name)
+                return;
+            _lastScene = arg2.name;
+            Debug.Log($"SceneChanged {arg2.name}");
+            
             GameHelper.Instance.StartCoroutine(WaitTime(SceneEnter));
 
         }

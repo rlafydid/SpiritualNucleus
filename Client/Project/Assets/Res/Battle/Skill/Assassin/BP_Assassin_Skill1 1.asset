@@ -16,6 +16,8 @@ MonoBehaviour:
   nodes:
   - rid: 0
   - rid: 1
+  - rid: 6647520330707632128
+  - rid: 6647520330707632129
   edges:
   - GUID: 2d62707a-3199-472c-a101-490a79788040
     owner: {fileID: 11400000}
@@ -25,12 +27,28 @@ MonoBehaviour:
     outputFieldName: executes
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: 8efdac35-767c-48da-9ec7-5e73626cf443
+  - GUID: 12ecf0a4-1c3e-4fd2-9f00-d830c46ad7bf
     owner: {fileID: 11400000}
-    inputNodeGUID: 6197ee59-7d21-4c69-ab0c-7a3ac9fb4953
-    outputNodeGUID: 7a3e6a5f-3671-43cc-826c-ad6de08cb071
+    inputNodeGUID: 936cd6bb-1f2c-4b9d-b4e5-aa2edc3cc892
+    outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: 91417a8a-24c0-41c6-b115-42757ff90df1
+  - GUID: 1ab574cf-ffcf-4e04-afe3-34856c628f92
+    owner: {fileID: 11400000}
+    inputNodeGUID: daf43997-052b-40b6-9281-a93b51653149
+    outputNodeGUID: 936cd6bb-1f2c-4b9d-b4e5-aa2edc3cc892
     inputFieldName: executed
     outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: d6004df7-594f-4b5c-b72e-1185a4a9f489
+    owner: {fileID: 11400000}
+    inputNodeGUID: daf43997-052b-40b6-9281-a93b51653149
+    outputNodeGUID: 936cd6bb-1f2c-4b9d-b4e5-aa2edc3cc892
+    inputFieldName: targets
+    outputFieldName: selectTargets
     inputPortIdentifier: 
     outputPortIdentifier: 
   groups: []
@@ -40,8 +58,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -54, y: -297.5, z: 0}
-  scale: {x: 1.15, y: 1.15, z: 1}
+  position: {x: -161.5, y: -249.5, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
@@ -76,10 +94,50 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         resId: Act_Assassin_Skill2
-        lifeTime: 1100
+        lifeTime: 1920
         targets: 
         attackSpeedScale: 0
         actEvents:
-        - triggerTime: 367
+        - triggerTime: 900
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
           id: 91417a8a-24c0-41c6-b115-42757ff90df1
+    - rid: 6647520330707632128
+      type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: daf43997-052b-40b6-9281-a93b51653149
+        computeOrder: 3
+        position:
+          serializedVersion: 2
+          x: 945.0794
+          y: 391.96313
+          width: 136
+          height: 219
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        angle: 0
+        v0: 80
+        speed: 1
+        animState: 1
+        targets: 
+        target: 0
+    - rid: 6647520330707632129
+      type: {class: SelectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 936cd6bb-1f2c-4b9d-b4e5-aa2edc3cc892
+        computeOrder: 2
+        position:
+          serializedVersion: 2
+          x: 649.46313
+          y: 417.86487
+          width: 173.5
+          height: 147
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        selectTargets: 
+        rangeType: 1
+        angleRange: 0
+        distanceRange: 4

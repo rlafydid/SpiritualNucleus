@@ -39,6 +39,8 @@ namespace Battle
 
             var handleInput = this.GetComponent<HandleInputComponent>();
 
+            FSM.Transition toIdle = new FSM.Transition(ERoleState.Idle);
+            
             FSM.Transition toMove = new FSM.Transition(ERoleState.Move);
             // toMove.AddCondition(GetComponent<JoystickMoveComponent>().IsMoving);
 
@@ -64,7 +66,6 @@ namespace Battle
             moveState.AddTransition(toJump);
             moveState.AddTransition(toFlashMove);
             moveState.AddTransition(toEvade);
-
         }
 
         public void TriggerEvent(ERoleState state)

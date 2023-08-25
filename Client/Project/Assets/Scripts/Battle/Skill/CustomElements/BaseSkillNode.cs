@@ -88,8 +88,15 @@ public class BaseAsyncNode : UniversalNode, IAsyncNode
     {
     }
 
-	protected void ExecuteNode(BaseNode node)
+    protected override void Process()
     {
+	    base.Process();
+	    _finish = false;
+    }
+
+    protected void ExecuteNode(BaseNode node)
+	{
+		_finish = false;
 		process.ExecuteNode(node);
     }
 

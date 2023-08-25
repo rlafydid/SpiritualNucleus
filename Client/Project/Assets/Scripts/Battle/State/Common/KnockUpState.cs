@@ -3,10 +3,8 @@ using UnityEngine;
 
 namespace Battle
 {
-    public class KnockFlyState : MonsterState
+    public class KnockFlyState : MonsterState<KnockFlyData>
     {
-        KnockFlyData data;
-
         float v0;
         float g = 10;
 
@@ -15,16 +13,11 @@ namespace Battle
         float t;
         float speed;
 
-        public override void SetParameters(object parameters)
-        {
-            data = (KnockFlyData)parameters;
-        }
-
         public override void Enter()
         {
             base.Enter();
             owner.StopMove();
-            switch(data.state)
+            switch(Data.state)
             {
                 case EKnockflyAnimState.Hurt:
                     owner.PlayAnim("Hurt");
@@ -38,17 +31,17 @@ namespace Battle
             }
             t = 0;
             lastH = 0;
-            speed = data.speed;
-            float radian = data.angle * Mathf.Deg2Rad;
-            if (data.angle == 0)
+            speed = Data.speed;
+            float radian = Data.angle * Mathf.Deg2Rad;
+            if (Data.angle == 0)
             {
-                v0 = data.f;
+                v0 = Data.f;
                 v = 0;
             }
             else
             {
-                v0 = Mathf.Sin(radian) * data.f;
-                v = Mathf.Cos(radian) * data.f;
+                v0 = Mathf.Sin(radian) * Data.f;
+                v = Mathf.Cos(radian) * Data.f;
             }
         }
 
@@ -61,7 +54,7 @@ namespace Battle
             float deltaH = h - lastH;
             lastH = h;
 
-            Vector3 newPos = GetActor.Position + Vector3.up * deltaH + data.direction * v * Time.deltaTime * speed;
+            Vector3 newPos = GetActor.Position + Vector3.up * deltaH + Data.direction * v * Time.deltaTime * speed;
             GetActor.Position = newPos;
 
             if(newPos.y < newPos.ToGroundPos().y)

@@ -65,22 +65,23 @@ namespace Battle
         public override void StartBattle()
         {
             Debug.Log("Start");
-            var ctrl = SceneManager.Instance.Camera.AddComponent<CameraMoveController>();
 
             Vector3 heroPos = new Vector3(-7.86f, 3.61f, -12.77f);
             CreateHero(1003, heroPos);
 
             Vector3 heroForward = heroPos + Vector3.forward * 10;
 
-            // float range = 20;
-            // float farRange = 100;
-            // for (int i = 0; i < 10; i++)
-            // {
-            //     float x = UnityEngine.Random.Range(heroForward.x - range, heroForward.x + range);
-            //     float y = UnityEngine.Random.Range(heroForward.z, heroForward.z + farRange);
-            //     CreateMonster(2002, new Vector3(x, 0, y));
-            // }
-            // ctrl.TraceTarget(heroActors[0].Entity);
+            float range = 20;
+            float farRange = 20;
+            for (int i = 0; i < 10; i++)
+            {
+                float x = UnityEngine.Random.Range(heroForward.x - range, heroForward.x + range);
+                float y = UnityEngine.Random.Range(heroForward.z, heroForward.z + farRange);
+                CreateMonster(1003, new Vector3(x, 0, y));
+            }
+            
+            var ctrl = SceneManager.Instance.Camera.AddComponent<CameraMoveController>();
+            ctrl.TraceTarget(heroActors[0].Entity);
         }
 
         public override void Update()

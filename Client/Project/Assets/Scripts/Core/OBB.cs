@@ -32,7 +32,7 @@ namespace Collision
         {
             this.entity = entity;
             this.transform = entity.Transform;
-            var boxCollider = transform.GetComponentInChildren<BoxCollider>();
+            var boxCollider = transform.GetComponentInChildren<BoxCollider>() ?? transform.gameObject.AddComponent<BoxCollider>();
             var boxSize = boxCollider.size;
             var scale = boxCollider.transform.localScale;
             size = new Vector3(boxSize.x * scale.x, boxSize.y * scale.y, boxSize.z * scale.z);

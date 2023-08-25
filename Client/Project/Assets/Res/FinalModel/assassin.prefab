@@ -2721,7 +2721,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: a5d686b319366491bad0dee308713e8c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -2782,20 +2782,26 @@ MonoBehaviour:
   - clip: {fileID: 7400000, guid: c2961a1a15be9fc409ba16170b792312, type: 3}
     name: Attack8
     defaultState: 0
-  - clip: {fileID: 7400000, guid: ac3e41f35b51bec48b844ca6e64e0fc8, type: 3}
+  - clip: {fileID: 7400000, guid: 2bc141a5715454242bb7336e33ccf332, type: 3}
     name: Skill
     defaultState: 0
-  - clip: {fileID: 7400000, guid: 3ff7e3056e7897849a6795c3685e01a4, type: 3}
+  - clip: {fileID: 7400000, guid: 18f8241ab7fcf264fa2a74d0b9081bb9, type: 3}
     name: Skill1
     defaultState: 0
-  - clip: {fileID: 7400000, guid: e1dbb95ab56104044b03e9ed42642055, type: 3}
+  - clip: {fileID: 7400000, guid: 2eefb28705b8e4d4f8f54f2406feb326, type: 3}
     name: Skill2
     defaultState: 0
-  - clip: {fileID: 7400000, guid: 471176ada4014654fbf4a53d94256db5, type: 3}
+  - clip: {fileID: 7400000, guid: 9203c6c58f903dc47bf018f78d8874cc, type: 3}
     name: Skill3
     defaultState: 0
   - clip: {fileID: 7400000, guid: 4b66c7588502d6b4b8c3beeaaaf3bc78, type: 3}
     name: Skill4
+    defaultState: 0
+  - clip: {fileID: 7400000, guid: 48cb33b2fd9d55a43a8015648ba77f6d, type: 3}
+    name: Hurt
+    defaultState: 0
+  - clip: {fileID: 7400000, guid: b30ebf229cff8eb4a8bf9f34a2fd1879, type: 3}
+    name: Knockfly
     defaultState: 0
   returnToDefaultState: 0
 --- !u!114 &-2478475712245162819

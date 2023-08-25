@@ -70,6 +70,7 @@ public class PlayActNode : BaseAsyncNode
 
     protected override void Process()
     {
+        base.Process();
         InitEventOutputs();
         //Debug.Log($"ACT  Process {resId}");
 
@@ -212,15 +213,15 @@ public class ActEventsController
             var actEvent = waitTriggerEvents.Peek();
             if (timer >= actEvent.triggerTime)
             {
-                try
-                {
+                // try
+                // {
                     TriggerEvent(actEvent);
                     waitTriggerEvents.Dequeue();
-                }
-                catch (Exception e)
-                {
-                    break;
-                }
+                // }
+                // catch (Exception e)
+                // {
+                //     break;
+                // }
             }
             else
                 break;

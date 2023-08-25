@@ -23,8 +23,7 @@ namespace Battle
             base.Update();
             if (Vector3.Distance(GetActor.Position, Data.entity.Position) < 2)
             {
-                //owner.TriggetNormalAttack();
-                ChangeState(ERoleState.Attack);
+                this.GetActor.GetComponent<HeroSkillComponent>().UseNormalAbility();
             }
         }
     }

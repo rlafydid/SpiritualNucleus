@@ -10,7 +10,7 @@ public class CameraMoveController : LKEngine.Component
 
     Vector3 offset;
 
-    float speed = 2;
+    float speed = 0.5f;
 
     public void TraceTarget(Entity target)
     {

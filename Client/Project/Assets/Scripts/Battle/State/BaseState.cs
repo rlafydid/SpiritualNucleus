@@ -35,7 +35,8 @@ namespace Battle
 
         public override void SetData(IStateData data)
         {
-            Data = (T)data;
+            if(data != null)
+                Data = (T)data;
         }
     }   
     
