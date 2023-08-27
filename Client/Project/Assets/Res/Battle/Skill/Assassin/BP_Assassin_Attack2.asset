@@ -43,7 +43,7 @@ MonoBehaviour:
     outputFieldName: selectTargets
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: 3f739e92-ecf0-4568-8eee-fd857cc5a756
+  - GUID: 114eea19-4a59-49a5-9591-f90278d387a1
     owner: {fileID: 11400000}
     inputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
     outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
@@ -51,6 +51,14 @@ MonoBehaviour:
     outputFieldName: eventOutputs
     inputPortIdentifier: 
     outputPortIdentifier: 44e4845f-2601-4be5-920b-463e423f434e
+  - GUID: 09b485ab-579d-483a-9105-b08cf6a0a9fc
+    owner: {fileID: 11400000}
+    inputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: 97d6e38d-b6bf-4230-bca3-dea16f49b6af
   groups: []
   stackNodes: []
   pinnedElements: []
@@ -58,8 +66,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -284.5, y: -159, z: 0}
-  scale: {x: 0.8695652, y: 0.8695652, z: 1}
+  position: {x: -934, y: -446, z: 0}
+  scale: {x: 1.520875, y: 1.520875, z: 1}
   references:
     version: 2
     RefIds:
@@ -79,11 +87,14 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         resId: Act_Assassin_Attack2
-        lifeTime: 500
+        lifeTime: 1000
         targets: 
         attackSpeedScale: 0
         actEvents:
-        - triggerTime: 267
+        - triggerTime: 200
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: 97d6e38d-b6bf-4230-bca3-dea16f49b6af
+        - triggerTime: 400
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
           id: 44e4845f-2601-4be5-920b-463e423f434e
     - rid: 1

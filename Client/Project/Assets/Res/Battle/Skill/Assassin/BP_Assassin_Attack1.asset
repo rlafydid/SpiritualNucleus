@@ -43,14 +43,14 @@ MonoBehaviour:
     outputFieldName: executes
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: 5703a333-dfaf-4270-a380-932190148567
+  - GUID: d8fa1bb0-7da9-49fb-a2e9-b9ad38c5e46b
     owner: {fileID: 11400000}
     inputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
     outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
     inputFieldName: executed
     outputFieldName: eventOutputs
     inputPortIdentifier: 
-    outputPortIdentifier: 5b08abd0-5f2a-4fa1-a1d4-91bdbacd9140
+    outputPortIdentifier: ec1233e2-f4f4-4016-97a3-aa0023394e39
   groups: []
   stackNodes: []
   pinnedElements: []
@@ -58,8 +58,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -606, y: -247, z: 0}
-  scale: {x: 1.15, y: 1.15, z: 1}
+  position: {x: -915, y: -450, z: 0}
+  scale: {x: 1.520875, y: 1.520875, z: 1}
   references:
     version: 2
     RefIds:
@@ -79,13 +79,13 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         resId: Act_Assassin_Attack1
-        lifeTime: 400
+        lifeTime: 1000
         targets: 
         attackSpeedScale: 0
         actEvents:
-        - triggerTime: 167
+        - triggerTime: 300
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
-          id: 5b08abd0-5f2a-4fa1-a1d4-91bdbacd9140
+          id: ec1233e2-f4f4-4016-97a3-aa0023394e39
     - rid: 1
       type: {class: SelectNode, ns: , asm: Assembly-CSharp}
       data:

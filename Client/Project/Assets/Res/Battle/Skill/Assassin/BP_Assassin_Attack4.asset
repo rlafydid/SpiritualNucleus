@@ -58,7 +58,7 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -402, y: -251, z: 0}
+  position: {x: -411, y: -260, z: 0}
   scale: {x: 1.15, y: 1.15, z: 1}
   references:
     version: 2
@@ -79,11 +79,14 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         resId: Act_Assassin_Attack4
-        lifeTime: 500
+        lifeTime: 1680
         targets: 
         attackSpeedScale: 0
         actEvents:
-        - triggerTime: 367
+        - triggerTime: 300
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: 3f7f7d27-e375-424f-92a2-aae2113a23c2
+        - triggerTime: 733
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
           id: 52c553d0-cc9a-488e-91c6-eee010cea1bc
     - rid: 1
