@@ -14,17 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeTime: 0.9333334
   Clips:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  - id: 4
+  - rid: 0
+  - rid: 1
+  - rid: 2
+  - rid: 3
+  - rid: 4
   Events:
-  - id: 5
+  - rid: 5
   Model: baixiaofei02
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
@@ -33,7 +34,7 @@ MonoBehaviour:
         Row: 0
         animName: Attack04
         dontStopOnDisable: 0
-    00000001:
+    - rid: 1
       type: {class: ActDisplacementClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0.050000075
@@ -42,7 +43,7 @@ MonoBehaviour:
         Row: 2
         eulerAngles: {x: 0, y: 0, z: 0}
         distance: 1
-    00000002:
+    - rid: 2
       type: {class: ActAudioClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
@@ -52,7 +53,7 @@ MonoBehaviour:
         configId: 
         cueSheet: 
         cueName: baixiaofei01_attack_normal_nahan03
-    00000003:
+    - rid: 3
       type: {class: ActAudioClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
@@ -62,7 +63,7 @@ MonoBehaviour:
         configId: 
         cueSheet: 
         cueName: baixiaofei01_attack_qinghui
-    00000004:
+    - rid: 4
       type: {class: ActEffectClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
@@ -84,7 +85,7 @@ MonoBehaviour:
         isLoop: 0
         isTurnToTarget: 0
         dontDestroyWithAct: 0
-    00000005:
+    - rid: 5
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0.46666667

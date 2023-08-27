@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
   m_Name: Act_Assassin_Attack2
   m_EditorClassIdentifier: 
-  LifeTime: 0.5
+  LifeTime: 1
   Clips:
   - rid: 0
   - rid: 1
+  - rid: 3766288644484890631
   Events:
   - rid: 2
+  - rid: 3766288644484890633
   Model: assassin
   references:
     version: 2
@@ -26,7 +28,7 @@ MonoBehaviour:
       type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
-        Duration: 0.70000005
+        Duration: 1
         Index: 0
         Row: 0
         animName: Attack2
@@ -34,7 +36,7 @@ MonoBehaviour:
     - rid: 1
       type: {class: ActAudioClip, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0.26666668
+        TriggerTime: 0.2
         Duration: 0.2477551
         Index: 0
         Row: 2
@@ -44,8 +46,26 @@ MonoBehaviour:
     - rid: 2
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0.26666668
+        TriggerTime: 0.4
         EventName: "\u89E6\u53D1\u4E8B\u4EF6"
         _row: 1
         GUID: 44e4845f-2601-4be5-920b-463e423f434e
+        AttackRange: 0
+    - rid: 3766288644484890631
+      type: {class: ActAudioClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.4
+        Duration: 0.2477551
+        Index: 0
+        Row: 3
+        configId: 
+        cueSheet: 
+        cueName: baixiaofei01_attack_qinghui
+    - rid: 3766288644484890633
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.2
+        EventName: "\u89E6\u53D1\u4E8B\u4EF6"
+        _row: 1
+        GUID: 97d6e38d-b6bf-4230-bca3-dea16f49b6af
         AttackRange: 0

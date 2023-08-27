@@ -2706,7 +2706,7 @@ Transform:
   - {fileID: 4454336320037257232}
   - {fileID: 4454336320037257272}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4454336320028274286
 Animator:
@@ -2770,17 +2770,17 @@ MonoBehaviour:
   - clip: {fileID: 7400000, guid: 4f120cda2582977448803ff835fdcbd2, type: 3}
     name: EvadeRight
     defaultState: 0
-  - clip: {fileID: 7400000, guid: 68c1ccbd80e2e4d4abb1731500154646, type: 3}
+  - clip: {fileID: 7400000, guid: b82516cfc2b28cc4fb5d8a050d208124, type: 3}
     name: Attack1
     defaultState: 0
-  - clip: {fileID: 7400000, guid: b88936b686bb10b4d9def72d2a5c8085, type: 3}
+  - clip: {fileID: 7400000, guid: 8c983ee39d279d043a7a48a2891a2230, type: 3}
     name: Attack2
     defaultState: 0
-  - clip: {fileID: 7400000, guid: af39959abdafc9647a5e2e70651c8ab7, type: 3}
+  - clip: {fileID: 7400000, guid: 4f8b7d92e63b04a4fa98b3b470f2c8d8, type: 3}
     name: Attack3
     defaultState: 0
-  - clip: {fileID: 7400000, guid: c2961a1a15be9fc409ba16170b792312, type: 3}
-    name: Attack8
+  - clip: {fileID: 7400000, guid: 48d4472af1cdaa24b98576828e6ceedc, type: 3}
+    name: Attack4
     defaultState: 0
   - clip: {fileID: 7400000, guid: 2bc141a5715454242bb7336e33ccf332, type: 3}
     name: Skill

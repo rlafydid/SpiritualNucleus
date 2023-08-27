@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
   m_Name: Act_Assassin_Attack3
   m_EditorClassIdentifier: 
-  LifeTime: 0.55
+  LifeTime: 0.86666673
   Clips:
   - rid: 0
   - rid: 1
@@ -26,7 +26,7 @@ MonoBehaviour:
       type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
-        Duration: 1.0666667
+        Duration: 0.86666673
         Index: 0
         Row: 0
         animName: Attack3
@@ -34,7 +34,7 @@ MonoBehaviour:
     - rid: 1
       type: {class: ActAudioClip, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0.31666666
+        TriggerTime: 0.25
         Duration: 0.2477551
         Index: 0
         Row: 2
@@ -44,7 +44,7 @@ MonoBehaviour:
     - rid: 2
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0.33333334
+        TriggerTime: 0.26666668
         EventName: "\u89E6\u53D1\u4E8B\u4EF6"
         _row: 1
         GUID: c15c63d0-5a94-468c-a9b1-177f3547fa5e

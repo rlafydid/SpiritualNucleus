@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
   m_Name: Act_Assassin_Attack4
   m_EditorClassIdentifier: 
-  LifeTime: 0.5
+  LifeTime: 1.6666667
   Clips:
   - rid: 0
   - rid: 6647520258994208795
   Events:
   - rid: 1
+  - rid: 3766288644484890637
   Model: assassin
   references:
     version: 2
@@ -26,7 +27,7 @@ MonoBehaviour:
       type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
-        Duration: 0.86666673
+        Duration: 1.6666667
         Index: 0
         Row: 0
         animName: Attack4
@@ -34,10 +35,18 @@ MonoBehaviour:
     - rid: 1
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0.36666667
+        TriggerTime: 0.73333335
         EventName: "\u89E6\u53D1\u4E8B\u4EF6"
         _row: 1
         GUID: 52c553d0-cc9a-488e-91c6-eee010cea1bc
+        AttackRange: 0
+    - rid: 3766288644484890637
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.3
+        EventName: "\u89E6\u53D1\u4E8B\u4EF6"
+        _row: 1
+        GUID: 3f7f7d27-e375-424f-92a2-aae2113a23c2
         AttackRange: 0
     - rid: 6647520258994208795
       type: {class: ActDisplacementClip, ns: Act, asm: ActEngine}
