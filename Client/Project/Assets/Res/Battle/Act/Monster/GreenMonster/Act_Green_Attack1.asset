@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
+  m_Name: Act_Green_Attack1
+  m_EditorClassIdentifier: 
+  LifeTime: 0.35
+  Clips:
+  - rid: 0
+  - rid: 1
+  - rid: 6647520395619467264
+  - rid: 6647520418176434183
+  Events:
+  - rid: 6647520258994208798
+  Model: GreenMonster
+  references:
+    version: 2
+    RefIds:
+    - rid: 0
+      type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 0.73333335
+        Index: 0
+        Row: 0
+        animName: Attack1
+        dontStopOnDisable: 0
+    - rid: 1
+      type: {class: ActAudioClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.3
+        Duration: 0.2477551
+        Index: 0
+        Row: 2
+        configId: 
+        cueSheet: 
+        cueName: baixiaofei01_attack_qinghui
+    - rid: 6647520258994208798
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.3
+        EventName: "\u89E6\u53D1\u4E8B\u4EF6"
+        _row: 1
+        GUID: ec1233e2-f4f4-4016-97a3-aa0023394e39
+        AttackRange: 0
+    - rid: 6647520395619467264
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.1
+        Duration: 1
+        Index: 0
+        Row: 3
+        assetPrefab: {fileID: 100078, guid: 7f20b252d7f5357419cb89647f3daad5, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 1
+        followType: 0
+        bindPoint: Default
+        speed: 2
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    - rid: 6647520418176434183
+      type: {class: ActDisplacementClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.18333334
+        Duration: 0.1
+        Index: 0
+        Row: 4
+        eulerAngles: {x: 0, y: 0, z: 0}
+        distance: 0.5
