@@ -67,8 +67,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -92, y: -216, z: 0}
-  scale: {x: 1, y: 1, z: 1}
+  position: {x: -269, y: -314.5, z: 0}
+  scale: {x: 1.15, y: 1.15, z: 1}
   references:
     version: 2
     RefIds:
@@ -141,10 +141,10 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 0700000000000000
-        rangeType: 0
+        selectTargets: 
+        rangeType: 1
         angleRange: 360
-        distanceRange: 20
+        distanceRange: 5
     - rid: 6647520330707632167
       type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
       data:
@@ -163,6 +163,6 @@ MonoBehaviour:
         angle: 30
         v0: 5
         speed: 1
-        animState: 0
-        targets: 0700000000000000
+        animState: 1
+        targets: 
         target: 0

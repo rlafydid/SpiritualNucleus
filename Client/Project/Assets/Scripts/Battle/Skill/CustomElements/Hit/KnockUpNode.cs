@@ -37,6 +37,7 @@ public class KnockUpNode : UniversalNode
         base.Process();
 
         //AudioManager.Instance.PlayAudio("baixiaofei01_attack_liuxingyu_hit.wav");
+        Debug.Log($"子弹命中目标");
         for (int i = 0; i < targets.Count; i++)
         {
             Hurt(targets[i]);

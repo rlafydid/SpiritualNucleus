@@ -10,8 +10,8 @@ namespace Battle
         {
             base.Enter();
             Debug.Log("Hero Run");
-            //owner.PlayAnim("Run");
-            //GetActor.Entity.GetComponent<MoveComponent>().ToDefaultState();
+            // owner.PlayAnim("Run");
+            GetActor.Entity.GetComponent<MoveComponent>().ToDefaultState();
         }
 
         public override void Update()

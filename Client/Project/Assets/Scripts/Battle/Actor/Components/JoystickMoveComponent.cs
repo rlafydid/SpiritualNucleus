@@ -32,7 +32,6 @@ namespace Battle
         
         public void SetMoveDelta(Vector3 val)
         {
-            Debug.Log($"MoveDelta {val}");
             MoveToDir(val.normalized);
 
             value = Mathf.Max(Mathf.Abs(val.x), Mathf.Abs(val.z));
@@ -57,7 +56,7 @@ namespace Battle
             // Entity.LookAt(lookAt);
             Vector3 groundPos = moveToPos.ToGroundPos();
             moveToPos.y = groundPos.y;
-            Debug.Log($"ownerActor.Position {ownerActor.Position} moveToPos {moveToPos}");
+            // Debug.Log($"ownerActor.Position {ownerActor.Position} moveToPos {moveToPos}");
             ownerActor.Position = moveToPos;
         }
 

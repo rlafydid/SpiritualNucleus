@@ -79,7 +79,7 @@ namespace Battle
 
         void OnTrigerEnter(Entity entity)
         {
-            Debug.Log($"与 {entity.GameObject.name} 发生碰撞");
+            // Debug.Log($"与 {entity.GameObject.name} 发生碰撞");
             foreach(var node in data.hitTriggerNode)
             {
                 (node as BulletHitNode).SetData(this.Entity.Id, entity.Id);

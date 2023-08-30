@@ -3,26 +3,21 @@ using UnityEngine;
 
 namespace Battle
 {
-    public class KnockBackState : MonsterState
+    public class KnockBackState : MonsterState<KnockBackData>
     {
-        KnockBackData data;
-
         float v0;
         float a;
 
         float t;
         float speed;
-
-        public override void SetParameters(object parameters)
-        {
-            data = (KnockBackData)parameters;
-        }
+        
+        float g = 10;
 
         public override void Enter()
         {
             base.Enter();
             owner.StopMove();
-            switch(data.state)
+            switch(Data.state)
             {
                 case EKnockflyAnimState.Hurt:
                     owner.PlayAnim("Hurt");
@@ -35,25 +30,41 @@ namespace Battle
                     break;
             }
             t = 0;
-            lastD = 0;
-            speed = data.speed;
-            v0 = data.f;
-            a = data.a;
+            speed = Data.speed;
+            v0 = Data.f;
+            a = Data.a;
+            
+            Debug.Log($"KnockBackState");
         }
 
-        float lastD = 0;
+        private Vector3 velocity;
+
+        private float flyV;
+        
         public override void Update()
         {
             base.Update();
-            t += Time.deltaTime * speed;
-            float d = v0 * t - 0.5f * a * t * t;
-            float delta = d - lastD;
-            lastD = d;
 
-            Vector3 newPos = GetActor.Position + data.direction * delta;
+            t += Time.deltaTime;
+            
+            float v = v0 + -a * t;
+            float yV = -g * t;
+
+            velocity = Data.direction * v;
+            velocity.y = yV;
+            
+            Debug.Log($"v0:{v} height:{yV} velocity:{velocity}");
+            
+            Vector3 newPos = GetActor.Position + velocity;
+
+            if (yV < newPos.ToGroundPos().y)
+            {
+                newPos.y = newPos.ToGroundPos().y;
+            }
+            
             GetActor.Position = newPos;
 
-            if(delta <= 0)
+            if(v <= 0 && newPos.y <= newPos.ToGroundPos().y)
             {
                 var pos = GetActor.Position;
                 pos.y = newPos.ToGroundPos().y;

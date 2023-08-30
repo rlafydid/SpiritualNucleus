@@ -105,7 +105,7 @@ namespace Act
         }
 
         static readonly HashSet<ParticleSystem> s_SubEmitterCollector = new HashSet<ParticleSystem>();
-        IList<ParticleSystem> GetControllableParticleSystems(GameObject go)
+        public static IList<ParticleSystem> GetControllableParticleSystems(GameObject go)
         {
             var roots = new List<ParticleSystem>();
 
@@ -123,7 +123,7 @@ namespace Act
         }
 
 
-        static void GetControllableParticleSystems(Transform t, ICollection<ParticleSystem> roots, HashSet<ParticleSystem> subEmitters)
+        public static void GetControllableParticleSystems(Transform t, ICollection<ParticleSystem> roots, HashSet<ParticleSystem> subEmitters)
         {
             var ps = t.GetComponent<ParticleSystem>();
             if (ps != null)
@@ -156,7 +156,7 @@ namespace Act
     }
 
 
-    class ActControlParticlePlayable
+    public class ActControlParticlePlayable
     {
         uint m_RandomSeed = 1;
         public ParticleSystem particleSystem { get; set; }

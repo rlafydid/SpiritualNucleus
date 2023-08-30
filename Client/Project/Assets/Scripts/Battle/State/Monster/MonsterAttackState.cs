@@ -27,7 +27,7 @@ namespace Battle
 
             var ability = owner.GetComponent<HeroSkillComponent>().GetAbility(Data.abilityId);
             await ability.TryActivateAbility();
-            this.ChangeState(ERoleState.Idle);
+            this.ToDefaultState();
             
             // Facade.Skill.TriggerSkill(triggerSkill);
         }
@@ -40,7 +40,7 @@ namespace Battle
 
         void Finish(SkillUnit unit)
         {
-            this.ChangeState(ERoleState.Idle);
+            this.ToDefaultState();
         }
 
         public override void Exit()

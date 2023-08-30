@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -128,29 +128,8 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2478475712245162819, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
-      propertyPath: NormalAbilities.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -2478475712245162819, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
-      propertyPath: NormalAbilities.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 28b45481170eb41e4985dada8a70d7b0, type: 2}
-    - target: {fileID: -2478475712245162819, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
-      propertyPath: NormalAbilities.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 968bacea9d5bb4318beddfde577c0f8c, type: 2}
-    - target: {fileID: -2478475712245162819, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
-      propertyPath: NormalAbilities.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 6267ebe50e88d48589898086051e7b1c, type: 2}
-    - target: {fileID: -2478475712245162819, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
-      propertyPath: NormalAbilities.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: afaa5f24ebf2a401da222d352b7cb1a1, type: 2}
     - target: {fileID: 4454336320037257642, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -199,12 +178,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: assassin
       objectReference: {fileID: 0}
-    - target: {fileID: 4454336320037625290, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
 --- !u!1 &49738521
 GameObject:
@@ -748,7 +722,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -831,6 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}

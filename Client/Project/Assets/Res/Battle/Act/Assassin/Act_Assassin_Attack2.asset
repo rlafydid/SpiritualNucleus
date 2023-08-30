@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
   m_Name: Act_Assassin_Attack2
   m_EditorClassIdentifier: 
-  LifeTime: 1
+  LifeTime: 0.5
   Clips:
   - rid: 0
   - rid: 1
   - rid: 3766288644484890631
+  - rid: 6647520395619467266
+  - rid: 6647520395619467268
   Events:
   - rid: 2
   - rid: 3766288644484890633
@@ -69,3 +71,47 @@ MonoBehaviour:
         _row: 1
         GUID: 97d6e38d-b6bf-4230-bca3-dea16f49b6af
         AttackRange: 0
+    - rid: 6647520395619467266
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.2
+        Duration: 1
+        Index: 0
+        Row: 4
+        assetPrefab: {fileID: 100078, guid: 7f20b252d7f5357419cb89647f3daad5, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 0
+        followType: 0
+        bindPoint: Default
+        speed: 2
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    - rid: 6647520395619467268
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 1
+        Index: 0
+        Row: 5
+        assetPrefab: {fileID: 100078, guid: 7f20b252d7f5357419cb89647f3daad5, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 0
+        followType: 0
+        bindPoint: Default
+        speed: 2
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 1.8, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 209.35}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0

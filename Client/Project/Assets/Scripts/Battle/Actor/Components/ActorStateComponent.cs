@@ -23,6 +23,8 @@ namespace FSM
 
         public int CurrentState { get; set; }
 
+        private int _defaultState;
+        
         protected override void OnStart()
         {
             ChangeState(ERoleState.Idle);
@@ -35,6 +37,16 @@ namespace FSM
             state.owner = ownerActor;
             state.fsm = this;
             states.Add(key, state);
+        }
+
+        public void SetDefaultState(Enum stateType)
+        {
+            _defaultState = stateType.ToInt();
+        }
+
+        public void ToDefaultState()
+        {
+            ChangeState(_defaultState);
         }
 
         public bool TriggerEvent(Enum stateType, IStateData data = null)
@@ -52,8 +64,12 @@ namespace FSM
         {
             if (CurrentState == (int)ERoleState.Dead)
                 return false;
-
-            if (states.TryGetValue(state, out BaseState target) && (target.CanTransitionToState(state) || state == 0))
+            
+            if(state != _defaultState)
+                if(curState != null && !curState.CanTransitionToState(state))
+                    return false;
+            
+            if (states.TryGetValue(state, out BaseState target))
             {
                 CurrentState = state;
 
@@ -63,7 +79,11 @@ namespace FSM
                 }
 
                 if(ownerActor is HeroActorController)
-                    Debug.Log($"转换状态为 => {(ERoleState)state}");
+                    Debug.Log($"英雄 转换状态为 => {(ERoleState)state}");
+                else
+                {
+                    Debug.Log($"怪物 转换状态为 => {(ERoleState)state}");
+                }
 
                 curState = target;
                 curState.SetData(data);
@@ -131,6 +151,11 @@ namespace FSM
             actor.GetComponent<FiniteStateMachine>().TriggerEvent(fsmEvent, data);
         }
 
+        public static void ToDefaultState(this SceneActorController actor)
+        {
+            actor.GetComponent<FiniteStateMachine>().ToDefaultState();
+        }
+        
         public static int GetCurrentState(this SceneActorController actor)
         {
             return actor.GetComponent<FiniteStateMachine>().CurrentState;

@@ -28,6 +28,9 @@ namespace Battle
                 case EKnockflyAnimState.KnockFly2:
                     owner.PlayAnim("Knockfly2");
                     break;
+                case EKnockflyAnimState.KnockBack:
+                    owner.PlayAnim("KnockBack");
+                    break;
             }
             t = 0;
             lastH = 0;
@@ -43,6 +46,8 @@ namespace Battle
                 v0 = Mathf.Sin(radian) * Data.f;
                 v = Mathf.Cos(radian) * Data.f;
             }
+            
+            Debug.Log($"KnockFlyState");
         }
 
         float lastH = 0;

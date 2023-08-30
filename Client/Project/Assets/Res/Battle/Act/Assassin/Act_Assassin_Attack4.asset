@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
   m_Name: Act_Assassin_Attack4
   m_EditorClassIdentifier: 
-  LifeTime: 1.6666667
+  LifeTime: 1.45
   Clips:
   - rid: 0
-  - rid: 6647520258994208795
+  - rid: 6647520395619467273
+  - rid: 6647520395619467290
+  - rid: 6647520418176434180
   Events:
   - rid: 1
   - rid: 3766288644484890637
+  - rid: 6647520395619467283
   Model: assassin
   references:
     version: 2
@@ -35,7 +38,7 @@ MonoBehaviour:
     - rid: 1
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0.73333335
+        TriggerTime: 0.6666667
         EventName: "\u89E6\u53D1\u4E8B\u4EF6"
         _row: 1
         GUID: 52c553d0-cc9a-488e-91c6-eee010cea1bc
@@ -43,17 +46,68 @@ MonoBehaviour:
     - rid: 3766288644484890637
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0.3
+        TriggerTime: 0.26666668
         EventName: "\u89E6\u53D1\u4E8B\u4EF6"
         _row: 1
         GUID: 3f7f7d27-e375-424f-92a2-aae2113a23c2
         AttackRange: 0
-    - rid: 6647520258994208795
+    - rid: 6647520395619467273
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.13333334
+        Duration: 0.5
+        Index: 0
+        Row: 3
+        assetPrefab: {fileID: 108260, guid: 51fa5d1d485544f49b1153960eccbbe4, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 1
+        followType: 0
+        bindPoint: Default
+        speed: 1.5
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0.27, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 1
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    - rid: 6647520395619467283
+      type: {class: ActBulletEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.76666665
+        EventName: "\u89E6\u53D1\u4E8B\u4EF6"
+        _row: 1
+        GUID: 9fb569f2-7130-4906-9010-e5c69f634ba7
+        BulletData:
+          rid: 6647520395619467285
+    - rid: 6647520395619467285
+      type: {class: ActVectorBulletData, ns: Act, asm: ActEngine}
+      data:
+        bulletID: Art_bullet_effect
+        launchOffset: {x: 0, y: 1.89, z: 0.56}
+        dispersionNum: 6
+        continuousShootingCount: 1
+        continuousTimeInterval: 1
+        BPdispersionSymmetry: 1
+        BPdispersionAngle: 10
+        speed: 10
+    - rid: 6647520395619467290
       type: {class: ActDisplacementClip, ns: Act, asm: ActEngine}
       data:
-        TriggerTime: 0
-        Duration: 0.33333334
+        TriggerTime: 0.2
+        Duration: 0.4666667
         Index: 0
         Row: 2
         eulerAngles: {x: 0, y: 0, z: 0}
-        distance: 0
+        distance: 1
+    - rid: 6647520418176434180
+      type: {class: ActDisplacementClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.6666667
+        Duration: 0.1
+        Index: 0
+        Row: 4
+        eulerAngles: {x: 0, y: 0, z: 0}
+        distance: -1

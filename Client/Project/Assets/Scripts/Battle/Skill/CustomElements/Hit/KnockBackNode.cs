@@ -29,6 +29,8 @@ public class KnockBackNode : UniversalNode
     {
         base.Process();
 
+        Debug.Log($"=击退 count {targets.Count} target {target}");
+        
         //AudioManager.Instance.PlayAudio("baixiaofei01_attack_liuxingyu_hit.wav");
         for (int i = 0; i < targets.Count; i++)
         {

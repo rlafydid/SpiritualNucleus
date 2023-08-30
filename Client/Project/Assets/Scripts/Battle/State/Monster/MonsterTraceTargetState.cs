@@ -23,7 +23,8 @@ namespace Battle
             base.Update();
             if (Vector3.Distance(GetActor.Position, Data.entity.Position) < 2)
             {
-                this.GetActor.GetComponent<HeroSkillComponent>().UseNormalAbility();
+                this.GetActor.StopMove();
+                // this.GetActor.GetComponent<HeroSkillComponent>().UseNormalAbility();
             }
         }
     }

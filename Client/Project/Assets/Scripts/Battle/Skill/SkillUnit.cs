@@ -131,6 +131,10 @@ namespace Battle
             {
                 BaseNode node = nodesToRun.Pop();
                 //Debug.Log("process" + node.GetType().Name);
+                if (node is BaseSkillNode baseSkillNode)
+                {
+                    baseSkillNode.Reset();
+                }
                 node.OnProcess();
                 switch (node)
                 {

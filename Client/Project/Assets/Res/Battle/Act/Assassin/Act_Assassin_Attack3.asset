@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb9cccb0b80acd4a83ec53f32450452, type: 3}
   m_Name: Act_Assassin_Attack3
   m_EditorClassIdentifier: 
-  LifeTime: 0.86666673
+  LifeTime: 0.45
   Clips:
   - rid: 0
   - rid: 1
+  - rid: 6647520395619467270
+  - rid: 6647520418176434177
   Events:
   - rid: 2
   Model: assassin
@@ -49,3 +51,34 @@ MonoBehaviour:
         _row: 1
         GUID: c15c63d0-5a94-468c-a9b1-177f3547fa5e
         AttackRange: 0
+    - rid: 6647520395619467270
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.016666668
+        Duration: 1
+        Index: 0
+        Row: 3
+        assetPrefab: {fileID: 100078, guid: 7f20b252d7f5357419cb89647f3daad5, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 1
+        followType: 0
+        bindPoint: Default
+        speed: 1.7
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 1.2, y: 2, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 115.5}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    - rid: 6647520418176434177
+      type: {class: ActDisplacementClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.13333334
+        Duration: 0.13333334
+        Index: 0
+        Row: 4
+        eulerAngles: {x: 0, y: 0, z: 0}
+        distance: 0.5

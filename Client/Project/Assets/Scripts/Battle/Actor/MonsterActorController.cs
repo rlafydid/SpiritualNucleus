@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FSM;
 using LKEngine;
 using UnityEngine;
 
@@ -37,6 +38,17 @@ namespace Battle
             fsm.AddState(ERoleState.Dead, deadState);
             fsm.AddState(ERoleState.KnockBack, knockBackState);
 
+            idleState.AddTransition(new Transition(ERoleState.Hurt));
+            idleState.AddTransition(new Transition(ERoleState.KnockBack));
+            idleState.AddTransition(new Transition(ERoleState.KnockFly));
+            idleState.AddTransition(new Transition(ERoleState.TraceTarget));
+            idleState.AddTransition(new Transition(ERoleState.Attack));
+            
+            traceState.AddTransition(new Transition(ERoleState.Hurt));
+            traceState.AddTransition(new Transition(ERoleState.KnockBack));
+            traceState.AddTransition(new Transition(ERoleState.KnockFly));
+            traceState.AddTransition(new Transition(ERoleState.Attack));
+            
             var toHurtTransition = new FSM.Transition(ERoleState.Hurt);
             fsm.AddEvent(FSM.EEvent.Hurt, toHurtTransition);
 
@@ -48,6 +60,20 @@ namespace Battle
 
             var toVertigoTransition = new FSM.Transition(ERoleState.Vertigo);
             fsm.AddEvent(FSM.EEvent.Vertigo, toVertigoTransition);
+            
+            hurtState.AddTransition(toHurtTransition);
+            hurtState.AddTransition(toKnockBackTransition);
+            
+            knockBackState.AddTransition(toKnockBackTransition);
+            knockBackState.AddTransition(toKnockFlyTransition);
+            
+            knockFlyState.AddTransition(toKnockFlyTransition);
+            knockFlyState.AddTransition(toKnockBackTransition);
+            knockFlyState.AddTransition(toHurtTransition);
+            
+            attackState.AddTransition(toHurtTransition);
+            attackState.AddTransition(toKnockBackTransition);
+            attackState.AddTransition(toKnockFlyTransition);
         }
 
         public override void Start()

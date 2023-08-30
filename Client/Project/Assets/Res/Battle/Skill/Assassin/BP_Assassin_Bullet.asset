@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedNodes: []
   nodes:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  - id: 4
+  - rid: 0
+  - rid: 1
+  - rid: 2
+  - rid: 3
+  - rid: 4
   edges:
   - GUID: 4abafd47-c991-459b-91a5-4cff2aa64d33
     owner: {fileID: 11400000}
@@ -67,11 +67,12 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -170.5, y: -163, z: 0}
-  scale: {x: 1.15, y: 1.15, z: 1}
+  position: {x: -151, y: -93, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: StartNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 
@@ -86,7 +87,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-    00000001:
+    - rid: 1
       type: {class: VectorBulletNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 
@@ -106,7 +107,8 @@ MonoBehaviour:
         speed: 30
         angle: 0
         distance: 50
-    00000002:
+        count: 1
+    - rid: 2
       type: {class: BulletHitNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 
@@ -121,7 +123,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-    00000003:
+    - rid: 3
       type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 
@@ -142,7 +144,7 @@ MonoBehaviour:
         animState: 1
         targets: 
         target: 0
-    00000004:
+    - rid: 4
       type: {class: LogNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 

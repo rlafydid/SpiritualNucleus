@@ -19,7 +19,9 @@ public class LoopExecutionNode : BaseAsyncNode
 	long realTimer;
 	protected override void Process()
 	{
+		realTimer = 0;
 		timer = 0;
+		Debug.Log($"LoopExecutionNode Process");
 	}
 
     public override void Update(int deltaTime)
@@ -27,20 +29,24 @@ public class LoopExecutionNode : BaseAsyncNode
         base.Update(deltaTime);
 		timer += deltaTime;
 		realTimer += deltaTime;
+		Debug.Log($"LoopExecutionNode Process Tine {realTimer}");
 		if (timer >= interval)
         {
+	        Debug.Log($"LoopExecutionNode  timer {realTimer}");
 			ExecuteOutputsNode();
 			timer = 0;
 		}
 
 		if(realTimer >= timeLength)
         {
+	        Debug.Log($"LoopExecutionNode  timer {realTimer} timeLength {timeLength} 结束 ");
 			OnFinished();
         }
     }
 
 	void ExecuteOutputsNode()
     {
+	    Debug.Log($"执行Node {realTimer}");
 		foreach(var node in GetExecutedNodes())
         {
 			ExecuteNode(node);

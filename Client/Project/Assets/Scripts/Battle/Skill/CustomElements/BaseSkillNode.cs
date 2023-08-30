@@ -41,7 +41,11 @@ public class BaseSkillNode : BaseNode
 
 	public virtual void OnInit() { }
 
-    protected override void Process()
+	public virtual void Reset()
+	{
+	}
+
+	protected override void Process()
     {
         base.Process();
     }
@@ -88,15 +92,19 @@ public class BaseAsyncNode : UniversalNode, IAsyncNode
     {
     }
 
+    public override void Reset()
+    {
+	    base.Reset();
+	    _finish = false;
+    }
+    
     protected override void Process()
     {
 	    base.Process();
-	    _finish = false;
     }
 
     protected void ExecuteNode(BaseNode node)
 	{
-		_finish = false;
 		process.ExecuteNode(node);
     }
 

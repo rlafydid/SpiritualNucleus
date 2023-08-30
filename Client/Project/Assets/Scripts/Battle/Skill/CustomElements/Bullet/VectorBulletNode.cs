@@ -16,13 +16,16 @@ public class VectorBulletNode : BaseBulletNode
 	[Input("距离"), SerializeField]
 	public float distance = 20;
 
+	[Input("数量"), SerializeField]
+	public int count = 1;
+	
 	protected override void Process()
 	{
 		var data = new VectorBulletData();
 		data.res = res;
 		data.angle = angle;
 		data.speed = speed;
-		data.dispersionCount = 1;
+		data.dispersionCount = count;
 		data.offset = offset;
 		data.distance = distance;
 		data.hitTriggerNode = GetHitTriggerNodes().ToList();

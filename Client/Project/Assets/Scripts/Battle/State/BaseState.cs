@@ -49,10 +49,6 @@ namespace Battle
 
         public int state;
 
-        public virtual void SetParameters(object parameters)
-        {
-        }
-
         public virtual void SetData(IStateData data)
         {
         }
@@ -90,9 +86,6 @@ namespace Battle
         /// <returns></returns>
         public bool CanTransitionToState(int state)
         {
-            if (transitions.Count == 0)
-                return true;
-            
             foreach (var trasition in transitions)
             {
                 if (state == trasition.toState && trasition.CanTransition())
@@ -112,6 +105,11 @@ namespace Battle
         protected void TriggerEvent(Enum state, IStateData param = null)
         {
             fsm.TriggerEvent(state, param);
+        }
+
+        protected void ToDefaultState()
+        {
+            fsm.ToDefaultState();
         }
     }
 }

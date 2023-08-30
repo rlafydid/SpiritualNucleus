@@ -66,8 +66,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -934, y: -446, z: 0}
-  scale: {x: 1.520875, y: 1.520875, z: 1}
+  position: {x: -703, y: -387, z: 0}
+  scale: {x: 1.15, y: 1.15, z: 1}
   references:
     version: 2
     RefIds:
@@ -87,7 +87,7 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         resId: Act_Assassin_Attack2
-        lifeTime: 1000
+        lifeTime: 500
         targets: 
         attackSpeedScale: 0
         actEvents:
@@ -112,10 +112,10 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 
+        selectTargets: 0200000000000000
         rangeType: 0
         angleRange: 60
-        distanceRange: 2
+        distanceRange: 3
     - rid: 2
       type: {class: StartNode, ns: , asm: Assembly-CSharp}
       data:
@@ -146,9 +146,9 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        f: 4
-        a: 10
+        f: 1
+        a: 5
         speed: 1
         animState: 0
-        targets: 
+        targets: 0200000000000000
         target: 0

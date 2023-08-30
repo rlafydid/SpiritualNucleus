@@ -341,6 +341,1491 @@
             "GUID": "c6115cd1ae5b04e739903ede9f6340a3"
         },
         {
+            "ID": "Art_fx_buff_atkup01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_atkup/Art_fx_buff_atkup01.prefab",
+            "GUID": "ef6af32b007f0404fbf3f6fe15ac6562"
+        },
+        {
+            "ID": "Art_fx_buff_atkup02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_atkup/Art_fx_buff_atkup02.prefab",
+            "GUID": "bb77e5350ef835746b5b7472ed592d51"
+        },
+        {
+            "ID": "Art_fx_buff_atkup03.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_atkup/Art_fx_buff_atkup03.prefab",
+            "GUID": "e0499a0fcc5bc9a4a90285c8e4121c0e"
+        },
+        {
+            "ID": "Art_fx_buff_atkup04.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_atkup/Art_fx_buff_atkup04.prefab",
+            "GUID": "5558156aa6243fd4c8a9fcf1f4f4d112"
+        },
+        {
+            "ID": "Art_fx_buff_atkup05.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_atkup/Art_fx_buff_atkup05.prefab",
+            "GUID": "60a0cc15c1803d047877b58cca5ce6ce"
+        },
+        {
+            "ID": "Art_fx_buff_atkup06.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_atkup/Art_fx_buff_atkup06.prefab",
+            "GUID": "b6c80282e02215e449449355d78b72db"
+        },
+        {
+            "ID": "Art_fx_buff_cure01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_cure/Art_fx_buff_cure01.prefab",
+            "GUID": "5aca448f461be3649a63cf9938d82c5d"
+        },
+        {
+            "ID": "Art_fx_buff_cure02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_cure/Art_fx_buff_cure02.prefab",
+            "GUID": "1e3f59999bb6e53418903e05f30a0682"
+        },
+        {
+            "ID": "Art_fx_buff_cure03.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_cure/Art_fx_buff_cure03.prefab",
+            "GUID": "e1066a4938a9a644ea4fa0755020b8dc"
+        },
+        {
+            "ID": "Art_fx_buff_cure04.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_cure/Art_fx_buff_cure04.prefab",
+            "GUID": "97e219e10c3a7ce4f8ca61c3b03ffb14"
+        },
+        {
+            "ID": "Art_fx_buff_cure05.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_cure/Art_fx_buff_cure05.prefab",
+            "GUID": "ab8281ea78152424abd899460a520773"
+        },
+        {
+            "ID": "Art_fx_buff_cure06.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_cure/Art_fx_buff_cure06.prefab",
+            "GUID": "8bfd9063ba8d14145b0d0d803466286e"
+        },
+        {
+            "ID": "Art_fx_buff_decelerate.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_decelerate/Art_fx_buff_decelerate.prefab",
+            "GUID": "0461358bdf1cb2647b32efb204266fd5"
+        },
+        {
+            "ID": "fx_buff_map_gear_aiCat.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_map_gear_aiCat/fx_buff_map_gear_aiCat.prefab",
+            "GUID": "b895fbea6a2908a4eb758fafbd70d522"
+        },
+        {
+            "ID": "Art_fx_buff_Pellet01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_Pellet/Art_fx_buff_Pellet01.prefab",
+            "GUID": "66a5cbdbd5aa75245ba92c5b76021790"
+        },
+        {
+            "ID": "Art_fx_buff_Pellet02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_Pellet/Art_fx_buff_Pellet02.prefab",
+            "GUID": "b0d34d11dd157ad438c27bfe497bacb7"
+        },
+        {
+            "ID": "Art_fx_buff_Pellet03.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_Pellet/Art_fx_buff_Pellet03.prefab",
+            "GUID": "3c25ddf14f9c75144b0e3a7b459ae9f1"
+        },
+        {
+            "ID": "Art_fx_buff_Pellet04.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_Pellet/Art_fx_buff_Pellet04.prefab",
+            "GUID": "5cda6e07df30f584cbfc5f8f8d2c6f2a"
+        },
+        {
+            "ID": "Art_fx_buff_Pellet05.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_Pellet/Art_fx_buff_Pellet05.prefab",
+            "GUID": "3a49b879c6304a247ad381bb62ef0665"
+        },
+        {
+            "ID": "Art_fx_buff_Pellet06.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_Pellet/Art_fx_buff_Pellet06.prefab",
+            "GUID": "13ead02a9704bf74190fe0255bc82668"
+        },
+        {
+            "ID": "Art_fx_buff_range01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_range/Art_fx_buff_range01.prefab",
+            "GUID": "db42071e47e156748aa612fc1aaa9ad6"
+        },
+        {
+            "ID": "Art_fx_buff_range02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_range/Art_fx_buff_range02.prefab",
+            "GUID": "fafb43a850ab6f64791c8cc40dbcfbe5"
+        },
+        {
+            "ID": "Art_fx_buff_range03.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_range/Art_fx_buff_range03.prefab",
+            "GUID": "0e61be5634d65a44fab862bb8185834a"
+        },
+        {
+            "ID": "Art_fx_buff_range04.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_range/Art_fx_buff_range04.prefab",
+            "GUID": "6fb402963668f514ab7bf8756f541f7c"
+        },
+        {
+            "ID": "Art_fx_buff_range05.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_range/Art_fx_buff_range05.prefab",
+            "GUID": "d388c93c615f78f4491217d07e870f5b"
+        },
+        {
+            "ID": "Art_fx_buff_range06.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/fx_buff_range/Art_fx_buff_range06.prefab",
+            "GUID": "ef31651d74a804c4fa049b0669481bb8"
+        },
+        {
+            "ID": "map_gear_common_bean01_Dead.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/map_gear_common_bean/map_gear_common_bean01_Dead.prefab",
+            "GUID": "61025bdc6ebaa6243b2291c1b6578ee9"
+        },
+        {
+            "ID": "map_gear_common_bean01_Idle.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/map_gear_common_bean/map_gear_common_bean01_Idle.prefab",
+            "GUID": "e5df36b985a21a540b60083b2a4ed12f"
+        },
+        {
+            "ID": "map_gear_common_bean02_Dead.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/map_gear_common_bean/map_gear_common_bean02_Dead.prefab",
+            "GUID": "b37157749628505408f39715fe3e00eb"
+        },
+        {
+            "ID": "map_gear_common_bean02_Idle.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Buff/map_gear_common_bean/map_gear_common_bean02_Idle.prefab",
+            "GUID": "de06fbbbcd4214346ae6d53c7fdd5813"
+        },
+        {
+            "ID": "fx_a_com_atkup.anim",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Animation/fx_a_com_atkup.anim",
+            "GUID": "ec084f596bac84845a657521e3101bb2"
+        },
+        {
+            "ID": "fx_a_com_atkup.controller",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Animation/fx_a_com_atkup.controller",
+            "GUID": "d677b05e5d53ba44082ca53911d83c77"
+        },
+        {
+            "ID": "fx_a_com_cure.controller",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Animation/fx_a_com_cure.controller",
+            "GUID": "99137237d3299b744b4333627e7c06fa"
+        },
+        {
+            "ID": "fx_a_com_pellet.controller",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Animation/fx_a_com_pellet.controller",
+            "GUID": "df67ff90c5f191b48bc6d621c973f27b"
+        },
+        {
+            "ID": "fx_a_com_range.controller",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Animation/fx_a_com_range.controller",
+            "GUID": "89d66a162a6af434491be3527c1aab5f"
+        },
+        {
+            "ID": "fx_skil_jjs_Bomb.anim",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Animation/fx_skil_jjs_Bomb.anim",
+            "GUID": "b03156bceb638e24e8d4c4f63ac28a96"
+        },
+        {
+            "ID": "fx_skil_jjs_Bomb.controller",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Animation/fx_skil_jjs_Bomb.controller",
+            "GUID": "61a5836a4e235414fb5ecfa32127a943"
+        },
+        {
+            "ID": "fx_ski_zl_juzhen_ani_01.anim",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Animation/temp/fx_ski_zl_juzhen_ani_01.anim",
+            "GUID": "05a4ead8332e83245a1c6025b74a02a9"
+        },
+        {
+            "ID": "fx_ski_zl_juzhen_ani_01.controller",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Animation/temp/fx_ski_zl_juzhen_ani_01.controller",
+            "GUID": "3719edc576e58934086b01224e7664c9"
+        },
+        {
+            "ID": "Art_Effect_Rage.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Art_Effect_Rage/Art_Effect_Rage.prefab",
+            "GUID": "f75c565d772e42f46821688274ba9fab"
+        },
+        {
+            "ID": "Art_boom_effect.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/boom_effect/Art_boom_effect.prefab",
+            "GUID": "41c33c4ea7920c14b9f47c9709d57b38"
+        },
+        {
+            "ID": "Art_bullet_effect.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/bullet_effect/Art_bullet_effect.prefab",
+            "GUID": "7b907b576f70ef744b26dddb07dc9fc1"
+        },
+        {
+            "ID": "Art_bullet_effect2.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/bullet_effect2/Art_bullet_effect2.prefab",
+            "GUID": "d2297b2685bda7f4f85b0929804aab07"
+        },
+        {
+            "ID": "Art_cure_effect.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/cure_effect/Art_cure_effect.prefab",
+            "GUID": "4ff46d029d072654b91937e588ac834e"
+        },
+        {
+            "ID": "Art_Flash 1.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Flash1/Art_Flash 1.prefab",
+            "GUID": "4ab48a9a03327fb4ca76018592f4626d"
+        },
+        {
+            "ID": "Art_Flash 2.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Flash2/Art_Flash 2.prefab",
+            "GUID": "b15ff8497c1816242b4531a624ad5784"
+        },
+        {
+            "ID": "Art_fx_com_guangquan.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx _com_kuangbao/Art_fx_com_guangquan.prefab",
+            "GUID": "572317f34af1b974087351be892ab0cb"
+        },
+        {
+            "ID": "Art_fx_com_kuangbao.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx _com_kuangbao/Art_fx_com_kuangbao.prefab",
+            "GUID": "7746960b8e24bb447aa6edd7f3aeb2a3"
+        },
+        {
+            "ID": "Art_fx _com_monsterShield.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx _com_monsterShield/Art_fx _com_monsterShield.prefab",
+            "GUID": "4ccbcbb1bfc0bb942bd8b900209f5d33"
+        },
+        {
+            "ID": "Art_fx_com_absorption.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_absorption/Art_fx_com_absorption.prefab",
+            "GUID": "c2b978bc78ef1bf45a3d0ed18a72ffa3"
+        },
+        {
+            "ID": "Art_fx_com_absorption_green.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_absorption/Art_fx_com_absorption_green.prefab",
+            "GUID": "b174db27452319943ba37604386dc263"
+        },
+        {
+            "ID": "Art_fx_com_attack01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_attack/Art_fx_com_attack01.prefab",
+            "GUID": "ebc6213a86f36424886411bb09eaf967"
+        },
+        {
+            "ID": "Art_fx_com_attack02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_attack/Art_fx_com_attack02.prefab",
+            "GUID": "817c7f85883d4da46a45774ecc76bba6"
+        },
+        {
+            "ID": "Art_fx_com_bullet01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_bullet/Art_fx_com_bullet01.prefab",
+            "GUID": "dd94845b55c94b440a31d061a45397c0"
+        },
+        {
+            "ID": "Art_fx_com_bullet01_1.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_bullet/Art_fx_com_bullet01_1.prefab",
+            "GUID": "089f84c73df8a9a48bf6c334e3c9c75a"
+        },
+        {
+            "ID": "Art_fx_com_bullet02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_bullet/Art_fx_com_bullet02.prefab",
+            "GUID": "8d8b045c7021ede46a02d8b5c3d4e784"
+        },
+        {
+            "ID": "Art_fx_com_bullet03.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_bullet/Art_fx_com_bullet03.prefab",
+            "GUID": "71e77988c31e52649be313240fd1eec4"
+        },
+        {
+            "ID": "Art_fx_com_chusheng.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_chusheng/Art_fx_com_chusheng.prefab",
+            "GUID": "9031f9db7142d5d43a97aa135e77b596"
+        },
+        {
+            "ID": "Art_fx_com_cure.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_cure/Art_fx_com_cure.prefab",
+            "GUID": "562ee704a7f4fd848a963617e582a2a2"
+        },
+        {
+            "ID": "Art_fx_com_cure_loop.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_cure_loop/Art_fx_com_cure_loop.prefab",
+            "GUID": "b2230ef39aa82974dbbde8e91eef0a83"
+        },
+        {
+            "ID": "Art_fx_com_debar.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_debar/Art_fx_com_debar.prefab",
+            "GUID": "0753a0bdbb85d7b418fea890dc103e67"
+        },
+        {
+            "ID": "Art_fx_com_debuff.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_debuff/Art_fx_com_debuff.prefab",
+            "GUID": "de0632906cb752947b890741185da33e"
+        },
+        {
+            "ID": "Art_fx_com_dizziness.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_dizziness/Art_fx_com_dizziness.prefab",
+            "GUID": "fad87a549e24d1c41a3cd50f6eecd7db"
+        },
+        {
+            "ID": "Art_fx_com_enemy_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_enemy_hit/Art_fx_com_enemy_hit.prefab",
+            "GUID": "dbad58bb5c280bf419dac6731b32260e"
+        },
+        {
+            "ID": "Art_fx_com_explode.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_explode/Art_fx_com_explode.prefab",
+            "GUID": "5c8f61f536175e74585281ab58b52677"
+        },
+        {
+            "ID": "Art_fx_com_gain.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_gain/Art_fx_com_gain.prefab",
+            "GUID": "7aa02eb79be61114ab3ac85facb9e959"
+        },
+        {
+            "ID": "Art_fx_com_gun_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_gun/Art_fx_com_gun_attack.prefab",
+            "GUID": "da56244b077677c4a8ba5eb18ea4003d"
+        },
+        {
+            "ID": "Art_fx_com_gun_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_gun/Art_fx_com_gun_hit.prefab",
+            "GUID": "022ea791b1e6bce418887ee3da351d0b"
+        },
+        {
+            "ID": "Art_fx_com_gun_pjt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_gun/Art_fx_com_gun_pjt.prefab",
+            "GUID": "69414fa800561b248ab14f86b78cbc0a"
+        },
+        {
+            "ID": "Art_fx_com_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_hit/Art_fx_com_hit.prefab",
+            "GUID": "eb1a5e05d444cc545b71ec972d845748"
+        },
+        {
+            "ID": "Art_fx_com_invincible_end.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_invincible/Art_fx_com_invincible_end.prefab",
+            "GUID": "a55d634b8de663e419d6a86537d7d1cd"
+        },
+        {
+            "ID": "Art_fx_com_invincible_loop.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_invincible/Art_fx_com_invincible_loop.prefab",
+            "GUID": "d9b34a33456483444a8143408ba7d4b1"
+        },
+        {
+            "ID": "Art_fx_com_machinegun_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_machinegun/Art_fx_com_machinegun_attack.prefab",
+            "GUID": "6a754d73a2fce4545af6d4ee65dd61c1"
+        },
+        {
+            "ID": "Art_fx_com_machinegun_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_machinegun/Art_fx_com_machinegun_hit.prefab",
+            "GUID": "f4f01b4fbb46ce1438af725cb0675203"
+        },
+        {
+            "ID": "Art_fx_com_machinegun_pjt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_machinegun/Art_fx_com_machinegun_pjt.prefab",
+            "GUID": "c0f5cc90a3dc0214ba9737f1c4386107"
+        },
+        {
+            "ID": "Art_fx_com_bomb.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_map_gear_bomb/Art_fx_com_bomb.prefab",
+            "GUID": "b3d5184f877f7c74b96ced4c1121cf78"
+        },
+        {
+            "ID": "Art_fx_com_map_gear_bomb_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_map_gear_bomb/Art_fx_com_map_gear_bomb_01.prefab",
+            "GUID": "5f44dae38902aab48ae80eceed0d55cb"
+        },
+        {
+            "ID": "Art_fx_com_map_gear_bomb_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_map_gear_bomb/Art_fx_com_map_gear_bomb_02.prefab",
+            "GUID": "d56d7093693cb8b4ebef4051d7b052f3"
+        },
+        {
+            "ID": "Art_fx_com_monster_birth.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_monster_birth/Art_fx_com_monster_birth.prefab",
+            "GUID": "1a0da903239b3f841b4900d9df37e3a2"
+        },
+        {
+            "ID": "Art_fx_com_pigment_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_pigment/Art_fx_com_pigment_attack.prefab",
+            "GUID": "ccda3aa6c9e33bb4ca81323810a7b8e7"
+        },
+        {
+            "ID": "Art_fx_com_pigment_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_pigment/Art_fx_com_pigment_hit.prefab",
+            "GUID": "579bae6bdb083c04982d4e7e374475c8"
+        },
+        {
+            "ID": "Art_fx_com_pigment_pjt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_pigment/Art_fx_com_pigment_pjt.prefab",
+            "GUID": "92864e26a1ccf5d4db31ffb5eda36440"
+        },
+        {
+            "ID": "Art_fx_com_purify.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_purify/Art_fx_com_purify.prefab",
+            "GUID": "bf5226bdc199b914bb826b63e8fdf5db"
+        },
+        {
+            "ID": "Art_fx_com_reduce.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_reduce/Art_fx_com_reduce.prefab",
+            "GUID": "ba7a8cc742c1fbe49a5fc9ad64ecf74d"
+        },
+        {
+            "ID": "Art_fx_com_rifle_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_rifle/Art_fx_com_rifle_attack.prefab",
+            "GUID": "4e1f0880fb545714db74e6085e77cf06"
+        },
+        {
+            "ID": "Art_fx_com_rifle_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_rifle/Art_fx_com_rifle_hit.prefab",
+            "GUID": "c2d20530158e4564cb767df4d34948ec"
+        },
+        {
+            "ID": "Art_fx_com_rifle_pjt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_rifle/Art_fx_com_rifle_pjt.prefab",
+            "GUID": "3f4793a086696e5489cf120ecb265480"
+        },
+        {
+            "ID": "fx_com_sewersmoke.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_sewersmoke/fx_com_sewersmoke.prefab",
+            "GUID": "80ec614d13fe5474aa1b46672719bc6f"
+        },
+        {
+            "ID": "Art_fx_com_Shield.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_Shield/Art_fx_com_Shield.prefab",
+            "GUID": "5f4091b8fbbd15b49a2614fe55b7afc6"
+        },
+        {
+            "ID": "fx_a_com_shield.controller",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_Shield/fx_a_com_shield.controller",
+            "GUID": "fa331e5101c94ef4a8a4c86037412ea5"
+        },
+        {
+            "ID": "fx_a_com_shield_end.anim",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_Shield/fx_a_com_shield_end.anim",
+            "GUID": "ec5bdd616688d7044be7efee0c35bd2f"
+        },
+        {
+            "ID": "fx_a_com_shield_loop.anim",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_Shield/fx_a_com_shield_loop.anim",
+            "GUID": "dd114bec971981d42901a6baa859ea89"
+        },
+        {
+            "ID": "fx_a_com_shield_start.anim",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_Shield/fx_a_com_shield_start.anim",
+            "GUID": "605f7b233b76dc645aa6d04e58afe9a9"
+        },
+        {
+            "ID": "Art_fx_com_sniper_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_sniper/Art_fx_com_sniper_attack.prefab",
+            "GUID": "f6b07b07225906d43813c53daa5efb03"
+        },
+        {
+            "ID": "Art_fx_com_sniper_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_sniper/Art_fx_com_sniper_hit.prefab",
+            "GUID": "1c0578f23ffadb54b96059a3a3f8fbbd"
+        },
+        {
+            "ID": "Art_fx_com_sniper_pjt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_sniper/Art_fx_com_sniper_pjt.prefab",
+            "GUID": "9f61572798c034e408641f1230e826c6"
+        },
+        {
+            "ID": "Art_fx_com_splash.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_splash/Art_fx_com_splash.prefab",
+            "GUID": "674dc120cc5b3db4da2020b249257226"
+        },
+        {
+            "ID": "Art_fx_com_submachinegun_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_submachinegun/Art_fx_com_submachinegun_attack.prefab",
+            "GUID": "3f6935d46e36a82498837dc0cf1b46da"
+        },
+        {
+            "ID": "Art_fx_com_submachinegun_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_submachinegun/Art_fx_com_submachinegun_hit.prefab",
+            "GUID": "68e93eb7bed630f49bca9aecbaad6a2c"
+        },
+        {
+            "ID": "Art_fx_com_submachinegun_pjt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_submachinegun/Art_fx_com_submachinegun_pjt.prefab",
+            "GUID": "d168493c14949da43afdac40001e0250"
+        },
+        {
+            "ID": "Art_com_Line.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_towerpoint/Art_com_Line.prefab",
+            "GUID": "6307ac75e33544b42a5c8c68a5c949a8"
+        },
+        {
+            "ID": "Art_fx_com_towerpoint.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_towerpoint/Art_fx_com_towerpoint.prefab",
+            "GUID": "ac2dcc71913674941854eed95c2b7ab4"
+        },
+        {
+            "ID": "Art_fx_com_towerpoint_2.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_towerpoint/Art_fx_com_towerpoint_2.prefab",
+            "GUID": "45b6842a282bd2b48862b16450fc01ed"
+        },
+        {
+            "ID": "Art_fx_com_towerpoint_out.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_towerpoint/Art_fx_com_towerpoint_out.prefab",
+            "GUID": "1cc338308f85921429305c7da4d41355"
+        },
+        {
+            "ID": "Art_fx_com_towerpoint_out_2.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_towerpoint/Art_fx_com_towerpoint_out_2.prefab",
+            "GUID": "bf6dea64f42f3cd44ae0dbd0b91193dd"
+        },
+        {
+            "ID": "Art_fx_com_undead.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_undead/Art_fx_com_undead.prefab",
+            "GUID": "90b35a207aa533242aa65501341b8287"
+        },
+        {
+            "ID": "Art_fx_com_undeadbuff.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_undeadbuff/Art_fx_com_undeadbuff.prefab",
+            "GUID": "554553e56a919b242be965405ad030af"
+        },
+        {
+            "ID": "fx_com_ppqiu.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_youxiji/fx_com_ppqiu.prefab",
+            "GUID": "b8f51406ddfde2043acb52f7e653b004"
+        },
+        {
+            "ID": "fx_com_RadioWave.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_youxiji/fx_com_RadioWave.prefab",
+            "GUID": "2d2d2219edcdd434299001661df81de5"
+        },
+        {
+            "ID": "fx_com_youxiji_idle.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_youxiji/fx_com_youxiji_idle.prefab",
+            "GUID": "8fe5af74c4122554c97c39278050ecfb"
+        },
+        {
+            "ID": "fx_com_youxiji_loading.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_youxiji/fx_com_youxiji_loading.prefab",
+            "GUID": "e377a044077149349a0c23a4167e185e"
+        },
+        {
+            "ID": "fx_com_youxiji_yinbo.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_youxiji/fx_com_youxiji_yinbo.prefab",
+            "GUID": "eae75df166f4c1a49b83cce52a99d5d6"
+        },
+        {
+            "ID": "fx_com_youxiji_zhandou.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_com_youxiji/fx_com_youxiji_zhandou.prefab",
+            "GUID": "07d7f433eed1213499043b01713d11be"
+        },
+        {
+            "ID": "Art_fx_Effect_Prop_P001_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_Effect_Prop/Art_fx_Effect_Prop_P001_01.prefab",
+            "GUID": "89708e38a9262d84dbf57b7e42b4bba5"
+        },
+        {
+            "ID": "Art_fx_Effect_Prop_P001_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_Effect_Prop/Art_fx_Effect_Prop_P001_02.prefab",
+            "GUID": "fb43af5439a48394799d8202a8c625b5"
+        },
+        {
+            "ID": "Art_fx_Effect_Prop_P002.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_Effect_Prop/Art_fx_Effect_Prop_P002.prefab",
+            "GUID": "7e4aa20930cb022499641c52e8a6fa21"
+        },
+        {
+            "ID": "Art_fx_Effect_Prop_P003.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_Effect_Prop/Art_fx_Effect_Prop_P003.prefab",
+            "GUID": "85d7f52569bdb444da3242f50c09d0f9"
+        },
+        {
+            "ID": "Art_fx_Effect_Prop_P101.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_Effect_Prop/Art_fx_Effect_Prop_P101.prefab",
+            "GUID": "078af3420615ac745aeea0acc1712a0e"
+        },
+        {
+            "ID": "Art_fx_Effect_Prop_P102.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_Effect_Prop/Art_fx_Effect_Prop_P102.prefab",
+            "GUID": "5b387aa3995beed4ebc376e0884dee7f"
+        },
+        {
+            "ID": "Art_Fx_hit_boss_bomb.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/Fx_hit_boss_bomb/Art_Fx_hit_boss_bomb.prefab",
+            "GUID": "dd5e627aa97d5654abef9d261278d70a"
+        },
+        {
+            "ID": "Art_fx_hit_chengbaojizhong.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_hit_chengbaojizhong/Art_fx_hit_chengbaojizhong.prefab",
+            "GUID": "a51996266562d3a498d5f02fe28ffba7"
+        },
+        {
+            "ID": "Art_fx_hit_SChi_bomb.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_hit_SChi_bomb/Art_fx_hit_SChi_bomb.prefab",
+            "GUID": "87410d977665cd044a2109dacf1d3d55"
+        },
+        {
+            "ID": "Art_fx_hit_TaserLighting.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_hit_TaserLighting/Art_fx_hit_TaserLighting.prefab",
+            "GUID": "2e14b886434f9694c9503d2f0e494f5a"
+        },
+        {
+            "ID": "Art_fx_hit_TShi_qiu.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_hit_TShi_qiu/Art_fx_hit_TShi_qiu.prefab",
+            "GUID": "daa60311141b5f64db2b1e993c6f5c32"
+        },
+        {
+            "ID": "Art_fx_hit_tuzi.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_hit_tuzi/Art_fx_hit_tuzi.prefab",
+            "GUID": "5dd1c5ee8407e694696ba165beb679cf"
+        },
+        {
+            "ID": "Art_fx_pjt_jt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_Text_bullet/Art_fx_pjt_jt.prefab",
+            "GUID": "89605460a0932e940a050b555bb8fb67"
+        },
+        {
+            "ID": "Art_fx_pjt_jtq.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_Text_bullet/Art_fx_pjt_jtq.prefab",
+            "GUID": "a45e9456714301f4b8b081eec5333a2f"
+        },
+        {
+            "ID": "Art_fx_ty_BuqianHit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_ty_BuqianHit/Art_fx_ty_BuqianHit.prefab",
+            "GUID": "1a1f897d7b8fd4949aa360dbf5c0eeaa"
+        },
+        {
+            "ID": "Art_fx_xiaoye_daoguang.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_xiaoye_attack/Art_fx_xiaoye_daoguang.prefab",
+            "GUID": "8ec4debbb5010054f9befc2f698899be"
+        },
+        {
+            "ID": "Art_fx_xiaoye_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/fx_xiaoye_attack/Art_fx_xiaoye_hit.prefab",
+            "GUID": "8c4117d0230acf3478711c74c3609f9f"
+        },
+        {
+            "ID": "Art_VFX_Comet_Projectile.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/ProjectilesFX/VFX_Prefabs/Projectiles_Full/Art_VFX_Comet_Projectile.prefab",
+            "GUID": "8667b9af5b3bedd459341eed37acf8ef"
+        },
+        {
+            "ID": "Art_VFX_Comet_Projectile_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/ProjectilesFX/VFX_Prefabs/Projectiles_Full/Art_VFX_Comet_Projectile_hit.prefab",
+            "GUID": "5275c9d848aa3974a9046b99c78cabf0"
+        },
+        {
+            "ID": "Art_VFX_Fire_Projectile.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/ProjectilesFX/VFX_Prefabs/Projectiles_Full/Art_VFX_Fire_Projectile.prefab",
+            "GUID": "89e9b968188336e4f8ebb41b960c7a65"
+        },
+        {
+            "ID": "Art_VFX_Fire_Projectile_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/ProjectilesFX/VFX_Prefabs/Projectiles_Full/Art_VFX_Fire_Projectile_hit.prefab",
+            "GUID": "2c9366d7e7b74b94bbae93a3f67187e7"
+        },
+        {
+            "ID": "Art_VFX_Priest_Projectile.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/ProjectilesFX/VFX_Prefabs/Projectiles_Full/Art_VFX_Priest_Projectile.prefab",
+            "GUID": "2c68eafe2091223408951d8e9cccc81c"
+        },
+        {
+            "ID": "Art_VFX_Priest_Projectile_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/ProjectilesFX/VFX_Prefabs/Projectiles_Full/Art_VFX_Priest_Projectile_hit.prefab",
+            "GUID": "a64b01dbf790a1f41b7a8c8427953254"
+        },
+        {
+            "ID": "Art_VFX_Vampire_Projectile.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Common/ProjectilesFX/VFX_Prefabs/Projectiles_Full/Art_VFX_Vampire_Projectile.prefab",
+            "GUID": "e6dd529088fedef488263116b7503034"
+        },
+        {
+            "ID": "Art_fx_E001_dead.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_E001_dead/Art_fx_E001_dead.prefab",
+            "GUID": "0f9103586af8f674a85d0fd2d5d61e53"
+        },
+        {
+            "ID": "Art_fx_E002_dead.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_E002_dead/Art_fx_E002_dead.prefab",
+            "GUID": "a74cea44f974a224d9f2e350b8a20a02"
+        },
+        {
+            "ID": "Art_fx_com_Enemy_B0001.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_Enemy_B0001/Art_fx_com_Enemy_B0001.prefab",
+            "GUID": "afc9a7166b47f5d44aab03c6ca9379eb"
+        },
+        {
+            "ID": "Art_fx_com_Enemy_B0001_1.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_Enemy_B0001/Art_fx_com_Enemy_B0001_1.prefab",
+            "GUID": "e005e131c33e67c48bcca44fdb4a767b"
+        },
+        {
+            "ID": "Art_fx_com_Enemy_B0001_2.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_Enemy_B0001/Art_fx_com_Enemy_B0001_2.prefab",
+            "GUID": "a89d0e59c1fa68c46946f65ccecfc603"
+        },
+        {
+            "ID": "Art_fx_Enemy_B0002_1_head.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_Enemy_B0002/Art_fx_Enemy_B0002_1_head.prefab",
+            "GUID": "236cee75f5210524d9cd6c19742f797c"
+        },
+        {
+            "ID": "Art_fx_Enemy_B0002_2_head.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_Enemy_B0002/Art_fx_Enemy_B0002_2_head.prefab",
+            "GUID": "cd7b4b4623c739648a94d9a1c2fa784b"
+        },
+        {
+            "ID": "Art_fx_Enemy_B0002_head.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_Enemy_B0002/Art_fx_Enemy_B0002_head.prefab",
+            "GUID": "954d79fd1fdcc854dbae9b82ace21d12"
+        },
+        {
+            "ID": "Art_fx_H0005_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0005/Art_fx_H0005_attack1_01.prefab",
+            "GUID": "f1e3f1b1598edaa439151b662f173fe2"
+        },
+        {
+            "ID": "Art_fx_H0005_attack1_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0005/Art_fx_H0005_attack1_bullet_01.prefab",
+            "GUID": "d7b6e64f138e23e43b267ebf409170f8"
+        },
+        {
+            "ID": "Art_fx_H0005_attack1_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0005/Art_fx_H0005_attack1_hit.prefab",
+            "GUID": "ad63a9b4e43dbcf4cb34408c51936836"
+        },
+        {
+            "ID": "Art_fx_H0006_attack_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0006/Art_fx_H0006_attack_01.prefab",
+            "GUID": "ce3a331185cf2d34dbc113fefbe9ce1d"
+        },
+        {
+            "ID": "Art_fx_H0006_bullet1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0006/Art_fx_H0006_bullet1_01.prefab",
+            "GUID": "527ed8bfe67d0bc4a853d4f321f320e8"
+        },
+        {
+            "ID": "Art_fx_H0006_hit_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0006/Art_fx_H0006_hit_01.prefab",
+            "GUID": "cb35dc530768e0d48b6700272d92d7b5"
+        },
+        {
+            "ID": "Art_fx_H0007_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0007/Art_fx_H0007_attack1_01.prefab",
+            "GUID": "659c5ca7a6843f0469ba2fed171a011d"
+        },
+        {
+            "ID": "Art_fx_H0007_attack2_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0007/Art_fx_H0007_attack2_01.prefab",
+            "GUID": "48aff16562947f04fab0f4d15e405669"
+        },
+        {
+            "ID": "Art_fx_H0007_attack3_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0007/Art_fx_H0007_attack3_01.prefab",
+            "GUID": "c251f83f0a24a464993d2ae14c841384"
+        },
+        {
+            "ID": "Art_fx_H0007_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0007/Art_fx_H0007_hit.prefab",
+            "GUID": "1ffc18b9690b65d4a89c3f2e35742e11"
+        },
+        {
+            "ID": "Art_fx_H0007_skil1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0007/Art_fx_H0007_skil1_01.prefab",
+            "GUID": "e528ebb2d8565704d94048f2f4f21e5e"
+        },
+        {
+            "ID": "Art_fx_H0007_skil1_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0007/Art_fx_H0007_skil1_02.prefab",
+            "GUID": "03e87d1768f71ba4f92c08db44dfa252"
+        },
+        {
+            "ID": "Art_fx_H0007_skil1_Weapon.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0007/Art_fx_H0007_skil1_Weapon.prefab",
+            "GUID": "f22577de3f27e104b8ba17c2265f13f4"
+        },
+        {
+            "ID": "Art_fx_H0007_skil2_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0007/Art_fx_H0007_skil2_01.prefab",
+            "GUID": "149dd3facdc0adf459758b39aaa100ce"
+        },
+        {
+            "ID": "Art_fx_H0007_skil2_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0007/Art_fx_H0007_skil2_02.prefab",
+            "GUID": "fe9ac23297c67de44b5424d32c7563f2"
+        },
+        {
+            "ID": "Art_fx_H0007_skil2_Weapon.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0007/Art_fx_H0007_skil2_Weapon.prefab",
+            "GUID": "f50845e82a43c6a408559263f9db74e4"
+        },
+        {
+            "ID": "Art_fx_H008_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0008/Art_fx_H008_attack1_01.prefab",
+            "GUID": "e3a37b2d6beb4b3448ac64561b3fb07e"
+        },
+        {
+            "ID": "Art_fx_H008_bullet1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0008/Art_fx_H008_bullet1_01.prefab",
+            "GUID": "0e0ef854f6151b74bb8a448eece2d5ae"
+        },
+        {
+            "ID": "Art_fx_H008_hit_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0008/Art_fx_H008_hit_01.prefab",
+            "GUID": "0615e0b672e2d29469a7e939eae3ca51"
+        },
+        {
+            "ID": "Art_fx_H0009_attack_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0009/Art_fx_H0009_attack_01.prefab",
+            "GUID": "92087bbe80bbe7848a89bbd69a2939a5"
+        },
+        {
+            "ID": "Art_fx_H0009_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0009/Art_fx_H0009_bullet_01.prefab",
+            "GUID": "169f78a54e28a4946957d684b004c104"
+        },
+        {
+            "ID": "Art_fx_H0009_hit_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0009/Art_fx_H0009_hit_01.prefab",
+            "GUID": "6da4632fc086f9448b816ceafb99a470"
+        },
+        {
+            "ID": "Art_fx_H0012_attack01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0012/Art_fx_H0012_attack01.prefab",
+            "GUID": "1667f59300aa7d845b5f9ced4c93d99e"
+        },
+        {
+            "ID": "Art_fx_H0012_attack02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0012/Art_fx_H0012_attack02.prefab",
+            "GUID": "189cd17c5a522d4409f04263fb38693e"
+        },
+        {
+            "ID": "Art_fx_H0012_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0012/Art_fx_H0012_hit01.prefab",
+            "GUID": "896110a91addd6c4d8cd07ab16d1a09c"
+        },
+        {
+            "ID": "Art_fx_H0012_hit02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0012/Art_fx_H0012_hit02.prefab",
+            "GUID": "128b10d0a16d03a41bab2698aea4d5b3"
+        },
+        {
+            "ID": "Art_fx_H0012_permanent.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0012/Art_fx_H0012_permanent.prefab",
+            "GUID": "dba1b4a4a75c0ea43a86ca7f01d949c4"
+        },
+        {
+            "ID": "Art_fx_H0012_pjt01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0012/Art_fx_H0012_pjt01.prefab",
+            "GUID": "26391abf9314b3e4985ea25acc1e8849"
+        },
+        {
+            "ID": "Art_fx_H0012_pjt02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0012/Art_fx_H0012_pjt02.prefab",
+            "GUID": "cc82e4d36290e944ea84be5352edad09"
+        },
+        {
+            "ID": "Art_fx_H0012_ski_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0012/Art_fx_H0012_ski_attack.prefab",
+            "GUID": "df8f1b84e7592d444a8466974705d2ba"
+        },
+        {
+            "ID": "Art_fx_H0012_ski_attack_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0012/Art_fx_H0012_ski_attack_hit.prefab",
+            "GUID": "734da3b4257172749b654572e80d86eb"
+        },
+        {
+            "ID": "fx_a_H0012_permanent.anim",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0012/fx_a_H0012_permanent.anim",
+            "GUID": "7005d99cfc3d8854ea0127c4d20dcd27"
+        },
+        {
+            "ID": "Art_fx_H0013_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0013/Art_fx_H0013_attack1_01.prefab",
+            "GUID": "f0b98719263cba44991262f3ffa6bd3f"
+        },
+        {
+            "ID": "Art_fx_H0013_attack1_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0013/Art_fx_H0013_attack1_02.prefab",
+            "GUID": "fdafbb2cd9e817443ba231214623f726"
+        },
+        {
+            "ID": "Art_fx_H0013_attack1_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0013/Art_fx_H0013_attack1_bullet_01.prefab",
+            "GUID": "6ebedfdcd910e2c4a8515f383c25d893"
+        },
+        {
+            "ID": "Art_fx_H0013_attack1_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0013/Art_fx_H0013_attack1_hit01.prefab",
+            "GUID": "1bbd950cbef76b047a42ec454c2b7eaf"
+        },
+        {
+            "ID": "Art_fx_H0013_attack1_hit02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0013/Art_fx_H0013_attack1_hit02.prefab",
+            "GUID": "8c9ca4a022899da43bc4116d4f2370d6"
+        },
+        {
+            "ID": "Art_fx_H0013_buff1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0013/Art_fx_H0013_buff1_01.prefab",
+            "GUID": "7a3cc9c9345a20c46b8a470b7c8ee859"
+        },
+        {
+            "ID": "Art_H0013_Skill1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0013/Art_H0013_Skill1_01.prefab",
+            "GUID": "c087d6842de077b488a180f1bf1be387"
+        },
+        {
+            "ID": "Art_H0013_Skill1_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0013/Art_H0013_Skill1_hit01.prefab",
+            "GUID": "85e7c87fed0acbc42a601e38bf707370"
+        },
+        {
+            "ID": "Art_fx_H0014_attack01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0014/Art_fx_H0014_attack01.prefab",
+            "GUID": "baca45fe889f46843b6fbc9ed1141b7b"
+        },
+        {
+            "ID": "Art_fx_H0014_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0014/Art_fx_H0014_hit01.prefab",
+            "GUID": "937cf5591ccb5e4438bcf5ad78aed923"
+        },
+        {
+            "ID": "Art_fx_H0014_pjt01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0014/Art_fx_H0014_pjt01.prefab",
+            "GUID": "570838aa9e9f14b4fa08b9ad433f83b6"
+        },
+        {
+            "ID": "Art_fx_H0014_ski_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0014/Art_fx_H0014_ski_attack.prefab",
+            "GUID": "9d8889f61d0da594f8579b4fa8087c89"
+        },
+        {
+            "ID": "Art_fx_H0103_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0103/Art_fx_H0103_attack.prefab",
+            "GUID": "6417ed5a5063c3546aa151f9ee65000e"
+        },
+        {
+            "ID": "Art_fx_H0103_attack_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0103/Art_fx_H0103_attack_hit.prefab",
+            "GUID": "db083731c8d29f544b6dba48e9ff95bc"
+        },
+        {
+            "ID": "Art_fx_H0103_attack_robot.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0103/Art_fx_H0103_attack_robot.prefab",
+            "GUID": "d8c2562669c7788429ee25fcdddc4e58"
+        },
+        {
+            "ID": "Art_fx_H0103_bullet1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0103/Art_fx_H0103_bullet1_01.prefab",
+            "GUID": "be0f2ccb2197e1347b2053b057e4564e"
+        },
+        {
+            "ID": "Art_fx_H0103_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0103/Art_fx_H0103_hit.prefab",
+            "GUID": "2a04f59d79fea5b49a57c3869319af54"
+        },
+        {
+            "ID": "Art_fx_H0103_pjt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0103/Art_fx_H0103_pjt.prefab",
+            "GUID": "87d3c2ac15d77914cbbdc414940b1c7d"
+        },
+        {
+            "ID": "Art_fx_H0103_pjt_robot.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0103/Art_fx_H0103_pjt_robot.prefab",
+            "GUID": "f80a320e9c1238443b86f70cfb3ed14c"
+        },
+        {
+            "ID": "Art_fx_H0103_ski_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0103/Art_fx_H0103_ski_attack.prefab",
+            "GUID": "e926ca9444562ab4eadb802ae004db80"
+        },
+        {
+            "ID": "Art_fx_H0103_ski_pjt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0103/Art_fx_H0103_ski_pjt.prefab",
+            "GUID": "ff95f9293f414b24a89ae67c8df7dcf8"
+        },
+        {
+            "ID": "Art_fx_H0104_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_attack1_01.prefab",
+            "GUID": "c6b5179fd425bda46a02e9a0e8effc87"
+        },
+        {
+            "ID": "Art_fx_H0104_attack1_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_attack1_bullet_01.prefab",
+            "GUID": "e5ba856fb96aa8645b35a6f6e9c0c67b"
+        },
+        {
+            "ID": "Art_fx_H0104_attack1_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_attack1_hit01.prefab",
+            "GUID": "09b2ab6d2b67da34ebe1f8a349cbf271"
+        },
+        {
+            "ID": "Art_fx_H0104_attack2_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_attack2_01.prefab",
+            "GUID": "68047ab395202f44782a9d783b950b58"
+        },
+        {
+            "ID": "Art_fx_H0104_attack2_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_attack2_hit01.prefab",
+            "GUID": "bbb05420be03bfe40bc77b684feb38b3"
+        },
+        {
+            "ID": "Art_fx_H0104_pjt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_pjt.prefab",
+            "GUID": "aab6dfc80de3e0444a6ba485344d2372"
+        },
+        {
+            "ID": "Art_fx_H0104_skill1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_skill1_01.prefab",
+            "GUID": "2506fd141cec97d468abb38a0fba319b"
+        },
+        {
+            "ID": "Art_fx_H0104_skill1_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_skill1_02.prefab",
+            "GUID": "151181a9eb609b7498c2a6522922cc08"
+        },
+        {
+            "ID": "Art_fx_H0104_skill1_03.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_skill1_03.prefab",
+            "GUID": "8bee543529ea87441918c3f5ecb15f10"
+        },
+        {
+            "ID": "Art_fx_H0104_skill1_04.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_skill1_04.prefab",
+            "GUID": "e36ffa34174cafd40be3018d108a48b3"
+        },
+        {
+            "ID": "Art_fx_H0104_skill1_bullet_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_skill1_bullet_02.prefab",
+            "GUID": "452913de128439f40ba722da623f936a"
+        },
+        {
+            "ID": "Art_fx_H0104_skill1_bullet_03.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_skill1_bullet_03.prefab",
+            "GUID": "8ae3743dac31c7b4f91efccfe1bdccdd"
+        },
+        {
+            "ID": "Art_fx_H0104_skill1_bullet_04.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0104/Art_fx_H0104_skill1_bullet_04.prefab",
+            "GUID": "1a8b9c2d867b4cb419450025fec38b08"
+        },
+        {
+            "ID": "Art_fx_H0105_attack_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0105/Art_fx_H0105_attack_01.prefab",
+            "GUID": "1d0777b4564a1ae48a58a0afbcdb263b"
+        },
+        {
+            "ID": "Art_fx_H0105_attack_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0105/Art_fx_H0105_attack_02.prefab",
+            "GUID": "4f0f80e7f499a06469cc24745813d7bf"
+        },
+        {
+            "ID": "Art_fx_H0105_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0105/Art_fx_H0105_bullet_01.prefab",
+            "GUID": "5b970c0ac6e36fc4aa97c72b1537bb54"
+        },
+        {
+            "ID": "Art_fx_H0105_hit_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0105/Art_fx_H0105_hit_01.prefab",
+            "GUID": "b3b493e2ddd281f40b5b02a0d976f3fd"
+        },
+        {
+            "ID": "Art_fx_H0105_hit_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0105/Art_fx_H0105_hit_02.prefab",
+            "GUID": "8e4a6cb21c5883943b607ac5fc4c08d2"
+        },
+        {
+            "ID": "Art_fx_H0105_skill1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0105/Art_fx_H0105_skill1_01.prefab",
+            "GUID": "470543c2a457d624fab2d4f5b6b57054"
+        },
+        {
+            "ID": "Art_fx_H0105_skill1_Weapon_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0105/Art_fx_H0105_skill1_Weapon_01.prefab",
+            "GUID": "5524e1abf31ee3449836d36631acda7d"
+        },
+        {
+            "ID": "Art_fx_H0105_Weapon_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0105/Art_fx_H0105_Weapon_01.prefab",
+            "GUID": "95b3990b95fab87489fca83fc3a64c90"
+        },
+        {
+            "ID": "Art_fx_H0106_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0106/Art_fx_H0106_attack1_01.prefab",
+            "GUID": "000c0266723b9454091ee61a0cf7fd8d"
+        },
+        {
+            "ID": "Art_fx_H0106_attack2_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0106/Art_fx_H0106_attack2_01.prefab",
+            "GUID": "fc1963a3c59a0894cb0867a4ca801b3f"
+        },
+        {
+            "ID": "Art_fx_H0106_attack3_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0106/Art_fx_H0106_attack3_01.prefab",
+            "GUID": "be8c0708bd5ce1847818fb0e238ef2c5"
+        },
+        {
+            "ID": "Art_fx_H0106_bullet01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0106/Art_fx_H0106_bullet01.prefab",
+            "GUID": "b4fa68b097d8aaa4b9558d1322e9ab40"
+        },
+        {
+            "ID": "Art_fx_H0106_bullet02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0106/Art_fx_H0106_bullet02.prefab",
+            "GUID": "5fbdb2ab0b736de4096fd81620534aa5"
+        },
+        {
+            "ID": "Art_fx_H0106_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0106/Art_fx_H0106_hit01.prefab",
+            "GUID": "24167a4b7cdbaa14a8064e56e2cb26d0"
+        },
+        {
+            "ID": "Art_fx_H0106_skill.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0106/Art_fx_H0106_skill.prefab",
+            "GUID": "197fbb67cb6b6ff44a56fe47910777cd"
+        },
+        {
+            "ID": "Art_fx_H0107_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0107/Art_fx_H0107_attack1_01.prefab",
+            "GUID": "5b42aab7082e63b47a5ddd98435c80d0"
+        },
+        {
+            "ID": "Art_fx_H0107_attack1_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0107/Art_fx_H0107_attack1_02.prefab",
+            "GUID": "40546c837285c2e4c8969f5bea523f82"
+        },
+        {
+            "ID": "Art_fx_H0107_attack1_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0107/Art_fx_H0107_attack1_bullet_01.prefab",
+            "GUID": "e029eeae206ef474f843d3b487fb7b1c"
+        },
+        {
+            "ID": "Art_fx_H0107_attack1_bullet_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0107/Art_fx_H0107_attack1_bullet_02.prefab",
+            "GUID": "693c5944b38ef034e939068dd8354715"
+        },
+        {
+            "ID": "Art_fx_H0107_attack1_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0107/Art_fx_H0107_attack1_hit01.prefab",
+            "GUID": "d040b9a4249cdb342bb79ee4f377b294"
+        },
+        {
+            "ID": "Art_fx_H0107_attack1_hit02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0107/Art_fx_H0107_attack1_hit02.prefab",
+            "GUID": "1935c50003d5ea34292c19c7b64d57a3"
+        },
+        {
+            "ID": "Art_fx_H0107_attack2_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0107/Art_fx_H0107_attack2_01.prefab",
+            "GUID": "76fb71c66efc8ca48907c84b9e2bf910"
+        },
+        {
+            "ID": "Art_fx_H0107_attack2_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0107/Art_fx_H0107_attack2_bullet_01.prefab",
+            "GUID": "79d59709b42b0154e8060b252591ec87"
+        },
+        {
+            "ID": "Art_fx_H0107_attack2_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0107/Art_fx_H0107_attack2_hit01.prefab",
+            "GUID": "c31c917f7941a5448b4de54712c35320"
+        },
+        {
+            "ID": "Art_fx_H0108_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0108/Art_fx_H0108_attack1_01.prefab",
+            "GUID": "59f9012890558334fb6a38200010f078"
+        },
+        {
+            "ID": "Art_fx_H0108_attack1_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0108/Art_fx_H0108_attack1_02.prefab",
+            "GUID": "bda4ec74a2fd2ad49b1a5c0fc68949c5"
+        },
+        {
+            "ID": "Art_fx_H0108_bullet1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0108/Art_fx_H0108_bullet1_01.prefab",
+            "GUID": "26d3c81bce711ea449a18f32db9872ef"
+        },
+        {
+            "ID": "Art_fx_H0108_hit_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0108/Art_fx_H0108_hit_01.prefab",
+            "GUID": "c2fc57478ab430d44857169ae3063632"
+        },
+        {
+            "ID": "Art_fx_H0108_skill1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0108/Art_fx_H0108_skill1_01.prefab",
+            "GUID": "35ee6391108766046a92984518ddc866"
+        },
+        {
+            "ID": "Art_fx_H0109_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0109/Art_fx_H0109_attack1_01.prefab",
+            "GUID": "884f966c75bab194d99209e0da0d1b54"
+        },
+        {
+            "ID": "Art_fx_H0109_attack1_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0109/Art_fx_H0109_attack1_02.prefab",
+            "GUID": "8c99704713bfe0742a1e41556a0222b4"
+        },
+        {
+            "ID": "Art_fx_H0109_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0109/Art_fx_H0109_bullet_01.prefab",
+            "GUID": "a068b4b89bf51d24e8e8acb159dc6b8f"
+        },
+        {
+            "ID": "Art_fx_H0109_hit_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0109/Art_fx_H0109_hit_01.prefab",
+            "GUID": "14750fb0caee3b24f8b10263d0235f0a"
+        },
+        {
+            "ID": "Art_fx_H0109_skill1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0109/Art_fx_H0109_skill1_01.prefab",
+            "GUID": "4b9ad2af978fab94f89644559bea0ea1"
+        },
+        {
+            "ID": "Art_fx_H0109_skill1_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0109/Art_fx_H0109_skill1_02.prefab",
+            "GUID": "6ad8e026f8c58fb4ab097fe65c064623"
+        },
+        {
+            "ID": "Art_fx_H0203_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0203/Art_fx_H0203_attack1_01.prefab",
+            "GUID": "1abb14e9f2e82a24fa1f8b4158dbf982"
+        },
+        {
+            "ID": "Art_fx_H0203_attack1_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0203/Art_fx_H0203_attack1_bullet_01.prefab",
+            "GUID": "fbc842d1ea393c24898c63702772409d"
+        },
+        {
+            "ID": "Art_fx_H0203_attack1_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0203/Art_fx_H0203_attack1_hit01.prefab",
+            "GUID": "0d0670704215e574bab3d9b2a516dd6c"
+        },
+        {
+            "ID": "Art_fx_H0203_skin1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0203/Art_fx_H0203_skin1_01.prefab",
+            "GUID": "873c81e5d9cf4bc42b2d4a4cecbf2f46"
+        },
+        {
+            "ID": "Art_fx_H0203_skin1_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0203/Art_fx_H0203_skin1_hit01.prefab",
+            "GUID": "00be8858e77242f48b3d715957b828c8"
+        },
+        {
+            "ID": "Art_fx_H0203_skin_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0203/Art_fx_H0203_skin_bullet_01.prefab",
+            "GUID": "8d2c9ccbe3484f64bbe14520e51c3864"
+        },
+        {
+            "ID": "Art_fx_H0204_attack01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0204/Art_fx_H0204_attack01.prefab",
+            "GUID": "3972a00c9abe38547b05197003ea67f0"
+        },
+        {
+            "ID": "Art_fx_H0204_attack02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0204/Art_fx_H0204_attack02.prefab",
+            "GUID": "897b39c9ad0c9cd4bbac9c33d8b78f4e"
+        },
+        {
+            "ID": "Art_fx_H0204_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0204/Art_fx_H0204_hit01.prefab",
+            "GUID": "0dd972b91f0624140aa449544e933b14"
+        },
+        {
+            "ID": "Art_fx_H0204_hit02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0204/Art_fx_H0204_hit02.prefab",
+            "GUID": "cfd1bbaa828297941899ddcce8eea19f"
+        },
+        {
+            "ID": "Art_fx_H0204_permanent.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0204/Art_fx_H0204_permanent.prefab",
+            "GUID": "16c4f4f53e5f5434c9dbc2f29d6f01c4"
+        },
+        {
+            "ID": "Art_fx_H0204_ski_attack.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0204/Art_fx_H0204_ski_attack.prefab",
+            "GUID": "10bd3b1cb0acaec478253a40823375d0"
+        },
+        {
+            "ID": "Art_fx_H0204_ski_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0204/Art_fx_H0204_ski_hit.prefab",
+            "GUID": "ea53e0e6a077c0b4cbf9ff18bb5c6120"
+        },
+        {
+            "ID": "Art_fx_H0204_ski_long.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0204/Art_fx_H0204_ski_long.prefab",
+            "GUID": "609dd980069000c4baa6ea4d186409be"
+        },
+        {
+            "ID": "Art_fx_H0205_attack_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0205/Art_fx_H0205_attack_01.prefab",
+            "GUID": "b45b287bd79cbc74b85e340b94ad6086"
+        },
+        {
+            "ID": "Art_fx_H0205_bullet1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0205/Art_fx_H0205_bullet1_01.prefab",
+            "GUID": "4ea1d16e210711248aa0373de01dc8fc"
+        },
+        {
+            "ID": "Art_fx_H0205_hit_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0205/Art_fx_H0205_hit_01.prefab",
+            "GUID": "cab2bf02c0bf02041bca22913a0748cb"
+        },
+        {
+            "ID": "Art_fx_H0205_skill_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0205/Art_fx_H0205_skill_01.prefab",
+            "GUID": "fdb7ce0ec8bd8cf4ab22a05105261ea3"
+        },
+        {
+            "ID": "Art_fx_H0206_attack_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0206/Art_fx_H0206_attack_01.prefab",
+            "GUID": "1539b6fb865d9814aa8f86286859115d"
+        },
+        {
+            "ID": "Art_fx_H0206_born.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0206/Art_fx_H0206_born.prefab",
+            "GUID": "cad9f1c9f7be27b44a4322491bfc1f69"
+        },
+        {
+            "ID": "Art_fx_H0206_hit_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0206/Art_fx_H0206_hit_01.prefab",
+            "GUID": "7414c60dc6f2fbe43a174bfc4c8c3b1c"
+        },
+        {
+            "ID": "Art_fx_H0206_skill_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0206/Art_fx_H0206_skill_01.prefab",
+            "GUID": "5d68323df0f6ae94b9b42db3294ccd22"
+        },
+        {
+            "ID": "Art_fx_H0207_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0207/Art_fx_H0207_attack1_01.prefab",
+            "GUID": "5cca2c05ae0c0c444bc5ad0ebce1c711"
+        },
+        {
+            "ID": "Art_fx_H0207_attack1_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0207/Art_fx_H0207_attack1_bullet_01.prefab",
+            "GUID": "11be29db3ae1a0d4bb55b36460fc1c42"
+        },
+        {
+            "ID": "Art_fx_H0207_attack1_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0207/Art_fx_H0207_attack1_hit01.prefab",
+            "GUID": "85c320a7c4bea424087867efc8900f47"
+        },
+        {
+            "ID": "Art_fx_H0207_buff.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0207/Art_fx_H0207_buff.prefab",
+            "GUID": "83cbce28230cb6449971935ec43cc1bf"
+        },
+        {
+            "ID": "Art_fx_H0207_buff_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0207/Art_fx_H0207_buff_hit.prefab",
+            "GUID": "069c7083637056d43b8fe9fbf80c68aa"
+        },
+        {
+            "ID": "Art_fx_H0207_skill1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0207/Art_fx_H0207_skill1_01.prefab",
+            "GUID": "d33a84db4dc52d0408ec958272665cde"
+        },
+        {
+            "ID": "Art_fx_H0207_skill1_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0207/Art_fx_H0207_skill1_02.prefab",
+            "GUID": "4e3e44801449cff4286e812af10a26dd"
+        },
+        {
+            "ID": "Art_fx_S0207_skill1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0207/Art_fx_S0207_skill1_01.prefab",
+            "GUID": "84ae42a6acd437741bca9b9c8ac2fb6a"
+        },
+        {
+            "ID": "Art_fx_H0208_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0208/Art_fx_H0208_attack1_01.prefab",
+            "GUID": "6e4a2dc7b3bb6ed4db4639627cd3b572"
+        },
+        {
+            "ID": "Art_fx_H0208_attack1_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0208/Art_fx_H0208_attack1_bullet_01.prefab",
+            "GUID": "b5e8de82546b2544fa16fc9d577fbc02"
+        },
+        {
+            "ID": "Art_fx_H0208_attack1_bullet_02.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0208/Art_fx_H0208_attack1_bullet_02.prefab",
+            "GUID": "6f0273f63ca989d4cb8cb926d6689600"
+        },
+        {
+            "ID": "Art_fx_H0208_attack01_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0208/Art_fx_H0208_attack01_hit.prefab",
+            "GUID": "6f118e0b24af7944b8ca5ba67c56451d"
+        },
+        {
+            "ID": "Art_fx_H0208_skill1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0208/Art_fx_H0208_skill1_01.prefab",
+            "GUID": "a6c3992cfa269a6499f7809ffe93f23a"
+        },
+        {
+            "ID": "Art_fx_H0209_attack1_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0209/Art_fx_H0209_attack1_01.prefab",
+            "GUID": "de28127b5d7cf644e89a181b2c98225a"
+        },
+        {
+            "ID": "Art_fx_H0209_attack1_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0209/Art_fx_H0209_attack1_bullet_01.prefab",
+            "GUID": "348fe9936c77f394e820e74bbffc7e98"
+        },
+        {
+            "ID": "Art_fx_H0209_attack1_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0209/Art_fx_H0209_attack1_hit.prefab",
+            "GUID": "7b1bee63b1a7b9d4197f6128008e4535"
+        },
+        {
+            "ID": "Art_fx_H0209_attack2_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0209/Art_fx_H0209_attack2_01.prefab",
+            "GUID": "b3a42c1f5d8b74a418e0aaeb6c7419d6"
+        },
+        {
+            "ID": "Art_fx_H0209_attack2_hit01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0209/Art_fx_H0209_attack2_hit01.prefab",
+            "GUID": "08d7dd714c2f77846965575c769e0fbc"
+        },
+        {
+            "ID": "Art_fx_H0209_skill1_bullet_01.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0209/Art_fx_H0209_skill1_bullet_01.prefab",
+            "GUID": "8ec15172c10a51a49bbc4a6e58e8021e"
+        },
+        {
+            "ID": "Art_fx_H0209_skill1_hit.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_p_H0209/Art_fx_H0209_skill1_hit.prefab",
+            "GUID": "990ca122d43812a489f43ca016171eb8"
+        },
+        {
+            "ID": "Art_Projectile12.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_Projectile12/Art_Projectile12.prefab",
+            "GUID": "f433416470d4f204d923065e0764d5a5"
+        },
+        {
+            "ID": "Art_fx_sk_bomb.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_sk_bomb/Art_fx_sk_bomb.prefab",
+            "GUID": "38688fb0f09840f44b3560e8e52a2d98"
+        },
+        {
+            "ID": "Art_fx_sk_bomb_green.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_sk_bomb_green/Art_fx_sk_bomb_green.prefab",
+            "GUID": "b461dbf2510cf5840ba4107b09b31314"
+        },
+        {
+            "ID": "Art_fx_sk_bomb_lan.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_sk_bomb_lan/Art_fx_sk_bomb_lan.prefab",
+            "GUID": "d76821a5e49e4194c889a4d8af50fe98"
+        },
+        {
+            "ID": "Art_fx_sk_Dg_H001.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_sk_Dg_H001/Art_fx_sk_Dg_H001.prefab",
+            "GUID": "720a02a5dd1024849880ae603ce7355b"
+        },
+        {
+            "ID": "Art_fx_sk_Dg_H007.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_sk_Dg_H007/Art_fx_sk_Dg_H007.prefab",
+            "GUID": "0d6cd8f25b9f9014380ee4b29bd781c6"
+        },
+        {
+            "ID": "Art_fx_ski_H0203_pjt.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_ski_H0203/Art_fx_ski_H0203_pjt.prefab",
+            "GUID": "9c8ffd99e5bba83408216cbe1b94903d"
+        },
+        {
+            "ID": "Art_fx_m_ski_LYing_Bomb.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_ski_LYing_Bomb/Art_fx_m_ski_LYing_Bomb.prefab",
+            "GUID": "a9a228d8f6afbaf4699e4f35933bf027"
+        },
+        {
+            "ID": "Art_fx_ski_TTang.prefab",
+            "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_ski_TTang/Art_fx_ski_TTang.prefab",
+            "GUID": "02f26400ac423b24bb030273982eabf3"
+        },
+        {
             "ID": "BP_Assassin_Attack1.asset",
             "Path": "Assets/Res/Battle/Skill/Assassin/BP_Assassin_Attack1.asset",
             "GUID": "7d215f97bda4142b69dae91ff39ff3d7"

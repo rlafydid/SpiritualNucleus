@@ -687,7 +687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4454336320037257226
 Transform:
   m_ObjectHideFlags: 0
@@ -773,7 +773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4454336320037257228
 Transform:
   m_ObjectHideFlags: 0
@@ -1588,7 +1588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4454336320037257272
 Transform:
   m_ObjectHideFlags: 0
@@ -2415,7 +2415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4454336320037257636
 Transform:
   m_ObjectHideFlags: 0
@@ -2706,7 +2706,7 @@ Transform:
   - {fileID: 4454336320037257232}
   - {fileID: 4454336320037257272}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4454336320028274286
 Animator:
@@ -2797,11 +2797,14 @@ MonoBehaviour:
   - clip: {fileID: 7400000, guid: 4b66c7588502d6b4b8c3beeaaaf3bc78, type: 3}
     name: Skill4
     defaultState: 0
-  - clip: {fileID: 7400000, guid: 48cb33b2fd9d55a43a8015648ba77f6d, type: 3}
+  - clip: {fileID: 7400000, guid: 208dfb20183bdb340b06cb4331a9bc19, type: 3}
     name: Hurt
     defaultState: 0
-  - clip: {fileID: 7400000, guid: b30ebf229cff8eb4a8bf9f34a2fd1879, type: 3}
+  - clip: {fileID: 7400000, guid: 90c1a79ef07854e4bbc8c24eba5beada, type: 3}
     name: Knockfly
+    defaultState: 0
+  - clip: {fileID: 7400000, guid: 48cb33b2fd9d55a43a8015648ba77f6d, type: 3}
+    name: KnockBack
     defaultState: 0
   returnToDefaultState: 0
 --- !u!114 &-2478475712245162819
