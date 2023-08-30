@@ -72,7 +72,7 @@ namespace Battle
             Vector3 heroForward = heroPos + Vector3.forward * 10;
 
             float range = 1;
-            float farRange = 20;
+            float farRange = 5;
             for (int i = 0; i < 1; i++)
             {
                 float x = UnityEngine.Random.Range(heroForward.x - range, heroForward.x + range);

@@ -101,7 +101,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 0200000000000000
+        selectTargets: 0400000000000000
         rangeType: 0
         angleRange: 60
         distanceRange: 3
@@ -139,5 +139,5 @@ MonoBehaviour:
         v0: 4
         speed: 1
         animState: 1
-        targets: 0200000000000000
+        targets: 0400000000000000
         target: 0

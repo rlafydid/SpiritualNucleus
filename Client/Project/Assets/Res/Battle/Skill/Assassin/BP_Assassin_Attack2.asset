@@ -18,19 +18,12 @@ MonoBehaviour:
   - rid: 1
   - rid: 2
   - rid: 3
+  - rid: 6647520438562324481
   edges:
   - GUID: db5cbfa1-262a-4cc5-8246-38b1e626c61d
     owner: {fileID: 11400000}
     inputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
     outputNodeGUID: e22cfa32-d45c-44f7-9b38-d6d6dca43e4c
-    inputFieldName: executed
-    outputFieldName: executes
-    inputPortIdentifier: 
-    outputPortIdentifier: 
-  - GUID: 5c956741-8077-4574-8e71-f25f1d3c4cca
-    owner: {fileID: 11400000}
-    inputNodeGUID: 0dea97e3-86af-432b-b1d2-609e17afb818
-    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
     inputFieldName: executed
     outputFieldName: executes
     inputPortIdentifier: 
@@ -59,6 +52,22 @@ MonoBehaviour:
     outputFieldName: eventOutputs
     inputPortIdentifier: 
     outputPortIdentifier: 97d6e38d-b6bf-4230-bca3-dea16f49b6af
+  - GUID: 8424bd45-6f08-4102-b69e-1fbce7d82cf8
+    owner: {fileID: 11400000}
+    inputNodeGUID: 732904fb-2240-4a92-b207-8efc719decb4
+    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 175f4961-ec2a-4f04-b110-27978409b179
+    owner: {fileID: 11400000}
+    inputNodeGUID: 732904fb-2240-4a92-b207-8efc719decb4
+    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    inputFieldName: selectTargets
+    outputFieldName: selectTargets
+    inputPortIdentifier: 
+    outputPortIdentifier: 
   groups: []
   stackNodes: []
   pinnedElements: []
@@ -66,8 +75,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -703, y: -387, z: 0}
-  scale: {x: 1.15, y: 1.15, z: 1}
+  position: {x: -971, y: -378.5, z: 0}
+  scale: {x: 1.3225, y: 1.3225, z: 1}
   references:
     version: 2
     RefIds:
@@ -139,16 +148,31 @@ MonoBehaviour:
         computeOrder: 3
         position:
           serializedVersion: 2
-          x: 1202.5
-          y: 402.5
+          x: 1191.914
+          y: 481.13904
           width: 136
           height: 219
         expanded: 0
         debug: 0
         nodeLock: 0
         f: 1
-        a: 5
+        a: 10
         speed: 1
         animState: 0
         targets: 0200000000000000
         target: 0
+    - rid: 6647520438562324481
+      type: {class: DamageNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 732904fb-2240-4a92-b207-8efc719decb4
+        computeOrder: 4
+        position:
+          serializedVersion: 2
+          x: 1192
+          y: 354.2741
+          width: 136
+          height: 99
+        expanded: 0
+        debug: 0
+        nodeLock: 0
