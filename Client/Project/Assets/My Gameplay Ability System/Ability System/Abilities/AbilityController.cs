@@ -23,8 +23,12 @@ public class AbilityController : MonoBehaviour
     void Start()
     {
         this.abilitySystemCharacter = GetComponent<AbilitySystemCharacter>();
-        var spec = Abilities[0].CreateSpec(this.abilitySystemCharacter);
-        this.abilitySystemCharacter.GrantAbility(spec);
+        if (Abilities.Length > 0)
+        {
+            var spec = Abilities[0].CreateSpec(this.abilitySystemCharacter);
+            this.abilitySystemCharacter.GrantAbility(spec);
+        }
+        
         ActivateInitialisationAbilities();
         GrantCastableAbilities();
     }

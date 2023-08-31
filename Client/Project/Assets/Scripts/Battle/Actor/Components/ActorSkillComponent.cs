@@ -20,7 +20,6 @@ namespace Battle
     public class HeroSkillComponent : SkillComponent
     {
         Dictionary<int, SkillUnit> skillMapping;
-        NormalAttacksComponent normalAttacksComp;
 
         private int _normalAttackIndex;
 
@@ -36,8 +35,6 @@ namespace Battle
         {
             base.OnStart();
             _abilityController = this.ownerActor.Entity.GameObject.GetComponent<AbilityController>();
-            normalAttacksComp = this.AddComponent<NormalAttacksComponent>();
-            normalAttacksComp.Setup(ownerActor);
             skillMapping = new Dictionary<int, SkillUnit>();
 
             var conf = ownerActor.CharacterConfig;
@@ -70,7 +67,7 @@ namespace Battle
         //
         public void UseNormalAbility()
         {
-            _normalAttackIndex = _normalAttackIndex % 4;
+            _normalAttackIndex = _normalAttackIndex % _abilityController.NormalAbilities.Length;
             var ability = _abilityController.GetNormalAbility(_normalAttackIndex);
             if (TryUseAbility(ability))
             {

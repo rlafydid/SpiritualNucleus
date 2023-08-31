@@ -1,51 +1,6 @@
 {
     "tables": [
         {
-            "ID": "Ability1.asset",
-            "Path": "Assets/Res/Battle/Abilities/Ability1.asset",
-            "GUID": "992b0e9e8bda54b29b6de370866641c0"
-        },
-        {
-            "ID": "Ability2.asset",
-            "Path": "Assets/Res/Battle/Abilities/Ability2.asset",
-            "GUID": "c8a7d7eb12f08441bbf73e4669b5b69b"
-        },
-        {
-            "ID": "Ability3.asset",
-            "Path": "Assets/Res/Battle/Abilities/Ability3.asset",
-            "GUID": "dec998d16076c45db85fd15f721e198e"
-        },
-        {
-            "ID": "Ability4.asset",
-            "Path": "Assets/Res/Battle/Abilities/Ability4.asset",
-            "GUID": "435da1a9a1135410196276276a514df5"
-        },
-        {
-            "ID": "Ability5.asset",
-            "Path": "Assets/Res/Battle/Abilities/Ability5.asset",
-            "GUID": "743020e20e92e43e2b12ba63becc65fb"
-        },
-        {
-            "ID": "Attack1.asset",
-            "Path": "Assets/Res/Battle/Abilities/Attack1.asset",
-            "GUID": "28b45481170eb41e4985dada8a70d7b0"
-        },
-        {
-            "ID": "Attack2.asset",
-            "Path": "Assets/Res/Battle/Abilities/Attack2.asset",
-            "GUID": "968bacea9d5bb4318beddfde577c0f8c"
-        },
-        {
-            "ID": "Attack3.asset",
-            "Path": "Assets/Res/Battle/Abilities/Attack3.asset",
-            "GUID": "6267ebe50e88d48589898086051e7b1c"
-        },
-        {
-            "ID": "Attack4.asset",
-            "Path": "Assets/Res/Battle/Abilities/Attack4.asset",
-            "GUID": "afaa5f24ebf2a401da222d352b7cb1a1"
-        },
-        {
             "ID": "Act_H0204_skill.asset",
             "Path": "Assets/Res/Battle/Act/Act_H0204_skill.asset",
             "GUID": "78b49b0eaa5680846a7e104c7bb27995"
@@ -189,6 +144,16 @@
             "ID": "Act_Bullet_Vector.asset",
             "Path": "Assets/Res/Battle/Act/Demo/Events/Act_Bullet_Vector.asset",
             "GUID": "91734ea6977e0cc48ad0200f5fdddc3c"
+        },
+        {
+            "ID": "Act_Green_Attack1.asset",
+            "Path": "Assets/Res/Battle/Act/Monster/GreenMonster/Act_Green_Attack1.asset",
+            "GUID": "9108f11b528a54660a67284825e62f0c"
+        },
+        {
+            "ID": "Act_Green_Attack2.asset",
+            "Path": "Assets/Res/Battle/Act/Monster/GreenMonster/Act_Green_Attack2.asset",
+            "GUID": "97ed6d0e034f3488dbe31ff5a7f330bc"
         },
         {
             "ID": "Act_H0014_attack1.asset",
@@ -1826,6 +1791,51 @@
             "GUID": "02f26400ac423b24bb030273982eabf3"
         },
         {
+            "ID": "Ability1.asset",
+            "Path": "Assets/Res/Battle/Skill/Assassin/Abilities/Ability1.asset",
+            "GUID": "992b0e9e8bda54b29b6de370866641c0"
+        },
+        {
+            "ID": "Ability2.asset",
+            "Path": "Assets/Res/Battle/Skill/Assassin/Abilities/Ability2.asset",
+            "GUID": "c8a7d7eb12f08441bbf73e4669b5b69b"
+        },
+        {
+            "ID": "Ability3.asset",
+            "Path": "Assets/Res/Battle/Skill/Assassin/Abilities/Ability3.asset",
+            "GUID": "dec998d16076c45db85fd15f721e198e"
+        },
+        {
+            "ID": "Ability4.asset",
+            "Path": "Assets/Res/Battle/Skill/Assassin/Abilities/Ability4.asset",
+            "GUID": "435da1a9a1135410196276276a514df5"
+        },
+        {
+            "ID": "Ability5.asset",
+            "Path": "Assets/Res/Battle/Skill/Assassin/Abilities/Ability5.asset",
+            "GUID": "743020e20e92e43e2b12ba63becc65fb"
+        },
+        {
+            "ID": "Attack1.asset",
+            "Path": "Assets/Res/Battle/Skill/Assassin/Abilities/Attack1.asset",
+            "GUID": "28b45481170eb41e4985dada8a70d7b0"
+        },
+        {
+            "ID": "Attack2.asset",
+            "Path": "Assets/Res/Battle/Skill/Assassin/Abilities/Attack2.asset",
+            "GUID": "968bacea9d5bb4318beddfde577c0f8c"
+        },
+        {
+            "ID": "Attack3.asset",
+            "Path": "Assets/Res/Battle/Skill/Assassin/Abilities/Attack3.asset",
+            "GUID": "6267ebe50e88d48589898086051e7b1c"
+        },
+        {
+            "ID": "Attack4.asset",
+            "Path": "Assets/Res/Battle/Skill/Assassin/Abilities/Attack4.asset",
+            "GUID": "afaa5f24ebf2a401da222d352b7cb1a1"
+        },
+        {
             "ID": "BP_Assassin_Attack1.asset",
             "Path": "Assets/Res/Battle/Skill/Assassin/BP_Assassin_Attack1.asset",
             "GUID": "7d215f97bda4142b69dae91ff39ff3d7"
@@ -1931,6 +1941,26 @@
             "GUID": "1682bd6264dd546e78abc87c88043924"
         },
         {
+            "ID": "Attack1.asset",
+            "Path": "Assets/Res/Battle/Skill/Monster/GreenMonster/Attack1.asset",
+            "GUID": "4cd3429370071469a9ef6f22c4baf7ac"
+        },
+        {
+            "ID": "Attack2.asset",
+            "Path": "Assets/Res/Battle/Skill/Monster/GreenMonster/Attack2.asset",
+            "GUID": "bfbb95aa6fc8c4700911982305d54e2f"
+        },
+        {
+            "ID": "BP_GreenMonster_Attack1.asset",
+            "Path": "Assets/Res/Battle/Skill/Monster/GreenMonster/BP_GreenMonster_Attack1.asset",
+            "GUID": "74b88121f53a94ac48e0fdd6d233b7c7"
+        },
+        {
+            "ID": "BP_GreenMonster_Attack2.asset",
+            "Path": "Assets/Res/Battle/Skill/Monster/GreenMonster/BP_GreenMonster_Attack2.asset",
+            "GUID": "a34099eea10934369a4602eeb4606354"
+        },
+        {
             "ID": "skill1.asset",
             "Path": "Assets/Res/Battle/Skill/skill1.asset",
             "GUID": "138ed927258af4b8ba168f09a030b433"
@@ -1984,6 +2014,11 @@
             "ID": "Frank_Assassin_Skin 1.FBX",
             "Path": "Assets/Res/FinalModel/Frank_Assassin_Skin 1.FBX",
             "GUID": "bdfc26afe3f374d7eb134d7085323eb7"
+        },
+        {
+            "ID": "GreenMonster.prefab",
+            "Path": "Assets/Res/FinalModel/GreenMonster.prefab",
+            "GUID": "93cf8c05ba0e1434d86836e22bba92b0"
         },
         {
             "ID": "DamageNumber.prefab",

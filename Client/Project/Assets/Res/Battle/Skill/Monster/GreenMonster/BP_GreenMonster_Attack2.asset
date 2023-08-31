@@ -17,7 +17,6 @@ MonoBehaviour:
   - rid: 0
   - rid: 1
   - rid: 2
-  - rid: 3
   - rid: 6647520438562324481
   edges:
   - GUID: db5cbfa1-262a-4cc5-8246-38b1e626c61d
@@ -28,30 +27,6 @@ MonoBehaviour:
     outputFieldName: executes
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: ac1a0ff3-c678-4331-8352-f45a14dc43f0
-    owner: {fileID: 11400000}
-    inputNodeGUID: 0dea97e3-86af-432b-b1d2-609e17afb818
-    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
-    inputFieldName: targets
-    outputFieldName: selectTargets
-    inputPortIdentifier: 
-    outputPortIdentifier: 
-  - GUID: 114eea19-4a59-49a5-9591-f90278d387a1
-    owner: {fileID: 11400000}
-    inputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
-    outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
-    inputFieldName: executed
-    outputFieldName: eventOutputs
-    inputPortIdentifier: 
-    outputPortIdentifier: 44e4845f-2601-4be5-920b-463e423f434e
-  - GUID: 09b485ab-579d-483a-9105-b08cf6a0a9fc
-    owner: {fileID: 11400000}
-    inputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
-    outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
-    inputFieldName: executed
-    outputFieldName: eventOutputs
-    inputPortIdentifier: 
-    outputPortIdentifier: 97d6e38d-b6bf-4230-bca3-dea16f49b6af
   - GUID: 8424bd45-6f08-4102-b69e-1fbce7d82cf8
     owner: {fileID: 11400000}
     inputNodeGUID: 732904fb-2240-4a92-b207-8efc719decb4
@@ -68,6 +43,14 @@ MonoBehaviour:
     outputFieldName: selectTargets
     inputPortIdentifier: 
     outputPortIdentifier: 
+  - GUID: 41aa7d18-b349-4a73-99e3-c4b00ef708f0
+    owner: {fileID: 11400000}
+    inputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
+    outputNodeGUID: 2e6e6e38-4af9-4f89-909e-783a9c6e9439
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: 44e4845f-2601-4be5-920b-463e423f434e
   groups: []
   stackNodes: []
   pinnedElements: []
@@ -75,8 +58,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -971, y: -378.5, z: 0}
-  scale: {x: 1.3225, y: 1.3225, z: 1}
+  position: {x: -593, y: -287, z: 0}
+  scale: {x: 1.15, y: 1.15, z: 1}
   references:
     version: 2
     RefIds:
@@ -95,15 +78,12 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        resId: Act_Assassin_Attack2
-        lifeTime: 500
+        resId: Act_Green_Attack2
+        lifeTime: 1400
         targets: 
         attackSpeedScale: 0
         actEvents:
-        - triggerTime: 200
-          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
-          id: 97d6e38d-b6bf-4230-bca3-dea16f49b6af
-        - triggerTime: 400
+        - triggerTime: 767
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
           id: 44e4845f-2601-4be5-920b-463e423f434e
     - rid: 1
@@ -140,33 +120,12 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-    - rid: 3
-      type: {class: KnockBackNode, ns: , asm: Assembly-CSharp}
-      data:
-        nodeCustomName: 
-        GUID: 0dea97e3-86af-432b-b1d2-609e17afb818
-        computeOrder: 3
-        position:
-          serializedVersion: 2
-          x: 1191.914
-          y: 481.13904
-          width: 136
-          height: 219
-        expanded: 0
-        debug: 0
-        nodeLock: 0
-        f: 1
-        a: 10
-        speed: 1
-        animState: 0
-        targets: 0200000000000000
-        target: 0
     - rid: 6647520438562324481
       type: {class: DamageNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 
         GUID: 732904fb-2240-4a92-b207-8efc719decb4
-        computeOrder: 4
+        computeOrder: 3
         position:
           serializedVersion: 2
           x: 1192

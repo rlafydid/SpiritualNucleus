@@ -17,7 +17,6 @@ MonoBehaviour:
   - rid: 0
   - rid: 1
   - rid: 2
-  - rid: 3
   - rid: 6647520438562324480
   edges:
   - GUID: db5cbfa1-262a-4cc5-8246-38b1e626c61d
@@ -26,14 +25,6 @@ MonoBehaviour:
     outputNodeGUID: e22cfa32-d45c-44f7-9b38-d6d6dca43e4c
     inputFieldName: executed
     outputFieldName: executes
-    inputPortIdentifier: 
-    outputPortIdentifier: 
-  - GUID: 5b98e45a-f171-4f75-8a6a-c3b845808efd
-    owner: {fileID: 11400000}
-    inputNodeGUID: 89a5d754-07b2-4a46-8914-f61b194a52ee
-    outputNodeGUID: 090ec932-4dd1-44d5-9a8c-d0726e3fc5e1
-    inputFieldName: targets
-    outputFieldName: selectTargets
     inputPortIdentifier: 
     outputPortIdentifier: 
   - GUID: d8fa1bb0-7da9-49fb-a2e9-b9ad38c5e46b
@@ -67,8 +58,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -1451, y: -530.5, z: 0}
-  scale: {x: 1.7490063, y: 1.7490063, z: 1}
+  position: {x: -545, y: -310, z: 0}
+  scale: {x: 1.15, y: 1.15, z: 1}
   references:
     version: 2
     RefIds:
@@ -87,12 +78,12 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        resId: Act_Assassin_Attack1
-        lifeTime: 360
+        resId: Act_Green_Attack1
+        lifeTime: 1420
         targets: 
         attackSpeedScale: 0
         actEvents:
-        - triggerTime: 300
+        - triggerTime: 733
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
           id: ec1233e2-f4f4-4016-97a3-aa0023394e39
     - rid: 1
@@ -129,37 +120,16 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-    - rid: 3
-      type: {class: KnockBackNode, ns: , asm: Assembly-CSharp}
-      data:
-        nodeCustomName: 
-        GUID: 89a5d754-07b2-4a46-8914-f61b194a52ee
-        computeOrder: 3
-        position:
-          serializedVersion: 2
-          x: 1231.0824
-          y: 420.00003
-          width: 136
-          height: 219
-        expanded: 0
-        debug: 0
-        nodeLock: 0
-        f: 1
-        a: 10
-        speed: 1
-        animState: 0
-        targets: 1200000000000000
-        target: 0
     - rid: 6647520438562324480
       type: {class: DamageNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 
         GUID: 2040fda5-2d3b-4eca-97b2-19182950c20e
-        computeOrder: 4
+        computeOrder: 3
         position:
           serializedVersion: 2
           x: 1213
-          y: 321
+          y: 353
           width: 136
           height: 99
         expanded: 0

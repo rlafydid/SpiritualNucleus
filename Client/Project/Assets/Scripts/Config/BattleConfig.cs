@@ -14,6 +14,7 @@ public class ModelConfig
         { new ModelConfig(){ Id = 1003, ResName = "assassin.prefab"}},
         { new ModelConfig(){ Id = 2001, ResName = "monster1.prefab"}},
         { new ModelConfig(){ Id = 2002, ResName = "sunxiaohou01.prefab"}},
+        { new ModelConfig(){ Id = 2003, ResName = "GreenMonster.prefab"}},
     };
 
 
@@ -83,9 +84,11 @@ public class CharacterConfig
             Hp = 100,
             Attack = 5,
             NormalAttacks =  new string[] {"SunXiaoHou_Attack1.asset", "SunXiaoHou_Attack2.asset", "SunXiaoHou_Attack3.asset", "SunXiaoHou_Attack4.asset" },
+            
         }
-
         },
+        { new CharacterConfig(){ Id = 2003, ModelConfigId = 2003, Hp = 100}},
+
     };
 
 

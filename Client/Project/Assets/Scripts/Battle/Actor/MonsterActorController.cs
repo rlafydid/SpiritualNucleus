@@ -13,7 +13,7 @@ namespace Battle
         public override void OnInit()
         {
             base.OnInit();
-            AddComponent<NormalAttacksComponent>();
+            // AddComponent<NormalAttacksComponent>();
             AddComponent<HeroSkillComponent>();
             InitState();
         }
@@ -80,7 +80,7 @@ namespace Battle
         {
             base.Start();
             this.Entity.LookAt(this.Position - this.Entity.Forward);
-            this.RandomAttack();
+            // this.RandomAttack();
         }
 
         public void TraceTarget(Entity entity)

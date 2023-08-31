@@ -21,8 +21,8 @@ MonoBehaviour:
     Model: {fileID: 130230, guid: 3d068baf535dd094187bde9bca521302, type: 3}
   - Name: "\u5FCD\u8005"
     Model: {fileID: 4454336320037625290, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
-  - Name: "\u5FCD\u80051"
-    Model: {fileID: 3247666156732370219, guid: 070506cedf7714033a4257512487c19d, type: 3}
+  - Name: "\u7EFF\u8272\u602A\u7269"
+    Model: {fileID: 7507445929137760294, guid: 93cf8c05ba0e1434d86836e22bba92b0, type: 3}
   monsterList:
   - Name: 1
     Model: {fileID: 2376634735948654772, guid: f0af2074c8fab834aa0d5cd359829d20, type: 3}
