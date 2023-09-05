@@ -84,7 +84,7 @@ namespace Battle
         {
             GetComponent<JoystickMoveComponent>().Active = true;
             IsMove = true;
-            Entity.GetComponent<AnimationController>().PlayDefault();
+            // Entity.GetComponent<AnimationController>().PlayDefault();
         }
 
         public override void StopMove()
