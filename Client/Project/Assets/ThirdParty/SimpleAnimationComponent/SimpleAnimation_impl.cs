@@ -301,12 +301,19 @@ public partial class SimpleAnimation : MonoBehaviour, IAnimationClipSource
     {
         var state = getPlayingState;
         //Debug.Log($"Play {getPlayingState.name} length {getPlayingState.length} time {getPlayingState.time} normalized {getPlayingState.normalizedTime} enable {state.enabled}");
-        if (state != null && (state.normalizedTime == 1 || !state.enabled))
+        if (ReturnToDefaultState && state != null && (state.normalizedTime == 1 || !state.enabled))
         {
+            ClearCurState();
             if (GetState(kDefaultStateName) != null)
             {
-                ClearCurState();
                 CrossFade(kDefaultStateName, 0.2f, false);
+            }
+            else
+            {
+                Stop();
+                animator.Play("Move");
+                animator.SetFloat("v1", 0);
+                animator.SetFloat("v2", 0);
             }
         }
     }

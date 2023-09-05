@@ -60,6 +60,8 @@ namespace Battle
 
             var toVertigoTransition = new FSM.Transition(ERoleState.Vertigo);
             fsm.AddEvent(FSM.EEvent.Vertigo, toVertigoTransition);
+
+            var toDeadTranstion = new FSM.Transition(ERoleState.Dead);
             
             hurtState.AddTransition(toHurtTransition);
             hurtState.AddTransition(toKnockBackTransition);
@@ -74,6 +76,10 @@ namespace Battle
             attackState.AddTransition(toHurtTransition);
             attackState.AddTransition(toKnockBackTransition);
             attackState.AddTransition(toKnockFlyTransition);
+            
+            knockBackState.AddTransition(toDeadTranstion);
+            knockFlyState.AddTransition(toDeadTranstion);
+            hurtState.AddTransition(toDeadTranstion);
         }
 
         public override void Start()

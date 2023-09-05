@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FSM;
 using UnityEngine;
 
 namespace Battle
@@ -18,6 +19,10 @@ namespace Battle
         public void LoseHp(long val)
         {
             hp -= val;
+            if (IsDead())
+            {
+                this.GetActor.ChangeState(ERoleState.Dead);
+            }
         }
 
         public bool IsDead()

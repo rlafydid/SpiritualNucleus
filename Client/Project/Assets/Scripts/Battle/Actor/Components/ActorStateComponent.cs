@@ -141,7 +141,7 @@ namespace FSM
             actor.GetComponent<FiniteStateMachine>().AddState(stateType, state);
         }
 
-        public static bool ChangeState(this SceneActorController actor, Enum stateType, IStateData param)
+        public static bool ChangeState(this SceneActorController actor, Enum stateType, IStateData param = null)
         {
             return actor.GetComponent<FiniteStateMachine>().ChangeState(stateType, param);
         }

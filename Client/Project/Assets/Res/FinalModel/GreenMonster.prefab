@@ -1781,7 +1781,7 @@ MonoBehaviour:
     name: KnockBack
     defaultState: 0
   - clip: {fileID: 2459078804267041145, guid: d6f8b53a8ba781a4891864157c8ab61a, type: 3}
-    name: KnockFly
+    name: Knockfly
     defaultState: 0
   returnToDefaultState: 0
 --- !u!114 &-8796739515721605207

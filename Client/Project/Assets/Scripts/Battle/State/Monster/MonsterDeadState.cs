@@ -11,6 +11,7 @@ namespace Battle
         {
             base.Enter();
             owner.PlayAnim("Dead");
+            owner.Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = false;
             TimerMod.Delay(2f, Destroy);
         }
 

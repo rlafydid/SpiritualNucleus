@@ -82,6 +82,8 @@ public partial class SimpleAnimation : MonoBehaviour
         }
     }
 
+    public bool ReturnToDefaultState { get; set; } = true;
+
 
     public void AddClip(AnimationClip clip, string newName)
     {
