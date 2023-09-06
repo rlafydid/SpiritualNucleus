@@ -67,8 +67,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -1451, y: -530.5, z: 0}
-  scale: {x: 1.7490063, y: 1.7490063, z: 1}
+  position: {x: -1104, y: -323, z: 0}
+  scale: {x: 1.520875, y: 1.520875, z: 1}
   references:
     version: 2
     RefIds:
@@ -110,7 +110,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 1200000000000000
+        selectTargets: 1000000000000000
         rangeType: 0
         angleRange: 60
         distanceRange: 2
@@ -148,7 +148,7 @@ MonoBehaviour:
         a: 10
         speed: 1
         animState: 0
-        targets: 1200000000000000
+        targets: 1000000000000000
         target: 0
     - rid: 6647520438562324480
       type: {class: DamageNode, ns: , asm: Assembly-CSharp}
@@ -158,8 +158,8 @@ MonoBehaviour:
         computeOrder: 4
         position:
           serializedVersion: 2
-          x: 1213
-          y: 321
+          x: 1231
+          y: 313.00006
           width: 136
           height: 99
         expanded: 0
