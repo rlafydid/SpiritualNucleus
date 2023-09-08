@@ -77,7 +77,7 @@ namespace Battle
             {
                 float x = UnityEngine.Random.Range(heroForward.x - range, heroForward.x + range);
                 float y = UnityEngine.Random.Range(heroForward.z, heroForward.z + farRange);
-                CreateMonster(2003, new Vector3(x, 0, y));
+                CreateMonster(2002, new Vector3(x, 0, y));
             }
             
             var ctrl = SceneManager.Instance.Camera.AddComponent<CameraMoveController>();

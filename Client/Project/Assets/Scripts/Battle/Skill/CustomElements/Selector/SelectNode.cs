@@ -4,7 +4,7 @@ using UnityEngine;
 using GraphProcessor;
 using System.Linq;
 
-[System.Serializable, NodeMenuItem("Skill/SelectNode")]
+[System.Serializable, NodeMenuItem("Skill/筛选/筛选目标")]
 public class SelectNode : UniversalNode
 {
 	enum RangeType
@@ -25,7 +25,7 @@ public class SelectNode : UniversalNode
 	[Input("DistanceRange"), SerializeField]
 	float distanceRange;
 
-	public override string		name => "SelectNode";
+	public override string		name => "筛选目标";
 
 	protected override void Process()
 	{

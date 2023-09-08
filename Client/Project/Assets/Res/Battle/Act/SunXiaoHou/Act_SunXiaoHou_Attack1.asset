@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeTime: 1
   Clips:
-  - id: 0
-  - id: 1
-  - id: 2
+  - rid: 0
+  - rid: 1
+  - rid: 2
   Events:
-  - id: 3
+  - rid: 3
   Model: sunxiaohou01
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: ActAnimationClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
@@ -31,7 +32,7 @@ MonoBehaviour:
         Row: 0
         animName: Attack
         dontStopOnDisable: 0
-    00000001:
+    - rid: 1
       type: {class: ActEffectClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
@@ -53,7 +54,7 @@ MonoBehaviour:
         isLoop: 0
         isTurnToTarget: 0
         dontDestroyWithAct: 0
-    00000002:
+    - rid: 2
       type: {class: ActAudioClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0.33691615
@@ -63,7 +64,7 @@ MonoBehaviour:
         configId: 
         cueSheet: 
         cueName: sunxiaohou01_attack
-    00000003:
+    - rid: 3
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0.46666667

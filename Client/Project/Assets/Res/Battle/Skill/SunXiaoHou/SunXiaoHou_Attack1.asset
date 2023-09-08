@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedNodes: []
   nodes:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
+  - rid: 0
+  - rid: 1
+  - rid: 2
+  - rid: 3
   edges:
   - GUID: db5cbfa1-262a-4cc5-8246-38b1e626c61d
     owner: {fileID: 11400000}
@@ -58,11 +58,12 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -355, y: -275.5, z: 0}
+  position: {x: -517, y: -267, z: 0}
   scale: {x: 1.15, y: 1.15, z: 1}
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: PlayActNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 
@@ -85,7 +86,7 @@ MonoBehaviour:
         - triggerTime: 467
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
           id: c9016ce4-9bf8-4f9f-bd14-32e57e3b99de
-    00000001:
+    - rid: 1
       type: {class: SelectNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 
@@ -104,7 +105,7 @@ MonoBehaviour:
         rangeType: 0
         angleRange: 60
         distanceRange: 2
-    00000002:
+    - rid: 2
       type: {class: StartNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 
@@ -119,7 +120,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-    00000003:
+    - rid: 3
       type: {class: DamageNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 

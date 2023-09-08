@@ -1976,6 +1976,26 @@
             "GUID": "fbda6ed3227774ecf908b4ceea4edce0"
         },
         {
+            "ID": "Attack1.asset",
+            "Path": "Assets/Res/Battle/Skill/SunXiaoHou/Attack1.asset",
+            "GUID": "a66352471dc5d4221a797c3deef7c910"
+        },
+        {
+            "ID": "Attack2.asset",
+            "Path": "Assets/Res/Battle/Skill/SunXiaoHou/Attack2.asset",
+            "GUID": "577101dc3d0cd4abd95e287545b21e77"
+        },
+        {
+            "ID": "Attack3.asset",
+            "Path": "Assets/Res/Battle/Skill/SunXiaoHou/Attack3.asset",
+            "GUID": "b54d94f2f2c004b12b4e9abed6f77861"
+        },
+        {
+            "ID": "Attack4.asset",
+            "Path": "Assets/Res/Battle/Skill/SunXiaoHou/Attack4.asset",
+            "GUID": "e77b24744b3be462683d5072ec5254db"
+        },
+        {
             "ID": "SunXiaoHou_Attack1.asset",
             "Path": "Assets/Res/Battle/Skill/SunXiaoHou/SunXiaoHou_Attack1.asset",
             "GUID": "aa57bc5445ec048888f1ac1be82620b4"
@@ -2074,6 +2094,126 @@
             "ID": "PathGuide.prefab",
             "Path": "Assets/Res/Model/Models/Other/PathGuide/PathGuide.prefab",
             "GUID": "6e05e845bb7df39448c29c5fc2bb40c6"
+        },
+        {
+            "ID": "sunxiaohou01AnimatorOverrideController.overrideController",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/AnimatorController/sunxiaohou01AnimatorOverrideController.overrideController",
+            "GUID": "0b419c4b9f2ad3249aa3478ec98cb4ce"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01.mat",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/Materials/P_M_Sunxiaohou_01.mat",
+            "GUID": "a6640be66c611354eb55e70da0c159a2"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@attack01.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@attack01.FBX",
+            "GUID": "2d9fe94aeb4573a4db4e136b8d101859"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@attack02.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@attack02.FBX",
+            "GUID": "2adadfd61418e0042bfa011fcd957f60"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@attack03.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@attack03.FBX",
+            "GUID": "0a28ddb19d5be8b4eb68381b2c429add"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@attack04.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@attack04.FBX",
+            "GUID": "227ff70c4537e8e4b9cc6e738ddd9076"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@charge.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@charge.FBX",
+            "GUID": "6e93871b0efce0e43bbf20eec1920e36"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@dead.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@dead.FBX",
+            "GUID": "8f0d0c0b2f7a0084ebb63b6ae4c0cec2"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@dead02.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@dead02.FBX",
+            "GUID": "fb42e09658993414e85bd4281daaa7b2"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@hurt.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@hurt.FBX",
+            "GUID": "88a482a3aa79c584d82736f896286ed7"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@idle.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@idle.FBX",
+            "GUID": "081e08d5d5b52134d95c6f995fd4d92f"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@knockfly.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@knockfly.FBX",
+            "GUID": "7507c4dba112062408848b70f5e97e6c"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@knockfly02.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@knockfly02.FBX",
+            "GUID": "f5bb77eaca10d504aa4c513db98686a0"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@leisure.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@leisure.FBX",
+            "GUID": "ece28e34c1301ec4d8ec6cde7958e5c1"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@run.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@run.FBX",
+            "GUID": "4a7aa03515bda2e48a05587e28ebe310"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@skill01.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@skill01.FBX",
+            "GUID": "520570e90d67f3d43aee355933ff0b44"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@skill02.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@skill02.FBX",
+            "GUID": "90ae1245f1f54ca43ad412f213d546bf"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@skill03.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@skill03.FBX",
+            "GUID": "2bced125463128f4d825164ce701f343"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@skill04.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@skill04.FBX",
+            "GUID": "e6170c4e412fd404287d541d793a7ea8"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@skin.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@skin.FBX",
+            "GUID": "6120f36b620162d4aa16da20ca53b34e"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@stun.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@stun.FBX",
+            "GUID": "07066af2fc7f37f45a5b9f1b2320d685"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01@tumbling.FBX",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/P_M_Sunxiaohou_01@tumbling.FBX",
+            "GUID": "b009f998c19882446bc5a18d73a4457b"
+        },
+        {
+            "ID": "sunxiaohou01.prefab",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/sunxiaohou01.prefab",
+            "GUID": "3d068baf535dd094187bde9bca521302"
+        },
+        {
+            "ID": "P_M_Sunxiaohou_01.png",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/Texture/P_M_Sunxiaohou_01.png",
+            "GUID": "a8f7f6918065cce47bd901e776a76822"
         },
         {
             "ID": "monster1.prefab",
