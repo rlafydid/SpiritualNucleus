@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace Battle
         public override void Enter()
         {
             base.Enter();
+            // if(Math.Abs(owner.Position.ToGroundPos().y - owner.Position.y))
             owner.PlayAnim("Dead");
             owner.Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = false;
             TimerMod.Delay(2f, Destroy);

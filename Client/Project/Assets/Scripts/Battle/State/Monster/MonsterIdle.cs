@@ -10,6 +10,7 @@ namespace Battle
         {
             base.Enter();
             t = 0;
+            owner.Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = true;
             if(owner.IsDead())
             {
                 ChangeState(ERoleState.Dead);
