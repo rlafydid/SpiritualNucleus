@@ -7,13 +7,15 @@ namespace Battle
 {
     public enum ECompareType
     {
-        Less, 
-        Equal,
-        Greate
+        Less,//小于
+        LEqual, //小于等于
+        Equal, //等于
+        GEqual, //大于党羽
+        Greater //大于
     }
-    public class HpCondition : StateCondition
+    public class AttributeCondition : StateCondition
     {
-        public int Hp;
+        public string AttributeType;
         public ECompareType CompareType;
         public override bool Pass()
         {
@@ -23,7 +25,7 @@ namespace Battle
                  break;
              case ECompareType.Equal:
                  break;
-             case ECompareType.Greate:
+             case ECompareType.Greater:
                  break;
             }
             return base.Pass();
