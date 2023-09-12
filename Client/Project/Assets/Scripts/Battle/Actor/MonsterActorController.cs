@@ -76,6 +76,8 @@ namespace Battle
             attackState.AddTransition(toHurtTransition);
             attackState.AddTransition(toKnockBackTransition);
             attackState.AddTransition(toKnockFlyTransition);
+
+            toDeadTranstion.AddCondition(new AttributeCondition(){ AttributeValue = 0, AttributeType = "hp", CompareType = ECompareType.LEqual});
             
             knockBackState.AddTransition(toDeadTranstion);
             knockFlyState.AddTransition(toDeadTranstion);

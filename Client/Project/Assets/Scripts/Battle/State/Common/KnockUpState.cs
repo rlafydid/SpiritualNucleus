@@ -62,12 +62,16 @@ namespace Battle
             Vector3 newPos = GetActor.Position + Vector3.up * deltaH + Data.direction * v * Time.deltaTime * speed;
             GetActor.Position = newPos;
 
+            if(owner.IsDead())
+                owner.Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = false;
+            
             if(newPos.y < newPos.ToGroundPos().y)
             {
                 var pos = GetActor.Position;
                 pos.y = newPos.ToGroundPos().y;
                 GetActor.Position = pos;
-                ChangeState(ERoleState.Idle);
+                if(!owner.IsDead())
+                    ChangeState(ERoleState.Idle);
             }
 
         }

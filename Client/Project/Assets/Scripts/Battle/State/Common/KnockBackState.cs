@@ -64,12 +64,26 @@ namespace Battle
             
             GetActor.Position = newPos;
 
+            if (owner.IsDead())
+                owner.Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = false;
+            
             if(v <= 0 && newPos.y <= newPos.ToGroundPos().y)
             {
                 var pos = GetActor.Position;
                 pos.y = newPos.ToGroundPos().y;
                 GetActor.Position = pos;
-                ChangeState(ERoleState.Idle);
+                if (owner.IsDead())
+                {
+                    TimerMod.Delay(2f, () =>
+                    {
+                        Facade.Battle.ReleaseActor(owner.ID);
+                    });
+                }
+                else
+                {
+                    ChangeState(ERoleState.Idle);
+                }
+                
             }
 
         }

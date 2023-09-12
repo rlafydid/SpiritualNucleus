@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using AttributeSystem.Components;
 using Battle;
 using UnityEngine;
@@ -22,16 +24,28 @@ namespace Battle
         public override bool Pass()
         {
             AttributeSystemComponent system = owner.Entity.GameObject.GetComponent<AttributeSystemComponent>();
+            float val = 0;
+            switch (AttributeType)
+            {
+                case "hp" :
+                    val = owner.GetComponent<AttributesComponent>().hp;
+                    break;
+            }
+            
             switch (CompareType)
             {
              case ECompareType.Less:
-                 break;
+                 return val < AttributeValue;
+             case ECompareType.LEqual:
+                 return val <= AttributeValue;
              case ECompareType.Equal:
-                 break;
+                 return Math.Abs(val - AttributeValue) < float.Epsilon;
+             case ECompareType.GEqual:
+                 return val >= AttributeValue;
              case ECompareType.Greater:
-                 break;
+                 return val > AttributeValue;
             }
-            return base.Pass();
+            return false;
         }
     }
 }

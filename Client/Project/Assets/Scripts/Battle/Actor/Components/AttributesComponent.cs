@@ -19,10 +19,10 @@ namespace Battle
         public void LoseHp(long val)
         {
             hp -= val;
-            if (IsDead())
-            {
-                this.GetActor.ChangeState(ERoleState.Dead);
-            }
+            // if (IsDead())
+            // {
+            //     this.GetActor.ChangeState(ERoleState.Dead);
+            // }
         }
 
         public bool IsDead()
