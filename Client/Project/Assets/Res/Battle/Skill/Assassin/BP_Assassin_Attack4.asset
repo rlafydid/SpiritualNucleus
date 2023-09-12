@@ -24,6 +24,9 @@ MonoBehaviour:
   - rid: 6647520421829935105
   - rid: 6647520421829935106
   - rid: 6647520421829935108
+  - rid: 5209252080799711247
+  - rid: 5209252080799711248
+  - rid: 5209252080799711249
   edges:
   - GUID: db5cbfa1-262a-4cc5-8246-38b1e626c61d
     owner: {fileID: 11400000}
@@ -113,6 +116,46 @@ MonoBehaviour:
     outputFieldName: executes
     inputPortIdentifier: 
     outputPortIdentifier: 
+  - GUID: 1417fcc0-5422-4735-b40b-ea0927819ea8
+    owner: {fileID: 11400000}
+    inputNodeGUID: 9adea4c6-8a21-4473-962a-7ee8e3684a1f
+    outputNodeGUID: 0d7f135b-9e04-4479-bd78-c85116599286
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: ded6a4ed-2cb6-4b62-8277-3784c7365c63
+    owner: {fileID: 11400000}
+    inputNodeGUID: 9adea4c6-8a21-4473-962a-7ee8e3684a1f
+    outputNodeGUID: 0d7f135b-9e04-4479-bd78-c85116599286
+    inputFieldName: targets
+    outputFieldName: selectTargets
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: efa6a270-35c7-4f85-8448-4e27facbd109
+    owner: {fileID: 11400000}
+    inputNodeGUID: 8441eb12-40ce-4470-a301-e56591a49d14
+    outputNodeGUID: 9adea4c6-8a21-4473-962a-7ee8e3684a1f
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: cf6dce16-839b-4e30-bee1-371986153059
+    owner: {fileID: 11400000}
+    inputNodeGUID: 8441eb12-40ce-4470-a301-e56591a49d14
+    outputNodeGUID: 9adea4c6-8a21-4473-962a-7ee8e3684a1f
+    inputFieldName: toTarget
+    outputFieldName: nearestTarget
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: f66fe9c5-2673-410a-887e-9d8d11c72397
+    owner: {fileID: 11400000}
+    inputNodeGUID: 0d7f135b-9e04-4479-bd78-c85116599286
+    outputNodeGUID: e22cfa32-d45c-44f7-9b38-d6d6dca43e4c
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
   groups: []
   stackNodes: []
   pinnedElements: []
@@ -120,8 +163,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -3, y: -64, z: 0}
-  scale: {x: 0.57175326, y: 0.57175326, z: 1}
+  position: {x: -111, y: 137, z: 0}
+  scale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
     RefIds:
@@ -169,6 +212,58 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
+    - rid: 5209252080799711247
+      type: {class: SelectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 0d7f135b-9e04-4479-bd78-c85116599286
+        computeOrder: 10
+        position:
+          serializedVersion: 2
+          x: 604.1411
+          y: -54.600822
+          width: 174
+          height: 147
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        selectTargets: 
+        rangeType: 0
+        angleRange: 60
+        distanceRange: 2
+    - rid: 5209252080799711248
+      type: {class: FindNearestTargetNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 9adea4c6-8a21-4473-962a-7ee8e3684a1f
+        computeOrder: 11
+        position:
+          serializedVersion: 2
+          x: 845.1411
+          y: -36.600815
+          width: 172
+          height: 99
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        targets: 
+        nearestTarget: 2
+    - rid: 5209252080799711249
+      type: {class: LookAtNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 8441eb12-40ce-4470-a301-e56591a49d14
+        computeOrder: 12
+        position:
+          serializedVersion: 2
+          x: 1076.1411
+          y: -19.600815
+          width: 136
+          height: 99
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        toTarget: 2
     - rid: 6647520395619467277
       type: {class: LoopExecutionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -201,7 +296,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 1000000000000000
+        selectTargets: 
         rangeType: 0
         angleRange: 60
         distanceRange: 3
@@ -224,7 +319,7 @@ MonoBehaviour:
         v0: 3
         speed: 1
         animState: 1
-        targets: 1000000000000000
+        targets: 
         target: 0
     - rid: 6647520395619467294
       type: {class: VectorBulletNode, ns: , asm: Assembly-CSharp}
@@ -298,7 +393,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 1000000000000000
+        selectTargets: 
         rangeType: 0
         angleRange: 60
         distanceRange: 3
@@ -321,5 +416,5 @@ MonoBehaviour:
         a: 10
         speed: 1
         animState: 1
-        targets: 1000000000000000
+        targets: 
         target: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using AttributeSystem.Components;
 using Battle;
 using UnityEngine;
 
@@ -17,8 +18,10 @@ namespace Battle
     {
         public string AttributeType;
         public ECompareType CompareType;
+        public float AttributeValue;
         public override bool Pass()
         {
+            AttributeSystemComponent system = owner.Entity.GameObject.GetComponent<AttributeSystemComponent>();
             switch (CompareType)
             {
              case ECompareType.Less:
