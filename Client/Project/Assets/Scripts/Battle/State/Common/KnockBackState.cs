@@ -17,27 +17,33 @@ namespace Battle
         {
             base.Enter();
             owner.StopMove();
-            switch(Data.state)
+            // switch(Data.state)
+            // {
+            //     case EKnockflyAnimState.Hurt:
+            //         owner.PlayAnim("Hurt");
+            //         break;
+            //     case EKnockflyAnimState.KnockFly:
+            //         owner.PlayAnim("Knockfly");
+            //         break;
+            //     case EKnockflyAnimState.KnockFly2:
+            //         owner.PlayAnim("Knockfly2");
+            //         break;
+            // }
+
+            if (owner.IsFloatingState())
             {
-                case EKnockflyAnimState.Hurt:
-                    owner.PlayAnim("Hurt");
-                    break;
-                case EKnockflyAnimState.KnockFly:
-                    owner.PlayAnim("Knockfly");
-                    break;
-                case EKnockflyAnimState.KnockFly2:
-                    owner.PlayAnim("Knockfly2");
-                    break;
+                owner.PlayAnim("Knockfly");
+                owner.DontToDefaultAnimation();
             }
+            else
+                owner.PlayAnim("Hurt");
+            
             t = 0;
             speed = Data.speed;
             v0 = Data.f;
             a = Data.a;
             
             Debug.Log($"KnockBackState");
-            owner.DontToDefaultAnimation();
-            
-            owner.Position.ToGroundPos()
         }
 
         private Vector3 velocity;
@@ -49,7 +55,7 @@ namespace Battle
             t += Time.deltaTime;
             
             float v = v0 + -a * t;
-            float yV = -g * t;
+            float yV = -g * t * 0.5f;
 
             velocity = Data.direction * v;
             velocity.y = yV;

@@ -57,16 +57,18 @@ namespace Battle
 
             var toKnockFlyTransition = new FSM.Transition(ERoleState.KnockFly);
             fsm.AddEvent(FSM.EEvent.KnockFly, toKnockFlyTransition);
+            toKnockFlyTransition.priority = -2;
 
             var toVertigoTransition = new FSM.Transition(ERoleState.Vertigo);
             fsm.AddEvent(FSM.EEvent.Vertigo, toVertigoTransition);
 
             var toDeadTranstion = new FSM.Transition(ERoleState.Dead);
+            toDeadTranstion.priority = 10;
             
             hurtState.AddTransition(toHurtTransition);
             hurtState.AddTransition(toKnockBackTransition);
             
-            knockBackState.AddTransition(toKnockBackTransition);
+            // knockBackState.AddTransition(toKnockBackTransition);
             knockBackState.AddTransition(toKnockFlyTransition);
             
             knockFlyState.AddTransition(toKnockFlyTransition);

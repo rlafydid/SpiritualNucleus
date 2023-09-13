@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Battle;
 using LKEngine;
 using UnityEngine;
 
@@ -277,6 +278,19 @@ public static class RaycastTools
         return p;
     }
     
-    public static bool Is
+    /// <summary>
+    /// 是否浮空状态
+    /// </summary>
+    /// <returns></returns>
+    public static bool IsFloatingState(this SceneActorController actor)
+    {
+        var groundPos = ToGroundPos(actor.Position);
+        if (actor.Position.y - groundPos.y > 0.1f)
+        {
+            return true;
+        }
+
+        return false;
+    }
 
 }

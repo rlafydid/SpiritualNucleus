@@ -117,6 +117,10 @@ namespace Battle
                 fsm.ChangeState(transition.toState);
                 return true;
             }
+            else
+            {
+                fsm.ToDefaultState();
+            }
 
             return false;
         }
