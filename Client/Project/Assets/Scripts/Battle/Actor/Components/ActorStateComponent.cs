@@ -59,12 +59,21 @@ namespace FSM
             int state = stateType.ToInt();
             return ChangeState(state, data);
         }
+        
+        /// <summary>
+        /// 退出状态
+        /// </summary>
+        public void ExitState(BaseState state)
+        {
+            if (state != null)
+            {
+                state.Exit();
+            }
+            
+        }
 
         public bool ChangeState(int state, IStateData data = null)
         {
-            if (CurrentState == (int)ERoleState.Dead)
-                return false;
-            
             if(state != _defaultState)
                 if(curState != null && !curState.CanTransitionToState(state))
                     return false;

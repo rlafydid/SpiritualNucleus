@@ -11,6 +11,10 @@ namespace FSM
         public int fromState = -1;
         public int toState;
 
+        public int priority = -1;
+
+        public bool hasExitTime = true;
+
         List<Condition> conditions = new List<Condition>();
         List<Func<bool>> conditionFuncs = new List<Func<bool>>();
 

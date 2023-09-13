@@ -96,6 +96,30 @@ namespace Battle
 
             return false;
         }
+        
+        /// <summary>
+        /// 跳转到连接的状态
+        /// </summary>
+        /// <returns></returns>
+        public bool ToLinkedState()
+        {
+            Transition transition = null;
+            foreach (var item in transitions)
+            {
+                if (item.CanTransition() && (transition == null || item.priority > transition.priority))
+                {
+                    transition = item;
+                }
+            }
+
+            if (transition != null)
+            {
+                fsm.ChangeState(transition.toState);
+                return true;
+            }
+
+            return false;
+        }
 
         protected void ChangeState(Enum state, IStateData param = null)
         {
@@ -105,6 +129,14 @@ namespace Battle
         protected void TriggerEvent(Enum state, IStateData param = null)
         {
             fsm.TriggerEvent(state, param);
+        }
+        
+        /// <summary>
+        /// 退出当前状态
+        /// </summary>
+        protected void ExitState()
+        {
+            ToLinkedState();
         }
 
         protected void ToDefaultState()

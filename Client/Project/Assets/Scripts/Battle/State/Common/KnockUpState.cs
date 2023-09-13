@@ -17,21 +17,23 @@ namespace Battle
         {
             base.Enter();
             owner.StopMove();
-            switch(Data.state)
-            {
-                case EKnockflyAnimState.Hurt:
-                    owner.PlayAnim("Hurt");
-                    break;
-                case EKnockflyAnimState.KnockFly:
-                    owner.PlayAnim("Knockfly");
-                    break;
-                case EKnockflyAnimState.KnockFly2:
-                    owner.PlayAnim("Knockfly2");
-                    break;
-                case EKnockflyAnimState.KnockBack:
-                    owner.PlayAnim("KnockBack");
-                    break;
-            }
+            // switch(Data.state)
+            // {
+            //     case EKnockflyAnimState.Hurt:
+            //         owner.PlayAnim("Hurt");
+            //         break;
+            //     case EKnockflyAnimState.KnockFly:
+            //         owner.PlayAnim("Knockfly");
+            //         break;
+            //     case EKnockflyAnimState.KnockFly2:
+            //         owner.PlayAnim("Knockfly2");
+            //         break;
+            //     case EKnockflyAnimState.KnockBack:
+            //         owner.PlayAnim("KnockBack");
+            //         break;
+            // }
+            owner.PlayAnim("Knockfly");
+            owner.DontToDefaultAnimation();
             t = 0;
             lastH = 0;
             speed = Data.speed;
@@ -70,8 +72,8 @@ namespace Battle
                 var pos = GetActor.Position;
                 pos.y = newPos.ToGroundPos().y;
                 GetActor.Position = pos;
-                if(!owner.IsDead())
-                    ChangeState(ERoleState.Idle);
+                owner.TurnOnToDefaultAnimation();
+                ExitState();
             }
 
         }

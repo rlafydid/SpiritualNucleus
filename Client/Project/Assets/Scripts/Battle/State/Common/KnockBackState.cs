@@ -36,12 +36,12 @@ namespace Battle
             
             Debug.Log($"KnockBackState");
             owner.DontToDefaultAnimation();
+            
+            owner.Position.ToGroundPos()
         }
 
         private Vector3 velocity;
 
-        private float flyV;
-        
         public override void Update()
         {
             base.Update();
@@ -70,15 +70,8 @@ namespace Battle
                 var pos = GetActor.Position;
                 pos.y = newPos.ToGroundPos().y;
                 GetActor.Position = pos;
-                if (owner.IsDead())
-                {
-                    ChangeState(ERoleState.Dead);
-                }
-                else
-                {
-                    ChangeState(ERoleState.Idle);
-                }
-                
+                owner.TurnOnToDefaultAnimation();
+                ExitState();
             }
 
         }
