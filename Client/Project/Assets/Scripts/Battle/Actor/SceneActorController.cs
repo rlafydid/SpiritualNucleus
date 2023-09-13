@@ -174,6 +174,16 @@ namespace Battle
             this.StopAct();
             Facade.Skill.StopSkill(ID);
         }
+
+        public void DontToDefaultAnimation()
+        {
+            Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = false;
+        }
+        
+        public void TurnOnToDefaultAnimation()
+        {
+            Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = true;
+        }
     }
 
     public class DamageData : IStateData

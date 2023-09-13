@@ -16,7 +16,7 @@ namespace Battle
             base.Enter();
             // if(Math.Abs(owner.Position.ToGroundPos().y - owner.Position.y))
             owner.PlayAnim("Dead");
-            owner.Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = false;
+            owner.DontToDefaultAnimation();
             TimerMod.Delay(2f, Destroy);
         }
 

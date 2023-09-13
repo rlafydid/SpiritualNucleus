@@ -35,6 +35,7 @@ namespace Battle
             a = Data.a;
             
             Debug.Log($"KnockBackState");
+            owner.DontToDefaultAnimation();
         }
 
         private Vector3 velocity;
@@ -64,9 +65,6 @@ namespace Battle
             
             GetActor.Position = newPos;
 
-            if (owner.IsDead())
-                owner.Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = false;
-            
             if(v <= 0 && newPos.y <= newPos.ToGroundPos().y)
             {
                 var pos = GetActor.Position;
@@ -74,10 +72,7 @@ namespace Battle
                 GetActor.Position = pos;
                 if (owner.IsDead())
                 {
-                    TimerMod.Delay(2f, () =>
-                    {
-                        Facade.Battle.ReleaseActor(owner.ID);
-                    });
+                    ChangeState(ERoleState.Dead);
                 }
                 else
                 {
