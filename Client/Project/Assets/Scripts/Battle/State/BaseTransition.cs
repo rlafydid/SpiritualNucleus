@@ -11,7 +11,7 @@ namespace FSM
         public int fromState = -1;
         public int toState;
 
-        public int priority = -1;
+        public int priority = 0;
 
         public bool hasExitTime = true;
 

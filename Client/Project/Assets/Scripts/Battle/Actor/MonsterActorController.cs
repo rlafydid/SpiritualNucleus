@@ -48,6 +48,9 @@ namespace Battle
             traceState.AddTransition(new Transition(ERoleState.KnockBack));
             traceState.AddTransition(new Transition(ERoleState.KnockFly));
             traceState.AddTransition(new Transition(ERoleState.Attack));
+
+            var toIdleTransition = new FSM.Transition(ERoleState.Idle);
+            toIdleTransition.priority = -1;
             
             var toHurtTransition = new FSM.Transition(ERoleState.Hurt);
             fsm.AddEvent(FSM.EEvent.Hurt, toHurtTransition);
@@ -70,10 +73,12 @@ namespace Battle
             
             // knockBackState.AddTransition(toKnockBackTransition);
             knockBackState.AddTransition(toKnockFlyTransition);
+            knockBackState.AddTransition(toIdleTransition);
             
             knockFlyState.AddTransition(toKnockFlyTransition);
             knockFlyState.AddTransition(toKnockBackTransition);
             knockFlyState.AddTransition(toHurtTransition);
+            knockFlyState.AddTransition(toIdleTransition);
             
             attackState.AddTransition(toHurtTransition);
             attackState.AddTransition(toKnockBackTransition);
