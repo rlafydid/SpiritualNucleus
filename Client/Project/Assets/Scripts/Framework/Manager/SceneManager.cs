@@ -74,7 +74,7 @@ namespace LKEngine
             }
         }
 
-        public void LoadScene(SceneType sceneType)
+        public void LoadScene(SceneType sceneType, string sceneName = null)
         {
             if (currentType == SceneType.None)
             {
@@ -83,7 +83,8 @@ namespace LKEngine
 
 
             //BaseScene baseScene = AllScene [sceneType];
-            string sceneName = GetSceneName(sceneType);
+            if(string.IsNullOrEmpty(sceneName))
+                sceneName = GetSceneName(sceneType);
 
             if (string.IsNullOrEmpty(sceneName))
                 return;

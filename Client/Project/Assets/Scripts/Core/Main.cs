@@ -40,8 +40,8 @@ public class Main : MonoBehaviour
         {
             module.Start();
         }
-        SceneManager.Instance.LoadScene(SceneType.Battle);
 
+        Facade.Battle.EnterLevel(1);
     }
 
     // Update is called once per frame

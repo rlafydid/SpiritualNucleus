@@ -1791,6 +1791,16 @@
             "GUID": "02f26400ac423b24bb030273982eabf3"
         },
         {
+            "ID": "ChapterConfig.asset",
+            "Path": "Assets/Res/Battle/Scene/ChapterConfig.asset",
+            "GUID": "96ca7bde608c44e2ab89912d760ca5aa"
+        },
+        {
+            "ID": "LevelConfig.asset",
+            "Path": "Assets/Res/Battle/Scene/LevelConfig.asset",
+            "GUID": "4f8133e16f0914e74b84b3466c920788"
+        },
+        {
             "ID": "Ability1.asset",
             "Path": "Assets/Res/Battle/Skill/Assassin/Abilities/Ability1.asset",
             "GUID": "992b0e9e8bda54b29b6de370866641c0"
@@ -2224,6 +2234,11 @@
             "ID": "Battle.unity",
             "Path": "Assets/Res/Scenes/Battle.unity",
             "GUID": "e79f0a2b6049441f28e0d98421068ef9"
+        },
+        {
+            "ID": "Level1.unity",
+            "Path": "Assets/Res/Scenes/Level1.unity",
+            "GUID": "45fdf1603fce04f1891d4bb4047c9338"
         },
         {
             "ID": "NewBattleSettings.lighting",

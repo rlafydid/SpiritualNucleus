@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Battle;
 using LKEngine;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Facade
 {
@@ -43,7 +44,7 @@ namespace Battle
         public HeroActorController CreateHero(int heroId, Vector3 pos = default)
         {
             HeroActorController actor = new HeroActorController();
-            actor.SetConfig(heroId);
+            actor.SetConfig((int)heroId);
             actor.OnInit();
             actor.Load();
             actor.Position = pos.ToGroundPos();
@@ -51,10 +52,10 @@ namespace Battle
             return actor;
         }
 
-        public SceneActorController CreateMonster(int monsterID, Vector3 pos = default)
+        public SceneActorController CreateMonster(long monsterID, Vector3 pos = default)
         {
             MonsterActorController actor = new MonsterActorController();
-            actor.SetConfig(monsterID);
+            actor.SetConfig((int)monsterID);
             actor.OnInit();
             actor.Load();
             actor.Position = pos.ToGroundPos();
@@ -71,13 +72,29 @@ namespace Battle
 
             Vector3 heroForward = heroPos + Vector3.forward * 10;
 
-            float range = 1;
-            float farRange = 5;
-            for (int i = 0; i < 1; i++)
+            var sceneConfig = Facade.Battle.GetConfig();
+
+            foreach (var pointConfig in sceneConfig.pointConfigs)
             {
-                float x = UnityEngine.Random.Range(heroForward.x - range, heroForward.x + range);
-                float y = UnityEngine.Random.Range(heroForward.z, heroForward.z + farRange);
-                CreateMonster(2002, new Vector3(x, 0, y));
+                switch (pointConfig.generateType)
+                {
+                    case EGenerateType.Hero:
+                        CreateHero((int)pointConfig.id, pointConfig.point);
+                        break;
+                    case EGenerateType.Monster:
+                        for (int i = 0; i < pointConfig.count; i++)
+                        {
+                            float randomRadius = pointConfig.radius;
+                            float randomAngle = Random.Range(0, 360);
+                            float cosVal = Mathf.Cos(randomAngle);
+                            float sinVal = Mathf.Sin(randomAngle);
+
+                            float x = sinVal * randomRadius;
+                            float y = cosVal * randomRadius;
+                            CreateMonster(pointConfig.id, pointConfig.point + new Vector3(x,0,y));
+                        }
+                        break;
+                }
             }
             
             var ctrl = SceneManager.Instance.Camera.AddComponent<CameraMoveController>();
