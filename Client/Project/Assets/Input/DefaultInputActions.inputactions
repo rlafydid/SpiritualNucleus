@@ -1036,6 +1036,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Camera",
+            "id": "3ad7c5e5-c5e6-42c0-bb2e-27b4bb97caab",
+            "actions": [
+                {
+                    "name": "Press",
+                    "type": "Button",
+                    "id": "d4b6c1a2-9c4c-474e-b9e6-e7a01b27dbbf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "804c78ee-10fc-4207-ae9d-7d54146b4ee0",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touch;Keyboard&Mouse",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

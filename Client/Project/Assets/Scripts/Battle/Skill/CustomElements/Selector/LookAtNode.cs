@@ -16,6 +16,8 @@ public class LookAtNode : UniversalNode
 	{
 		var owner = Facade.Battle.GetActor(skilUnit.OwnerID);
 		var target = Facade.Battle.GetActor(toTarget);
+		if (target == null)
+			return;
 		var targetPos = target.Position;
 		targetPos.y = owner.Position.y;
 		owner.Entity.LookAt(targetPos);

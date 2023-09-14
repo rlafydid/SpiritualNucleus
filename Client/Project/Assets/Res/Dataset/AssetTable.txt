@@ -2111,6 +2111,11 @@
             "GUID": "0b419c4b9f2ad3249aa3478ec98cb4ce"
         },
         {
+            "ID": "TestAnimator.controller",
+            "Path": "Assets/Res/Model/Models/sunxiaohou01/AnimatorController/TestAnimator.controller",
+            "GUID": "5590c74bad5074402bac41dee9f0d6d9"
+        },
+        {
             "ID": "P_M_Sunxiaohou_01.mat",
             "Path": "Assets/Res/Model/Models/sunxiaohou01/Materials/P_M_Sunxiaohou_01.mat",
             "GUID": "a6640be66c611354eb55e70da0c159a2"

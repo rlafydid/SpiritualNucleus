@@ -45,7 +45,12 @@ namespace Battle
             Facade.Battle.StartBattle = StartBattle;
             Facade.Battle.EnterLevel = EnterLevel;
             Facade.Battle.GetConfig = GetConfig;
-            _chapterConfig = Facade.Asset.Load<ChapterConfig>("ChapterConfig");
+        }
+
+        public override void Start()
+        {
+            base.Start();
+            _chapterConfig = Facade.Asset.Load<ChapterConfig>("ChapterConfig.asset");
         }
 
         SceneConfig GetConfig()

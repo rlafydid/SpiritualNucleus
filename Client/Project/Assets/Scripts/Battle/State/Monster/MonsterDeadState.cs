@@ -17,13 +17,13 @@ namespace Battle
             // if(Math.Abs(owner.Position.ToGroundPos().y - owner.Position.y))
             owner.PlayAnim("Dead");
             owner.DontToDefaultAnimation();
-            TimerMod.Delay(2f, Destroy);
+            Facade.Battle.ReleaseActor(owner.ID);
+
         }
 
 
         void Destroy()
         {
-            Facade.Battle.ReleaseActor(owner.ID);
         }
     }
 

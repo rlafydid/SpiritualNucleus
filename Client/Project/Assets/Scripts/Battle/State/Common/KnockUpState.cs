@@ -16,6 +16,11 @@ namespace Battle
         public override void Enter()
         {
             base.Enter();
+            if (Data == null)
+            {
+                ExitState();
+                return;
+            }
             owner.StopMove();
             // switch(Data.state)
             // {

@@ -67,11 +67,6 @@ namespace Battle
         {
             Debug.Log("Start");
 
-            Vector3 heroPos = new Vector3(-7.86f, 3.61f, -12.77f);
-            CreateHero(1003, heroPos);
-
-            Vector3 heroForward = heroPos + Vector3.forward * 10;
-
             var sceneConfig = Facade.Battle.GetConfig();
 
             foreach (var pointConfig in sceneConfig.pointConfigs)
@@ -108,6 +103,7 @@ namespace Battle
             {
                 act.Update();
             }
+            
             foreach (var act in monsterActors)
             {
                 act.Update();
@@ -117,6 +113,16 @@ namespace Battle
         public override void LateUpdate()
         {
             base.LateUpdate();
+
+            if (_releasedActors.Count > 0)
+            {
+                foreach (var id in _releasedActors)
+                {
+                    RemoveActor(id);
+                }
+                _releasedActors.Clear();
+            }
+            
             foreach (var act in heroActors)
             {
                 act.LateUpdate();
@@ -127,7 +133,13 @@ namespace Battle
             }
         }
 
+        private List<long> _releasedActors = new List<long>();
         void ReleaseActor(long id)
+        {
+            _releasedActors.Add(id);
+        }
+
+        void RemoveActor(long id)
         {
             var act = heroActors.Find(d => d.ID == id);
             if (act != null)

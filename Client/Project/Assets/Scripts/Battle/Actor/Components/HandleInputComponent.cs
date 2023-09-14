@@ -7,7 +7,7 @@ namespace Battle
 {
     public class HandleInputComponent : ActorComponent, DefaultInputActions.IHeroActions
     {
-        private DefaultInputActions playerInput;
+        public static DefaultInputActions playerInput;
         protected override void OnStart()
         {
             base.OnStart();

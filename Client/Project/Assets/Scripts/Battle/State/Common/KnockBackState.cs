@@ -16,6 +16,12 @@ namespace Battle
         public override void Enter()
         {
             base.Enter();
+            if (Data == null)
+            {
+                ExitState();
+                return;
+            }
+                
             owner.StopMove();
             // switch(Data.state)
             // {
@@ -64,7 +70,7 @@ namespace Battle
             
             Vector3 newPos = GetActor.Position + velocity;
 
-            if (yV < newPos.ToGroundPos().y)
+            if (newPos.y < newPos.ToGroundPos().y)
             {
                 newPos.y = newPos.ToGroundPos().y;
             }

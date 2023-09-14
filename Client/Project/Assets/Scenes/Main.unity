@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: assassin
       objectReference: {fileID: 0}
+    - target: {fileID: 4454336320037625290, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
 --- !u!1 &49738521
@@ -894,6 +898,10 @@ PrefabInstance:
     - target: {fileID: 426930, guid: 3d068baf535dd094187bde9bca521302, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9578280, guid: 3d068baf535dd094187bde9bca521302, type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d068baf535dd094187bde9bca521302, type: 3}

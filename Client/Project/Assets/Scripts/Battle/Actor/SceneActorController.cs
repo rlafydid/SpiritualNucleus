@@ -166,6 +166,11 @@ namespace Battle
 
         public void Destroy()
         {
+            TimerMod.Delay(2f, RemoveEntity);
+        }
+
+        void RemoveEntity()
+        {
             SceneManager.Instance.RemoveEntity(Entity);
         }
 

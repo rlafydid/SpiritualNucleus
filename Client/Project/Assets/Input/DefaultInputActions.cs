@@ -1058,6 +1058,34 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Camera"",
+            ""id"": ""3ad7c5e5-c5e6-42c0-bb2e-27b4bb97caab"",
+            ""actions"": [
+                {
+                    ""name"": ""Press"",
+                    ""type"": ""Button"",
+                    ""id"": ""d4b6c1a2-9c4c-474e-b9e6-e7a01b27dbbf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""804c78ee-10fc-4207-ae9d-7d54146b4ee0"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch;Keyboard&Mouse"",
+                    ""action"": ""Press"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -1151,6 +1179,9 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
         m_Hero_Skill3 = m_Hero.FindAction("Skill3", throwIfNotFound: true);
         m_Hero_Skill4 = m_Hero.FindAction("Skill4", throwIfNotFound: true);
         m_Hero_Dodge = m_Hero.FindAction("Dodge", throwIfNotFound: true);
+        // Camera
+        m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
+        m_Camera_Press = m_Camera.FindAction("Press", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1457,6 +1488,39 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
         }
     }
     public HeroActions @Hero => new HeroActions(this);
+
+    // Camera
+    private readonly InputActionMap m_Camera;
+    private ICameraActions m_CameraActionsCallbackInterface;
+    private readonly InputAction m_Camera_Press;
+    public struct CameraActions
+    {
+        private @DefaultInputActions m_Wrapper;
+        public CameraActions(@DefaultInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Press => m_Wrapper.m_Camera_Press;
+        public InputActionMap Get() { return m_Wrapper.m_Camera; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CameraActions set) { return set.Get(); }
+        public void SetCallbacks(ICameraActions instance)
+        {
+            if (m_Wrapper.m_CameraActionsCallbackInterface != null)
+            {
+                @Press.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnPress;
+                @Press.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnPress;
+                @Press.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnPress;
+            }
+            m_Wrapper.m_CameraActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Press.started += instance.OnPress;
+                @Press.performed += instance.OnPress;
+                @Press.canceled += instance.OnPress;
+            }
+        }
+    }
+    public CameraActions @Camera => new CameraActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1532,5 +1596,9 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
         void OnSkill3(InputAction.CallbackContext context);
         void OnSkill4(InputAction.CallbackContext context);
         void OnDodge(InputAction.CallbackContext context);
+    }
+    public interface ICameraActions
+    {
+        void OnPress(InputAction.CallbackContext context);
     }
 }

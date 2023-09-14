@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using LKEngine;
 using UnityEngine;
 
 namespace Battle
@@ -48,9 +49,20 @@ namespace Battle
         
         public void MoveToDir(Vector3 dir)
         {
+            Vector3 camToOwner = ownerActor.Position - SceneManager.Instance.Camera.Camera.transform.position;
+            camToOwner.Normalize();
+            camToOwner.y = 0;
+
+            Vector3 forward = ownerActor.Entity.Forward;
+            forward.y = 0;
+            
+            float angle = Vector3.SignedAngle(Vector3.forward, camToOwner, Vector3.up);
+            
+            dir = Quaternion.AngleAxis(angle, Vector3.up) * dir;
+                
             dir.x *= 0.7f;
             Vector3 moveToPos = ownerActor.Position + dir * _moveSpeed * Time.deltaTime;
-
+            
             Vector3 lookAt = moveToPos;
             lookAt.y = ownerActor.Position.y;
             // Entity.LookAt(lookAt);
@@ -58,6 +70,7 @@ namespace Battle
             moveToPos.y = groundPos.y;
             // Debug.Log($"ownerActor.Position {ownerActor.Position} moveToPos {moveToPos}");
             ownerActor.Position = moveToPos;
+            ownerActor.Entity.LookAt(ownerActor.Position + camToOwner);
         }
 
         protected override void OnLateUpdate()

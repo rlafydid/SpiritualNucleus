@@ -14,7 +14,7 @@ namespace FSM
         public int priority = 0;
 
         public bool hasExitTime = true;
-
+        
         List<Condition> conditions = new List<Condition>();
         List<Func<bool>> conditionFuncs = new List<Func<bool>>();
 
