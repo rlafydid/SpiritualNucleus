@@ -135,6 +135,7 @@ namespace LKEngine
             _lastScene = arg2.name;
             Debug.Log($"SceneChanged {arg2.name}");
             
+            
             GameHelper.Instance.StartCoroutine(WaitTime(SceneEnter));
 
         }
