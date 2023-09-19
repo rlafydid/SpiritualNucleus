@@ -13,6 +13,16 @@ namespace Battle
 
         float value;
 
+        public Vector3 GetMoveDirection
+        {
+            get
+            {
+                return _direction;
+            }
+        }
+
+        private Vector3 _lastJoytickDirection;
+
         protected override void OnUpdate()
         {
             // float x = Input.GetAxis("Horizontal");
@@ -25,9 +35,9 @@ namespace Battle
 
             //MoveToDir(Vector3.Lerp(Entity.Forward, offset.normalized, Time.deltaTime));
 
-            if (_direction != Vector3.zero)
+            if (_lastJoytickDirection != Vector3.zero)
             {
-                SetMoveDelta(_direction);
+                SetMoveDelta(_lastJoytickDirection);
             }
         }
         
@@ -43,8 +53,8 @@ namespace Battle
         private Vector3 _direction;
         public void SetMoveDir(Vector3 dir)
         {
-            _direction = dir;
-            SetMoveDelta(_direction);
+            _lastJoytickDirection = dir;
+            SetMoveDelta(dir);
         }
         
         public void MoveToDir(Vector3 dir)
@@ -59,8 +69,11 @@ namespace Battle
             float angle = Vector3.SignedAngle(Vector3.forward, camToOwner, Vector3.up);
             
             dir = Quaternion.AngleAxis(angle, Vector3.up) * dir;
-                
+            
+            _direction = dir;
+
             dir.x *= 0.7f;
+
             Vector3 moveToPos = ownerActor.Position + dir * _moveSpeed * Time.deltaTime;
             
             Vector3 lookAt = moveToPos;

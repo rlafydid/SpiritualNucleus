@@ -6,9 +6,8 @@ namespace Battle
     public class MonsterIdleState : MonsterState
     {
         float t;
-        public override void Enter()
+        protected override void OnEnter()
         {
-            base.Enter();
             t = 0;
             owner.Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = true;
             if(owner.IsDead())
@@ -19,9 +18,8 @@ namespace Battle
             //GetActor.PlayAnim("Default");
         }
 
-        public override void Update()
+        protected override void OnUpdate()
         {
-            base.Update();
             if (owner.IsDead())
                 return;
 
@@ -39,9 +37,8 @@ namespace Battle
         }
 
 
-        public override void Exit()
+        protected override void OnExit()
         {
-            base.Exit();
         }
     }
 }

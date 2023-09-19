@@ -49,15 +49,32 @@ namespace Battle
 
         public int state;
 
+        protected bool IsUpdate { get; set; } = true;
+
         public virtual void SetData(IStateData data)
         {
         }
+
+        public void Enter()
+        {
+            IsUpdate = true;
+            OnEnter();
+        }
+        public void Update()
+        {
+            if(IsUpdate)
+                OnUpdate();
+        }
+        public void Exit()
+        {
+            OnExit();
+        }
         
-        public virtual void Enter()
+        protected virtual void OnEnter()
         {
         }
-        public virtual void Update() { }
-        public virtual void Exit() { }
+        protected virtual void OnUpdate() { }
+        protected virtual void OnExit() { }
 
         public void AddTransition(Transition transition)
         {

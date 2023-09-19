@@ -19,10 +19,8 @@ namespace Battle
 
         int jumpCount = 0;
 
-        public override void Enter()
+        protected override void OnEnter()
         {
-            base.Enter();
-
             t = 0;
             lastH = 0;
 
@@ -43,7 +41,7 @@ namespace Battle
             jumpCount++;
         }
 
-        public override void Update()
+        protected override void OnUpdate()
         {
             t += Time.deltaTime * speed;
             float h = v0 * t - 0.5f * g * t * t;

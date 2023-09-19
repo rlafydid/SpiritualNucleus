@@ -9,22 +9,19 @@ namespace Battle
         float length = 1f;
 
         float t = 0;
-        public override void Enter()
+        protected override void OnEnter()
         {
-            base.Enter();
             owner.PlayAnim("Hurt");
             Debug.Log($"HurtState");
         }
-        public override void Update()
+        protected override void OnUpdate()
         {
-            base.Update();
             t += Time.deltaTime;
             if (t < length)
                 ChangeState(ERoleState.Idle);
         }
-        public override void Exit()
+        protected override void OnExit()
         {
-            base.Exit();
         }
     }
 

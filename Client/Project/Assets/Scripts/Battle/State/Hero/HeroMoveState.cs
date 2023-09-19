@@ -6,22 +6,19 @@ namespace Battle
 {
     public class HeroMoveState : HeroState
     {
-        public override void Enter()
+        protected override void OnEnter()
         {
-            base.Enter();
             Debug.Log("Hero Run");
             // owner.PlayAnim("Run");
             GetActor.Entity.GetComponent<MoveComponent>().ToDefaultState();
         }
 
-        public override void Update()
+        protected override void OnUpdate()
         {
-            base.Update();
         }
 
-        public override void Exit()
+        protected override void OnExit()
         {
-            base.Exit();
             owner.StopMove();
         }
     }

@@ -11,16 +11,14 @@ namespace Battle
             public Entity entity;
         }
     
-        public override void Enter()
+        protected override void OnEnter()
         {
-            base.Enter();
             GetActor.TraceTarget(Data.entity);
             GetActor.PlayAnim("Run");
         }
 
-        public override void Update()
+        protected override void OnUpdate()
         {
-            base.Update();
             if (Vector3.Distance(GetActor.Position, Data.entity.Position) < 2)
             {
                 this.GetActor.StopMove();

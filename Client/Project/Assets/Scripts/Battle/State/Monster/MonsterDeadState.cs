@@ -11,9 +11,8 @@ namespace Battle
     }
     public class MonsterDeadState : MonsterState
     {
-        public override void Enter()
+        protected override void OnEnter()
         {
-            base.Enter();
             // if(Math.Abs(owner.Position.ToGroundPos().y - owner.Position.y))
             owner.PlayAnim("Dead");
             owner.DontToDefaultAnimation();

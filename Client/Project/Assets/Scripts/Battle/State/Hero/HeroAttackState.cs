@@ -11,7 +11,7 @@ namespace Battle
     }
     public class HeroAttackState : HeroState<AttackStateData>
     {
-        public override async void Enter()
+        protected override async void OnEnter()
         {
             owner.StopMove();
 

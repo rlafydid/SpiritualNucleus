@@ -185,7 +185,7 @@ namespace Battle
             Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = false;
         }
         
-        public void TurnOnToDefaultAnimation()
+        public void TurnOnToDefaultAnimation(float delay = 0)
         {
             Entity.GameObject.GetComponent<SimpleAnimation>().ReturnToDefaultState = true;
         }

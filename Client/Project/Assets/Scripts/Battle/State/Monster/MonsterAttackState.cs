@@ -9,7 +9,7 @@ namespace Battle
         SceneActorController target;
         float maxDistance = 3f;
 
-        public override async void Enter()
+        protected override async void OnEnter()
         {
             owner.StopMove();
             // if (target == null || Vector3.Distance(owner.Position, target.Position) > maxDistance)
@@ -33,7 +33,7 @@ namespace Battle
         }
 
 
-        public override void Update()
+        protected override void OnUpdate()
         {
 
         }
@@ -43,9 +43,8 @@ namespace Battle
             this.ToDefaultState();
         }
 
-        public override void Exit()
+        protected override void OnExit()
         {
-            base.Exit();
             owner.StopAttack();
         }
     }

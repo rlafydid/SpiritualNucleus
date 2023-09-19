@@ -27,7 +27,7 @@ namespace Battle
             HeroMoveState moveState = new HeroMoveState();
             HeroAttackState attackState = new HeroAttackState();
             HeroJumpState jumpState = new HeroJumpState();
-            HeroFlashStateState flashState = new HeroFlashStateState();
+            HeroFlashState flashState = new HeroFlashState();
             HeroEvadeState evadeState = new HeroEvadeState();
 
             fsm.AddState(ERoleState.Idle, idleState);
@@ -54,7 +54,6 @@ namespace Battle
             // toFlashMove.AddCondition(handleInput.FlashMove);
 
             FSM.Transition toEvade = new FSM.Transition(ERoleState.Evade);
-            toEvade.AddCondition(new EvadeCondition());
             
             idleState.AddTransition(toMove);
             idleState.AddTransition(toAttack);
@@ -66,6 +65,8 @@ namespace Battle
             moveState.AddTransition(toJump);
             moveState.AddTransition(toFlashMove);
             moveState.AddTransition(toEvade);
+            
+            evadeState.AddTransition(toIdle);
         }
 
         public void TriggerEvent(ERoleState state)

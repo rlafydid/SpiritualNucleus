@@ -13,30 +13,15 @@ namespace Battle
         float t;
         float speed;
 
-        public override void Enter()
+        protected override void OnEnter()
         {
-            base.Enter();
             if (Data == null)
             {
                 ExitState();
                 return;
             }
             owner.StopMove();
-            // switch(Data.state)
-            // {
-            //     case EKnockflyAnimState.Hurt:
-            //         owner.PlayAnim("Hurt");
-            //         break;
-            //     case EKnockflyAnimState.KnockFly:
-            //         owner.PlayAnim("Knockfly");
-            //         break;
-            //     case EKnockflyAnimState.KnockFly2:
-            //         owner.PlayAnim("Knockfly2");
-            //         break;
-            //     case EKnockflyAnimState.KnockBack:
-            //         owner.PlayAnim("KnockBack");
-            //         break;
-            // }
+
             owner.PlayAnim("Knockfly");
             owner.DontToDefaultAnimation();
             t = 0;
@@ -58,9 +43,8 @@ namespace Battle
         }
 
         float lastH = 0;
-        public override void Update()
+        protected override void OnUpdate()
         {
-            base.Update();
             t += Time.deltaTime * speed;
             float h = v0 * t - 0.5f * g * t * t;
             float deltaH = h - lastH;
@@ -77,8 +61,12 @@ namespace Battle
                 var pos = GetActor.Position;
                 pos.y = newPos.ToGroundPos().y;
                 GetActor.Position = pos;
-                owner.TurnOnToDefaultAnimation();
-                ExitState();
+                IsUpdate = false;
+                TimerMod.Delay(owner.IsDead() ? 0 : 2, () =>
+                {
+                    owner.TurnOnToDefaultAnimation();
+                    ExitState();
+                });
             }
 
         }

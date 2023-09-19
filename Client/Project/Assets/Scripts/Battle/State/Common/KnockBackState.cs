@@ -14,9 +14,10 @@ namespace Battle
         float g = 10;
         private Vector3 velocity;
 
-        public override void Enter()
+        private bool isUpdate = false;
+
+        protected override void OnEnter()
         {
-            base.Enter();
             if (Data == null)
             {
                 ExitState();
@@ -24,18 +25,6 @@ namespace Battle
             }
                 
             owner.StopMove();
-            // switch(Data.state)
-            // {
-            //     case EKnockflyAnimState.Hurt:
-            //         owner.PlayAnim("Hurt");
-            //         break;
-            //     case EKnockflyAnimState.KnockFly:
-            //         owner.PlayAnim("Knockfly");
-            //         break;
-            //     case EKnockflyAnimState.KnockFly2:
-            //         owner.PlayAnim("Knockfly2");
-            //         break;
-            // }
 
             if (owner.IsFloatingState())
             {
@@ -50,31 +39,28 @@ namespace Battle
             v0 = Data.f;
             a = Data.a;
             velocity = Vector3.zero;
-            
+
+            isUpdate = true;
             Debug.Log($"KnockBackState");
         }
 
 
-        public override void Update()
+        protected override void OnUpdate()
         {
-            base.Update();
-
+            if (!isUpdate)
+                return;
+            
             t += Time.deltaTime;
             
             float v = v0 + -a * t;
             float yV = -g * t * 0.5f;
 
             Vector3 offset = Data.direction * v;
-            offset.y = velocity.y * Time.deltaTime;
-            
-            velocity.y -= g * Time.deltaTime * 2;
-            
+            offset.y = 0;
             Debug.Log($"v0:{v} height:{yV} velocity:{velocity}");
             
             Vector3 newPos = GetActor.Position + offset;
 
-          
-            
             GetActor.Position = newPos;
 
             if(v <= 0 && newPos.y <= newPos.ToGroundPos().y)

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FSM;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -67,7 +68,14 @@ namespace Battle
 
         public void OnDodge(InputAction.CallbackContext context)
         {
-            throw new System.NotImplementedException();
+            if (!context.performed)
+                return;
+            Vector3 dir = this.ownerActor.GetComponent<JoystickMoveComponent>().GetMoveDirection;
+            if (dir.magnitude < 0.001f)
+            {
+                dir = ownerActor.Entity.Forward;
+            }
+            ownerActor.ChangeState(ERoleState.Evade, new HeroEvadeStateData(){ direction = dir});
         }
 
         void ChangeToState(ERoleState state)

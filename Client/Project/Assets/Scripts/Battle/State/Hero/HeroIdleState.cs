@@ -6,13 +6,13 @@ namespace Battle
 {
     public class HeroIdleState : HeroState
     {
-        public override void Enter()
+        protected override void OnEnter()
         {
             //GetActor.PlayAct("idle");
             GetActor.StartMove();
            
         }
-        public override void Update()
+        protected override void OnUpdate()
         {
         }
     }

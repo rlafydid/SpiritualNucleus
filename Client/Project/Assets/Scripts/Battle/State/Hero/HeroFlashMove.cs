@@ -4,23 +4,23 @@ using UnityEngine;
 
 namespace Battle
 {
-    public class HeroFlashStateState : HeroState
+    public struct HeroFlashStateData : IStateData
+    {
+        public Vector3 direction;
+    }
+    public class HeroFlashState : HeroState<HeroFlashStateData>
     {
         float speed = 20;
-        public override void Enter()
+        protected override void OnEnter()
         {
             owner.PlayAnim("Charge");
             var moveComponent = GetActor.Entity.GetComponent<MoveComponent>();
+            moveComponent.MoveLerpTo(owner.Position + Data.direction * 10, 1);
             moveComponent.Finish = Finish;
 
         }
-        public override void Update()
+        protected override void OnUpdate()
         {
-            owner.Position += owner.Entity.Forward * Time.deltaTime * speed;
-            if (Input.GetKeyUp(KeyCode.E))
-            {
-                Finish();
-            }
         }
 
         void Finish()

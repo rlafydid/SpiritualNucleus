@@ -80,6 +80,7 @@ namespace Battle
             knockFlyState.AddTransition(toKnockFlyTransition);
             knockFlyState.AddTransition(toKnockBackTransition);
             knockFlyState.AddTransition(toHurtTransition);
+            knockFlyState.AddTransition(toDeadTranstion);
             
             attackState.AddTransition(toHurtTransition);
             attackState.AddTransition(toKnockBackTransition);

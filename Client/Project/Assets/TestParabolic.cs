@@ -12,6 +12,8 @@ public class TestParabolic : MonoBehaviour
     private Vector3 startPos;
 
     private Vector3 velocity;
+
+    public Transform target;
     
     // Start is called before the first frame update
     void Start()
@@ -22,17 +24,19 @@ public class TestParabolic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float deltaTime = Time.deltaTime;
-            
-        this.transform.position +=  velocity * deltaTime;
-
-        velocity.y -= g * deltaTime;
+        // float deltaTime = Time.deltaTime;
+        //     
+        // this.transform.position +=  velocity * deltaTime;
+        //
+        // velocity.y -= g * deltaTime;
+        //
+        // if (reset)
+        // {
+        //     this.transform.position = startPos;
+        //     t = 0;
+        //     reset = false;
+        // }
         
-        if (reset)
-        {
-            this.transform.position = startPos;
-            t = 0;
-            reset = false;
-        }
+        Debug.Log(Vector3.SignedAngle(transform.forward, (target.position - transform.position).normalized, Vector3.up));
     }
 }
