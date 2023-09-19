@@ -163,8 +163,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -111, y: 137, z: 0}
-  scale: {x: 0.65751624, y: 0.65751624, z: 1}
+  position: {x: -1099, y: -706, z: 0}
+  scale: {x: 1.3225, y: 1.3225, z: 1}
   references:
     version: 2
     RefIds:
@@ -227,7 +227,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 
+        selectTargets: 0200000000000000
         rangeType: 0
         angleRange: 60
         distanceRange: 2
@@ -246,7 +246,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        targets: 
+        targets: 0200000000000000
         nearestTarget: 2
     - rid: 5209252080799711249
       type: {class: LookAtNode, ns: , asm: Assembly-CSharp}
@@ -296,7 +296,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 
+        selectTargets: 0200000000000000
         rangeType: 0
         angleRange: 60
         distanceRange: 3
@@ -319,7 +319,7 @@ MonoBehaviour:
         v0: 3
         speed: 1
         animState: 1
-        targets: 
+        targets: 0200000000000000
         target: 0
     - rid: 6647520395619467294
       type: {class: VectorBulletNode, ns: , asm: Assembly-CSharp}
@@ -393,7 +393,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 
+        selectTargets: 0200000000000000
         rangeType: 0
         angleRange: 60
         distanceRange: 3
@@ -413,8 +413,8 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         f: 2
-        a: 10
+        a: 1
         speed: 1
         animState: 1
-        targets: 
+        targets: 0200000000000000
         target: 0

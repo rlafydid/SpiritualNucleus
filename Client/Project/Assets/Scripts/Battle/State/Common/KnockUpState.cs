@@ -45,8 +45,8 @@ namespace Battle
             float radian = Data.angle * Mathf.Deg2Rad;
             if (Data.angle == 0)
             {
-                v0 = Data.f;
-                v = 0;
+                v0 = 0;
+                v = Data.f;
             }
             else
             {
