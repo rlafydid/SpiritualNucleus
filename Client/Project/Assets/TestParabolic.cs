@@ -5,11 +5,14 @@ using UnityEngine;
 public class TestParabolic : MonoBehaviour
 {
     private float t;
-    private float g = 0.9f;
+    private float g = 10f;
 
     public bool reset = false;
 
     private Vector3 startPos;
+
+    private Vector3 velocity;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +22,12 @@ public class TestParabolic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        t += Time.deltaTime;
+        float deltaTime = Time.deltaTime;
             
-        float yV = -g * t * 0.5f;
-        float v = yV;
-        this.transform.position += Vector3.up * v;
+        this.transform.position +=  velocity * deltaTime;
 
+        velocity.y -= g * deltaTime;
+        
         if (reset)
         {
             this.transform.position = startPos;
