@@ -118,7 +118,7 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -526, y: -39, z: 0}
+  position: {x: -510, y: -38, z: 0}
   scale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -164,7 +164,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 0200000000000000
+        selectTargets: 480000000000000049000000000000004a00000000000000
         rangeType: 0
         angleRange: 60
         distanceRange: 3
@@ -202,7 +202,7 @@ MonoBehaviour:
         a: 10
         speed: 1
         animState: 0
-        targets: 0200000000000000
+        targets: 480000000000000049000000000000004a00000000000000
         target: 0
     - rid: 5209252080799711241
       type: {class: SelectNode, ns: , asm: Assembly-CSharp}
@@ -219,9 +219,9 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 
+        selectTargets: 480000000000000049000000000000004a00000000000000
         rangeType: 0
-        angleRange: 60
+        angleRange: 360
         distanceRange: 2
     - rid: 5209252080799711242
       type: {class: FindNearestTargetNode, ns: , asm: Assembly-CSharp}
@@ -238,8 +238,8 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        targets: 
-        nearestTarget: 0
+        targets: 480000000000000049000000000000004a00000000000000
+        nearestTarget: 74
     - rid: 5209252080799711243
       type: {class: LookAtNode, ns: , asm: Assembly-CSharp}
       data:
@@ -255,7 +255,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        toTarget: 0
+        toTarget: 74
     - rid: 6647520438562324481
       type: {class: DamageNode, ns: , asm: Assembly-CSharp}
       data:

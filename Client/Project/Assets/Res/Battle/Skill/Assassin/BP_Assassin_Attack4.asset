@@ -163,7 +163,7 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -1099, y: -706, z: 0}
+  position: {x: -1063, y: -681, z: 0}
   scale: {x: 1.3225, y: 1.3225, z: 1}
   references:
     version: 2
@@ -227,7 +227,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 0200000000000000
+        selectTargets: 
         rangeType: 0
         angleRange: 60
         distanceRange: 2
@@ -246,8 +246,8 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        targets: 0200000000000000
-        nearestTarget: 2
+        targets: 
+        nearestTarget: 73
     - rid: 5209252080799711249
       type: {class: LookAtNode, ns: , asm: Assembly-CSharp}
       data:
@@ -263,7 +263,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        toTarget: 2
+        toTarget: 73
     - rid: 6647520395619467277
       type: {class: LoopExecutionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -296,7 +296,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 0200000000000000
+        selectTargets: 48000000000000004900000000000000
         rangeType: 0
         angleRange: 60
         distanceRange: 3
@@ -319,7 +319,7 @@ MonoBehaviour:
         v0: 3
         speed: 1
         animState: 1
-        targets: 0200000000000000
+        targets: 48000000000000004900000000000000
         target: 0
     - rid: 6647520395619467294
       type: {class: VectorBulletNode, ns: , asm: Assembly-CSharp}
@@ -393,7 +393,7 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 0200000000000000
+        selectTargets: 480000000000000049000000000000004a00000000000000
         rangeType: 0
         angleRange: 60
         distanceRange: 3
@@ -412,9 +412,9 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        f: 2
+        f: 6
         a: 1
-        speed: 1
+        speed: 2
         animState: 1
-        targets: 0200000000000000
+        targets: 480000000000000049000000000000004a00000000000000
         target: 0
