@@ -851,7 +851,7 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a124da89-6dbf-4bd7-b858-faac5fe82d40"",
-                    ""path"": ""<Keyboard>/u"",
+                    ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -862,7 +862,7 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""18580014-3e9a-4825-a1e3-f563f8f9467b"",
-                    ""path"": ""<Keyboard>/i"",
+                    ""path"": ""<Keyboard>/3"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -873,7 +873,7 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""679d54df-0584-41e7-a098-fb01dd8ac5b2"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/4"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -884,7 +884,7 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5882966c-581b-4c16-a0f1-ff93dcb16abe"",
-                    ""path"": ""<Keyboard>/j"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Touch"",
@@ -895,7 +895,7 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""15e01a96-0a56-4503-9aa1-7a22407065a6"",
-                    ""path"": ""<Keyboard>/k"",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

@@ -2806,6 +2806,9 @@ MonoBehaviour:
   - clip: {fileID: 7400000, guid: 48cb33b2fd9d55a43a8015648ba77f6d, type: 3}
     name: KnockBack
     defaultState: 0
+  - clip: {fileID: 7400000, guid: c0c8f173a2f7eab40bb5c07cd813c3bf, type: 3}
+    name: RunFaster
+    defaultState: 0
   returnToDefaultState: 0
 --- !u!114 &-2478475712245162819
 MonoBehaviour:

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: c2bdaa034589ccb4b80b2534e72bb9fe
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 21300
   internalIDToNameTable:
   - first:
       1: 100000
@@ -554,15 +554,16 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: 
+    removeConstantScaleCurves: 0
+    motionNodeName: <Root Transform>
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
       copied configuration does not match position in animation file:\n\t'thigh_l'
       : position error = 2.920851 mm\n\t'calf_l' : position error = 1.265643 mm\n\t'thigh_r'
       : position error = 1.542095 mm\n\t'calf_r' : position error = 1.205293 mm\n\t'lowerarm_l'
       : position error = 1.116946 mm\n\t'hand_l' : position error = 3.335907 mm\n\t'lowerarm_r'
-      : position error = 1.208715 mm\n\t'hand_r' : position error = 2.300540 mm\n\t'middle_02_r'
-      : position error = 1.204164 mm\n\t'ring_02_r' : position error = 1.314686 mm\n"
+      : position error = 1.208719 mm\n\t'hand_r' : position error = 2.300546 mm\n\t'middle_02_r'
+      : position error = 1.204167 mm\n\t'ring_02_r' : position error = 1.314686 mm\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -641,6 +642,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
     fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -652,6 +654,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -1590,6 +1593,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

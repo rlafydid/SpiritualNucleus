@@ -56,7 +56,7 @@ namespace Battle
                 var pos = GetActor.Position;
                 pos.y = newPos.ToGroundPos().y;
                 GetActor.Position = pos;
-                ChangeState(ERoleState.Idle);
+                ExitState();
             }
 
             // if(jumpCount < 2 && owner.GetComponent<HandleInputComponent>().Jump())

@@ -21,7 +21,8 @@ namespace FSM
 
         protected BaseState curState;
 
-        public int CurrentState { get; set; }
+        public int CurrentState { get; private set; }
+        public int LastState { get; private set; }
 
         private int _defaultState;
         
@@ -80,6 +81,7 @@ namespace FSM
             
             if (states.TryGetValue(state, out BaseState target))
             {
+                LastState = CurrentState;
                 CurrentState = state;
 
                 if (curState != null)

@@ -42,16 +42,13 @@ namespace Battle
             FSM.Transition toIdle = new FSM.Transition(ERoleState.Idle);
             
             FSM.Transition toMove = new FSM.Transition(ERoleState.Move);
-            // toMove.AddCondition(GetComponent<JoystickMoveComponent>().IsMoving);
 
             FSM.Transition toAttack = new FSM.Transition(ERoleState.Attack);
-            // toAttack.AddCondition(this.GetComponent<HeroSkillComponent>().FindSkill);
 
             FSM.Transition toJump = new FSM.Transition(ERoleState.Jump);
-            // toJump.AddCondition(handleInput.Jump);
 
-            FSM.Transition toFlashMove = new FSM.Transition(ERoleState.FlashMove);
-            // toFlashMove.AddCondition(handleInput.FlashMove);
+            FSM.Transition toFlashMove = new FSM.Transition(ERoleState.Move);
+            toFlashMove.AddCondition(new MoveCondition(){isMoving = true});
 
             FSM.Transition toEvade = new FSM.Transition(ERoleState.Evade);
             
@@ -66,7 +63,11 @@ namespace Battle
             moveState.AddTransition(toFlashMove);
             moveState.AddTransition(toEvade);
             
+            evadeState.AddTransition(toFlashMove);
             evadeState.AddTransition(toIdle);
+            
+            jumpState.AddTransition(toMove);
+            jumpState.AddTransition(toIdle);
         }
 
         public void TriggerEvent(ERoleState state)

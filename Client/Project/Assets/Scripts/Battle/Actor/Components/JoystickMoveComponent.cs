@@ -7,7 +7,7 @@ namespace Battle
 {
     class JoystickMoveComponent : ActorComponent
     {
-        float _moveSpeed = 5;
+        float _moveSpeed = 7;
 
         public float MoveSpeed { get => _moveSpeed; set => _moveSpeed = value; }
 
@@ -39,6 +39,28 @@ namespace Battle
             {
                 SetMoveDelta(_lastJoytickDirection);
             }
+            else
+            {
+                StopRunFaster();
+            }
+        }
+
+        public bool FastMoving { get; private set; }
+
+        public void StartRunFaster()
+        {
+            GetActor.PlayAnim("RunFaster");
+            MoveSpeed = 20;
+            GetActor.DontToDefaultAnimation();
+            FastMoving = true;
+        }
+
+        public void StopRunFaster()
+        {
+            GetActor.Entity.GetComponent<AnimationController>().PlayDefault();
+            MoveSpeed = 5;
+            GetActor.TurnOnToDefaultAnimation();
+            FastMoving = false;
         }
         
         public void SetMoveDelta(Vector3 val)
@@ -72,7 +94,7 @@ namespace Battle
             
             _direction = dir;
 
-            dir.x *= 0.7f;
+            // dir.x *= 0.7f;
 
             Vector3 moveToPos = ownerActor.Position + dir * _moveSpeed * Time.deltaTime;
             
@@ -100,6 +122,7 @@ namespace Battle
 
         public bool IsMoving()
         {
+            Debug.Log($"英雄 move value {value}");
             return value > 0;
         }
 
