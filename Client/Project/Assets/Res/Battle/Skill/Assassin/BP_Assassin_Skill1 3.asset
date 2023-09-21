@@ -27,14 +27,6 @@ MonoBehaviour:
     outputFieldName: executes
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: 4f338bc9-545b-4dbd-8e03-3fafbde10f62
-    owner: {fileID: 11400000}
-    inputNodeGUID: 7a3e6a5f-3671-43cc-826c-ad6de08cb071
-    outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
-    inputFieldName: executed
-    outputFieldName: eventOutputs
-    inputPortIdentifier: 
-    outputPortIdentifier: 91417a8a-24c0-41c6-b115-42757ff90df1
   - GUID: 8efdac35-767c-48da-9ec7-5e73626cf443
     owner: {fileID: 11400000}
     inputNodeGUID: 6197ee59-7d21-4c69-ab0c-7a3ac9fb4953
@@ -50,8 +42,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -241, y: -233, z: 0}
-  scale: {x: 1.15, y: 1.15, z: 1}
+  position: {x: -84, y: -382, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
@@ -90,9 +82,30 @@ MonoBehaviour:
         targets: 
         attackSpeedScale: 0
         actEvents:
-        - triggerTime: 367
+        - triggerTime: 767
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
-          id: 91417a8a-24c0-41c6-b115-42757ff90df1
+          id: 00a663c3-1f2f-47ae-ab76-0e56acf2181f
+        - triggerTime: 933
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: 480c0e48-0223-4883-8882-4c473953ccfc
+        - triggerTime: 1100
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: 23ad8a64-a41f-4b5b-8261-90fa1cdf5203
+        - triggerTime: 1267
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: 5cb4c8eb-e8b8-44cc-a6bc-9a919c84411a
+        - triggerTime: 1433
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: 4e234797-b4c9-403f-b177-b18094dc42c4
+        - triggerTime: 1567
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: 292781fc-9a3e-4bc7-8403-ecf3e6a3e89f
+        - triggerTime: 1733
+          displayName: "\u89E6\u53D1\u4E8B\u4EF6"
+          id: 272c2da4-f4f9-4c0a-ad90-e84df42b05f2
+        - triggerTime: 2000
+          displayName: "\u51FB\u9000"
+          id: be5b22a5-cb3f-401a-9c71-d2c3218fa744
     - rid: 2
       type: {class: LauncherNode, ns: , asm: Assembly-CSharp}
       data:

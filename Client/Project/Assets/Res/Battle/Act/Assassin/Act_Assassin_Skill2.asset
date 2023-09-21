@@ -15,6 +15,7 @@ MonoBehaviour:
   LifeTime: 1.9166667
   Clips:
   - rid: 0
+  - rid: 5209252374946512902
   Events:
   - rid: 1
   Model: assassin
@@ -42,11 +43,34 @@ MonoBehaviour:
     - rid: 2
       type: {class: ActVectorBulletData, ns: Act, asm: ActEngine}
       data:
-        bulletID: fx_com_bullet01
-        launchOffset: {x: 0, y: 0, z: 0}
-        dispersionNum: 1
+        bulletID: fx_baixiaofei01@skill08_fly
+        launchOffset: {x: 0, y: 0.72, z: 1}
+        angleOffset: {x: 0, y: 0, z: 90}
+        dispersionNum: 5
         continuousShootingCount: 1
         continuousTimeInterval: 1
         BPdispersionSymmetry: 1
-        BPdispersionAngle: 0
+        BPdispersionAngle: 15
+        speed: 5
+    - rid: 5209252374946512902
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0
+        Duration: 0.8
+        Index: 0
+        Row: 2
+        assetPrefab: {fileID: 127336, guid: 6af07b888f838e74585d9b108cb60cea, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 0
+        followType: 0
+        bindPoint: Default
         speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0.27, y: 0, z: -0.92}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 1
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0

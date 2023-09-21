@@ -14,6 +14,9 @@ namespace Act
 
         [ActDisplayName("发射偏移值"), SynchroData]
         public Vector3 launchOffset;
+
+        [ActDisplayName("旋转偏移"), SynchroData]
+        public Vector3 angleOffset;
     }
 
     [ActDisplayName("指向子弹"), Serializable]

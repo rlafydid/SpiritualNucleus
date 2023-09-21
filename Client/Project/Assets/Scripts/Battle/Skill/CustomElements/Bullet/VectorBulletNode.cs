@@ -31,6 +31,7 @@ public class VectorBulletNode : BaseBulletNode
 		data.hitTriggerNode = GetHitTriggerNodes().ToList();
 		data.shooter = owner.ID;
 		data.process = this.process;
+		data.angleOffset = this.angleOffset;
 		Debug.Log("触发节点数量" + data.hitTriggerNode.Count);
 		Facade.Bullet.LaunchBullet(data);
 	}

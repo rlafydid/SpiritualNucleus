@@ -16,6 +16,8 @@ MonoBehaviour:
   Clips:
   - rid: 0
   - rid: 6647520330707632223
+  - rid: 5209252374946512896
+  - rid: 5209252374946512898
   Events:
   - rid: 6647520310010839043
   Model: assassin
@@ -31,6 +33,50 @@ MonoBehaviour:
         Row: 0
         animName: Skill
         dontStopOnDisable: 0
+    - rid: 5209252374946512896
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.45
+        Duration: 0.5
+        Index: 0
+        Row: 3
+        assetPrefab: {fileID: 100080, guid: c6d2eabce5c9d094dad0a1ec9ed54993, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 1
+        followType: 0
+        bindPoint: Default
+        speed: 2
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: -1.71}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    - rid: 5209252374946512898
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.45
+        Duration: 1
+        Index: 0
+        Row: 4
+        assetPrefab: {fileID: 125028, guid: 9f390746f98822d47ab56f08ede91961, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 1
+        followType: 0
+        bindPoint: Default
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0.03, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: -22.22}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
     - rid: 6647520310010839043
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:

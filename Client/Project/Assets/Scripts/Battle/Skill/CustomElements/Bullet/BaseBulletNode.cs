@@ -13,6 +13,9 @@ public class BaseBulletNode : UniversalNode
 	[Input("偏移值"), SerializeField]
 	public Vector3 offset;
 
+	[Input("旋转偏移值"), SerializeField]
+	public Vector3 angleOffset;
+	
 	[Input("速度"), SerializeField]
 	public float speed;
 

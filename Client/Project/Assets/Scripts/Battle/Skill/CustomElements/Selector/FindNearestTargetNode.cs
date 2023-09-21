@@ -16,7 +16,7 @@ public class FindNearestTargetNode : UniversalNode
 {
 	public override string name => "最近目标";
 
-	[Input(name = "朝向目标")]
+	[Input(name = "目标列表")]
 	public List<long> targets;
 	
 	[Output(name = "最近的目标")]

@@ -28,12 +28,12 @@ public class ResourceManager : BaseModule {
     {
         base.Init();
 		Instance = this;
+		AssetUtil.InitializeAssetTableInEditor();
     }
 
     public override void Start()
     {
         base.Start();
-		AssetUtil.InitializeAssetTableInEditor();
 	}
 
 	public T Load<T>(string name) where T : UnityEngine.Object

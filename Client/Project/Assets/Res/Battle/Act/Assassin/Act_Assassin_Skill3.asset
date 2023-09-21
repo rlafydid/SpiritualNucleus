@@ -15,8 +15,11 @@ MonoBehaviour:
   LifeTime: 2.0833335
   Clips:
   - rid: 0
+  - rid: 5209252374946512904
+  - rid: 5209252374946512905
   Events:
   - rid: 6647520310010839048
+  - rid: 5209252374946512908
   Model: assassin
   references:
     version: 2
@@ -30,6 +33,58 @@ MonoBehaviour:
         Row: 0
         animName: Skill2
         dontStopOnDisable: 0
+    - rid: 5209252374946512904
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.15
+        Duration: 1
+        Index: 0
+        Row: 2
+        assetPrefab: {fileID: 154034, guid: bd2acc445de428f45b7cf87335ca0a8b, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 0
+        followType: 0
+        bindPoint: Default
+        speed: 1.5
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    - rid: 5209252374946512905
+      type: {class: ActEffectClip, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.51666665
+        Duration: 1
+        Index: 0
+        Row: 3
+        assetPrefab: {fileID: 140260, guid: 145e8883070db9e4d974b30b1e129dc2, type: 3}
+        generateMode: 0
+        direction: 0
+        space: 0
+        actionMode: 1
+        followType: 0
+        bindPoint: Default
+        speed: 1
+        worldOffset: {x: 0, y: 0, z: 0}
+        localOffset: {x: 0, y: 0, z: 0}
+        scale: 1
+        eulerAngles: {x: 0, y: 0, z: 0}
+        isLoop: 0
+        isTurnToTarget: 0
+        dontDestroyWithAct: 0
+    - rid: 5209252374946512908
+      type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
+      data:
+        TriggerTime: 0.56666666
+        EventName: "\u77AC\u79FB"
+        _row: 1
+        GUID: 27ceae7f-cbf0-4c35-8a0a-102f317bc7b3
+        AttackRange: 0
     - rid: 6647520310010839048
       type: {class: ActDamageEvent, ns: Act, asm: ActEngine}
       data:

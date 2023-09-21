@@ -44,6 +44,7 @@ namespace Act.Simulator
         {
             GameObject bullet = obj as GameObject;
             bullet.SetActive(false);
+            bullet.transform.localRotation = Quaternion.Euler(bulletEvent.BulletData.angleOffset);
             switch (bulletEvent.BulletData)
             {
                 case ActTraceBulletData data:
@@ -162,7 +163,7 @@ namespace Act.Simulator
                     item.direction = Quaternion.AngleAxis(HAngleOffsetCfg, Vector3.right) *
             Quaternion.AngleAxis(angleOffset, Vector3.up) * item.direction;
 
-                    item.rotation = Quaternion.LookRotation(item.direction);
+                    item.rotation = Quaternion.LookRotation(item.direction) * Quaternion.Euler(data.angleOffset);
 
                     list.Add(item);
                 }

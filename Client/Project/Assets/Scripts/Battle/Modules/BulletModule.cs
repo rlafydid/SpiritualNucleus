@@ -25,6 +25,7 @@ namespace Battle
         public float speed;
         public long shooter;
         public Vector3 offset;
+        public Vector3 angleOffset;
         public List<TriggerNode> hitTriggerNode;
         public SkillProcess process;
     }
@@ -75,6 +76,7 @@ namespace Battle
         {
             base.Start();
             this.Entity.GetComponent<ColliderComponent>().onTriggerEnter = OnTrigerEnter;
+            Entity.LocalRotation = Quaternion.LookRotation(direction) * Quaternion.Euler(data.angleOffset);
         }
 
         void OnTrigerEnter(Entity entity)
@@ -93,7 +95,6 @@ namespace Battle
             base.Update();
             Vector3 offset = direction * Time.deltaTime * data.speed;
             Vector3 pos = Entity.Position + offset;
-            Entity.LookAt(pos);
             Entity.Position = pos;
 
             distance += offset.magnitude;

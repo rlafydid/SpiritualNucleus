@@ -35,7 +35,7 @@ namespace Battle
             if (count % 2 == 0)
                 minAngle = angle * count * 0.5f - angle * 0.5f;
             else
-                minAngle = angle * (count - 1);
+                minAngle = angle * (count - 1) * 0.5f;
 
             minAngle = -minAngle;
 

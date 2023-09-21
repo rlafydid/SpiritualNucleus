@@ -18,6 +18,12 @@ MonoBehaviour:
   - rid: 1
   - rid: 2
   - rid: 3
+  - rid: 5209252379956084741
+  - rid: 5209252379956084742
+  - rid: 5209252379956084746
+  - rid: 5209252379956084750
+  - rid: 5209252379956084757
+  - rid: 5209252379956084758
   edges:
   - GUID: 2d62707a-3199-472c-a101-490a79788040
     owner: {fileID: 11400000}
@@ -27,20 +33,92 @@ MonoBehaviour:
     outputFieldName: executes
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: 4f338bc9-545b-4dbd-8e03-3fafbde10f62
-    owner: {fileID: 11400000}
-    inputNodeGUID: 7a3e6a5f-3671-43cc-826c-ad6de08cb071
-    outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
-    inputFieldName: executed
-    outputFieldName: eventOutputs
-    inputPortIdentifier: 
-    outputPortIdentifier: 91417a8a-24c0-41c6-b115-42757ff90df1
   - GUID: 8efdac35-767c-48da-9ec7-5e73626cf443
     owner: {fileID: 11400000}
     inputNodeGUID: 6197ee59-7d21-4c69-ab0c-7a3ac9fb4953
     outputNodeGUID: 7a3e6a5f-3671-43cc-826c-ad6de08cb071
     inputFieldName: executed
     outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: c2a91aba-459c-4456-8e65-862d9462aff4
+    owner: {fileID: 11400000}
+    inputNodeGUID: 8bbdf5fe-f146-431c-8504-99fb9c1a1cc5
+    outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: 27ceae7f-cbf0-4c35-8a0a-102f317bc7b3
+  - GUID: 18c5457b-fe99-4000-aeec-5d354ebd3cb3
+    owner: {fileID: 11400000}
+    inputNodeGUID: ace1ef97-24c0-4c13-a436-06f4e1048e33
+    outputNodeGUID: 8bbdf5fe-f146-431c-8504-99fb9c1a1cc5
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: bca58a02-3d5e-4b05-a88d-ed41128e48cc
+    owner: {fileID: 11400000}
+    inputNodeGUID: ace1ef97-24c0-4c13-a436-06f4e1048e33
+    outputNodeGUID: 8bbdf5fe-f146-431c-8504-99fb9c1a1cc5
+    inputFieldName: targets
+    outputFieldName: selectTargets
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 4920b639-f72c-47cc-83a8-192991e09298
+    owner: {fileID: 11400000}
+    inputNodeGUID: 9d64dbd1-98d0-4098-8bd0-fda8f37c5211
+    outputNodeGUID: ace1ef97-24c0-4c13-a436-06f4e1048e33
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 6c3b860c-ad2e-400c-b30c-77265faec614
+    owner: {fileID: 11400000}
+    inputNodeGUID: 9d64dbd1-98d0-4098-8bd0-fda8f37c5211
+    outputNodeGUID: ace1ef97-24c0-4c13-a436-06f4e1048e33
+    inputFieldName: actorId
+    outputFieldName: nearestTarget
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: c6c7870f-5820-4ee0-b318-055bee13d994
+    owner: {fileID: 11400000}
+    inputNodeGUID: 6ea68b71-ab32-4bc5-9f6f-62761a815cfc
+    outputNodeGUID: 9d64dbd1-98d0-4098-8bd0-fda8f37c5211
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 71323d07-1ef6-4bd8-9058-7f06b79fae35
+    owner: {fileID: 11400000}
+    inputNodeGUID: 6ea68b71-ab32-4bc5-9f6f-62761a815cfc
+    outputNodeGUID: 9d64dbd1-98d0-4098-8bd0-fda8f37c5211
+    inputFieldName: target
+    outputFieldName: position
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 3e773496-7243-4ec0-80f2-db1ef0863646
+    owner: {fileID: 11400000}
+    inputNodeGUID: c5d15a19-e53a-4da8-8145-f63ac0f9e060
+    outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: 76602c80-7a55-429f-a65d-ee6b21eae251
+  - GUID: 23f4e405-f313-4282-90ab-f2be7068470d
+    owner: {fileID: 11400000}
+    inputNodeGUID: 844c45b7-bc08-4cb0-97e5-3b3c3f6509d3
+    outputNodeGUID: c5d15a19-e53a-4da8-8145-f63ac0f9e060
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 183e8172-07d0-447e-bb84-714cdd70bbe6
+    owner: {fileID: 11400000}
+    inputNodeGUID: 844c45b7-bc08-4cb0-97e5-3b3c3f6509d3
+    outputNodeGUID: c5d15a19-e53a-4da8-8145-f63ac0f9e060
+    inputFieldName: targets
+    outputFieldName: selectTargets
     inputPortIdentifier: 
     outputPortIdentifier: 
   groups: []
@@ -50,7 +128,7 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -194.5, y: -241, z: 0}
+  position: {x: -702, y: -364, z: 0}
   scale: {x: 1.15, y: 1.15, z: 1}
   references:
     version: 2
@@ -78,21 +156,24 @@ MonoBehaviour:
         computeOrder: 1
         position:
           serializedVersion: 2
-          x: 334.4928
-          y: 354.97253
-          width: 228
-          height: 246
+          x: 221.80006
+          y: 368.5
+          width: 214.5
+          height: 4233.5
         expanded: 0
         debug: 0
         nodeLock: 0
         resId: Act_Assassin_Skill3
-        lifeTime: 1100
+        lifeTime: 2100
         targets: 
         attackSpeedScale: 0
         actEvents:
-        - triggerTime: 367
+        - triggerTime: 567
+          displayName: "\u77AC\u79FB"
+          id: 27ceae7f-cbf0-4c35-8a0a-102f317bc7b3
+        - triggerTime: 1100
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
-          id: 91417a8a-24c0-41c6-b115-42757ff90df1
+          id: 76602c80-7a55-429f-a65d-ee6b21eae251
     - rid: 2
       type: {class: LauncherNode, ns: , asm: Assembly-CSharp}
       data:
@@ -101,8 +182,8 @@ MonoBehaviour:
         computeOrder: 2
         position:
           serializedVersion: 2
-          x: 671.8913
-          y: 332
+          x: 841.73914
+          y: 232.08696
           width: 147
           height: 99
         expanded: 0
@@ -117,11 +198,123 @@ MonoBehaviour:
         computeOrder: 3
         position:
           serializedVersion: 2
-          x: 886.94055
-          y: 373.37714
-          width: 124.5
+          x: 1069.5652
+          y: 269.6087
+          width: 124
           height: 99
         expanded: 0
         debug: 0
         nodeLock: 0
         log: "\u6267\u884C\u5B8C\u6BD51"
+    - rid: 5209252379956084741
+      type: {class: FindNearestTargetNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: ace1ef97-24c0-4c13-a436-06f4e1048e33
+        computeOrder: 5
+        position:
+          serializedVersion: 2
+          x: 808.17395
+          y: 345.50003
+          width: 172
+          height: 99
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        targets: 
+        nearestTarget: 21
+    - rid: 5209252379956084742
+      type: {class: SelectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 8bbdf5fe-f146-431c-8504-99fb9c1a1cc5
+        computeOrder: 4
+        position:
+          serializedVersion: 2
+          x: 602.26086
+          y: 355.00006
+          width: 174
+          height: 147
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        selectTargets: 
+        rangeType: 0
+        angleRange: 369
+        distanceRange: 10
+    - rid: 5209252379956084746
+      type: {class: ActorConvertToTransformValueNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 9d64dbd1-98d0-4098-8bd0-fda8f37c5211
+        computeOrder: 6
+        position:
+          serializedVersion: 2
+          x: 1043.5
+          y: 401
+          width: 179.5
+          height: 147
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        actorId: 21
+        position: {x: -40.18353, y: 2.5229568, z: 108.32405}
+        rotation: {x: 0, y: 0, z: 0, w: 1}
+        scale: {x: 1, y: 1, z: 1}
+    - rid: 5209252379956084750
+      type: {class: TeleportNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 6ea68b71-ab32-4bc5-9f6f-62761a815cfc
+        computeOrder: 7
+        position:
+          serializedVersion: 2
+          x: 1291.8507
+          y: 425.18246
+          width: 136
+          height: 123
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        target: {x: -40.18353, y: 2.5229568, z: 108.32405}
+        offset: {x: 0, y: 0, z: 0}
+    - rid: 5209252379956084757
+      type: {class: SelectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: c5d15a19-e53a-4da8-8145-f63ac0f9e060
+        computeOrder: 8
+        position:
+          serializedVersion: 2
+          x: 564.0751
+          y: 617.55005
+          width: 100
+          height: 100
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        selectTargets: 140000000000000015000000000000001600000000000000
+        rangeType: 0
+        angleRange: 360
+        distanceRange: 1
+    - rid: 5209252379956084758
+      type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 844c45b7-bc08-4cb0-97e5-3b3c3f6509d3
+        computeOrder: 9
+        position:
+          serializedVersion: 2
+          x: 907.49994
+          y: 602.24384
+          width: 136
+          height: 219
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        angle: 70
+        v0: 2
+        speed: 1
+        animState: 1
+        targets: 140000000000000015000000000000001600000000000000
+        target: 0
