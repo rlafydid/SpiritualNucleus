@@ -1,2 +1,2 @@
 # SpiritualNucleus
-灵核是一款MMORPG动作游戏，引入了参考UE的GameplayAbilitySystem框架，有着自定义的技能蓝图及自定义的技能Timeline编辑器。
+灵核是一款有着极致的画面和打击感，炫酷的战斗，汇聚于一身的MMORPG动作游戏，引入了参考UE的GameplayAbilitySystem框架，有着自定义的技能蓝图及自定义的技能Timeline编辑器。
