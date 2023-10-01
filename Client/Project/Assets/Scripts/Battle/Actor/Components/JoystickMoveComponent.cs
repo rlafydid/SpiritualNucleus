@@ -68,8 +68,10 @@ namespace Battle
             MoveToDir(val.normalized);
 
             value = Mathf.Max(Mathf.Abs(val.x), Mathf.Abs(val.z));
-            SetValue("v1", val.z);
-            SetValue("v2", val.x);
+            // SetValue("v1", val.z);
+            // SetValue("v2", val.x);
+            
+            SetValue("v1", 1);
         }
 
         private Vector3 _direction;
@@ -100,12 +102,12 @@ namespace Battle
             
             Vector3 lookAt = moveToPos;
             lookAt.y = ownerActor.Position.y;
-            // Entity.LookAt(lookAt);
             Vector3 groundPos = moveToPos.ToGroundPos();
             moveToPos.y = groundPos.y;
             // Debug.Log($"ownerActor.Position {ownerActor.Position} moveToPos {moveToPos}");
+            // ownerActor.Entity.LookAt(ownerActor.Position + camToOwner);
+            ownerActor.Entity.LookAt(moveToPos);
             ownerActor.Position = moveToPos;
-            ownerActor.Entity.LookAt(ownerActor.Position + camToOwner);
         }
 
         protected override void OnLateUpdate()
