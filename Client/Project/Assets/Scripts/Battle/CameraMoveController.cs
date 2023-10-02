@@ -81,11 +81,20 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
         var dragOffset = mousePos - _lastMousePos;
         if (dragOffset.magnitude < 0.01f)
             return;
-        Debug.Log($"mousePos {mousePos} offset {dragOffset}");
         float x = dragOffset.x / Screen.width;
         float y = dragOffset.y / Screen.height;
+
         Vector3 newPoint = Quaternion.AngleAxis(x * 360, Vector3.up) * offset;
-        newPoint = Quaternion.AngleAxis(-y * 360, Vector3.right) * newPoint;
+        
+        float yAngleOffset = y * 360;
+        float angle = Vector3.SignedAngle(newPoint, Vector3.up, Vector3.Cross(newPoint, Vector3.up));
+        Debug.Log($"angle{angle} offset{yAngleOffset}");
+        if (Mathf.Abs(angle) + yAngleOffset > 100)
+            yAngleOffset = Mathf.Abs(angle) - 100;
+        
+        newPoint = Quaternion.AngleAxis(yAngleOffset, Vector3.Cross(Vector3.up, newPoint)) * newPoint;
+        
+                
         offset = newPoint;
         _lastMousePos = mousePos;
     }
