@@ -89,8 +89,12 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
         float yAngleOffset = y * 360;
         float angle = Vector3.SignedAngle(newPoint, Vector3.up, Vector3.Cross(newPoint, Vector3.up));
         Debug.Log($"angle{angle} offset{yAngleOffset}");
-        if (Mathf.Abs(angle) + yAngleOffset > 100)
+        angle = Mathf.Abs(angle);
+        if (angle + yAngleOffset > 100)
             yAngleOffset = Mathf.Abs(angle) - 100;
+
+        if (angle + yAngleOffset < 30)
+            yAngleOffset = 30 - angle; 
         
         newPoint = Quaternion.AngleAxis(yAngleOffset, Vector3.Cross(Vector3.up, newPoint)) * newPoint;
         
