@@ -1071,6 +1071,15 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CallOutMouse"",
+                    ""type"": ""Button"",
+                    ""id"": ""5070a67a-b34a-4f82-9437-ccd8b5b09d91"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1082,6 +1091,17 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Touch;Keyboard&Mouse"",
                     ""action"": ""Press"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0f184e3-b391-4a05-8895-9d1fc5443c53"",
+                    ""path"": ""<Keyboard>/alt"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""CallOutMouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1182,6 +1202,7 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
         // Camera
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_Press = m_Camera.FindAction("Press", throwIfNotFound: true);
+        m_Camera_CallOutMouse = m_Camera.FindAction("CallOutMouse", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1493,11 +1514,13 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Camera;
     private ICameraActions m_CameraActionsCallbackInterface;
     private readonly InputAction m_Camera_Press;
+    private readonly InputAction m_Camera_CallOutMouse;
     public struct CameraActions
     {
         private @DefaultInputActions m_Wrapper;
         public CameraActions(@DefaultInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Press => m_Wrapper.m_Camera_Press;
+        public InputAction @CallOutMouse => m_Wrapper.m_Camera_CallOutMouse;
         public InputActionMap Get() { return m_Wrapper.m_Camera; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1510,6 +1533,9 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                 @Press.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnPress;
                 @Press.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnPress;
                 @Press.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnPress;
+                @CallOutMouse.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnCallOutMouse;
+                @CallOutMouse.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnCallOutMouse;
+                @CallOutMouse.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnCallOutMouse;
             }
             m_Wrapper.m_CameraActionsCallbackInterface = instance;
             if (instance != null)
@@ -1517,6 +1543,9 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
                 @Press.started += instance.OnPress;
                 @Press.performed += instance.OnPress;
                 @Press.canceled += instance.OnPress;
+                @CallOutMouse.started += instance.OnCallOutMouse;
+                @CallOutMouse.performed += instance.OnCallOutMouse;
+                @CallOutMouse.canceled += instance.OnCallOutMouse;
             }
         }
     }
@@ -1600,5 +1629,6 @@ public partial class @DefaultInputActions : IInputActionCollection2, IDisposable
     public interface ICameraActions
     {
         void OnPress(InputAction.CallbackContext context);
+        void OnCallOutMouse(InputAction.CallbackContext context);
     }
 }

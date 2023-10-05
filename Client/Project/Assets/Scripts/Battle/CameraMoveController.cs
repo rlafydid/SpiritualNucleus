@@ -10,9 +10,13 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
     public Entity target;
     Camera camera;
 
+    public Vector3 DefaultAngle { get; set; } = new Vector3(0, 60, 0);
+    public float DefaultDistance { get; set; } = 10;
+
     Vector3 offset;
 
     float speed = 1f;
+    private float _dragSpeed = 0.8f;
 
     protected override void OnStart()
     {
@@ -23,14 +27,19 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
     {
         this.target = target;
         camera = Camera.main;
-        offset = camera.transform.position - this.target.Position;
+        
+        // offset = camera.transform.position - this.target.Position;
+        offset = Quaternion.Euler(DefaultAngle) * -this.target.Forward * DefaultDistance;
         
         HandleInputComponent.playerInput.Camera.SetCallbacks(this);
+        StartDrag();
     }
 
     private bool _isDrag = false;
     private Vector3 _startDragPoint;
     private Vector3 _cameraStartOffset;
+    
+    
     protected override void OnUpdate()
     {
         if(target == null)
@@ -41,7 +50,7 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
         var lookat = target.LocalRotation;
         float t = Time.deltaTime * speed;
 
-        camera.transform.position = Vector3.Lerp(camera.transform.position, target.Position + offset, t);
+        camera.transform.position = Vector3.Lerp(camera.transform.position, target.Position + offset, t * 10);
         // camera.transform.LookAt(target.Position);
 
         Vector3 lookAtDir = (target.Position + Vector3.up * 2) - camera.transform.position ;
@@ -63,17 +72,44 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
         switch (context.phase)
         {
             case InputActionPhase.Started:
-                _lastMousePos = Mouse.current.position.ReadValue();
-                _cameraStartOffset = camera.transform.position;
-                _isDrag = true;
-                _lastOffset = offset;
+                // StartDrag();
                 break;
             case InputActionPhase.Canceled:
-                _isDrag = false;
+                // CanceledDrag();
                 break;
         }
     }
 
+    void StartDrag()
+    {
+        _lastMousePos = Mouse.current.position.ReadValue();
+        _cameraStartOffset = camera.transform.position;
+        _isDrag = true;
+        _lastOffset = offset;
+        Cursor.visible = false;
+    }
+
+    void CanceledDrag()
+    {
+        _isDrag = false;
+        Cursor.visible = true;
+    }
+
+    public void OnCallOutMouse(InputAction.CallbackContext context)
+    {
+        switch (context.phase)
+        {
+            case InputActionPhase.Started:
+                CanceledDrag();
+                break;
+            case InputActionPhase.Canceled:
+                StartDrag();
+                // CanceledDrag();
+                break;
+        }
+    }
+
+    
     private Vector3 _lastMousePos;
     void DragCamera()
     {
@@ -84,14 +120,14 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
         float x = dragOffset.x / Screen.width;
         float y = dragOffset.y / Screen.height;
 
-        Vector3 newPoint = Quaternion.AngleAxis(x * 360, Vector3.up) * offset;
+        Vector3 newPoint = Quaternion.AngleAxis(x * 360 * _dragSpeed, Vector3.up) * offset;
         
-        float yAngleOffset = y * 360;
+        float yAngleOffset = y * 360 * _dragSpeed;
         float angle = Vector3.SignedAngle(newPoint, Vector3.up, Vector3.Cross(newPoint, Vector3.up));
         Debug.Log($"angle{angle} offset{yAngleOffset}");
         angle = Mathf.Abs(angle);
-        if (angle + yAngleOffset > 100)
-            yAngleOffset = Mathf.Abs(angle) - 100;
+        if (angle + yAngleOffset > 150)
+            yAngleOffset = Mathf.Abs(angle) - 150;
 
         if (angle + yAngleOffset < 30)
             yAngleOffset = 30 - angle; 

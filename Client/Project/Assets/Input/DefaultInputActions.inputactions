@@ -1049,6 +1049,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CallOutMouse",
+                    "type": "Button",
+                    "id": "5070a67a-b34a-4f82-9437-ccd8b5b09d91",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1060,6 +1069,17 @@
                     "processors": "",
                     "groups": "Touch;Keyboard&Mouse",
                     "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e0f184e3-b391-4a05-8895-9d1fc5443c53",
+                    "path": "<Keyboard>/alt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "CallOutMouse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
