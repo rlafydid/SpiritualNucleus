@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd1394a4099e43045a0702620297f06e, type: 3}
+  m_Name: "Act\u9884\u89C8\u6B63\u5F0F\u6570\u636E\u914D\u7F6E"
+  m_EditorClassIdentifier: 
+  heroList:
+  - Name: "\u90B4\u820D"
+    Model: {fileID: 167408, guid: 11b02e3d641f15a4887d0cf67a9d99a2, type: 3}
+  - Name: "\u767D\u5C0F\u98DE"
+    Model: {fileID: 157374, guid: 2ccde518be9e7ab45a9a0af73c845044, type: 3}
+  - Name: "\u5B59\u5C0F\u7334"
+    Model: {fileID: 130230, guid: 3d068baf535dd094187bde9bca521302, type: 3}
+  - Name: "\u5FCD\u8005"
+    Model: {fileID: 4454336320037625290, guid: 25391c8ed3a534537b0b09ebba08a34f, type: 3}
+  - Name: "\u7EFF\u8272\u602A\u7269"
+    Model: {fileID: 7507445929137760294, guid: 93cf8c05ba0e1434d86836e22bba92b0, type: 3}
+  monsterList:
+  - Name: 1
+    Model: {fileID: 2376634735948654772, guid: f0af2074c8fab834aa0d5cd359829d20, type: 3}
+  sceneList:
+  - Name: "\u9ED8\u8BA4"
+    Scene: {fileID: 0}
+    HeroPosition: {x: 0, y: 0, z: 0}
+    MonsterPosition: {x: 0, y: 0, z: 3}
