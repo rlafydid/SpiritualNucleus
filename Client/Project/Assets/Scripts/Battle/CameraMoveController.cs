@@ -16,7 +16,7 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
     Vector3 offset;
 
     float speed = 1f;
-    private float _dragSpeed = 0.8f;
+    private float _dragSpeed = 0.5f;
 
     protected override void OnStart()
     {
@@ -122,9 +122,8 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
 
         Vector3 newPoint = Quaternion.AngleAxis(x * 360 * _dragSpeed, Vector3.up) * offset;
         
-        float yAngleOffset = y * 360 * _dragSpeed;
+        float yAngleOffset = y * 180 * _dragSpeed;
         float angle = Vector3.SignedAngle(newPoint, Vector3.up, Vector3.Cross(newPoint, Vector3.up));
-        Debug.Log($"angle{angle} offset{yAngleOffset}");
         angle = Mathf.Abs(angle);
         if (angle + yAngleOffset > 150)
             yAngleOffset = Mathf.Abs(angle) - 150;
@@ -137,5 +136,15 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
                 
         offset = newPoint;
         _lastMousePos = mousePos;
+
+        ImmediateUpdating();
+    }
+
+    void ImmediateUpdating()
+    {
+        camera.transform.position = target.Position + offset;
+        Vector3 lookAtDir = (target.Position + Vector3.up * 2) - camera.transform.position ;
+        
+        camera.transform.rotation = Quaternion.LookRotation(lookAtDir.normalized);
     }
 }
