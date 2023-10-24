@@ -5,7 +5,7 @@ using LKEngine;
 using UnityEngine;
 
 
-[NodeMenuItem("触发器/子弹命中")]
+[NodeMenuItem("技能/触发器/子弹命中")]
 public class BulletHitNode : TriggerNode
 {
     [Input(name = "In")]

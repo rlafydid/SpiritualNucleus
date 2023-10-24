@@ -6,7 +6,7 @@ using GraphProcessor;
 using LKEngine;
 using UnityEngine;
 
-[NodeMenuItem("功能/切割Mesh")]
+[NodeMenuItem("技能/功能/切割Mesh")]
 public class SliceMeshNode : UniversalNode
 {
     public override string name => "切割Mesh";

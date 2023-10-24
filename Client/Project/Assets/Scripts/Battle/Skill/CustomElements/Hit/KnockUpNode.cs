@@ -11,7 +11,7 @@ public enum EKnockflyAnimState
     KnockBack
 }
 
-[System.Serializable, NodeMenuItem("击中效果/击飞")]
+[System.Serializable, NodeMenuItem("技能/击中效果/击飞")]
 public class KnockUpNode : UniversalNode
 {
     [SerializeField, Input("角度")]

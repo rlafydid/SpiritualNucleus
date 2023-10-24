@@ -5,7 +5,7 @@ using GraphProcessor;
 using System.Linq;
 using Battle;
 
-[System.Serializable, NodeMenuItem("弹道/矢量子弹")]
+[System.Serializable, NodeMenuItem("技能/弹道/矢量子弹")]
 public class VectorBulletNode : BaseBulletNode
 {
 	public override string		name => "矢量子弹";

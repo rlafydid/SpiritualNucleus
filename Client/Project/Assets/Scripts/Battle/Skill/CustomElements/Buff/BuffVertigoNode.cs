@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using GraphProcessor;
 using UnityEngine;
 
-[NodeMenuItem("Buff/眩晕")]
+[NodeMenuItem("技能/Buff/眩晕")]
 public class BuffVertigoNode : BuffNode
 {
     public override string name => "Buff-眩晕";

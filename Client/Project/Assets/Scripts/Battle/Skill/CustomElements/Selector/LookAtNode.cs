@@ -4,7 +4,7 @@ using UnityEngine;
 using GraphProcessor;
 using System.Linq;
 
-[System.Serializable, NodeMenuItem("Skill/朝向/朝向目标")]
+[System.Serializable, NodeMenuItem("技能/朝向/朝向目标")]
 public class LookAtNode : UniversalNode
 {
 	public override string name => "朝向目标";

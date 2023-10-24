@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using GraphProcessor;
 using UnityEngine;
 
-[NodeMenuItem("击中效果/击退"), Serializable]
+[NodeMenuItem("技能/击中效果/击退"), Serializable]
 public class KnockBackNode : UniversalNode
 {
     [Input("冲击力"), SerializeField]

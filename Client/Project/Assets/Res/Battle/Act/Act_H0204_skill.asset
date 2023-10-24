@@ -67,6 +67,7 @@ MonoBehaviour:
       data:
         bulletID: fx_H0204_ski_long
         launchOffset: {x: 0, y: 0.55, z: 0}
+        angleOffset: {x: 0, y: 0, z: 0}
         dispersionNum: 1
         continuousShootingCount: 1
         continuousTimeInterval: 1

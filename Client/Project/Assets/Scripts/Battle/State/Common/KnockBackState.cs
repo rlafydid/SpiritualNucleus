@@ -53,17 +53,16 @@ namespace Battle
             t += Time.deltaTime;
             
             float v = v0 + -a * t;
-            float yV = -g * t * 0.5f;
 
             Vector3 offset = Data.direction * v;
             offset.y = 0;
-            Debug.Log($"v0:{v} height:{yV} velocity:{velocity}");
+            Debug.Log($"v0:{v}");
             
             Vector3 newPos = GetActor.Position + offset;
 
             GetActor.Position = newPos;
 
-            if(v <= 0 && newPos.y <= newPos.ToGroundPos().y)
+            if(v <= 0)
             {
                 var pos = GetActor.Position;
                 pos.y = newPos.ToGroundPos().y;

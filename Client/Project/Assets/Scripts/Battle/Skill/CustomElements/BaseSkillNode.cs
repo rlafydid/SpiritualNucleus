@@ -23,6 +23,11 @@ interface IExecuteNode
 	FieldInfo[] GetNodeFields(); // Provide a custom order for fields (so conditional links are always at the top of the node)
 }
 
+public static class NodeConstant
+{
+	public const string Parent = "Ability";
+}
+
 public class BaseSkillNode : BaseNode
 {
 	protected SkillProcess process {get;set;}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using GraphProcessor;
 using UnityEngine;
 
-[System.Serializable, NodeMenuItem("转换/Actor转换为Transform值")]
+[System.Serializable, NodeMenuItem("技能/转换/Actor转换为Transform值")]
 public class ActorConvertToTransformValueNode : UniversalNode
 {
     public override string name { get => "Actor转换为Transform值"; }
@@ -12,7 +12,7 @@ public class ActorConvertToTransformValueNode : UniversalNode
     public long actorId;
 
     [Output(name = "Position")]
-    public Vector3 position;
+    public Vector3 point;
 
     [Output(name = "Rotation")] 
     public Quaternion rotation;
@@ -25,7 +25,7 @@ public class ActorConvertToTransformValueNode : UniversalNode
         var actor = Facade.Battle.GetActor(actorId);
         if (actor != null)
         {
-            position = actor.Position;
+            point = actor.Position;
             rotation = actor.Entity.LocalRotation;
             scale = actor.Entity.LocalScale;
         }
