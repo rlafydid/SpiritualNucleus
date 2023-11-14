@@ -29,7 +29,7 @@ namespace Battle
             if (owner.IsFloatingState())
             {
                 ChangeState(ERoleState.KnockFly,new KnockFlyData(){ f = Data.f, angle = 0, direction = Data.direction, speed = Data.speed});
-                return;    
+                return;
             }
             else
                 owner.PlayAnim("Hurt");

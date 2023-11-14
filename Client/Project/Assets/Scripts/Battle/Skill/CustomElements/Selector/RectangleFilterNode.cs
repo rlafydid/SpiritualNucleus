@@ -31,6 +31,7 @@ public class RectangleFilterNode : TargetFilterNode
 			var target = targets[i];
 			if (IsInRectangle(owner, target.Position))
 			{
+				Debug.Log("在范围内");
 				selectTargets.Add(target.ID);
 			}
 		}
@@ -38,24 +39,29 @@ public class RectangleFilterNode : TargetFilterNode
 
 	bool IsInRectangle(SceneActorController owner, Vector3 point)
 	{
-		Vector3 center = owner.Entity.Position + offset;
+		Vector3 center = owner.Entity.Position + owner.Entity.LocalRotation * offset;
 
 		float halfWidth = width * 0.5f;
 		float halfHeight = height * 0.5f;
 		//左下，左上，右上，右下
-		Vector3 p1 = center + new Vector3(-halfWidth, 0, -halfHeight);
-		Vector3 p2 = center + new Vector3(-halfWidth, 0, halfHeight);
-		Vector3 p3 = center + new Vector3(halfWidth, 0, halfHeight);
-		Vector3 p4 = center + new Vector3(halfWidth, 0, -halfHeight);
+		Vector3 p1 =  new Vector3(-halfWidth, 0, -halfHeight);
+		Vector3 p2 =  new Vector3(-halfWidth, 0, halfHeight);
+		Vector3 p3 = new Vector3(halfWidth, 0, halfHeight);
+		Vector3 p4 = new Vector3(halfWidth, 0, -halfHeight);
 
+		point.y = 0;
+		Vector3 targetOffset = point - owner.Entity.Position;
+		
 		Vector3[] rectangle = { p1, p2, p3, p4 };
 
 		for (int i = 1; i <= rectangle.Length; i++)
 		{
-			Vector3 lastP = owner.Entity.LocalRotation * rectangle[i-1];
-			Vector3 curP = owner.Entity.LocalRotation * rectangle[i == rectangle.Length ? 0 : i];
+			Vector3 lastP = center + owner.Entity.LocalRotation * rectangle[i-1];
+			Vector3 curP = center + owner.Entity.LocalRotation * rectangle[i == rectangle.Length ? 0 : i];
 			if (Vector3.Dot((curP - lastP).normalized, (point - lastP).normalized) < 0)
+			{
 				return false;
+			}
 		}
 
 		return true;

@@ -11,6 +11,8 @@ public enum EKnockflyAnimState
     KnockBack
 }
 
+public enum 
+
 [System.Serializable, NodeMenuItem("技能/击中效果/击飞")]
 public class KnockUpNode : UniversalNode
 {
@@ -29,6 +31,9 @@ public class KnockUpNode : UniversalNode
 
     [Input("目标")]
     public long target;
+
+    [Input("击飞方向")]
+    public Vector3 direction;
 
     public override string name => "击飞";
 
