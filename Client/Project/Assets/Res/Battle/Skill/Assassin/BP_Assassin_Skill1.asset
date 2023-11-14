@@ -58,7 +58,7 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -198, y: -179, z: 0}
+  position: {x: -202, y: -219.33333, z: 0}
   scale: {x: 1.15, y: 1.15, z: 1}
   references:
     version: 2
@@ -106,7 +106,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 5ebd9f61-1d9f-4bc8-b399-705874b5be3f
-        computeOrder: 3
+        computeOrder: 2
         position:
           serializedVersion: 2
           x: 718.00006
@@ -116,16 +116,16 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        selectTargets: 
-        width: 1
-        height: 3
+        selectTargets: 0200000000000000
+        width: 3
+        height: 5
         offset: {x: 0, y: 0, z: -1.5}
     - rid: 6647520330707632167
       type: {class: KnockUpNode, ns: , asm: Assembly-CSharp}
       data:
         nodeCustomName: 
         GUID: 9c547506-2464-45bb-8872-e6d7ffe862eb
-        computeOrder: 4
+        computeOrder: 3
         position:
           serializedVersion: 2
           x: 970.5
@@ -139,5 +139,6 @@ MonoBehaviour:
         v0: 5
         speed: 1
         animState: 1
-        targets: 
+        targets: 0200000000000000
         target: 0
+        direction: {x: 0, y: 0, z: 0}
