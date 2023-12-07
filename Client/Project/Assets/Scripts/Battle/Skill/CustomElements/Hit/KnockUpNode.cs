@@ -11,7 +11,10 @@ public enum EKnockflyAnimState
     KnockBack
 }
 
-public enum 
+public enum EDirectionType
+{
+    
+}
 
 [System.Serializable, NodeMenuItem("技能/击中效果/击飞")]
 public class KnockUpNode : UniversalNode
