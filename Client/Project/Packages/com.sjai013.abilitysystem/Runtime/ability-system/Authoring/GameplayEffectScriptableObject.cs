@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Act;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace AbilitySystem.Authoring
 {
@@ -13,8 +15,11 @@ namespace AbilitySystem.Authoring
         [SerializeField]
         public GameplayEffectTags gameplayEffectTags;
 
+        [FormerlySerializedAs("Period")] [SerializeField]
+        public GameplayEffectPeriod period;
+
         [SerializeField]
-        public GameplayEffectPeriod Period;
+        public ActAsset[] display;
     }
 
 }

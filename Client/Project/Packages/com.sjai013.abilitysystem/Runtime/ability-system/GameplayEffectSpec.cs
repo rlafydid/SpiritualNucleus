@@ -45,9 +45,9 @@ namespace AbilitySystem
                 this.TotalDuration = this.DurationRemaining;
             }
 
-            this.TimeUntilPeriodTick = this.GameplayEffect.Period.Period;
+            this.TimeUntilPeriodTick = this.GameplayEffect.period.Period;
             // By setting the time to 0, we make sure it gets executed at first opportunity
-            if (this.GameplayEffect.Period.ExecuteOnApplication)
+            if (this.GameplayEffect.period.ExecuteOnApplication)
             {
                 this.TimeUntilPeriodTick = 0;
             }
@@ -82,10 +82,10 @@ namespace AbilitySystem
             executePeriodicTick = false;
             if (this.TimeUntilPeriodTick <= 0)
             {
-                this.TimeUntilPeriodTick = this.GameplayEffect.Period.Period;
+                this.TimeUntilPeriodTick = this.GameplayEffect.period.Period;
 
                 // Check to make sure period is valid, otherwise we'd just end up executing every frame
-                if (this.GameplayEffect.Period.Period > 0)
+                if (this.GameplayEffect.period.Period > 0)
                 {
                     executePeriodicTick = true;
                 }
