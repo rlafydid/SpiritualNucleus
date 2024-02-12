@@ -5,14 +5,27 @@ using UnityEngine;
 
 namespace LKEngine
 {
-    public class Entity : Component
+    public interface IEntity
     {
-        public GameObject GameObject;
-        public Transform Transform;
+        GameObject GameObject { get; }
+        Transform Transform { get; }
+        Vector3 Position { get; set; }
+        Quaternion LocalRotation { get; set; }
+        Vector3 LocalScale { get; set; }
+        bool IsValid { get; }
+        bool IsLoaded { get; set; }
+        bool IsDestroyed { get; set; }
+    }
+
+    public class Entity : Component, IEntity
+    {
+        public GameObject GameObject { get; set; }
+        public Transform Transform { get; set; }
 
         public bool IsLoaded { get; set; }
 
         Vector3 _position;
+
         public Vector3 Position
         {
             get
@@ -21,6 +34,7 @@ namespace LKEngine
                 {
                     _position = Transform.position;
                 }
+
                 return _position;
             }
             set
@@ -32,21 +46,27 @@ namespace LKEngine
         }
 
         Vector3 _localScale = Vector3.one;
-        public Vector3 LocalScale { get => _localScale;
+
+        public Vector3 LocalScale
+        {
+            get => _localScale;
             set
             {
                 _localScale = value;
-                if(IsLoaded)
+                if (IsLoaded)
                     Transform.localScale = value;
             }
         }
 
         Quaternion _localRotation = Quaternion.identity;
-        public Quaternion LocalRotation { get => _localRotation;
+
+        public Quaternion LocalRotation
+        {
+            get => _localRotation;
             set
             {
                 _localRotation = value;
-                if(IsLoaded)
+                if (IsLoaded)
                 {
                     Transform.localRotation = _localRotation;
                 }
@@ -55,12 +75,33 @@ namespace LKEngine
 
         public string ResName;
 
-        public Vector3 Forward { get => Transform.forward.normalized; }
-        public Vector3 Up { get => Transform.up.normalized; }
-        public Vector3 Right { get => Transform.right.normalized; }
+        public Vector3 Forward
+        {
+            get => Transform.forward.normalized;
+        }
+
+        public Vector3 Up
+        {
+            get => Transform.up.normalized;
+        }
+
+        public Vector3 Right
+        {
+            get => Transform.right.normalized;
+        }
 
         public Action Finished { get; set; }
         public long Id { get; set; }
+
+        /// <summary>
+        /// 是否是有效的
+        /// </summary>
+        public bool IsValid
+        {
+            get { return this.IsLoaded && !this.IsDestroyed; }
+        }
+
+        public virtual bool IsDestroyed { get; set; }
 
         static long entityId;
 
@@ -93,7 +134,7 @@ namespace LKEngine
 
         public void LookAt(Vector3 point)
         {
-            if(IsLoaded)
+            if (IsLoaded)
                 Transform.LookAt(point);
         }
 
@@ -102,5 +143,4 @@ namespace LKEngine
             GameObject.Destroy(GameObject);
         }
     }
-
 }

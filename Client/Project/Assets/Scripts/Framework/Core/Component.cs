@@ -110,6 +110,11 @@ namespace LKEngine
             t.Awake();
             return t;
         }
+        
+        public static implicit operator bool(Component t)
+        {
+            return t != null;
+        }
     }
 }
 

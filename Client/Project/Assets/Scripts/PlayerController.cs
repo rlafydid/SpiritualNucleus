@@ -23,8 +23,8 @@ public class PlayerController : MonoBehaviour, DefaultInputActions.IPlayerAction
     private CharacterController controller;
     private Transform cameraTransform;
 
-    [SerializeField]
-    private AbilityController abilityController;
+    //[SerializeField]
+    //private AbilityController abilityController;
 
     private int mAnimator_ShouldMove = Animator.StringToHash("ShouldMove");
     private int mAnimator_Movement_X = Animator.StringToHash("Movement_X");
@@ -93,12 +93,12 @@ public class PlayerController : MonoBehaviour, DefaultInputActions.IPlayerAction
     {
         if (ability1Released)
         {
-            this.abilityController.UseAbility(0);
+            //this.abilityController.UseAbility(0);
         }
 
         if (ability2Released)
         {
-            this.abilityController.UseAbility(1);
+            //this.abilityController.UseAbility(1);
         }
     }
 

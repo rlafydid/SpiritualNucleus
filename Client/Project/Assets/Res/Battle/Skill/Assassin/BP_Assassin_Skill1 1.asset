@@ -167,4 +167,4 @@ MonoBehaviour:
         speed: 1
         animState: 0
         targets: 
-        target: 98
+        target: 15

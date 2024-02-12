@@ -19,7 +19,7 @@ public class UniversalAbilityScriptableObject : AbstractAbilityScriptableObject
         var spec = new UniversalAbilitySpec(this, owner);
         spec.Level = owner.Level;
         spec.AbilityBlueprint = this.AbilityBlueprint;
-        spec.CastPointComponent = owner.GetComponent<CastPointComponent>();
+        // spec.CastPointComponent = owner.GetComponent<CastPointComponent>();
         return spec;
     }
 

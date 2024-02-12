@@ -25,7 +25,7 @@ public class ShowDamageNumbersEventHandler : AbstractAttributeEventHandler
             if (prevValue != currentValue)
             {
                 // Instantiate a prefab for displaying the number
-                var damageNumber = Instantiate(damageNumberComponent, attributeSystem.gameObject.transform.position, attributeSystem.gameObject.transform.rotation);
+                var damageNumber = Instantiate(damageNumberComponent, attributeSystem.GetActor.Entity.Position, attributeSystem.GetActor.Entity.LocalRotation);
 
                 // The prefab has an Initialise method, which allows us to pass in the change magnitude, so we can show the appropriate number
                 damageNumber.Initialise(currentValue - prevValue);

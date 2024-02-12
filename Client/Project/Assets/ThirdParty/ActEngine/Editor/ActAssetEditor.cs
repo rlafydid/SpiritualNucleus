@@ -55,6 +55,12 @@ namespace Act
                 }
             }
 
+            for (int i = actData.Clips.Count-1; i >= 0; i--)
+            {
+                if(actData.Clips[i] == null)
+                    actData.Clips.RemoveAt(i);
+            }
+            
             for (int i = 0; i < actData.Clips.Count; i++)
             {
                 editors.Add(ActEditor.CreateEditor(actData, actData.Clips[i]));

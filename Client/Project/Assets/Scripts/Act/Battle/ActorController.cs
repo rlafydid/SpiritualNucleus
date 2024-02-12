@@ -17,8 +17,8 @@ namespace Act.Simulator
 
         public MoveComponent moveComp { get; set; }
 
-        private AbilityController _abilityController;
-        private AbilitySystemCharacter _abilitySystemCharacter;
+        //private AbilityController _abilityController;
+        //private AbilitySystemCharacter _abilitySystemCharacter;
         
         public ActInstance PlayAct(string path, List<GameObject> targets = null)
         {

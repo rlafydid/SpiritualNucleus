@@ -81,6 +81,17 @@ public class UniversalNode : BaseSkillNode, IExecuteNode
 	{
 		base.Process();
 	}
+
+	protected void Execute(ExecuteLink link)
+	{
+		var nodes = outputPorts.FirstOrDefault(n => n.fieldName == nameof(link))
+			.GetEdges().Select(e => e.inputNode as BaseSkillNode);
+		foreach (var node in nodes)
+		{
+			ExecuteNode(node);
+		}
+		
+	}
 }
 
 public class BaseAsyncNode : UniversalNode, IAsyncNode

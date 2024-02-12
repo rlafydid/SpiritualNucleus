@@ -6,6 +6,8 @@ using AbilitySystem.Authoring;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace Battle
+{
 public class AbilityController : MonoBehaviour
 {
     public AbstractAbilityScriptableObject[] NormalAbilities;
@@ -123,4 +125,5 @@ public class AbilityController : MonoBehaviour
 
         return null;
     }
+}
 }

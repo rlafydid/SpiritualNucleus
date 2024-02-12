@@ -19,7 +19,7 @@ public class LogAttributeChangeEventHandler : AbstractAttributeEventHandler
             if (prevValue != currentValue)
             {
                 // If value has changed, log a message to console
-                Debug.Log($"{attributeSystem.gameObject.name}: {currentAttributeValues[primaryAttributeIndex].Attribute.Name} modified.  Old Value: {prevValue}.  New Value: {currentValue}.");
+                Debug.Log($"{attributeSystem.Name}: {currentAttributeValues[primaryAttributeIndex].Attribute.Name} modified.  Old Value: {prevValue}.  New Value: {currentValue}.");
             }
         }
     }

@@ -16,7 +16,7 @@ public class MyProjectileAbilityScriptableObject : AbstractAbilityScriptableObje
         var spec = new MyProjectileAbilitySpec(this, owner);
         spec.Level = owner.Level;
         spec.projectile = this.projectile;
-        spec.CastPointComponent = owner.GetComponent<CastPointComponent>();
+        // spec.CastPointComponent = owner.GetComponent<CastPointComponent>();
         return spec;
     }
 
@@ -46,7 +46,7 @@ public class MyProjectileAbilityScriptableObject : AbstractAbilityScriptableObje
         protected override async Task<bool> ActivateAbility()
         {
             await Task.Yield();
-            
+            /*
             AbilitySystemCharacter target = null;
 
             var cdSpec = this.Owner.MakeOutgoingSpec(this.Ability.Cooldown);
@@ -73,7 +73,7 @@ public class MyProjectileAbilityScriptableObject : AbstractAbilityScriptableObje
                 target.ApplyGameplayEffectSpecToSelf(effectSpec);
                 Destroy(go.gameObject);
             }
-
+*/
             EndAbility();
 
             // Spawn instance of projectile prefab

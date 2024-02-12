@@ -14,6 +14,11 @@ namespace Battle
         public SceneActorController GetActor { get => ownerActor; }
         protected SceneActorController ownerActor;
 
+        public string Name
+        {
+            get => ownerActor.Entity.GameObject.name;
+        }
+
         public void Setup(SceneActorController owner)
         {
             this.ownerActor = owner;
