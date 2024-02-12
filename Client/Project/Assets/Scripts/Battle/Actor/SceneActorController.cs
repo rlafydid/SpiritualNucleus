@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using AbilitySystem;
 using DamageNumbersPro;
 using FSM;
 using LKEngine;
@@ -80,6 +81,7 @@ namespace Battle
             this.AddComponent<FSM.FiniteStateMachine>();
             this.AddComponent<ActorActComponent>();
             this.AddComponent<AttributesComponent>();
+            this.AddComponent<AbilitySystemCharacter>();
         }
 
         public void Load()

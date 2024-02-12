@@ -23,7 +23,7 @@ namespace AbilitySystem
         protected override void OnStart()
         {
             base.OnStart();
-            this.ownerActor.AddComponent<AttributeSystemComponent>();
+            _attributeSystem = this.ownerActor.AddComponent<AttributeSystemComponent>();
         }
 
         public void GrantAbility(AbstractAbilitySpec spec)
