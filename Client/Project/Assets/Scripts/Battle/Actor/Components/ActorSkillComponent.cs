@@ -42,8 +42,6 @@ namespace Battle
             skillMapping.Add(1, new SkillUnit() { BPRes = conf.Skill1, OwnerID = this.ownerActor.ID });
             skillMapping.Add(2, new SkillUnit() { BPRes = conf.Skill2, OwnerID = this.ownerActor.ID });
             skillMapping.Add(3, new SkillUnit() { BPRes = conf.Skill3, OwnerID = this.ownerActor.ID });
-
-            this.ownerActor.GetComponent<AbilitySystemCharacter>().OwnerId = this.ownerActor.ID;
         }
         //
         // public bool FindSkill()

@@ -25,12 +25,13 @@ namespace Act
 
         public override bool OnTrigger()
         {
+            _materials = new();
             var renderers = (owner as GameObjectEntity).GameObject.GetComponentsInChildren<Renderer>();
             foreach (var renderer in renderers)
             {
                 _materials.Add(renderer, renderer.material);
 
-                Facade.Externals.LoadAssetAsync("Frozen", (obj) =>
+                Facade.Externals.LoadAssetAsync("PolyToots_ASE_FrostIcicles.mat", (obj) =>
                 {
                     renderer.material = (obj as Material);
                 });

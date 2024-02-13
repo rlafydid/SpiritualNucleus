@@ -11,6 +11,11 @@
             "GUID": "9166807bfa0d4564e93b0987c0ff7c84"
         },
         {
+            "ID": "PolyToots_ASE_FrostIcicles.mat",
+            "Path": "Assets/Res/ASEShader/PolyToots_ASE_FrostIcicles.mat",
+            "GUID": "9e4953594a6ce23438614852f15a6f23"
+        },
+        {
             "ID": "Act_H0204_skill.asset",
             "Path": "Assets/Res/Battle/Act/Act_H0204_skill.asset",
             "GUID": "78b49b0eaa5680846a7e104c7bb27995"
@@ -1806,8 +1811,8 @@
             "GUID": "02f26400ac423b24bb030273982eabf3"
         },
         {
-            "ID": "Freeze.asset",
-            "Path": "Assets/Res/Battle/Effects/Freeze.asset",
+            "ID": "Frozen.asset",
+            "Path": "Assets/Res/Battle/Effects/Frozen.asset",
             "GUID": "b2d4dfccaaff0c043ba533ff783de4c7"
         },
         {

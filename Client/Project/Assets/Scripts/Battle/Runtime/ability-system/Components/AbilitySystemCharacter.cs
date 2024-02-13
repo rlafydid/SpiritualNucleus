@@ -159,6 +159,7 @@ namespace AbilitySystem
                 modifiersToApply.Add(new GameplayEffectContainer.ModifierContainer() { Attribute = modifier.Attribute, Modifier = attributeModifier });
             }
             AppliedGameplayEffects.Add(new GameplayEffectContainer() { spec = spec, modifiers = modifiersToApply.ToArray() });
+            spec.PlayCue();
         }
 
         void UpdateAttributeSystem()

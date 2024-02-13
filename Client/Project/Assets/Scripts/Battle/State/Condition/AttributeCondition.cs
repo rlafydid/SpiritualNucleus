@@ -23,7 +23,7 @@ namespace Battle
         public float AttributeValue;
         public override bool Pass()
         {
-            AttributeSystemComponent system = owner.Entity.GameObject.GetComponent<AttributeSystemComponent>();
+            AttributeSystemComponent system = owner.GetComponent<AttributeSystemComponent>();
             float val = 0;
             switch (AttributeType)
             {

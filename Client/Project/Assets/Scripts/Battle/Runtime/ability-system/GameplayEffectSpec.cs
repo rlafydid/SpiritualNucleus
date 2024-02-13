@@ -1,6 +1,8 @@
 using System;
 using AbilitySystem.Authoring;
 using AttributeSystem.Components;
+using Battle;
+using UnityEngine;
 
 namespace AbilitySystem
 {
@@ -99,7 +101,16 @@ namespace AbilitySystem
             this.Level = level;
             return this;
         }
-        
+
+        public void PlayCue()
+        {
+            foreach (var cue in GameplayEffect.display)
+            {
+                var actor = Facade.Battle.GetActor(Source.OwnerId);
+                actor.PlayAct(cue.name);
+                Debug.Log($"播放 effect cue {cue.name}");
+            }
+        }
         
     }
 
