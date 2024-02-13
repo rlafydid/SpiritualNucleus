@@ -18,10 +18,10 @@ namespace AttributeSystem.Components
         /// Attribute sets assigned to the game character
         /// </summary>
         [SerializeField]
-        private List<AttributeScriptableObject> Attributes;
+        private List<AttributeScriptableObject> Attributes = new();
 
         [SerializeField]
-        private List<AttributeValue> AttributeValues;
+        private List<AttributeValue> AttributeValues = new();
 
         private bool mAttributeDictStale;
         public Dictionary<AttributeScriptableObject, int> mAttributeIndexCache { get; private set; } = new Dictionary<AttributeScriptableObject, int>();
@@ -187,7 +187,8 @@ namespace AttributeSystem.Components
                 prevAttributeValues.Add(_attribute);
                 this.AttributeValues[i] = _attribute.Attribute.CalculateCurrentAttributeValue(_attribute, this.AttributeValues);
             }
-
+            if(AttributeSystemEvents == null)
+                return;
             for (var i = 0; i < this.AttributeSystemEvents.Length; i++)
             {
                 this.AttributeSystemEvents[i].PreAttributeChange(this, prevAttributeValues, ref this.AttributeValues);

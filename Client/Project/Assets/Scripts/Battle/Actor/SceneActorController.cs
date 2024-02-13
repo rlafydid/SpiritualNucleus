@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AbilitySystem;
+using AttributeSystem.Components;
 using DamageNumbersPro;
 using FSM;
 using LKEngine;
@@ -82,6 +83,7 @@ namespace Battle
             this.AddComponent<ActorActComponent>();
             this.AddComponent<AttributesComponent>();
             this.AddComponent<AbilitySystemCharacter>();
+            this.AddComponent<AttributeSystemComponent>();
         }
 
         public void Load()

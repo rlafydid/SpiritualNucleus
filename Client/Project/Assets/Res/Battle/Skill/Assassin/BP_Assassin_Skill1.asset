@@ -20,6 +20,8 @@ MonoBehaviour:
   - rid: 6474727236465852416
   - rid: 6474727236465852417
   - rid: 6474727236465852418
+  - rid: 5428821368144134145
+  - rid: 5428821368144134146
   edges:
   - GUID: 2d62707a-3199-472c-a101-490a79788040
     owner: {fileID: 11400000}
@@ -61,12 +63,52 @@ MonoBehaviour:
     outputFieldName: point
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: 2eeee0a9-eca7-41c5-aaea-56dd407299cb
+  - GUID: 0a8713ad-ee22-41cb-9b4a-bf13a121dc9a
+    owner: {fileID: 11400000}
+    inputNodeGUID: ae3b01a9-a9e3-4faf-9b24-8af1a7be0c86
+    outputNodeGUID: e8475000-c00e-4cba-a388-217141b08e9f
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 03c6eae9-8410-4aae-bb6f-36e46f189b14
+    owner: {fileID: 11400000}
+    inputNodeGUID: ae3b01a9-a9e3-4faf-9b24-8af1a7be0c86
+    outputNodeGUID: e8475000-c00e-4cba-a388-217141b08e9f
+    inputFieldName: list
+    outputFieldName: selectTargets
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: b9af163b-b0f5-480e-a14f-ca4fdc7f47c1
+    owner: {fileID: 11400000}
+    inputNodeGUID: 442c9008-e514-4dc0-a947-693d4e92902c
+    outputNodeGUID: ae3b01a9-a9e3-4faf-9b24-8af1a7be0c86
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 4d9fa0b8-bf70-4fd0-9447-dec7783c6ac8
+    owner: {fileID: 11400000}
+    inputNodeGUID: 442c9008-e514-4dc0-a947-693d4e92902c
+    outputNodeGUID: ae3b01a9-a9e3-4faf-9b24-8af1a7be0c86
+    inputFieldName: actorId
+    outputFieldName: element
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 0eca3d92-8b3f-46d3-9999-2abbbf475600
     owner: {fileID: 11400000}
     inputNodeGUID: 9c547506-2464-45bb-8872-e6d7ffe862eb
-    outputNodeGUID: e8475000-c00e-4cba-a388-217141b08e9f
-    inputFieldName: targets
-    outputFieldName: selectTargets
+    outputNodeGUID: 442c9008-e514-4dc0-a947-693d4e92902c
+    inputFieldName: executed
+    outputFieldName: endEffect
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 459fd5d3-e5af-4758-9c04-2abc481e93c6
+    owner: {fileID: 11400000}
+    inputNodeGUID: 9c547506-2464-45bb-8872-e6d7ffe862eb
+    outputNodeGUID: 442c9008-e514-4dc0-a947-693d4e92902c
+    inputFieldName: target
+    outputFieldName: outputActorId
     inputPortIdentifier: 
     outputPortIdentifier: 
   groups: []
@@ -76,8 +118,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -465, y: -122, z: 0}
-  scale: {x: 1, y: 1, z: 1}
+  position: {x: -282, y: 208, z: 0}
+  scale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 2
     RefIds:
@@ -119,6 +161,41 @@ MonoBehaviour:
         - triggerTime: 667
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
           id: d5b47b94-9751-4a1e-b985-63dc14bdbb41
+    - rid: 5428821368144134145
+      type: {class: ForeachLongListNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: ae3b01a9-a9e3-4faf-9b24-8af1a7be0c86
+        computeOrder: 5
+        position:
+          serializedVersion: 2
+          x: 1240.4653
+          y: 285.5242
+          width: 120
+          height: 99
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        list: 
+        element: 4
+    - rid: 5428821368144134146
+      type: {class: GameplayEffectNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 442c9008-e514-4dc0-a947-693d4e92902c
+        computeOrder: 6
+        position:
+          serializedVersion: 2
+          x: 1478.1229
+          y: 354.2193
+          width: 134
+          height: 123
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        effect: {fileID: 11400000, guid: b2d4dfccaaff0c043ba533ff783de4c7, type: 2}
+        actorId: 4
+        outputActorId: 4
     - rid: 6474727236465852416
       type: {class: GetSelfNode, ns: , asm: Assembly-CSharp}
       data:
@@ -156,7 +233,7 @@ MonoBehaviour:
         selectTargets: 
         width: 2
         startPoint: {x: 14.126066, y: -0.65115356, z: 56.905415}
-        endPoint: {x: 14.126066, y: -0.65115356, z: 56.905415}
+        endPoint: {x: 13.14696, y: -0.34202576, z: 59.998226}
     - rid: 6474727236465852418
       type: {class: GetSelfNode, ns: , asm: Assembly-CSharp}
       data:
@@ -173,7 +250,7 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         ownerId: 1
-        point: {x: 14.126066, y: -0.65115356, z: 56.905415}
+        point: {x: 13.14696, y: -0.34202576, z: 59.998226}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         scale: {x: 1, y: 1, z: 1}
     - rid: 6647520330707632167
@@ -181,12 +258,12 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 9c547506-2464-45bb-8872-e6d7ffe862eb
-        computeOrder: 5
+        computeOrder: 7
         position:
           serializedVersion: 2
-          x: 1278.7609
-          y: 233.49995
-          width: 136
+          x: 1716.8052
+          y: 246.26013
+          width: 137
           height: 243
         expanded: 0
         debug: 0
@@ -196,5 +273,5 @@ MonoBehaviour:
         speed: 1
         animState: 1
         targets: 
-        target: 0
+        target: 4
         direction: {x: 0, y: 0, z: 0}

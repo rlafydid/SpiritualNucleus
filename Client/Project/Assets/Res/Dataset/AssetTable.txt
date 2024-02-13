@@ -1,6 +1,16 @@
 {
     "tables": [
         {
+            "ID": "Frezon.mat",
+            "Path": "Assets/Res/ASEShader/Frezon.mat",
+            "GUID": "3e361f73efdb560449c5e09277734a5e"
+        },
+        {
+            "ID": "Frozen.shader",
+            "Path": "Assets/Res/ASEShader/Frozen.shader",
+            "GUID": "9166807bfa0d4564e93b0987c0ff7c84"
+        },
+        {
             "ID": "Act_H0204_skill.asset",
             "Path": "Assets/Res/Battle/Act/Act_H0204_skill.asset",
             "GUID": "78b49b0eaa5680846a7e104c7bb27995"
@@ -109,6 +119,11 @@
             "ID": "Act_BingShe_Attack4.asset",
             "Path": "Assets/Res/Battle/Act/BingShe/Act_BingShe_Attack4.asset",
             "GUID": "d69323f91273f410fb0dba1d2a81b44b"
+        },
+        {
+            "ID": "Act_Buff_Frozen.asset",
+            "Path": "Assets/Res/Battle/Act/Buff/Act_Buff_Frozen.asset",
+            "GUID": "414b31d09783d40d6970ecd1d86232cb"
         },
         {
             "ID": "Act_Hero_Show.asset",
@@ -1789,6 +1804,16 @@
             "ID": "Art_fx_ski_TTang.prefab",
             "Path": "Assets/Res/Battle/EffectPrefab/Skill/fx_ski_TTang/Art_fx_ski_TTang.prefab",
             "GUID": "02f26400ac423b24bb030273982eabf3"
+        },
+        {
+            "ID": "Freeze.asset",
+            "Path": "Assets/Res/Battle/Effects/Freeze.asset",
+            "GUID": "b2d4dfccaaff0c043ba533ff783de4c7"
+        },
+        {
+            "ID": "New Simple Float Modifier Magnitude.asset",
+            "Path": "Assets/Res/Battle/Effects/New Simple Float Modifier Magnitude.asset",
+            "GUID": "32cc798c64e5be546bbeca6d8b0bfcea"
         },
         {
             "ID": "ChapterConfig.asset",
@@ -7316,6 +7341,11 @@
             "GUID": "45fdf1603fce04f1891d4bb4047c9338"
         },
         {
+            "ID": "Main.unity",
+            "Path": "Assets/Res/Scenes/Main.unity",
+            "GUID": "527785b003a5b4acba1b9e4e066b4dac"
+        },
+        {
             "ID": "NewBattleSettings.lighting",
             "Path": "Assets/Res/Scenes/NewBattleSettings.lighting",
             "GUID": "af984cd6da9344dbc858050180494bdd"
@@ -7329,6 +7359,16 @@
             "ID": "World.unity",
             "Path": "Assets/Res/Scenes/World.unity",
             "GUID": "1c0b58ee2423f41deaf7807997025d1f"
+        },
+        {
+            "ID": "Frozen.mat",
+            "Path": "Assets/Res/Shader/Frozen.mat",
+            "GUID": "31cf77b6f203b6842b41232b46518474"
+        },
+        {
+            "ID": "Frozen.shadergraph",
+            "Path": "Assets/Res/Shader/Frozen.shadergraph",
+            "GUID": "3689dc662e6cd0c46bce395bd3722980"
         },
         {
             "ID": "Fail.mp3",

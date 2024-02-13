@@ -4,6 +4,7 @@ using AttributeSystem.Authoring;
 using AttributeSystem.Components;
 using Battle;
 using GameplayTag.Authoring;
+using LKEngine;
 using UnityEngine;
 
 
@@ -18,12 +19,14 @@ namespace AbilitySystem
         public List<AbstractAbilitySpec> GrantedAbilities = new List<AbstractAbilitySpec>();
         public float Level;
 
-        public long OwnerId { get; set; }
+        public long OwnerId { get => ownerActor.ID;}
 
         protected override void OnStart()
         {
             base.OnStart();
-            _attributeSystem = this.ownerActor.AddComponent<AttributeSystemComponent>();
+            _attributeSystem = this.ownerActor.GetComponent<AttributeSystemComponent>();
+            var abilityController = this.GetActor.Entity.GameObject.GetComponent<AbilityController>();
+            abilityController.InitialisaAbilites(this);
         }
 
         public void GrantAbility(AbstractAbilitySpec spec)

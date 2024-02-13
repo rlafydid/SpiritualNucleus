@@ -22,9 +22,9 @@ public class AbilityController : MonoBehaviour
     public Image[] Cooldowns;
 
     // Start is called before the first frame update
-    void Start()
+    public void InitialisaAbilites(AbilitySystemCharacter abilitySystemCharacter)
     {
-        this.abilitySystemCharacter = GetComponent<AbilitySystemCharacter>();
+        this.abilitySystemCharacter = abilitySystemCharacter;
         if (Abilities.Length > 0)
         {
             var spec = Abilities[0].CreateSpec(this.abilitySystemCharacter);

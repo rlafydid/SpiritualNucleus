@@ -14,27 +14,41 @@ public class GameplayEffectNode : BaseAsyncNode
 
 	[Input(name = "Actor")] public long actorId;
 	
+	[Output(name = "Actor")] public long outputActorId;
+	
 	public override string		name => "GameplayEffect";
 	
 	[Output(name = "End")]
 	public ExecuteLink endEffect;
 
-
-	private GameplayEffectSpec _gameplayEffectSpec;
+	private List<GameplayEffectSpec> _specs = new();
+	
 	protected override void Process()
 	{
+		outputActorId = actorId;
+		Debug.Log($"effect to actor id  {actorId}");
 		var actor = Facade.Battle.GetActor(actorId);
-		var character = this.owner.GetComponent<AbilitySystemCharacter>();
+		var character = actor.GetComponent<AbilitySystemCharacter>();
 		var sqec = character.MakeOutgoingSpec(effect);
-		_gameplayEffectSpec = sqec;
+		_specs.Add(sqec);
 		character.ApplyGameplayEffectSpecToSelf(sqec);
 	}
 
 	public override void Update(int deltaTime)
 	{
-		if (_gameplayEffectSpec.DurationRemaining <= 0)
+		for (int i = _specs.Count - 1; i >= 0; i--)
 		{
-			this.Execute(endEffect);
+			var spec = _specs[i];
+			if (spec.DurationRemaining <= 0)
+			{
+				outputActorId = spec.Source.OwnerId;
+				this.Execute(nameof(endEffect));
+				_specs.RemoveAt(i);
+				Debug.Log($"移除Effect {i}");
+			}
+		}
+		if (_specs.Count <= 0)
+		{
 			OnFinished();
 		}
 	}
