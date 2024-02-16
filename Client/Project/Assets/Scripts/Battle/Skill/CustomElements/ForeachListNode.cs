@@ -18,10 +18,12 @@ public class ForeachListNode<T> : UniversalNode
     protected override void Process()
     {
         base.Process();
+        element = default;
         foreach(var item in list)
         {
             element = item;
             Execute(nameof(this.executes));
         }
+        list.Clear();
     }
 }

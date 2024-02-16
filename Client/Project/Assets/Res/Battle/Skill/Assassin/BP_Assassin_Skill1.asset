@@ -39,14 +39,6 @@ MonoBehaviour:
     outputFieldName: point
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: 508ef387-155d-43f9-9ecc-854caa82f30b
-    owner: {fileID: 11400000}
-    inputNodeGUID: ace89001-8f38-43d0-a96a-8dd7b5a5b8a3
-    outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
-    inputFieldName: executed
-    outputFieldName: eventOutputs
-    inputPortIdentifier: 
-    outputPortIdentifier: d5b47b94-9751-4a1e-b985-63dc14bdbb41
   - GUID: 39a257fb-0abe-4525-b12c-206957f72227
     owner: {fileID: 11400000}
     inputNodeGUID: e8475000-c00e-4cba-a388-217141b08e9f
@@ -111,6 +103,22 @@ MonoBehaviour:
     outputFieldName: outputActorId
     inputPortIdentifier: 
     outputPortIdentifier: 
+  - GUID: 362ae7e6-4230-42a5-8303-50070471b241
+    owner: {fileID: 11400000}
+    inputNodeGUID: 6d118859-dbf3-44c7-ac58-7d9bfa14589d
+    outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: Start
+  - GUID: 8653316d-99ca-4226-8285-237d17fd71cb
+    owner: {fileID: 11400000}
+    inputNodeGUID: ace89001-8f38-43d0-a96a-8dd7b5a5b8a3
+    outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: d5b47b94-9751-4a1e-b985-63dc14bdbb41
   groups: []
   stackNodes: []
   pinnedElements: []
@@ -118,8 +126,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -282, y: 208, z: 0}
-  scale: {x: 0.57175326, y: 0.57175326, z: 1}
+  position: {x: -720, y: -82, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
@@ -158,6 +166,9 @@ MonoBehaviour:
         targets: 
         attackSpeedScale: 0
         actEvents:
+        - triggerTime: 0
+          displayName: Start
+          id: Start
         - triggerTime: 667
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
           id: d5b47b94-9751-4a1e-b985-63dc14bdbb41
@@ -177,7 +188,7 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         list: 
-        element: 4
+        element: 30
     - rid: 5428821368144134146
       type: {class: GameplayEffectNode, ns: , asm: Assembly-CSharp}
       data:
@@ -186,16 +197,16 @@ MonoBehaviour:
         computeOrder: 6
         position:
           serializedVersion: 2
-          x: 1478.1229
-          y: 354.2193
+          x: 1486.3914
+          y: 366
           width: 134
           height: 123
         expanded: 0
         debug: 0
         nodeLock: 0
         effect: {fileID: 11400000, guid: b2d4dfccaaff0c043ba533ff783de4c7, type: 2}
-        actorId: 4
-        outputActorId: 4
+        actorId: 30
+        outputActorId: 30
     - rid: 6474727236465852416
       type: {class: GetSelfNode, ns: , asm: Assembly-CSharp}
       data:
@@ -211,8 +222,8 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        ownerId: 1
-        point: {x: 14.126066, y: -0.65115356, z: 56.905415}
+        ownerId: 28
+        point: {x: 12.226801, y: -0.52591705, z: 54.338852}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         scale: {x: 1, y: 1, z: 1}
     - rid: 6474727236465852417
@@ -232,8 +243,8 @@ MonoBehaviour:
         nodeLock: 0
         selectTargets: 
         width: 2
-        startPoint: {x: 14.126066, y: -0.65115356, z: 56.905415}
-        endPoint: {x: 13.14696, y: -0.34202576, z: 59.998226}
+        startPoint: {x: 12.226801, y: -0.52591705, z: 54.338852}
+        endPoint: {x: 16.827572, y: -0.9947671, z: 56.239662}
     - rid: 6474727236465852418
       type: {class: GetSelfNode, ns: , asm: Assembly-CSharp}
       data:
@@ -249,8 +260,8 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        ownerId: 1
-        point: {x: 13.14696, y: -0.34202576, z: 59.998226}
+        ownerId: 28
+        point: {x: 16.827572, y: -0.9947671, z: 56.239662}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         scale: {x: 1, y: 1, z: 1}
     - rid: 6647520330707632167
@@ -261,8 +272,8 @@ MonoBehaviour:
         computeOrder: 7
         position:
           serializedVersion: 2
-          x: 1716.8052
-          y: 246.26013
+          x: 1735.1475
+          y: 351.64972
           width: 137
           height: 243
         expanded: 0
@@ -273,5 +284,5 @@ MonoBehaviour:
         speed: 1
         animState: 1
         targets: 
-        target: 4
+        target: 30
         direction: {x: 0, y: 0, z: 0}

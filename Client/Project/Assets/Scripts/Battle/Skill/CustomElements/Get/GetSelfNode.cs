@@ -29,6 +29,8 @@ public class GetSelfNode : UniversalNode
             point = actor.Position;
             rotation = actor.Entity.LocalRotation;
             scale = actor.Entity.LocalScale;
+            GizmosUtils.Instance.Draw(new SphereGizmos(point, 1){color = Color.cyan});
+            Debug.Log($"位置获取 {actor.Position} time {Time.realtimeSinceStartup}");
         }
     }
 }

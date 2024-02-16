@@ -28,7 +28,17 @@ public class RectangleBy2PointFilterNode : TargetFilterNode
 
 		Vector3 center = (startPoint + endPoint) / 2;
 
+		GizmosUtils.Instance.Draw(new SphereGizmos(startPoint){color = Color.yellow});
+		GizmosUtils.Instance.Draw(new SphereGizmos(endPoint){color = Color.black});
+		
 		Quaternion rotation = Quaternion.LookRotation((endPoint - startPoint).normalized);
+
+		var rectangle = GameObject.FindObjectOfType<TestRectangle>();
+		rectangle.width = width;
+		rectangle.height = height;
+		rectangle.transform.position = center;
+		rectangle.targets.Clear();
+		rectangle.transform.localRotation = rotation;
 		
 		var targets = owner is Battle.HeroActorController ?  Facade.Battle.GetMonsters() : Facade.Battle.GetHeroActors();
 		for (int i = 0; i < targets.Count; i++)
@@ -36,9 +46,10 @@ public class RectangleBy2PointFilterNode : TargetFilterNode
 			var target = targets[i];
 			if (MathUtils.IsInRectangle(width, height, rotation, center, target.Position))
 			{
-				Debug.Log("在范围内");
+				Debug.Log($"在范围内 {target.ID}");
 				selectTargets.Add(target.ID);
 			}
+			rectangle.targets.Add(target.Position);
 		}
 	}
 

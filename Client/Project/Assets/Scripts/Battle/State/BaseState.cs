@@ -84,11 +84,11 @@ namespace Battle
 
         public bool TryTransitionState(out int state)
         {
-            foreach(var trasition in transitions)
+            foreach(var transition in transitions)
             {
-                if(trasition.CanTransition())
+                if(transition.CanTransition())
                 {
-                    state = trasition.toState;
+                    state = transition.toState;
                     return true;
                 }
             }

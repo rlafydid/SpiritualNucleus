@@ -629,6 +629,7 @@ namespace GraphProcessor
 
 		public void OnProcess()
 		{
+			Log("OnProcess");
 			inputPorts.PullDatas();
 
 			ExceptionToLog.Call(() => Process());
@@ -638,6 +639,11 @@ namespace GraphProcessor
 			outputPorts.PushDatas();
 		}
 
+		protected void Log(object obj)
+		{
+			Debug.Log($"蓝图节点：{this.GetType().Name} {obj}");
+		}
+		
 		public void InvokeOnProcessed() => onProcessed?.Invoke();
 
 		/// <summary>

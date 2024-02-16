@@ -57,9 +57,10 @@ public class PlayActNode : BaseAsyncNode
             return ports;
 
         actEvents = actEvents.OrderBy(d => d.triggerTime).ToList();
+        
         foreach (var eventData in actEvents)
         {
-            PortData portData = new PortData { displayName = $"{eventData.displayName} ({eventData.triggerTime * 0.001f}s)", displayType = typeof(ExecuteLink), identifier = eventData.id };
+            var portData = new PortData { displayName = $"{eventData.displayName} ({eventData.triggerTime * 0.001f}s)", displayType = typeof(ExecuteLink), identifier = eventData.id };
             ports.Add(portData);
         }
         return ports;
@@ -150,6 +151,7 @@ public class PlayActNode : BaseAsyncNode
             return;
         }
         actEvents = actAsset.ToBPEvents();
+        actEvents.Add(new ActEventData(){triggerTime = 0, displayName = "Start", id = "Start"});
         lifeTime = TologicLifeTime(actAsset.LifeTime);
     }
 
@@ -204,6 +206,7 @@ public class ActEventsController
         timer = 0;
 
         waitTriggerEvents = new Queue<ActEventData>(actEvents);
+        OnTick(0);
     }
 
     public void OnTick(int deltaTimeMill)

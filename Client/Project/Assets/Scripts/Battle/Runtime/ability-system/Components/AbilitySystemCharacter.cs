@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using AbilitySystem.Authoring;
 using AttributeSystem.Authoring;
@@ -21,12 +22,19 @@ namespace AbilitySystem
 
         public long OwnerId { get => ownerActor.ID;}
 
+        public delegate void TagEvent(GameplayTagScriptableObject tag, EGameplayTagEventType eventType);
+
+        private Dictionary<GameplayTagScriptableObject, TagEvent> gameplayTagEvents = new();
+        private Dictionary<string, GameplayTagScriptableObject> tags = new();
+
         protected override void OnStart()
         {
             base.OnStart();
             _attributeSystem = this.ownerActor.GetComponent<AttributeSystemComponent>();
             var abilityController = this.GetActor.Entity.GameObject.GetComponent<AbilityController>();
             abilityController.InitialisaAbilites(this);
+            
+            
         }
 
         public void GrantAbility(AbstractAbilitySpec spec)
@@ -69,6 +77,11 @@ namespace AbilitySystem
                     return true;
             }
 
+            foreach (var tag in geSpec.GameplayEffect.gameplayEffectTags.GrantedTags)
+            {
+                Debug.Log($"添加 tag {tag.name}");
+                tags.TryAdd(tag.name, tag);
+            }
             return true;
         }
         public GameplayEffectSpec MakeOutgoingSpec(GameplayEffectScriptableObject GameplayEffect, float? level = 1f)
@@ -201,7 +214,25 @@ namespace AbilitySystem
 
         void CleanGameplayEffects()
         {
-            this.AppliedGameplayEffects.RemoveAll(x => x.spec.GameplayEffect.gameplayEffect.DurationPolicy == EDurationPolicy.HasDuration && x.spec.DurationRemaining <= 0);
+            // this.AppliedGameplayEffects.RemoveAll(x => x.spec.GameplayEffect.gameplayEffect.DurationPolicy == EDurationPolicy.HasDuration && x.spec.DurationRemaining <= 0);
+            
+            for (int i = AppliedGameplayEffects.Count - 1; i >= 0; i--)
+            {
+                var effect = AppliedGameplayEffects[i];
+                if (effect.spec.GameplayEffect.gameplayEffect.DurationPolicy == EDurationPolicy.HasDuration &&
+                    effect.spec.DurationRemaining <= 0)
+                {
+                    AppliedGameplayEffects.RemoveAt(i);
+                    foreach (var tag in effect.spec.GameplayEffect.gameplayEffectTags.GrantedTags)
+                    {
+                        if (gameplayTagEvents.TryGetValue(tag, out var val))
+                        {
+                            val.Invoke(tag, EGameplayTagEventType.Removed);
+                        }
+                    }
+                    
+                }
+            }
         }
 
         protected override void OnUpdate()
@@ -212,6 +243,40 @@ namespace AbilitySystem
 
             TickGameplayEffects();
             CleanGameplayEffects();
+        }
+
+        public void RegisterGameplayTagEvent(GameplayTagScriptableObject tag, EGameplayTagEventType eventType, TagEvent tagEvent)
+        {
+            if (!gameplayTagEvents.TryGetValue(tag, out var val))
+            {
+                gameplayTagEvents.Add(tag, new TagEvent(tagEvent)); 
+            }
+            else
+            {
+                val += tagEvent;
+            }
+        }
+
+        public void RemoveGameplayTagEvent(GameplayTagScriptableObject tag, EGameplayTagEventType eventType, TagEvent tagEvent)
+        {
+            if (gameplayTagEvents.TryGetValue(tag, out var val))
+            {
+                val -= tagEvent;
+            }
+        }
+        
+        public void RemoveGameplayTagEvent(GameplayTagScriptableObject tag)
+        {
+            if (gameplayTagEvents.TryGetValue(tag, out var val))
+            {
+                gameplayTagEvents.Remove(tag);
+            }
+        }
+
+        public GameplayTagScriptableObject GetTag(string name)
+        {
+            tags.TryGetValue(name, out var tag);
+            return tag;
         }
     }
 }
@@ -229,5 +294,11 @@ namespace AbilitySystem
             public AttributeScriptableObject Attribute;
             public AttributeModifier Modifier;
         }
+    }
+
+    public enum EGameplayTagEventType
+    {
+        Added = 0x0001,
+        Removed = 0x0002
     }
 }

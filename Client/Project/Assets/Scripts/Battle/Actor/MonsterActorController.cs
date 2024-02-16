@@ -29,6 +29,7 @@ namespace Battle
             KnockBackState knockBackState = new KnockBackState();
             HurtState hurtState = new HurtState();
             MonsterDeadState deadState = new MonsterDeadState();
+            FrozenState frozenState = new FrozenState();
 
             fsm.AddState(ERoleState.Idle, idleState);
             fsm.AddState(ERoleState.TraceTarget, traceState);
@@ -37,17 +38,7 @@ namespace Battle
             fsm.AddState(ERoleState.Hurt, hurtState);
             fsm.AddState(ERoleState.Dead, deadState);
             fsm.AddState(ERoleState.KnockBack, knockBackState);
-
-            idleState.AddTransition(new Transition(ERoleState.Hurt));
-            idleState.AddTransition(new Transition(ERoleState.KnockBack));
-            idleState.AddTransition(new Transition(ERoleState.KnockFly));
-            idleState.AddTransition(new Transition(ERoleState.TraceTarget));
-            idleState.AddTransition(new Transition(ERoleState.Attack));
-            
-            traceState.AddTransition(new Transition(ERoleState.Hurt));
-            traceState.AddTransition(new Transition(ERoleState.KnockBack));
-            traceState.AddTransition(new Transition(ERoleState.KnockFly));
-            traceState.AddTransition(new Transition(ERoleState.Attack));
+            fsm.AddState(ERoleState.Frozen, frozenState);
 
             var toIdleTransition = new FSM.Transition(ERoleState.Idle);
             toIdleTransition.priority = -1;
@@ -68,28 +59,43 @@ namespace Battle
 
             var toDeadTranstion = new FSM.Transition(ERoleState.Dead);
             toDeadTranstion.priority = 10;
+
+            var toFrozenTransition = new FSM.Transition(ERoleState.Frozen);
+            fsm.AddEvent(FSM.EEvent.Frozen, toFrozenTransition);
+            
+            idleState.AddTransition(new Transition(ERoleState.Hurt));
+            // idleState.AddTransition(new Transition(ERoleState.KnockBack));
+            // idleState.AddTransition(new Transition(ERoleState.KnockFly));
+            idleState.AddTransition(new Transition(ERoleState.TraceTarget));
+            idleState.AddTransition(new Transition(ERoleState.Attack));
+            
+            // traceState.AddTransition(new Transition(ERoleState.Hurt));
+            // traceState.AddTransition(new Transition(ERoleState.KnockBack));
+            // traceState.AddTransition(new Transition(ERoleState.KnockFly));
+            traceState.AddTransition(new Transition(ERoleState.Attack));
             
             hurtState.AddTransition(toHurtTransition);
             hurtState.AddTransition(toKnockBackTransition);
             
             // knockBackState.AddTransition(toKnockBackTransition);
-            knockBackState.AddTransition(toKnockFlyTransition);
+            // knockBackState.AddTransition(toKnockFlyTransition);
             knockBackState.AddTransition(toIdleTransition);
             
             knockFlyState.AddTransition(toIdleTransition);
-            knockFlyState.AddTransition(toKnockFlyTransition);
-            knockFlyState.AddTransition(toKnockBackTransition);
-            knockFlyState.AddTransition(toHurtTransition);
+            // knockFlyState.AddTransition(toKnockFlyTransition);
+            // knockFlyState.AddTransition(toKnockBackTransition);
+            // knockFlyState.AddTransition(toHurtTransition);
             knockFlyState.AddTransition(toDeadTranstion);
             
             attackState.AddTransition(toHurtTransition);
-            attackState.AddTransition(toKnockBackTransition);
-            attackState.AddTransition(toKnockFlyTransition);
+            // attackState.AddTransition(toKnockBackTransition);
+            // attackState.AddTransition(toKnockFlyTransition);
+            // attackState.AddTransition(toFrozenTransition);
 
             toDeadTranstion.AddCondition(new AttributeCondition(){ AttributeValue = 0, AttributeType = "hp", CompareType = ECompareType.LEqual});
             
-            knockBackState.AddTransition(toDeadTranstion);
-            knockFlyState.AddTransition(toDeadTranstion);
+            // knockBackState.AddTransition(toDeadTranstion);
+            // knockFlyState.AddTransition(toDeadTranstion);
             hurtState.AddTransition(toDeadTranstion);
         }
 

@@ -17,7 +17,7 @@ MonoBehaviour:
   - rid: 5428821328912973825
   - rid: 5428821328912973827
   Events: []
-  Model: 
+  Model: 0
   references:
     version: 2
     RefIds:
@@ -25,7 +25,7 @@ MonoBehaviour:
       type: {class: ActMaterialClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
-        Duration: 2
+        Duration: 4
         Index: 0
         Row: 0
         effect: 0
@@ -33,6 +33,6 @@ MonoBehaviour:
       type: {class: ActAnimationPause, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
-        Duration: 2
+        Duration: 4
         Index: 0
         Row: 0

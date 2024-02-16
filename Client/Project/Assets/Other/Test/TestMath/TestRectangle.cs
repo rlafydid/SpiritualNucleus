@@ -12,6 +12,8 @@ public class TestRectangle : MonoBehaviour
     public Vector3 offset;
 
     public GameObject target;
+
+    public List<Vector3> targets = new();
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,8 @@ public class TestRectangle : MonoBehaviour
         Vector3 p3 = new Vector3(halfWidth, 0, halfHeight);
         Vector3 p4 = new Vector3(halfWidth, 0, -halfHeight);
 
+        var p = point;
+        
         point.y = 0;
         Vector3 targetOffset = point - transform.position;
 		
@@ -51,15 +55,19 @@ public class TestRectangle : MonoBehaviour
             Gizmos.DrawLine(lastP, curP);
         }
 
-        if (isIn)
-        {
-            Gizmos.DrawCube(transform.position, Vector3.one);
-        }
+        Gizmos.color = isIn ? Color.green : Color.gray;
+
+        Gizmos.DrawSphere(p, 0.5f);
     }
 
     private void OnDrawGizmos()
     {
         if(target != null)
             IsInRectangle(target.transform.position);
+
+        foreach (var point in targets)
+        {
+            IsInRectangle(point);
+        }
     }
 }

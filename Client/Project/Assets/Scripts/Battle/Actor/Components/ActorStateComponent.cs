@@ -12,6 +12,7 @@ namespace FSM
         KnockBack, //击退
         KnockFly, //击飞
         Vertigo, //眩晕
+        Frozen,
     }
     public class FiniteStateMachine : ActorComponent
     {
@@ -75,9 +76,9 @@ namespace FSM
 
         public bool ChangeState(int state, IStateData data = null)
         {
-            if(state != _defaultState)
-                if(curState != null && !curState.CanTransitionToState(state))
-                    return false;
+            // if(state != _defaultState)
+            //     if(curState != null && !curState.CanTransitionToState(state))
+            //         return false;
             
             if (states.TryGetValue(state, out BaseState target))
             {
