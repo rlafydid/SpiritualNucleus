@@ -8279,6 +8279,16 @@
             "ID": "zhuangbeidakong.wav",
             "Path": "Assets/Res/Sounds/UI/zhuangbeidakong.wav",
             "GUID": "41c6efa4d03c5ef4b92144c5bd1d4159"
+        },
+        {
+            "ID": "Aility.Debuff.Control.Frozen.asset",
+            "Path": "Assets/Res/Tags/Aility.Debuff.Control.Frozen.asset",
+            "GUID": "cb58ee0ffbfb84ae88ab43baae30a1b3"
+        },
+        {
+            "ID": "GameplayTags.asset",
+            "Path": "Assets/Res/Tags/GameplayTags.asset",
+            "GUID": "e510747576ec347f9a7f3e813bc825ef"
         }
     ]
 }

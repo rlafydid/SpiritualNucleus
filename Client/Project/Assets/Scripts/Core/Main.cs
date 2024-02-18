@@ -84,6 +84,7 @@ public class Main : MonoBehaviour
         modules.Add(new TimerMod());
         modules.Add(new SceneManager());
         modules.Add(new Collision.World());
+        modules.Add(new GameplayAbilitySystem());
 
         foreach (var module in modules)
         {

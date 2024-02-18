@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,29 @@ using AbilitySystem;
 using AbilitySystem.Authoring;
 using FSM;
 using GameplayTag.Authoring;
+
+public class GameplayEffectNodeItem
+{
+	public long ActorId { get; }
+	Action<GameplayEffectNodeItem> _onFinish;
+	public  GameplayEffectNodeItem(long actorId, GameplayEffectScriptableObject effect, Action<GameplayEffectNodeItem> onFinish)
+	{
+		var actor = Facade.Battle.GetActor(actorId);
+		var asc = actor.GetComponent<AbilitySystemCharacter>();
+		var sqec = asc.MakeOutgoingSpec(effect);
+		asc.ApplyGameplayEffectSpecToSelf(sqec);
+		asc.OnGameplayEffectRemoved += OnGameplayEffectRemoved;
+
+		this._onFinish = onFinish;
+		ActorId = actorId;
+	}
+
+	void OnGameplayEffectRemoved(AbilitySystemCharacter asc, GameplayEffectSpec effect)
+	{
+		asc.OnGameplayEffectRemoved -= OnGameplayEffectRemoved;
+		_onFinish?.Invoke(this);
+	}
+}
 
 [System.Serializable, NodeMenuItem("技能/GAS/GameplayEffect")]
 public class GameplayEffectNode : BaseAsyncNode
@@ -23,53 +47,27 @@ public class GameplayEffectNode : BaseAsyncNode
 	[Output(name = "End")]
 	public ExecuteLink endEffect;
 
-	private List<GameplayEffectSpec> _specs = new();
-	
+	private List<GameplayEffectNodeItem> _items = new();
+
 	protected override void Process()
 	{
 		if (actorId > 0)
 		{
 			outputActorId = actorId;
 			Debug.Log($"effect to actor id  {actorId}");
-			var actor = Facade.Battle.GetActor(actorId);
-			var character = actor.GetComponent<AbilitySystemCharacter>();
-			var sqec = character.MakeOutgoingSpec(effect);
-			_specs.Add(sqec);
-			character.ApplyGameplayEffectSpecToSelf(sqec);
-			actor.GetComponent<FiniteStateMachine>().TriggerEvent(EEvent.Frozen);
 
-			string tagName = "Ability.Skill.Magic.Ice Blast";
-			
-			AbilitySystemCharacter.TagEvent onRemoved = (tag, type) =>
-			{
-				character.RemoveGameplayTagEvent(character.GetTag(tagName));
-				Debug.Log($"移除Effect Frozen {actor.ID}");
-				this.Execute(nameof(endEffect));
-			};
-			
-			character.RegisterGameplayTagEvent(character.GetTag(tagName), EGameplayTagEventType.Removed, onRemoved);
-			
+			var item = new GameplayEffectNodeItem(actorId, effect, OnFinished);
+			_items.Add(item);
 		}
-		OnFinished();
 	}
 
-	
-	public override void Update(int deltaTime)
+	void OnFinished(GameplayEffectNodeItem item)
 	{
-		// for (int i = _specs.Count - 1; i >= 0; i--)
-		// {
-		// 	var spec = _specs[i];
-		// 	if (spec.DurationRemaining <= 0)
-		// 	{
-		// 		Debug.Log($"移除Effect {i}");
-		// 		outputActorId = spec.Source.OwnerId;
-		// 		this.Execute(nameof(endEffect));
-		// 		_specs.RemoveAt(i);
-		// 	}
-		// }
-		// if (_specs.Count <= 0)
-		// {
-		// 	Debug.Log($"GameplayEffectNode 完成");
-		// }
+		_items.Remove(item);
+		outputActorId = actorId;
+		Execute(nameof(endEffect));
+		if (_items.Count <= 0)
+			OnFinished();
 	}
+
 }

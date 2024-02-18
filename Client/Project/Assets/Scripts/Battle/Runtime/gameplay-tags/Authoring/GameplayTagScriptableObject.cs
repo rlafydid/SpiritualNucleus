@@ -40,8 +40,4 @@ namespace GameplayTag.Authoring
 
     }
 
-    public struct GameplayTag
-    {
-        
-    }
 }

@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: mate_lc_cirongjie01
   m_Shader: {fileID: -6465566751694194690, guid: 54c899c421105974d9095d7f48a19486, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -17,6 +19,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -62,6 +65,8 @@ Material:
     - Vector1_cfa58589ad294e30a7bf5f7723a1e345: 0
     - Vector1_d1c32195c9e44a19ac5bed8673958445: 0
     - Vector1_df4ee793a4a14030ba71a5d3ca88996c: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color_19d44d0ba6ef4943ba742103345bad43: {r: 0, g: 0.26598445, b: 0.95686275, a: 1}
     - Color_8cad09a59efd4afa98850a42389b79ed: {r: 0, g: 108.42353, b: 766.9961, a: 1}
@@ -81,4 +86,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 5
+  version: 7

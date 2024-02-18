@@ -17,9 +17,6 @@ namespace AbilitySystem.Authoring
 
         [FormerlySerializedAs("Period")] [SerializeField]
         public GameplayEffectPeriod period;
-
-        [SerializeField]
-        public ActAsset[] display;
     }
 
 }

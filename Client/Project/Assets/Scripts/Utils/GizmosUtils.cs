@@ -11,6 +11,7 @@ public interface IGizmos
 public abstract class BaseGizmos : IGizmos
 {
     public Color color = Color.gray;
+    public float duration = 5f;
     public abstract void Draw();
 }
 
@@ -50,15 +51,28 @@ public class GizmosUtils : MonoBehaviour
         }
     }
 
-    List<IGizmos> _gizmosList = new();
+    List<BaseGizmos> _gizmosList = new();
 
-    public void Draw(IGizmos gizmos)
+    public void Draw(BaseGizmos gizmos)
     {
         _gizmosList.Add(gizmos);
     }
-    
+
+    private void Update()
+    {
+        for (int i = _gizmosList.Count - 1; i >= 0; i--)
+        {
+            var item = _gizmosList[i];
+            item.duration -= Time.deltaTime;
+            if(item.duration <= 0)
+                _gizmosList.RemoveAt(i);
+        }
+    }
+
     private void OnDrawGizmos()
     {
+        if (!Application.isPlaying)
+            return;
         foreach (var item in _gizmosList)
         {
             item.Draw();

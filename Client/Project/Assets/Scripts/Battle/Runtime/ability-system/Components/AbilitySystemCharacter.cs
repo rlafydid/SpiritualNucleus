@@ -25,7 +25,9 @@ namespace AbilitySystem
         public delegate void TagEvent(GameplayTagScriptableObject tag, EGameplayTagEventType eventType);
 
         private Dictionary<GameplayTagScriptableObject, TagEvent> gameplayTagEvents = new();
-        private Dictionary<string, GameplayTagScriptableObject> tags = new();
+
+        public Action<AbilitySystemCharacter, GameplayEffectSpec> OnGameplayEffectApplied { get; set; }
+        public Action<AbilitySystemCharacter, GameplayEffectSpec> OnGameplayEffectRemoved { get; set; }
 
         protected override void OnStart()
         {
@@ -77,11 +79,8 @@ namespace AbilitySystem
                     return true;
             }
 
-            foreach (var tag in geSpec.GameplayEffect.gameplayEffectTags.GrantedTags)
-            {
-                Debug.Log($"添加 tag {tag.name}");
-                tags.TryAdd(tag.name, tag);
-            }
+            OnGameplayEffectApplied?.Invoke(this, geSpec);
+            
             return true;
         }
         public GameplayEffectSpec MakeOutgoingSpec(GameplayEffectScriptableObject GameplayEffect, float? level = 1f)
@@ -172,7 +171,6 @@ namespace AbilitySystem
                 modifiersToApply.Add(new GameplayEffectContainer.ModifierContainer() { Attribute = modifier.Attribute, Modifier = attributeModifier });
             }
             AppliedGameplayEffects.Add(new GameplayEffectContainer() { spec = spec, modifiers = modifiersToApply.ToArray() });
-            spec.PlayCue();
         }
 
         void UpdateAttributeSystem()
@@ -230,6 +228,7 @@ namespace AbilitySystem
                             val.Invoke(tag, EGameplayTagEventType.Removed);
                         }
                     }
+                    OnGameplayEffectRemoved?.Invoke(this, effect.spec);
                     
                 }
             }
@@ -271,12 +270,6 @@ namespace AbilitySystem
             {
                 gameplayTagEvents.Remove(tag);
             }
-        }
-
-        public GameplayTagScriptableObject GetTag(string name)
-        {
-            tags.TryGetValue(name, out var tag);
-            return tag;
         }
     }
 }

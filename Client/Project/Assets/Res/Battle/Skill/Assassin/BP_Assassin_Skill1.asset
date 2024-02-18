@@ -103,7 +103,7 @@ MonoBehaviour:
     outputFieldName: outputActorId
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: 362ae7e6-4230-42a5-8303-50070471b241
+  - GUID: d5d043d8-05d8-4090-b67a-d38cff80bf54
     owner: {fileID: 11400000}
     inputNodeGUID: 6d118859-dbf3-44c7-ac58-7d9bfa14589d
     outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
@@ -111,7 +111,7 @@ MonoBehaviour:
     outputFieldName: eventOutputs
     inputPortIdentifier: 
     outputPortIdentifier: Start
-  - GUID: 8653316d-99ca-4226-8285-237d17fd71cb
+  - GUID: 81a4edc9-22c4-46ca-9fd0-3c59fc64ebc9
     owner: {fileID: 11400000}
     inputNodeGUID: ace89001-8f38-43d0-a96a-8dd7b5a5b8a3
     outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
@@ -126,8 +126,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -720, y: -82, z: 0}
-  scale: {x: 1, y: 1, z: 1}
+  position: {x: -1763, y: -353, z: 0}
+  scale: {x: 1.520875, y: 1.520875, z: 1}
   references:
     version: 2
     RefIds:
@@ -188,7 +188,7 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         list: 
-        element: 30
+        element: 4
     - rid: 5428821368144134146
       type: {class: GameplayEffectNode, ns: , asm: Assembly-CSharp}
       data:
@@ -205,8 +205,8 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         effect: {fileID: 11400000, guid: b2d4dfccaaff0c043ba533ff783de4c7, type: 2}
-        actorId: 30
-        outputActorId: 30
+        actorId: 4
+        outputActorId: 4
     - rid: 6474727236465852416
       type: {class: GetSelfNode, ns: , asm: Assembly-CSharp}
       data:
@@ -222,8 +222,8 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        ownerId: 28
-        point: {x: 12.226801, y: -0.52591705, z: 54.338852}
+        ownerId: 1
+        point: {x: 8.880534, y: 0.6814499, z: 66.63874}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         scale: {x: 1, y: 1, z: 1}
     - rid: 6474727236465852417
@@ -243,8 +243,9 @@ MonoBehaviour:
         nodeLock: 0
         selectTargets: 
         width: 2
-        startPoint: {x: 12.226801, y: -0.52591705, z: 54.338852}
-        endPoint: {x: 16.827572, y: -0.9947671, z: 56.239662}
+        startPoint: {x: 8.880534, y: 0.6814499, z: 66.63874}
+        endPoint: {x: 12.448237, y: 0.034540713, z: 63.195923}
+        expandDistance: 1
     - rid: 6474727236465852418
       type: {class: GetSelfNode, ns: , asm: Assembly-CSharp}
       data:
@@ -260,8 +261,8 @@ MonoBehaviour:
         expanded: 0
         debug: 0
         nodeLock: 0
-        ownerId: 28
-        point: {x: 16.827572, y: -0.9947671, z: 56.239662}
+        ownerId: 1
+        point: {x: 12.448237, y: 0.034540713, z: 63.195923}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         scale: {x: 1, y: 1, z: 1}
     - rid: 6647520330707632167
@@ -284,5 +285,5 @@ MonoBehaviour:
         speed: 1
         animState: 1
         targets: 
-        target: 30
+        target: 4
         direction: {x: 0, y: 0, z: 0}

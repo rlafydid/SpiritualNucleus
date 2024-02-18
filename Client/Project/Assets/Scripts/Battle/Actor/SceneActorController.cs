@@ -84,6 +84,7 @@ namespace Battle
             this.AddComponent<AttributesComponent>();
             this.AddComponent<AbilitySystemCharacter>();
             this.AddComponent<AttributeSystemComponent>();
+            this.AddComponent<ActorStateTagComponent>();
         }
 
         public void Load()

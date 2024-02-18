@@ -13,17 +13,21 @@ namespace Battle
         {
             base.OnEnter();
             var abilitySystem = GetActor.GetComponent<AbilitySystemCharacter>();
-            // frozenTag = abilitySystem.GetTag("Frozen");
-            // abilitySystem.RegisterGameplayTagEvent(frozenTag, EGameplayTagEventType.Removed, RemovedTag);
+            abilitySystem.RegisterGameplayTagEvent(GameplayTags.GetTag("Ability.Debuff.Control.Frozen"), EGameplayTagEventType.Removed, RemovedTag);
+            
+            this.GetActor.PlayAct("Act_Buff_Frozen");
         }
 
         void RemovedTag(GameplayTagScriptableObject tag, EGameplayTagEventType type)
         {
+            ToLinkedState();
         }
         
         protected override void OnExit()
         {
             base.OnExit();
+            var abilitySystem = GetActor.GetComponent<AbilitySystemCharacter>();
+            abilitySystem.RemoveGameplayTagEvent(GameplayTags.GetTag("Ability.Debuff.Control.Frozen"), EGameplayTagEventType.Removed, RemovedTag);
         }
     }
 }

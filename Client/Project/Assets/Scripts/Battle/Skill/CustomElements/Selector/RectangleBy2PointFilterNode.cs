@@ -17,6 +17,9 @@ public class RectangleBy2PointFilterNode : TargetFilterNode
 	[Input("终点"), SerializeField]
 	public Vector3 endPoint;
 
+	[Input("扩大距离（米）"), SerializeField]
+	float expandDistance;
+	
 	public override string		name => "筛选根据两点矩形内目标";
 
 	protected override void Process()
@@ -25,6 +28,7 @@ public class RectangleBy2PointFilterNode : TargetFilterNode
 		var owner = Facade.Battle.GetActor(skilUnit.OwnerID);
 
 		float height = Vector3.Distance(startPoint, endPoint);
+		height += expandDistance * 2;
 
 		Vector3 center = (startPoint + endPoint) / 2;
 
