@@ -80,6 +80,14 @@ namespace AbilitySystem
             }
 
             OnGameplayEffectApplied?.Invoke(this, geSpec);
+
+            foreach (var tag in geSpec.GameplayEffect.gameplayEffectTags.GrantedTags)
+            {
+                if (gameplayTagEvents.TryGetValue(tag, out var tagEvent))
+                {
+                    tagEvent?.Invoke(tag, EGameplayTagEventType.Added);
+                }
+            }
             
             return true;
         }

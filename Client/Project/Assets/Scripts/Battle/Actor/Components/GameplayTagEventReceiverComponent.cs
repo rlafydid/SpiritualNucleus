@@ -21,7 +21,7 @@ namespace Battle
             switch (eventType)
             {
                 case EGameplayTagEventType.Added:
-                    this.GetComponent<FiniteStateMachine>().TriggerEvent(EEvent.Frozen);
+                    this.ownerActor.GetComponent<FiniteStateMachine>().TriggerEvent(EEvent.Frozen);
                     break;
             }
         }

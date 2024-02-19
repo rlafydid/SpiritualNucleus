@@ -21,7 +21,7 @@ MonoBehaviour:
   gameplayEffectTags:
     AssetTag: {fileID: 0}
     GrantedTags:
-    - {fileID: 11400000, guid: d2ffa0e3d25579749987fae05af7a5c1, type: 2}
+    - {fileID: 11400000, guid: cb58ee0ffbfb84ae88ab43baae30a1b3, type: 2}
     OngoingTagRequirements:
       RequireTags: []
       IgnoreTags: []
@@ -35,5 +35,3 @@ MonoBehaviour:
   period:
     Period: 0
     ExecuteOnApplication: 0
-  display:
-  - {fileID: 11400000, guid: 414b31d09783d40d6970ecd1d86232cb, type: 2}
