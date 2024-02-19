@@ -8,6 +8,7 @@ namespace Battle
     public class HeroMoveState : HeroState
     {
         private bool _isFasterRun = false;
+        private JoystickMoveComponent _joystick;
         protected override void OnEnter()
         {
             Debug.Log("Hero Run");
@@ -18,6 +19,15 @@ namespace Battle
             {
                 GetActor.GetComponent<JoystickMoveComponent>().StartRunFaster();
             }
+
+            _joystick = GetActor.GetComponent<JoystickMoveComponent>();
+        }
+
+        protected override void OnUpdate()
+        {
+            base.OnUpdate();
+            if(!_joystick.IsMoving)
+                ChangeState(ERoleState.Idle);
         }
 
         protected override void OnExit()

@@ -20,6 +20,7 @@ namespace Battle
         public void OnMove(InputAction.CallbackContext context)
         {
             var delta = context.ReadValue<Vector2>();
+            Debug.Log($"delta {delta}");
             this.ownerActor.GetComponent<JoystickMoveComponent>().SetMoveDir(new Vector3(delta.x, 0, delta.y));
         }
 

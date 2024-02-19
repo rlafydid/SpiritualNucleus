@@ -13,6 +13,11 @@ namespace AbilitySystem
 {
     public class AbilitySystemCharacter : ActorComponent
     {
+        public struct GameplayTagEventItem
+        {
+            public GameplayTagEventDelegate tagEvent;
+            public EGameplayTagEventType eventType;
+        }
         [SerializeField]
         protected AttributeSystemComponent _attributeSystem;
         public AttributeSystemComponent AttributeSystem { get { return _attributeSystem; } set { _attributeSystem = value; } }
@@ -22,12 +27,14 @@ namespace AbilitySystem
 
         public long OwnerId { get => ownerActor.ID;}
 
-        public delegate void TagEvent(GameplayTagScriptableObject tag, EGameplayTagEventType eventType);
+        public delegate void GameplayTagEventDelegate(GameplayTagScriptableObject tag, EGameplayTagEventType eventType);
 
-        private Dictionary<GameplayTagScriptableObject, TagEvent> gameplayTagEvents = new();
+        private Dictionary<GameplayTagScriptableObject, List<GameplayTagEventItem>> gameplayTagEvents = new();
 
         public Action<AbilitySystemCharacter, GameplayEffectSpec> OnGameplayEffectApplied { get; set; }
         public Action<AbilitySystemCharacter, GameplayEffectSpec> OnGameplayEffectRemoved { get; set; }
+
+        public GameplayTagEventDelegate OnGameplayTagChanged { get; set; }
 
         protected override void OnStart()
         {
@@ -83,9 +90,10 @@ namespace AbilitySystem
 
             foreach (var tag in geSpec.GameplayEffect.gameplayEffectTags.GrantedTags)
             {
+                OnGameplayTagChanged?.Invoke(tag, EGameplayTagEventType.Added);
                 if (gameplayTagEvents.TryGetValue(tag, out var tagEvent))
                 {
-                    tagEvent?.Invoke(tag, EGameplayTagEventType.Added);
+                    InvokeTagEvent(tag, EGameplayTagEventType.Added);
                 }
             }
             
@@ -231,9 +239,10 @@ namespace AbilitySystem
                     AppliedGameplayEffects.RemoveAt(i);
                     foreach (var tag in effect.spec.GameplayEffect.gameplayEffectTags.GrantedTags)
                     {
+                        OnGameplayTagChanged?.Invoke(tag, EGameplayTagEventType.Removed);
                         if (gameplayTagEvents.TryGetValue(tag, out var val))
                         {
-                            val.Invoke(tag, EGameplayTagEventType.Removed);
+                            InvokeTagEvent(tag, EGameplayTagEventType.Removed);
                         }
                     }
                     OnGameplayEffectRemoved?.Invoke(this, effect.spec);
@@ -242,6 +251,20 @@ namespace AbilitySystem
             }
         }
 
+        void InvokeTagEvent(GameplayTagScriptableObject tag, EGameplayTagEventType eventType)
+        {
+            if (gameplayTagEvents.TryGetValue(tag, out var eventList))
+            {
+                foreach (var eventITem in eventList)
+                {
+                    if (eventITem.eventType == EGameplayTagEventType.Any || eventITem.eventType == eventType)
+                    {
+                        eventITem.tagEvent.Invoke(tag, eventType);
+                    }
+                }
+            }
+        }
+        
         protected override void OnUpdate()
         {
             // Reset all attributes to 0
@@ -252,23 +275,25 @@ namespace AbilitySystem
             CleanGameplayEffects();
         }
 
-        public void RegisterGameplayTagEvent(GameplayTagScriptableObject tag, EGameplayTagEventType eventType, TagEvent tagEvent)
+        public void RegisterGameplayTagEvent(GameplayTagScriptableObject tag, GameplayTagEventDelegate tagEvent, EGameplayTagEventType eventType = EGameplayTagEventType.Any)
         {
-            if (!gameplayTagEvents.TryGetValue(tag, out var val))
+            if (!gameplayTagEvents.TryGetValue(tag, out var eventList))
             {
-                gameplayTagEvents.Add(tag, new TagEvent(tagEvent)); 
+                eventList = new List<GameplayTagEventItem>();
             }
-            else
+
+            eventList.Add(new GameplayTagEventItem()
             {
-                val += tagEvent;
-            }
+                tagEvent = tagEvent,
+                eventType = eventType
+            });
         }
 
-        public void RemoveGameplayTagEvent(GameplayTagScriptableObject tag, EGameplayTagEventType eventType, TagEvent tagEvent)
+        public void RemoveGameplayTagEvent(GameplayTagScriptableObject tag, GameplayTagEventDelegate tagEvent)
         {
-            if (gameplayTagEvents.TryGetValue(tag, out var val))
+            if (gameplayTagEvents.TryGetValue(tag, out var eventList))
             {
-                val -= tagEvent;
+                eventList.RemoveAll(d => d.tagEvent == tagEvent);
             }
         }
         
@@ -299,7 +324,8 @@ namespace AbilitySystem
 
     public enum EGameplayTagEventType
     {
-        Added = 0x0001,
-        Removed = 0x0002
+        Any,
+        Added = 1,
+        Removed = 2,
     }
 }

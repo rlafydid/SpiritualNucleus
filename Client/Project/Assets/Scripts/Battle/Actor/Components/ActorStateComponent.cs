@@ -76,9 +76,8 @@ namespace FSM
 
         public bool ChangeState(int state, IStateData data = null)
         {
-            // if(state != _defaultState)
-            //     if(curState != null && !curState.CanTransitionToState(state))
-            //         return false;
+            if (state == CurrentState)
+                return false;
             
             if (states.TryGetValue(state, out BaseState target))
             {

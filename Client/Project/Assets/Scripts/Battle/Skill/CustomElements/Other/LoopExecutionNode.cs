@@ -5,7 +5,7 @@ using GraphProcessor;
 using System.Linq;
 
 [System.Serializable, NodeMenuItem("节点相关/循环执行")]
-public class LoopExecutionNode : BaseAsyncNode
+public class LoopExecutionNode : BaseAsyncNodeWithOut
 {
 	public override string name => "循环执行";
 

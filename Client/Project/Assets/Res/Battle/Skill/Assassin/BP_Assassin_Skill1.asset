@@ -247,7 +247,7 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         ownerId: 1
-        point: {x: 9.687579, y: 0.12168121, z: 58.393547}
+        point: {x: 12.422411, y: 0.12162781, z: 65.827324}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         scale: {x: 1, y: 1, z: 1}
     - rid: 6474727236465852417
@@ -267,8 +267,8 @@ MonoBehaviour:
         nodeLock: 0
         selectTargets: 
         width: 2
-        startPoint: {x: 9.687579, y: 0.12168121, z: 58.393547}
-        endPoint: {x: 14.24288, y: -0.28983197, z: 60.41342}
+        startPoint: {x: 12.422411, y: 0.12162781, z: 65.827324}
+        endPoint: {x: 16.91225, y: -0.1500473, z: 67.95077}
         expandDistance: 1
     - rid: 6474727236465852418
       type: {class: GetSelfNode, ns: , asm: Assembly-CSharp}
@@ -286,7 +286,7 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         ownerId: 1
-        point: {x: 14.24288, y: -0.28983197, z: 60.41342}
+        point: {x: 16.91225, y: -0.1500473, z: 67.95077}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         scale: {x: 1, y: 1, z: 1}
     - rid: 6647520330707632167

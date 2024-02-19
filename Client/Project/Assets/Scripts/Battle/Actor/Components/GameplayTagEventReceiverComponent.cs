@@ -13,24 +13,27 @@ namespace Battle
         {
             base.OnStart();
             var asc = ownerActor.GetComponent<AbilitySystemCharacter>();
-            asc.RegisterGameplayTagEvent(GameplayTags.GetTag("Ability.Debuff.Control.Frozen"), EGameplayTagEventType.Added, Frozen);
+            asc.OnGameplayTagChanged += OnGameplayTagChanged;
         }
 
-        void Frozen(GameplayTagScriptableObject tag, EGameplayTagEventType eventType)
+        void OnGameplayTagChanged(GameplayTagScriptableObject tag, EGameplayTagEventType eventType)
         {
-            switch (eventType)
+            if (eventType == EGameplayTagEventType.Added)
             {
-                case EGameplayTagEventType.Added:
-                    this.ownerActor.GetComponent<FiniteStateMachine>().TriggerEvent(EEvent.Frozen);
-                    break;
-            }
+                switch (tag.name)
+                {
+                    case "Ability.Debuff.Control.Frozen":
+                        this.ownerActor.GetComponent<FiniteStateMachine>().TriggerEvent(EEvent.Frozen);
+                        break;
+                }
+            } 
         }
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
             var asc = ownerActor.GetComponent<AbilitySystemCharacter>();
-            asc.RemoveGameplayTagEvent(GameplayTags.GetTag("Ability.Debuff.Control.Frozen"), EGameplayTagEventType.Added, Frozen);
+            asc.OnGameplayTagChanged -= OnGameplayTagChanged;
         }
     }
 }

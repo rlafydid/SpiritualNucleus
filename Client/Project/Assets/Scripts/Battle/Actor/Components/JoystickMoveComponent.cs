@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using LKEngine;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 namespace Battle
@@ -9,9 +10,10 @@ namespace Battle
     {
         float _moveSpeed = 7;
 
-        public float MoveSpeed { get => _moveSpeed; set => _moveSpeed = value; }
-
-        float value;
+        public float MoveSpeed { 
+            get => _moveSpeed; 
+            set => _moveSpeed = value;
+        }
 
         public Vector3 GetMoveDirection
         {
@@ -22,30 +24,24 @@ namespace Battle
         }
 
         private Vector3 _lastJoytickDirection;
+        
+        public bool FastMoving { get; private set; }
+
+        private bool _isMoving = false;
+        public bool IsMoving { get => _isMoving || FastMoving; }
 
         protected override void OnUpdate()
         {
-            // float x = Input.GetAxis("Horizontal");
-            // float y = Input.GetAxis("Vertical");
-            // Vector3 offset = new Vector3(x, 0, y);
-            // if (offset == Vector3.zero)
-            //     return;
-
-            //offset = Entity.LocalRotation * offset;
-
-            //MoveToDir(Vector3.Lerp(Entity.Forward, offset.normalized, Time.deltaTime));
-
             if (_lastJoytickDirection != Vector3.zero)
             {
                 SetMoveDelta(_lastJoytickDirection);
             }
-            else
+            else if(FastMoving)
             {
                 StopRunFaster();
             }
         }
 
-        public bool FastMoving { get; private set; }
 
         public void StartRunFaster()
         {
@@ -65,13 +61,15 @@ namespace Battle
         
         public void SetMoveDelta(Vector3 val)
         {
+            if (val.magnitude > 0.1f)
+            {
+                StartMove();
+            }
+            else
+            {
+                StopMove();
+            }
             MoveToDir(val.normalized);
-
-            value = Mathf.Max(Mathf.Abs(val.x), Mathf.Abs(val.z));
-            // SetValue("v1", val.z);
-            // SetValue("v2", val.x);
-            
-            SetValue("v1", 1);
         }
 
         private Vector3 _direction;
@@ -110,27 +108,23 @@ namespace Battle
             ownerActor.Position = moveToPos;
         }
 
-        protected override void OnLateUpdate()
-        {
-            base.OnLateUpdate();
-           
-
-        }
-
         public void SetValue(string name, float value)
         {
             ownerActor.Entity.GetComponent<AnimationController>().SetAnimatorValue(name, value);
         }
 
-        public bool IsMoving()
+        public void StartMove()
         {
-            Debug.Log($"英雄 move value {value}");
-            return value > 0;
+            Active = true;
+            _isMoving = true;
+            SetValue("v1", 1);
         }
-
-        public bool IsNotMoving()
+        
+        public void StopMove()
         {
-            return value == 0;
+            Active = false;
+            _isMoving = false;
+            SetValue("v1", 0);
         }
     }
 }

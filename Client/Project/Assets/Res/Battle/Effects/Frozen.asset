@@ -15,7 +15,7 @@ MonoBehaviour:
   gameplayEffect:
     DurationPolicy: 2
     DurationModifier: {fileID: 11400000, guid: 6736f6bddc4154afe86f1337118e6fd9, type: 2}
-    DurationMultiplier: 4
+    DurationMultiplier: 2
     Modifiers: []
     ConditionalGameplayEffects: []
   gameplayEffectTags:

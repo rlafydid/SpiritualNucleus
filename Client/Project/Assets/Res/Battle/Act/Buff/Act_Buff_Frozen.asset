@@ -25,7 +25,7 @@ MonoBehaviour:
       type: {class: ActMaterialClip, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
-        Duration: 4
+        Duration: 2
         Index: 0
         Row: 0
         effect: 0
@@ -33,6 +33,6 @@ MonoBehaviour:
       type: {class: ActAnimationPause, ns: Act, asm: ActEngine}
       data:
         TriggerTime: 0
-        Duration: 4
+        Duration: 2
         Index: 0
         Row: 0

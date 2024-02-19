@@ -9,7 +9,7 @@ namespace Battle
         public bool isMoving = false;
         public override bool Pass()
         {
-            return owner.GetComponent<JoystickMoveComponent>().IsMoving() == isMoving;
+            return owner.GetComponent<JoystickMoveComponent>().IsMoving == isMoving;
         }
     }
 }

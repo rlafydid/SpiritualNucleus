@@ -76,7 +76,7 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -588, y: 38, z: 0}
+  position: {x: -472.5, y: -17.5, z: 0}
   scale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -189,5 +189,6 @@ MonoBehaviour:
         v0: 4
         speed: 1
         animState: 1
-        targets: 48000000000000004900000000000000
+        targets: 
         target: 0
+        direction: {x: 0, y: 0, z: 0}

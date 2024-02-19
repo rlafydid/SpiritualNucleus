@@ -13,7 +13,7 @@ namespace Battle
         {
             base.OnEnter();
             var abilitySystem = GetActor.GetComponent<AbilitySystemCharacter>();
-            abilitySystem.RegisterGameplayTagEvent(GameplayTags.GetTag("Ability.Debuff.Control.Frozen"), EGameplayTagEventType.Removed, RemovedTag);
+            abilitySystem.RegisterGameplayTagEvent(GameplayTags.GetTag("Ability.Debuff.Control.Frozen"), RemovedTag);
             
             this.GetActor.PlayAct("Act_Buff_Frozen");
         }
@@ -27,7 +27,7 @@ namespace Battle
         {
             base.OnExit();
             var abilitySystem = GetActor.GetComponent<AbilitySystemCharacter>();
-            abilitySystem.RemoveGameplayTagEvent(GameplayTags.GetTag("Ability.Debuff.Control.Frozen"), EGameplayTagEventType.Removed, RemovedTag);
+            abilitySystem.RemoveGameplayTagEvent(GameplayTags.GetTag("Ability.Debuff.Control.Frozen"), RemovedTag);
         }
     }
 }
