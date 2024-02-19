@@ -54,17 +54,18 @@ public class GameplayEffectNode : BaseAsyncNode
 		if (actorId > 0)
 		{
 			outputActorId = actorId;
-			Debug.Log($"effect to actor id  {actorId}");
 
 			var item = new GameplayEffectNodeItem(actorId, effect, OnFinished);
 			_items.Add(item);
+			
+			Debug.Log($"effect to actor id  {actorId} count {_items.Count}");
 		}
 	}
 
 	void OnFinished(GameplayEffectNodeItem item)
 	{
 		_items.Remove(item);
-		outputActorId = actorId;
+		outputActorId = item.ActorId;
 		Execute(nameof(endEffect));
 		if (_items.Count <= 0)
 			OnFinished();

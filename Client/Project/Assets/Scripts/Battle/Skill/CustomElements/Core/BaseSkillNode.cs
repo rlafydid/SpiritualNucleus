@@ -57,24 +57,34 @@ public class BaseSkillNode : BaseNode
 
 	protected void ExecuteNode(BaseSkillNode node)
 	{
+		outputPorts.PushDatas();
 		process.ExecuteNode(node);
 	}
 }
 
+
+public class UniversalNodeWithOut : UniversalNode
+{
+	[Output(name = "Out", allowMultiple = true)]
+	public ExecuteLink executes;
+
+	public override IEnumerable<BaseSkillNode> GetExecutedNodes()
+	{
+		// Return all the nodes connected to the executes port
+		return outputPorts.FirstOrDefault(n => n.fieldName == nameof(executes))
+			.GetEdges().Select(e => e.inputNode as BaseSkillNode);
+	}
+}
 
 public class UniversalNode : BaseSkillNode, IExecuteNode
 {
 	[Input(name = "In", allowMultiple = true)]
 	public ExecuteLink executed;
 
-	[Output(name = "Out")]
-	public ExecuteLink executes;
-
-	public IEnumerable<BaseSkillNode> GetExecutedNodes()
+	public virtual IEnumerable<BaseSkillNode> GetExecutedNodes()
 	{
 		// Return all the nodes connected to the executes port
-		return outputPorts.FirstOrDefault(n => n.fieldName == nameof(executes))
-			.GetEdges().Select(e => e.inputNode as BaseSkillNode);
+		return null;
 	}
 
 	protected override void Process()
@@ -90,7 +100,6 @@ public class UniversalNode : BaseSkillNode, IExecuteNode
 		{
 			ExecuteNode(node);
 		}
-		
 	}
 }
 
@@ -113,20 +122,23 @@ public class BaseAsyncNode : UniversalNode, IAsyncNode
 	    base.Reset();
 	    _finish = false;
     }
-    
-    protected override void Process()
-    {
-	    base.Process();
-    }
-
-    protected void ExecuteNode(BaseNode node)
-	{
-		process.ExecuteNode(node);
-    }
 
 	protected void OnFinished()
     {
 		_finish = true;
+	}
+}
+
+public class BaseAsyncNodeWithOut : BaseAsyncNode
+{
+	[Output(name = "Out", allowMultiple = true)]
+	public ExecuteLink executes;
+
+	public override IEnumerable<BaseSkillNode> GetExecutedNodes()
+	{
+		// Return all the nodes connected to the executes port
+		return outputPorts.FirstOrDefault(n => n.fieldName == nameof(executes))
+			.GetEdges().Select(e => e.inputNode as BaseSkillNode);
 	}
 }
 

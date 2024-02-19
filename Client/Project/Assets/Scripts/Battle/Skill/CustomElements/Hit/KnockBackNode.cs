@@ -5,7 +5,7 @@ using GraphProcessor;
 using UnityEngine;
 
 [NodeMenuItem("技能/击中效果/击退"), Serializable]
-public class KnockBackNode : UniversalNode
+public class KnockBackNode : UniversalNodeWithOut
 {
     [Input("冲击力"), SerializeField]
     float f;

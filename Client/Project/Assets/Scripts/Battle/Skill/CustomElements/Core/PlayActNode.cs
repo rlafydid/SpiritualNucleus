@@ -45,7 +45,7 @@ public class PlayActNode : BaseAsyncNode
     #endregion
 
     #region 自定义Port
-    [Output]
+    [Output(allowMultiple = true)]
     public ExecuteLink eventOutputs;
 
     [CustomPortBehavior(nameof(eventOutputs))]
@@ -60,7 +60,7 @@ public class PlayActNode : BaseAsyncNode
         
         foreach (var eventData in actEvents)
         {
-            var portData = new PortData { displayName = $"{eventData.displayName} ({eventData.triggerTime * 0.001f}s)", displayType = typeof(ExecuteLink), identifier = eventData.id };
+            var portData = new PortData { displayName = $"{eventData.displayName} ({eventData.triggerTime * 0.001f}s)", displayType = typeof(ExecuteLink), identifier = eventData.id, acceptMultipleEdges = true };
             ports.Add(portData);
         }
         return ports;

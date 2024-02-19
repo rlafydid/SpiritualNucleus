@@ -5,7 +5,7 @@ using GraphProcessor;
 using UnityEngine;
 
 
-public class BaseBulletNode : UniversalNode
+public class BaseBulletNode : UniversalNodeWithOut
 {
 	[Input("资源"), SerializeField]
 	public string res;

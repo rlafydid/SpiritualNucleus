@@ -5,7 +5,7 @@ using GraphProcessor;
 using UnityEngine;
 
 [NodeMenuItem("发射器/创建发射器")]
-public class LauncherNode : UniversalNode
+public class LauncherNode : UniversalNodeWithOut
 {
     public override string name => "发射器";
     [Input("发射器资源"), SerializeField]

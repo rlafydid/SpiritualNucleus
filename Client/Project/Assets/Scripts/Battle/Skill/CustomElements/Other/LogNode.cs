@@ -4,7 +4,7 @@ using GraphProcessor;
 using UnityEngine;
 
 [NodeMenuItem("打印")]
-public class LogNode : UniversalNode
+public class LogNode : UniversalNodeWithOut
 {
     [Input("打印"), SerializeField]
     public string log;

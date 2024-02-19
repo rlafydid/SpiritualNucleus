@@ -13,9 +13,19 @@ namespace Battle
         public long TargetID;
         public int SkillID;
         public SkillConfig Config;
-        public Action<SkillUnit> Finish;
+        public Action<SkillUnit> OnEndAbility;
         public string BPRes;
         public BaseGraph Skill;
+
+        public bool IsAbilityEnded = false;
+
+        public void EndAbility()
+        {
+            if (IsAbilityEnded)
+                return;
+            IsAbilityEnded = true;
+            OnEndAbility?.Invoke(this);
+        }
     }
 
     public class SkillProcess
@@ -25,9 +35,9 @@ namespace Battle
 
         public bool IsFinished { get; set; } = false;
 
-        public long OwnerId { get => skill.OwnerID; }
+        public long OwnerId { get => _skill.OwnerID; }
 
-        protected SkillUnit skill;
+        private SkillUnit _skill;
 
         List<IAsyncNode> asyncNodes = new List<IAsyncNode>();
 
@@ -38,16 +48,16 @@ namespace Battle
             }
         }
 
-        Stack<BaseNode> nodeToExecute = new Stack<BaseNode>();
+        Stack<BaseNode> _nodeToExecute = new Stack<BaseNode>();
 
         public void Init(SkillUnit skill)
         {
-            this.skill = skill;
+            this._skill = skill;
         }
 
         public void Load()
         {
-            BaseGraph baseGraph = Facade.Asset.Instantiate<BaseGraph>($"{skill.BPRes}");
+            BaseGraph baseGraph = Facade.Asset.Instantiate<BaseGraph>($"{_skill.BPRes}");
             
         }
 
@@ -68,16 +78,16 @@ namespace Battle
                 }
                 else
                 {
-                    (node as BaseSkillNode).Setup(this, skill);
+                    (node as BaseSkillNode).Setup(this, _skill);
                 }
             }
 
 
             if (startNode != null)
             {
-                nodeToExecute.Push(startNode);
+                _nodeToExecute.Push(startNode);
 
-                RunTheGraph(nodeToExecute);
+                RunTheGraph(_nodeToExecute);
             }
         }
 
@@ -89,11 +99,15 @@ namespace Battle
             {
                 var item = asyncNodes[i];
                 item.Update(deltaTime);
-                if(item.Finished)
+                if(item.Finished && item is IExecuteNode node)
                 {
-                    foreach(var n in (item as IExecuteNode).GetExecutedNodes())
+                    var nodes = node.GetExecutedNodes();
+                    if (nodes != null)
                     {
-                        nodeToExecute.Push(n);
+                        foreach(var n in nodes)
+                        {
+                            _nodeToExecute.Push(n);
+                        }
                     }
                     isRun = true;
                     asyncNodes.RemoveAt(i);
@@ -102,12 +116,13 @@ namespace Battle
  
             if(isRun)
             {
-                RunTheGraph(nodeToExecute);
+                RunTheGraph(_nodeToExecute);
             }
 
-            if(asyncNodes.Count == 0 && nodeToExecute.Count == 0)
+            if(asyncNodes.Count == 0 && _nodeToExecute.Count == 0)
             {
-                skill.Finish?.Invoke(skill);
+                if (!_skill.IsAbilityEnded)
+                    _skill.EndAbility();
                 Finish?.Invoke(this);
             }
         }
@@ -115,14 +130,14 @@ namespace Battle
         public void Stop()
         {
             asyncNodes.Clear();
-            nodeToExecute.Clear();
+            _nodeToExecute.Clear();
         }
 
 
         public void ExecuteNode(BaseNode node)
         {
-            nodeToExecute.Push(node);
-            RunTheGraph(nodeToExecute);
+            _nodeToExecute.Push(node);
+            RunTheGraph(_nodeToExecute);
         }
 
         void RunTheGraph(Stack<BaseNode> nodesToRun)
@@ -138,17 +153,27 @@ namespace Battle
                 node.OnProcess();
                 switch (node)
                 {
-                    case IAsyncNode asyncNode:
-                        asyncNodes.Add(asyncNode);
-                        break;
                     case IExecuteNode skillNode:
-                        foreach (var n in skillNode.GetExecutedNodes())
+                        var nodes = skillNode.GetExecutedNodes();
+                        if (nodes != null)
                         {
-                            //Debug.Log("push" + n.GetType().Name);
-                            nodesToRun.Push(n);
+                            foreach (var n in nodes)
+                            {
+                                //Debug.Log("push" + n.GetType().Name);
+                                nodesToRun.Push(n);
+                            }
                         }
+                        
                         break;
                 }
+
+                switch (node)
+                {
+                    case IAsyncNode asyncNode:
+                        asyncNodes.Add(asyncNode);
+                    break;
+                }
+                    
             }
         }
 

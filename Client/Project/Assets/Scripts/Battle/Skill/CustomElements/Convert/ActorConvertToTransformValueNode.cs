@@ -4,7 +4,7 @@ using GraphProcessor;
 using UnityEngine;
 
 [System.Serializable, NodeMenuItem("技能/转换/Actor转换为Transform值")]
-public class ActorConvertToTransformValueNode : UniversalNode
+public class ActorConvertToTransformValueNode : UniversalNodeWithOut
 {
     public override string name { get => "Actor转换为Transform值"; }
 

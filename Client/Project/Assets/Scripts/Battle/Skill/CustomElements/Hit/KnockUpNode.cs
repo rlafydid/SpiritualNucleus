@@ -17,7 +17,7 @@ public enum EDirectionType
 }
 
 [System.Serializable, NodeMenuItem("技能/击中效果/击飞")]
-public class KnockUpNode : UniversalNode
+public class KnockUpNode : UniversalNodeWithOut
 {
     [SerializeField, Input("角度")]
     public int angle;

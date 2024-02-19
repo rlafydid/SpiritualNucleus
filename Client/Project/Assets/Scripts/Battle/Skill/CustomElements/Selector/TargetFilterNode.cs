@@ -5,7 +5,7 @@ using GraphProcessor;
 using System.Linq;
 
 [System.Serializable]
-public class TargetFilterNode : UniversalNode
+public class TargetFilterNode : UniversalNodeWithOut
 {
 	[Output(name = "列表")]
 	public List<long> selectTargets;

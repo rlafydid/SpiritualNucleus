@@ -19,6 +19,7 @@ MonoBehaviour:
   - rid: 5209252379956084736
   - rid: 5209252379956084738
   - rid: 5209252379956084739
+  - rid: 2593873713512316930
   edges:
   - GUID: 2d62707a-3199-472c-a101-490a79788040
     owner: {fileID: 11400000}
@@ -60,6 +61,14 @@ MonoBehaviour:
     outputFieldName: targetId
     inputPortIdentifier: 
     outputPortIdentifier: 
+  - GUID: 0df27b46-ba81-4b47-92b1-8a4c7f43c7ce
+    owner: {fileID: 11400000}
+    inputNodeGUID: 77d898d0-7f93-4894-bbfb-e64d536d1282
+    outputNodeGUID: 9f1cb7e8-98b1-485b-a116-64f780c477ca
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
   groups: []
   stackNodes: []
   pinnedElements: []
@@ -67,7 +76,7 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: 58, y: -213, z: 0}
+  position: {x: -550, y: -186, z: 0}
   scale: {x: 0.8695652, y: 0.8695652, z: 1}
   references:
     version: 2
@@ -110,6 +119,21 @@ MonoBehaviour:
         - triggerTime: 900
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
           id: 91417a8a-24c0-41c6-b115-42757ff90df1
+    - rid: 2593873713512316930
+      type: {class: EndAbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 77d898d0-7f93-4894-bbfb-e64d536d1282
+        computeOrder: 5
+        position:
+          serializedVersion: 2
+          x: 1081.0002
+          y: 339.99997
+          width: 99
+          height: 75
+        expanded: 0
+        debug: 0
+        nodeLock: 0
     - rid: 5209252379956084736
       type: {class: VectorBulletNode, ns: , asm: Assembly-CSharp}
       data:
@@ -118,9 +142,9 @@ MonoBehaviour:
         computeOrder: 2
         position:
           serializedVersion: 2
-          x: 733
-          y: 500
-          width: 172
+          x: 745.6502
+          y: 380.308
+          width: 174
           height: 243
         expanded: 0
         debug: 0
@@ -140,8 +164,8 @@ MonoBehaviour:
         computeOrder: 3
         position:
           serializedVersion: 2
-          x: 972.3915
-          y: 584.913
+          x: 1081
+          y: 414.8001
           width: 115
           height: 123
         expanded: 0
@@ -155,9 +179,9 @@ MonoBehaviour:
         computeOrder: 4
         position:
           serializedVersion: 2
-          x: 1196
-          y: 574
-          width: 136
+          x: 1324.202
+          y: 404.00003
+          width: 137
           height: 219
         expanded: 0
         debug: 0

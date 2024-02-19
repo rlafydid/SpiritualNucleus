@@ -4,7 +4,7 @@ using GraphProcessor;
 using UnityEngine;
 
 [System.Serializable, NodeMenuItem("技能/获取/自身")]
-public class GetSelfNode : UniversalNode
+public class GetSelfNode : UniversalNodeWithOut
 {
     public override string name { get => "获取自身数据"; }
 

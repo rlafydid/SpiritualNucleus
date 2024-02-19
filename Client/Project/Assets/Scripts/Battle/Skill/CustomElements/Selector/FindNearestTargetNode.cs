@@ -12,7 +12,7 @@ public enum ETeamType
 }
 
 [System.Serializable, NodeMenuItem("技能/筛选目标/最近目标")]
-public class FindNearestTargetNode : UniversalNode
+public class FindNearestTargetNode : UniversalNodeWithOut
 {
 	public override string name => "最近目标";
 

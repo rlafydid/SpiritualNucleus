@@ -4,7 +4,7 @@ using GraphProcessor;
 using UnityEngine;
 
 [System.Serializable, NodeMenuItem("技能/位移相关/瞬移")]
-public class TeleportNode : UniversalNode
+public class TeleportNode : UniversalNodeWithOut
 {
     public override string name => "瞬移";
 

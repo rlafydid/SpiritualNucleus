@@ -74,7 +74,7 @@ public class UniversalAbilityScriptableObject : AbstractAbilityScriptableObject
 
             _skillProcess = new SkillProcess();
             var skillUnit = new SkillUnit() { OwnerID = Owner.OwnerId };
-            skillUnit.Finish = (skill) =>
+            skillUnit.OnEndAbility = (skill) =>
             {
                 Debug.Log($"{Owner.OwnerId} 技能释放完成");
                 _taskCompletionSource.SetResult(true);

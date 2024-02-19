@@ -7,7 +7,7 @@ using LKEngine;
 using UnityEngine;
 
 [NodeMenuItem("技能/功能/切割Mesh")]
-public class SliceMeshNode : UniversalNode
+public class SliceMeshNode : UniversalNodeWithOut
 {
     public override string name => "切割Mesh";
 

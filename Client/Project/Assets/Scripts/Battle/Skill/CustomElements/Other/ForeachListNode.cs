@@ -5,7 +5,7 @@ using GraphProcessor;
 using UnityEngine;
 
 [Serializable]
-public class ForeachListNode<T> : UniversalNode
+public class ForeachListNode<T> : UniversalNodeWithOut
 {
     [Input("列表")]
     public List<T> list;

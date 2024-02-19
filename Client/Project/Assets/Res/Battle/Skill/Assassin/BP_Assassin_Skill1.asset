@@ -22,6 +22,7 @@ MonoBehaviour:
   - rid: 6474727236465852418
   - rid: 5428821368144134145
   - rid: 5428821368144134146
+  - rid: 2593873713512316929
   edges:
   - GUID: 2d62707a-3199-472c-a101-490a79788040
     owner: {fileID: 11400000}
@@ -111,9 +112,17 @@ MonoBehaviour:
     outputFieldName: eventOutputs
     inputPortIdentifier: 
     outputPortIdentifier: Start
-  - GUID: 81a4edc9-22c4-46ca-9fd0-3c59fc64ebc9
+  - GUID: 63b1bbb0-b99f-451f-bdfe-b3a10bd54b24
     owner: {fileID: 11400000}
     inputNodeGUID: ace89001-8f38-43d0-a96a-8dd7b5a5b8a3
+    outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
+    inputFieldName: executed
+    outputFieldName: eventOutputs
+    inputPortIdentifier: 
+    outputPortIdentifier: d5b47b94-9751-4a1e-b985-63dc14bdbb41
+  - GUID: 723e6a56-6fe2-4f17-9450-7a10c1161f88
+    owner: {fileID: 11400000}
+    inputNodeGUID: b8ba1c5d-6f78-4df6-8d41-b079182422a2
     outputNodeGUID: a43ec409-ff6d-40d7-8658-07ff4004abaf
     inputFieldName: executed
     outputFieldName: eventOutputs
@@ -126,8 +135,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -1763, y: -353, z: 0}
-  scale: {x: 1.520875, y: 1.520875, z: 1}
+  position: {x: -335, y: -3, z: 0}
+  scale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
     RefIds:
@@ -172,6 +181,21 @@ MonoBehaviour:
         - triggerTime: 667
           displayName: "\u89E6\u53D1\u4E8B\u4EF6"
           id: d5b47b94-9751-4a1e-b985-63dc14bdbb41
+    - rid: 2593873713512316929
+      type: {class: EndAbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: b8ba1c5d-6f78-4df6-8d41-b079182422a2
+        computeOrder: 8
+        position:
+          serializedVersion: 2
+          x: 747.5001
+          y: 656.15
+          width: 99
+          height: 75
+        expanded: 0
+        debug: 0
+        nodeLock: 0
     - rid: 5428821368144134145
       type: {class: ForeachLongListNode, ns: , asm: Assembly-CSharp}
       data:
@@ -188,7 +212,7 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         list: 
-        element: 4
+        element: 3
     - rid: 5428821368144134146
       type: {class: GameplayEffectNode, ns: , asm: Assembly-CSharp}
       data:
@@ -205,8 +229,8 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         effect: {fileID: 11400000, guid: b2d4dfccaaff0c043ba533ff783de4c7, type: 2}
-        actorId: 4
-        outputActorId: 4
+        actorId: 3
+        outputActorId: 3
     - rid: 6474727236465852416
       type: {class: GetSelfNode, ns: , asm: Assembly-CSharp}
       data:
@@ -223,7 +247,7 @@ MonoBehaviour:
         debug: 0
         nodeLock: 0
         ownerId: 1
-        point: {x: 8.880534, y: 0.6814499, z: 66.63874}
+        point: {x: 17.114145, y: -1.0899963, z: 56.720634}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         scale: {x: 1, y: 1, z: 1}
     - rid: 6474727236465852417
@@ -243,8 +267,8 @@ MonoBehaviour:
         nodeLock: 0
         selectTargets: 
         width: 2
-        startPoint: {x: 8.880534, y: 0.6814499, z: 66.63874}
-        endPoint: {x: 12.448237, y: 0.034540713, z: 63.195923}
+        startPoint: {x: 17.114145, y: -1.0899963, z: 56.720634}
+        endPoint: {x: 13.069944, y: -0.34887695, z: 59.569183}
         expandDistance: 1
     - rid: 6474727236465852418
       type: {class: GetSelfNode, ns: , asm: Assembly-CSharp}
@@ -254,15 +278,15 @@ MonoBehaviour:
         computeOrder: 2
         position:
           serializedVersion: 2
-          x: 654.5
-          y: 466.5
-          width: 126
+          x: 699.85
+          y: 436
+          width: 127
           height: 171
         expanded: 0
         debug: 0
         nodeLock: 0
         ownerId: 1
-        point: {x: 12.448237, y: 0.034540713, z: 63.195923}
+        point: {x: 13.069944, y: -0.34887695, z: 59.569183}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         scale: {x: 1, y: 1, z: 1}
     - rid: 6647520330707632167
@@ -285,5 +309,5 @@ MonoBehaviour:
         speed: 1
         animState: 1
         targets: 
-        target: 4
+        target: 3
         direction: {x: 0, y: 0, z: 0}

@@ -6,7 +6,7 @@ using System.Linq;
 
 
 [System.Serializable, NodeMenuItem("技能/击中效果/伤害")]
-public class DamageNode : UniversalNode
+public class DamageNode : UniversalNodeWithOut
 {
 	public override string name => "伤害";
 
