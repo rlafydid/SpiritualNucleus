@@ -25,7 +25,7 @@ namespace Battle
 
         void Finish()
         {
-            ChangeState(ERoleState.Idle);
+            MakeStateTransitionable();
         }
     }
 }

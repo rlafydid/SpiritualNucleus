@@ -11,14 +11,7 @@ namespace Battle
         {
             GetActor.StartMove();
             _joytick = GetActor.GetComponent<JoystickMoveComponent>();
-
-        }
-        protected override void OnUpdate()
-        {
-            if (_joytick.IsMoving)
-            {
-                ChangeState(ERoleState.Move);
-            }
+            MakeStateTransitionable();
         }
     }
 }

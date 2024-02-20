@@ -21,13 +21,7 @@ namespace Battle
             }
 
             _joystick = GetActor.GetComponent<JoystickMoveComponent>();
-        }
-
-        protected override void OnUpdate()
-        {
-            base.OnUpdate();
-            if(!_joystick.IsMoving)
-                ChangeState(ERoleState.Idle);
+            MakeStateTransitionable();
         }
 
         protected override void OnExit()

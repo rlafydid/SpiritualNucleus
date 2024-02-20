@@ -39,9 +39,11 @@ namespace Battle
 
             var handleInput = this.GetComponent<HandleInputComponent>();
 
-            FSM.Transition toIdle = new FSM.Transition(ERoleState.Idle);
-            
-            FSM.Transition toMove = new FSM.Transition(ERoleState.Move);
+            FSM.Transition toIdle = new FSM.Transition(ERoleState.Idle, true);
+            toIdle.AddCondition(new MoveCondition() { isMoving = false });
+
+            FSM.Transition toMove = new FSM.Transition(ERoleState.Move, true);
+            toMove.AddCondition(new MoveCondition() { isMoving = true });
 
             FSM.Transition toAttack = new FSM.Transition(ERoleState.Attack);
 

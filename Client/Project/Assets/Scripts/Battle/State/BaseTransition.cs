@@ -13,10 +13,10 @@ namespace FSM
 
         public int priority = 0;
 
-        public bool hasExitTime = true;
+        //表示在达成条件时自动转换
+        public bool willAutoTransit = true;
         
         List<Condition> conditions = new List<Condition>();
-        List<Func<bool>> conditionFuncs = new List<Func<bool>>();
 
         public FiniteStateMachine fsm;
 
@@ -31,9 +31,10 @@ namespace FSM
             this.toState = toState;
         }
 
-        public Transition(Enum toState)
+        public Transition(Enum toState, bool willAutoTransit = false)
         {
             this.toState = toState.ToInt();
+            this.willAutoTransit = willAutoTransit;
         }
 
         public Transition AddCondition(Condition condition)
@@ -43,22 +44,8 @@ namespace FSM
             return this;
         }
 
-        public Transition AddCondition(params Func<bool>[] conds)
-        {
-            conditionFuncs.AddRange(conds);
-            return this;
-        }
-
         public bool CanTransition()
         {
-            foreach (var item in conditionFuncs)
-            {
-                if (!item.Invoke())
-                {
-                    return false;
-                }
-            }
-
             foreach (var item in conditions)
             {
                 if (!item.Pass())

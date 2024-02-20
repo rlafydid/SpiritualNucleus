@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using FSM;
 using UnityEngine;
 
@@ -51,6 +52,8 @@ namespace Battle
 
         protected bool IsUpdate { get; set; } = true;
 
+        private bool CanStateTransition { get; set; } = false;
+
         public virtual void SetData(IStateData data)
         {
         }
@@ -62,9 +65,36 @@ namespace Battle
         }
         public void Update()
         {
-            if(IsUpdate)
-                OnUpdate();
+            if (CanStateTransition)
+                TryToNextState();
+            else
+            {
+                if(IsUpdate)
+                    OnUpdate();
+            }
         }
+
+        protected void MakeStateTransitionable()
+        {
+            CanStateTransition = true;
+        }
+        
+        void TryToNextState()
+        {
+            Transition transition = null;
+            foreach (var item in transitions)
+            {
+                if (item.willAutoTransit && item.CanTransition() && (transition == null || item.priority > transition.priority))
+                {
+                    transition = item;
+                }
+            }
+            if (transition != null)
+            {
+                fsm.ChangeState(transition.toState);
+            }
+        }
+        
         public void Exit()
         {
             OnExit();
@@ -79,6 +109,7 @@ namespace Battle
         public void AddTransition(Transition transition)
         {
             transition.fsm = fsm;
+            // transition.fromState = this.state;
             transitions.Add(transition);
         }
 
@@ -113,6 +144,8 @@ namespace Battle
 
             return false;
         }
+        
+        
         
         /// <summary>
         /// 跳转到连接的状态
