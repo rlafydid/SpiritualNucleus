@@ -16,7 +16,7 @@ namespace Battle
             // owner.PlayAnim("Run");
             GetActor.Entity.GetComponent<MoveComponent>().ToDefaultState();
 
-            if (fsm.LastState == (int)ERoleState.Evade || GetActor.GetComponent<JoystickMoveComponent>().FastMoving)
+            if (fsm.LastState == (int)ERoleState.Evade)
             {
                 GetActor.GetComponent<JoystickMoveComponent>().StartRunFaster();
             }
@@ -35,6 +35,8 @@ namespace Battle
         protected override void OnExit()
         {
             // owner.StopMove();
+            _joystick = GetActor.GetComponent<JoystickMoveComponent>();
+            _joystick.UnregisterMoveStateChanged(OnMoveStateChanged);
         }
     }
 }

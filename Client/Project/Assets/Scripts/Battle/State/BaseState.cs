@@ -165,6 +165,7 @@ namespace Battle
                 if (item.CanTransition() && (transition == null || item.priority > transition.priority))
                 {
                     transition = item;
+                    break;
                 }
             }
 

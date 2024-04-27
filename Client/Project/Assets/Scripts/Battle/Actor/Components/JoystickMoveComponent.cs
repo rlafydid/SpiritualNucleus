@@ -26,10 +26,8 @@ namespace Battle
 
         private Vector3 _lastJoytickDirection;
         
-        public bool FastMoving { get; private set; }
-
         private bool _isMoving = false;
-        public bool IsMoving { get => _isMoving || FastMoving; }
+        public bool IsMoving { get => _isMoving; }
 
         private event Action<bool> _moveStateAction;
         
@@ -43,7 +41,6 @@ namespace Battle
             GetActor.PlayAnim("RunFaster");
             MoveSpeed = 20;
             GetActor.DontToDefaultAnimation();
-            FastMoving = true;
         }
 
         public void StopRunFaster()
@@ -51,7 +48,6 @@ namespace Battle
             GetActor.Entity.GetComponent<AnimationController>().PlayDefault();
             MoveSpeed = 5;
             GetActor.TurnOnToDefaultAnimation();
-            FastMoving = false;
         }
 
         public void RegisterMoveStateChanged(Action<bool> moveStateAction)
@@ -128,6 +124,7 @@ namespace Battle
         
         public void StopMove()
         {
+            StopRunFaster();
             Active = false;
             _isMoving = false;
             SetValue("v1", 0);

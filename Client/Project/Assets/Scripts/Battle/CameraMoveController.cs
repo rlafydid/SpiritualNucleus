@@ -117,6 +117,11 @@ public class CameraMoveController : LKEngine.Component,DefaultInputActions.ICame
         var dragOffset = mousePos - _lastMousePos;
         if (dragOffset.magnitude < 0.01f)
             return;
+        else if (dragOffset.magnitude > 300)
+        {
+            _lastMousePos = mousePos;
+            return;
+        }
         float x = dragOffset.x / Screen.width;
         float y = dragOffset.y / Screen.height;
 
