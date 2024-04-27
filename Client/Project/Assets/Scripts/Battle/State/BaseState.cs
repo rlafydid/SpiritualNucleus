@@ -46,6 +46,8 @@ namespace Battle
         public SceneActorController owner;
         public FiniteStateMachine fsm;
 
+        public bool CanReenter { get; set; }
+
         protected List<Transition> transitions = new List<Transition>();
 
         public int state;
@@ -144,7 +146,11 @@ namespace Battle
 
             return false;
         }
-        
+
+        protected void EndState()
+        {
+            ToLinkedState();
+        }
         
         
         /// <summary>

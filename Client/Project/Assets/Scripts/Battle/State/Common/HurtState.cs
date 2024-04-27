@@ -18,7 +18,7 @@ namespace Battle
         {
             t += Time.deltaTime;
             if (t < length)
-                ChangeState(ERoleState.Idle);
+                ExitState();
         }
         protected override void OnExit()
         {

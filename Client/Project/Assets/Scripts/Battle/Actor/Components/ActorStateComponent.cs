@@ -13,6 +13,7 @@ namespace FSM
         KnockFly, //击飞
         Vertigo, //眩晕
         Frozen,
+        Dead
     }
     public class FiniteStateMachine : ActorComponent
     {
@@ -22,7 +23,7 @@ namespace FSM
 
         protected BaseState curState;
 
-        public int CurrentState { get; private set; }
+        public int CurrentState { get; private set; } = -1;
         public int LastState { get; private set; }
 
         private int _defaultState;
@@ -76,7 +77,7 @@ namespace FSM
 
         public bool ChangeState(int state, IStateData data = null)
         {
-            if (state == CurrentState)
+            if (state == CurrentState && !curState.CanReenter)
                 return false;
             
             if (states.TryGetValue(state, out BaseState target))

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using FSM;
@@ -21,7 +22,14 @@ namespace Battle
             }
 
             _joystick = GetActor.GetComponent<JoystickMoveComponent>();
+            _joystick.RegisterMoveStateChanged(OnMoveStateChanged);
             MakeStateTransitionable();
+        }
+
+        void OnMoveStateChanged(bool isMove)
+        {
+            if(!isMove)
+                ExitState();
         }
 
         protected override void OnExit()

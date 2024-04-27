@@ -20,7 +20,7 @@ namespace Battle
 
         void RemovedTag(GameplayTagScriptableObject tag, EGameplayTagEventType type)
         {
-            ToLinkedState();
+            ExitState();
         }
         
         protected override void OnExit()
@@ -28,6 +28,7 @@ namespace Battle
             base.OnExit();
             var abilitySystem = GetActor.GetComponent<AbilitySystemCharacter>();
             abilitySystem.RemoveGameplayTagEvent(GameplayTags.GetTag("Ability.Debuff.Control.Frozen"), RemovedTag);
+            
         }
     }
 }

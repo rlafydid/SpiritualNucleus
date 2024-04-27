@@ -9,7 +9,7 @@ namespace Battle
         private JoystickMoveComponent _joytick;
         protected override void OnEnter()
         {
-            GetActor.StartMove();
+            GetActor.StopMove();
             _joytick = GetActor.GetComponent<JoystickMoveComponent>();
             MakeStateTransitionable();
         }

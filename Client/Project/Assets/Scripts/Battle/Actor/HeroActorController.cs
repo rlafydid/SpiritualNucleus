@@ -60,6 +60,7 @@ namespace Battle
             idleState.AddTransition(toFlashMove);
             idleState.AddTransition(toEvade);
 
+            moveState.AddTransition(toIdle);
             moveState.AddTransition(toAttack);
             moveState.AddTransition(toJump);
             moveState.AddTransition(toFlashMove);

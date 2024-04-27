@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using LKEngine;
@@ -30,18 +31,12 @@ namespace Battle
         private bool _isMoving = false;
         public bool IsMoving { get => _isMoving || FastMoving; }
 
+        private event Action<bool> _moveStateAction;
+        
         protected override void OnUpdate()
         {
-            if (_lastJoytickDirection != Vector3.zero)
-            {
-                SetMoveDelta(_lastJoytickDirection);
-            }
-            else if(FastMoving)
-            {
-                StopRunFaster();
-            }
+            SetMoveDelta(_lastJoytickDirection);
         }
-
 
         public void StartRunFaster()
         {
@@ -57,6 +52,16 @@ namespace Battle
             MoveSpeed = 5;
             GetActor.TurnOnToDefaultAnimation();
             FastMoving = false;
+        }
+
+        public void RegisterMoveStateChanged(Action<bool> moveStateAction)
+        {
+            _moveStateAction += moveStateAction;
+        }
+        
+        public void UnregisterMoveStateChanged(Action<bool> moveStateAction)
+        {
+            _moveStateAction -= moveStateAction;
         }
         
         public void SetMoveDelta(Vector3 val)
@@ -118,6 +123,7 @@ namespace Battle
             Active = true;
             _isMoving = true;
             SetValue("v1", 1);
+            _moveStateAction?.Invoke(true);
         }
         
         public void StopMove()
@@ -125,6 +131,7 @@ namespace Battle
             Active = false;
             _isMoving = false;
             SetValue("v1", 0);
+            _moveStateAction?.Invoke(false);
         }
     }
 }
