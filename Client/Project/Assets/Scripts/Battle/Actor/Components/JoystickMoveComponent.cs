@@ -29,6 +29,8 @@ namespace Battle
         private bool _isMoving = false;
         public bool IsMoving { get => _isMoving; }
 
+        public bool IsRunFaster { get; set; }
+
         private event Action<bool> _moveStateAction;
         
         protected override void OnUpdate()
@@ -41,6 +43,7 @@ namespace Battle
             GetActor.PlayAnim("RunFaster");
             MoveSpeed = 20;
             GetActor.DontToDefaultAnimation();
+            IsRunFaster = true;
         }
 
         public void StopRunFaster()
@@ -48,6 +51,7 @@ namespace Battle
             GetActor.Entity.GetComponent<AnimationController>().PlayDefault();
             MoveSpeed = 5;
             GetActor.TurnOnToDefaultAnimation();
+            IsRunFaster = false;
         }
 
         public void RegisterMoveStateChanged(Action<bool> moveStateAction)
